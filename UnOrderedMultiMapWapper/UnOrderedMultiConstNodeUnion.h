@@ -1,0 +1,218 @@
+#pragma once
+namespace Utilities
+{
+	union UnOrderedMultiConstNodeUnion
+	{
+		void* ptrToDelete = nullptr;
+		UnOrderedMultiConstNode<unsigned char, unsigned char>* CPPmulticonstnode1;
+		UnOrderedMultiConstNode<unsigned char, char>* CPPmulticonstnode2;
+		UnOrderedMultiConstNode<unsigned char, short>* CPPmulticonstnode3;
+		UnOrderedMultiConstNode<unsigned char, unsigned short>* CPPmulticonstnode4;
+		UnOrderedMultiConstNode<unsigned char, int>* CPPmulticonstnode5;
+		UnOrderedMultiConstNode<unsigned char, unsigned int>* CPPmulticonstnode6;
+		UnOrderedMultiConstNode<unsigned char, long long>* CPPmulticonstnode7;
+		UnOrderedMultiConstNode<unsigned char, unsigned long long>* CPPmulticonstnode8;
+		UnOrderedMultiConstNode<unsigned char, float>* CPPmulticonstnode9;
+		UnOrderedMultiConstNode<unsigned char, double>* CPPmulticonstnode10;
+		UnOrderedMultiConstNode<unsigned char, wchar_t>* CPPmulticonstnode11;
+		UnOrderedMultiConstNode<unsigned char, bool>* CPPmulticonstnode12;
+		UnOrderedMultiConstNode<unsigned char, std::wstring>* CPPmulticonstnode13;
+		UnOrderedMultiConstNode<unsigned char, __int64>* CPPmulticonstnode14;
+
+		UnOrderedMultiConstNode<char, unsigned char>* CPPmulticonstnode15;
+		UnOrderedMultiConstNode<char, char>* CPPmulticonstnode16;
+		UnOrderedMultiConstNode<char, short>* CPPmulticonstnode17;
+		UnOrderedMultiConstNode<char, unsigned short>* CPPmulticonstnode18;
+		UnOrderedMultiConstNode<char, int>* CPPmulticonstnode19;
+		UnOrderedMultiConstNode<char, unsigned int>* CPPmulticonstnode20;
+		UnOrderedMultiConstNode<char, long long>* CPPmulticonstnode21;
+		UnOrderedMultiConstNode<char, unsigned long long>* CPPmulticonstnode22;
+		UnOrderedMultiConstNode<char, float>* CPPmulticonstnode23;
+		UnOrderedMultiConstNode<char, double>* CPPmulticonstnode24;
+		UnOrderedMultiConstNode<char, wchar_t>* CPPmulticonstnode25;
+		UnOrderedMultiConstNode<char, bool>* CPPmulticonstnode26;
+		UnOrderedMultiConstNode<char, std::wstring>* CPPmulticonstnode27;
+		UnOrderedMultiConstNode<char, __int64>* CPPmulticonstnode28;
+
+		UnOrderedMultiConstNode<short, unsigned char>* CPPmulticonstnode29;
+		UnOrderedMultiConstNode<short, char>* CPPmulticonstnode30;
+		UnOrderedMultiConstNode<short, short>* CPPmulticonstnode31;
+		UnOrderedMultiConstNode<short, unsigned short>* CPPmulticonstnode32;
+		UnOrderedMultiConstNode<short, int>* CPPmulticonstnode33;
+		UnOrderedMultiConstNode<short, unsigned int>* CPPmulticonstnode34;
+		UnOrderedMultiConstNode<short, long long>* CPPmulticonstnode35;
+		UnOrderedMultiConstNode<short, unsigned long long>* CPPmulticonstnode36;
+		UnOrderedMultiConstNode<short, float>* CPPmulticonstnode37;
+		UnOrderedMultiConstNode<short, double>* CPPmulticonstnode38;
+		UnOrderedMultiConstNode<short, wchar_t>* CPPmulticonstnode39;
+		UnOrderedMultiConstNode<short, bool>* CPPmulticonstnode40;
+		UnOrderedMultiConstNode<short, std::wstring>* CPPmulticonstnode41;
+		UnOrderedMultiConstNode<short, __int64>* CPPmulticonstnode42;
+
+		UnOrderedMultiConstNode<unsigned short, unsigned char>* CPPmulticonstnode43;
+		UnOrderedMultiConstNode<unsigned short, char>* CPPmulticonstnode44;
+		UnOrderedMultiConstNode<unsigned short, short>* CPPmulticonstnode45;
+		UnOrderedMultiConstNode<unsigned short, unsigned short>* CPPmulticonstnode46;
+		UnOrderedMultiConstNode<unsigned short, int>* CPPmulticonstnode47;
+		UnOrderedMultiConstNode<unsigned short, unsigned int>* CPPmulticonstnode48;
+		UnOrderedMultiConstNode<unsigned short, long long>* CPPmulticonstnode49;
+		UnOrderedMultiConstNode<unsigned short, unsigned long long>* CPPmulticonstnode50;
+		UnOrderedMultiConstNode<unsigned short, float>* CPPmulticonstnode51;
+		UnOrderedMultiConstNode<unsigned short, double>* CPPmulticonstnode52;
+		UnOrderedMultiConstNode<unsigned short, wchar_t>* CPPmulticonstnode53;
+		UnOrderedMultiConstNode<unsigned short, bool>* CPPmulticonstnode54;
+		UnOrderedMultiConstNode<unsigned short, std::wstring>* CPPmulticonstnode55;
+		UnOrderedMultiConstNode<unsigned short, __int64>* CPPmulticonstnode56;
+
+		UnOrderedMultiConstNode<int, unsigned char>* CPPmulticonstnode57;
+		UnOrderedMultiConstNode<int, char>* CPPmulticonstnode58;
+		UnOrderedMultiConstNode<int, short>* CPPmulticonstnode59;
+		UnOrderedMultiConstNode<int, unsigned short>* CPPmulticonstnode60;
+		UnOrderedMultiConstNode<int, int>* CPPmulticonstnode61;
+		UnOrderedMultiConstNode<int, unsigned int>* CPPmulticonstnode62;
+		UnOrderedMultiConstNode<int, long long>* CPPmulticonstnode63;
+		UnOrderedMultiConstNode<int, unsigned long long>* CPPmulticonstnode64;
+		UnOrderedMultiConstNode<int, float>* CPPmulticonstnode65;
+		UnOrderedMultiConstNode<int, double>* CPPmulticonstnode66;
+		UnOrderedMultiConstNode<int, wchar_t>* CPPmulticonstnode67;
+		UnOrderedMultiConstNode<int, bool>* CPPmulticonstnode68;
+		UnOrderedMultiConstNode<int, std::wstring>* CPPmulticonstnode69;
+		UnOrderedMultiConstNode<int, __int64>* CPPmulticonstnode70;
+
+		UnOrderedMultiConstNode<unsigned int, unsigned char>* CPPmulticonstnode71;
+		UnOrderedMultiConstNode<unsigned int, char>* CPPmulticonstnode72;
+		UnOrderedMultiConstNode<unsigned int, short>* CPPmulticonstnode73;
+		UnOrderedMultiConstNode<unsigned int, unsigned short>* CPPmulticonstnode74;
+		UnOrderedMultiConstNode<unsigned int, int>* CPPmulticonstnode75;
+		UnOrderedMultiConstNode<unsigned int, unsigned int>* CPPmulticonstnode76;
+		UnOrderedMultiConstNode<unsigned int, long long>* CPPmulticonstnode77;
+		UnOrderedMultiConstNode<unsigned int, unsigned long long>* CPPmulticonstnode78;
+		UnOrderedMultiConstNode<unsigned int, float>* CPPmulticonstnode79;
+		UnOrderedMultiConstNode<unsigned int, double>* CPPmulticonstnode80;
+		UnOrderedMultiConstNode<unsigned int, wchar_t>* CPPmulticonstnode81;
+		UnOrderedMultiConstNode<unsigned int, bool>* CPPmulticonstnode82;
+		UnOrderedMultiConstNode<unsigned int, std::wstring>* CPPmulticonstnode83;
+		UnOrderedMultiConstNode<unsigned int, __int64>* CPPmulticonstnode84;
+
+		UnOrderedMultiConstNode<long long, unsigned char>* CPPmulticonstnode85;
+		UnOrderedMultiConstNode<long long, char>* CPPmulticonstnode86;
+		UnOrderedMultiConstNode<long long, short>* CPPmulticonstnode87;
+		UnOrderedMultiConstNode<long long, unsigned short>* CPPmulticonstnode88;
+		UnOrderedMultiConstNode<long long, int>* CPPmulticonstnode89;
+		UnOrderedMultiConstNode<long long, unsigned int>* CPPmulticonstnode90;
+		UnOrderedMultiConstNode<long long, long long>* CPPmulticonstnode91;
+		UnOrderedMultiConstNode<long long, unsigned long long>* CPPmulticonstnode92;
+		UnOrderedMultiConstNode<long long, float>* CPPmulticonstnode93;
+		UnOrderedMultiConstNode<long long, double>* CPPmulticonstnode94;
+		UnOrderedMultiConstNode<long long, wchar_t>* CPPmulticonstnode95;
+		UnOrderedMultiConstNode<long long, bool>* CPPmulticonstnode96;
+		UnOrderedMultiConstNode<long long, std::wstring>* CPPmulticonstnode97;
+		UnOrderedMultiConstNode<long long, __int64>* CPPmulticonstnode98;
+
+		UnOrderedMultiConstNode<unsigned long long, unsigned char>* CPPmulticonstnode99;
+		UnOrderedMultiConstNode<unsigned long long, char>* CPPmulticonstnode100;
+		UnOrderedMultiConstNode<unsigned long long, short>* CPPmulticonstnode101;
+		UnOrderedMultiConstNode<unsigned long long, unsigned short>* CPPmulticonstnode102;
+		UnOrderedMultiConstNode<unsigned long long, int>* CPPmulticonstnode103;
+		UnOrderedMultiConstNode<unsigned long long, unsigned int>* CPPmulticonstnode104;
+		UnOrderedMultiConstNode<unsigned long long, long long>* CPPmulticonstnode105;
+		UnOrderedMultiConstNode<unsigned long long, unsigned long long>* CPPmulticonstnode106;
+		UnOrderedMultiConstNode<unsigned long long, float>* CPPmulticonstnode107;
+		UnOrderedMultiConstNode<unsigned long long, double>* CPPmulticonstnode108;
+		UnOrderedMultiConstNode<unsigned long long, wchar_t>* CPPmulticonstnode109;
+		UnOrderedMultiConstNode<unsigned long long, bool>* CPPmulticonstnode110;
+		UnOrderedMultiConstNode<unsigned long long, std::wstring>* CPPmulticonstnode111;
+		UnOrderedMultiConstNode<unsigned long long, __int64>* CPPmulticonstnode112;
+
+		UnOrderedMultiConstNode<float, unsigned char>* CPPmulticonstnode113;
+		UnOrderedMultiConstNode<float, char>* CPPmulticonstnode114;
+		UnOrderedMultiConstNode<float, short>* CPPmulticonstnode115;
+		UnOrderedMultiConstNode<float, unsigned short>* CPPmulticonstnode116;
+		UnOrderedMultiConstNode<float, int>* CPPmulticonstnode117;
+		UnOrderedMultiConstNode<float, unsigned int>* CPPmulticonstnode118;
+		UnOrderedMultiConstNode<float, long long>* CPPmulticonstnode119;
+		UnOrderedMultiConstNode<float, unsigned long long>* CPPmulticonstnode120;
+		UnOrderedMultiConstNode<float, float>* CPPmulticonstnode121;
+		UnOrderedMultiConstNode<float, double>* CPPmulticonstnode122;
+		UnOrderedMultiConstNode<float, wchar_t>* CPPmulticonstnode123;
+		UnOrderedMultiConstNode<float, bool>* CPPmulticonstnode124;
+		UnOrderedMultiConstNode<float, std::wstring>* CPPmulticonstnode125;
+		UnOrderedMultiConstNode<float, __int64>* CPPmulticonstnode126;
+
+		UnOrderedMultiConstNode<double, unsigned char>* CPPmulticonstnode127;
+		UnOrderedMultiConstNode<double, char>* CPPmulticonstnode128;
+		UnOrderedMultiConstNode<double, short>* CPPmulticonstnode129;
+		UnOrderedMultiConstNode<double, unsigned short>* CPPmulticonstnode130;
+		UnOrderedMultiConstNode<double, int>* CPPmulticonstnode131;
+		UnOrderedMultiConstNode<double, unsigned int>* CPPmulticonstnode132;
+		UnOrderedMultiConstNode<double, long long>* CPPmulticonstnode133;
+		UnOrderedMultiConstNode<double, unsigned long long>* CPPmulticonstnode134;
+		UnOrderedMultiConstNode<double, float>* CPPmulticonstnode135;
+		UnOrderedMultiConstNode<double, double>* CPPmulticonstnode136;
+		UnOrderedMultiConstNode<double, wchar_t>* CPPmulticonstnode137;
+		UnOrderedMultiConstNode<double, bool>* CPPmulticonstnode138;
+		UnOrderedMultiConstNode<double, std::wstring>* CPPmulticonstnode139;
+		UnOrderedMultiConstNode<double, __int64>* CPPmulticonstnode140;
+
+		UnOrderedMultiConstNode<wchar_t, unsigned char>* CPPmulticonstnode141;
+		UnOrderedMultiConstNode<wchar_t, char>* CPPmulticonstnode142;
+		UnOrderedMultiConstNode<wchar_t, short>* CPPmulticonstnode143;
+		UnOrderedMultiConstNode<wchar_t, unsigned short>* CPPmulticonstnode144;
+		UnOrderedMultiConstNode<wchar_t, int>* CPPmulticonstnode145;
+		UnOrderedMultiConstNode<wchar_t, unsigned int>* CPPmulticonstnode146;
+		UnOrderedMultiConstNode<wchar_t, long long>* CPPmulticonstnode147;
+		UnOrderedMultiConstNode<wchar_t, unsigned long long>* CPPmulticonstnode148;
+		UnOrderedMultiConstNode<wchar_t, float>* CPPmulticonstnode149;
+		UnOrderedMultiConstNode<wchar_t, double>* CPPmulticonstnode150;
+		UnOrderedMultiConstNode<wchar_t, wchar_t>* CPPmulticonstnode151;
+		UnOrderedMultiConstNode<wchar_t, bool>* CPPmulticonstnode152;
+		UnOrderedMultiConstNode<wchar_t, std::wstring>* CPPmulticonstnode153;
+		UnOrderedMultiConstNode<wchar_t, __int64>* CPPmulticonstnode154;
+
+		UnOrderedMultiConstNode<bool, unsigned char>* CPPmulticonstnode155;
+		UnOrderedMultiConstNode<bool, char>* CPPmulticonstnode156;
+		UnOrderedMultiConstNode<bool, short>* CPPmulticonstnode157;
+		UnOrderedMultiConstNode<bool, unsigned short>* CPPmulticonstnode158;
+		UnOrderedMultiConstNode<bool, int>* CPPmulticonstnode159;
+		UnOrderedMultiConstNode<bool, unsigned int>* CPPmulticonstnode160;
+		UnOrderedMultiConstNode<bool, long long>* CPPmulticonstnode161;
+		UnOrderedMultiConstNode<bool, unsigned long long>* CPPmulticonstnode162;
+		UnOrderedMultiConstNode<bool, float>* CPPmulticonstnode163;
+		UnOrderedMultiConstNode<bool, double>* CPPmulticonstnode164;
+		UnOrderedMultiConstNode<bool, wchar_t>* CPPmulticonstnode165;
+		UnOrderedMultiConstNode<bool, bool>* CPPmulticonstnode166;
+		UnOrderedMultiConstNode<bool, std::wstring>* CPPmulticonstnode167;
+		UnOrderedMultiConstNode<bool, __int64>* CPPmulticonstnode168;
+
+		UnOrderedMultiConstNode<std::wstring, unsigned char>* CPPmulticonstnode169;
+		UnOrderedMultiConstNode<std::wstring, char>* CPPmulticonstnode170;
+		UnOrderedMultiConstNode<std::wstring, short>* CPPmulticonstnode171;
+		UnOrderedMultiConstNode<std::wstring, unsigned short>* CPPmulticonstnode172;
+		UnOrderedMultiConstNode<std::wstring, int>* CPPmulticonstnode173;
+		UnOrderedMultiConstNode<std::wstring, unsigned int>* CPPmulticonstnode174;
+		UnOrderedMultiConstNode<std::wstring, long long>* CPPmulticonstnode175;
+		UnOrderedMultiConstNode<std::wstring, unsigned long long>* CPPmulticonstnode176;
+		UnOrderedMultiConstNode<std::wstring, float>* CPPmulticonstnode177;
+		UnOrderedMultiConstNode<std::wstring, double>* CPPmulticonstnode178;
+		UnOrderedMultiConstNode<std::wstring, wchar_t>* CPPmulticonstnode179;
+		UnOrderedMultiConstNode<std::wstring, bool>* CPPmulticonstnode180;
+		UnOrderedMultiConstNode<std::wstring, std::wstring>* CPPmulticonstnode181;
+		UnOrderedMultiConstNode<std::wstring, __int64>* CPPmulticonstnode182;
+
+		UnOrderedMultiConstNode<__int64, unsigned char>* CPPmulticonstnode183;
+		UnOrderedMultiConstNode<__int64, char>* CPPmulticonstnode184;
+		UnOrderedMultiConstNode<__int64, short>* CPPmulticonstnode185;
+		UnOrderedMultiConstNode<__int64, unsigned short>* CPPmulticonstnode186;
+		UnOrderedMultiConstNode<__int64, int>* CPPmulticonstnode187;
+		UnOrderedMultiConstNode<__int64, unsigned int>* CPPmulticonstnode188;
+		UnOrderedMultiConstNode<__int64, long long>* CPPmulticonstnode189;
+		UnOrderedMultiConstNode<__int64, unsigned long long>* CPPmulticonstnode190;
+		UnOrderedMultiConstNode<__int64, float>* CPPmulticonstnode191;
+		UnOrderedMultiConstNode<__int64, double>* CPPmulticonstnode192;
+		UnOrderedMultiConstNode<__int64, wchar_t>* CPPmulticonstnode193;
+		UnOrderedMultiConstNode<__int64, bool>* CPPmulticonstnode194;
+		UnOrderedMultiConstNode<__int64, std::wstring>* CPPmulticonstnode195;
+		UnOrderedMultiConstNode<__int64, __int64>* CPPmulticonstnode196;
+	};
+}
+

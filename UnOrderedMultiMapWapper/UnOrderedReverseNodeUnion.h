@@ -1,0 +1,218 @@
+#pragma once
+namespace Utilities
+{
+	union UnOrderedReverseNodeUnion
+	{
+		void* ptrToDelete = nullptr;
+		UnOrderedReverseNode<unsigned char, unsigned char>* CPPreversenode1;
+		UnOrderedReverseNode<unsigned char, char>* CPPreversenode2;
+		UnOrderedReverseNode<unsigned char, short>* CPPreversenode3;
+		UnOrderedReverseNode<unsigned char, unsigned short>* CPPreversenode4;
+		UnOrderedReverseNode<unsigned char, int>* CPPreversenode5;
+		UnOrderedReverseNode<unsigned char, unsigned int>* CPPreversenode6;
+		UnOrderedReverseNode<unsigned char, long long>* CPPreversenode7;
+		UnOrderedReverseNode<unsigned char, unsigned long long>* CPPreversenode8;
+		UnOrderedReverseNode<unsigned char, float>* CPPreversenode9;
+		UnOrderedReverseNode<unsigned char, double>* CPPreversenode10;
+		UnOrderedReverseNode<unsigned char, wchar_t>* CPPreversenode11;
+		UnOrderedReverseNode<unsigned char, bool>* CPPreversenode12;
+		UnOrderedReverseNode<unsigned char, std::wstring>* CPPreversenode13;
+		UnOrderedReverseNode<unsigned char, __int64>* CPPreversenode14;
+
+		UnOrderedReverseNode<char, unsigned char>* CPPreversenode15;
+		UnOrderedReverseNode<char, char>* CPPreversenode16;
+		UnOrderedReverseNode<char, short>* CPPreversenode17;
+		UnOrderedReverseNode<char, unsigned short>* CPPreversenode18;
+		UnOrderedReverseNode<char, int>* CPPreversenode19;
+		UnOrderedReverseNode<char, unsigned int>* CPPreversenode20;
+		UnOrderedReverseNode<char, long long>* CPPreversenode21;
+		UnOrderedReverseNode<char, unsigned long long>* CPPreversenode22;
+		UnOrderedReverseNode<char, float>* CPPreversenode23;
+		UnOrderedReverseNode<char, double>* CPPreversenode24;
+		UnOrderedReverseNode<char, wchar_t>* CPPreversenode25;
+		UnOrderedReverseNode<char, bool>* CPPreversenode26;
+		UnOrderedReverseNode<char, std::wstring>* CPPreversenode27;
+		UnOrderedReverseNode<char, __int64>* CPPreversenode28;
+
+		UnOrderedReverseNode<short, unsigned char>* CPPreversenode29;
+		UnOrderedReverseNode<short, char>* CPPreversenode30;
+		UnOrderedReverseNode<short, short>* CPPreversenode31;
+		UnOrderedReverseNode<short, unsigned short>* CPPreversenode32;
+		UnOrderedReverseNode<short, int>* CPPreversenode33;
+		UnOrderedReverseNode<short, unsigned int>* CPPreversenode34;
+		UnOrderedReverseNode<short, long long>* CPPreversenode35;
+		UnOrderedReverseNode<short, unsigned long long>* CPPreversenode36;
+		UnOrderedReverseNode<short, float>* CPPreversenode37;
+		UnOrderedReverseNode<short, double>* CPPreversenode38;
+		UnOrderedReverseNode<short, wchar_t>* CPPreversenode39;
+		UnOrderedReverseNode<short, bool>* CPPreversenode40;
+		UnOrderedReverseNode<short, std::wstring>* CPPreversenode41;
+		UnOrderedReverseNode<short, __int64>* CPPreversenode42;
+
+		UnOrderedReverseNode<unsigned short, unsigned char>* CPPreversenode43;
+		UnOrderedReverseNode<unsigned short, char>* CPPreversenode44;
+		UnOrderedReverseNode<unsigned short, short>* CPPreversenode45;
+		UnOrderedReverseNode<unsigned short, unsigned short>* CPPreversenode46;
+		UnOrderedReverseNode<unsigned short, int>* CPPreversenode47;
+		UnOrderedReverseNode<unsigned short, unsigned int>* CPPreversenode48;
+		UnOrderedReverseNode<unsigned short, long long>* CPPreversenode49;
+		UnOrderedReverseNode<unsigned short, unsigned long long>* CPPreversenode50;
+		UnOrderedReverseNode<unsigned short, float>* CPPreversenode51;
+		UnOrderedReverseNode<unsigned short, double>* CPPreversenode52;
+		UnOrderedReverseNode<unsigned short, wchar_t>* CPPreversenode53;
+		UnOrderedReverseNode<unsigned short, bool>* CPPreversenode54;
+		UnOrderedReverseNode<unsigned short, std::wstring>* CPPreversenode55;
+		UnOrderedReverseNode<unsigned short, __int64>* CPPreversenode56;
+
+		UnOrderedReverseNode<int, unsigned char>* CPPreversenode57;
+		UnOrderedReverseNode<int, char>* CPPreversenode58;
+		UnOrderedReverseNode<int, short>* CPPreversenode59;
+		UnOrderedReverseNode<int, unsigned short>* CPPreversenode60;
+		UnOrderedReverseNode<int, int>* CPPreversenode61;
+		UnOrderedReverseNode<int, unsigned int>* CPPreversenode62;
+		UnOrderedReverseNode<int, long long>* CPPreversenode63;
+		UnOrderedReverseNode<int, unsigned long long>* CPPreversenode64;
+		UnOrderedReverseNode<int, float>* CPPreversenode65;
+		UnOrderedReverseNode<int, double>* CPPreversenode66;
+		UnOrderedReverseNode<int, wchar_t>* CPPreversenode67;
+		UnOrderedReverseNode<int, bool>* CPPreversenode68;
+		UnOrderedReverseNode<int, std::wstring>* CPPreversenode69;
+		UnOrderedReverseNode<int, __int64>* CPPreversenode70;
+
+		UnOrderedReverseNode<unsigned int, unsigned char>* CPPreversenode71;
+		UnOrderedReverseNode<unsigned int, char>* CPPreversenode72;
+		UnOrderedReverseNode<unsigned int, short>* CPPreversenode73;
+		UnOrderedReverseNode<unsigned int, unsigned short>* CPPreversenode74;
+		UnOrderedReverseNode<unsigned int, int>* CPPreversenode75;
+		UnOrderedReverseNode<unsigned int, unsigned int>* CPPreversenode76;
+		UnOrderedReverseNode<unsigned int, long long>* CPPreversenode77;
+		UnOrderedReverseNode<unsigned int, unsigned long long>* CPPreversenode78;
+		UnOrderedReverseNode<unsigned int, float>* CPPreversenode79;
+		UnOrderedReverseNode<unsigned int, double>* CPPreversenode80;
+		UnOrderedReverseNode<unsigned int, wchar_t>* CPPreversenode81;
+		UnOrderedReverseNode<unsigned int, bool>* CPPreversenode82;
+		UnOrderedReverseNode<unsigned int, std::wstring>* CPPreversenode83;
+		UnOrderedReverseNode<unsigned int, __int64>* CPPreversenode84;
+
+		UnOrderedReverseNode<long long, unsigned char>* CPPreversenode85;
+		UnOrderedReverseNode<long long, char>* CPPreversenode86;
+		UnOrderedReverseNode<long long, short>* CPPreversenode87;
+		UnOrderedReverseNode<long long, unsigned short>* CPPreversenode88;
+		UnOrderedReverseNode<long long, int>* CPPreversenode89;
+		UnOrderedReverseNode<long long, unsigned int>* CPPreversenode90;
+		UnOrderedReverseNode<long long, long long>* CPPreversenode91;
+		UnOrderedReverseNode<long long, unsigned long long>* CPPreversenode92;
+		UnOrderedReverseNode<long long, float>* CPPreversenode93;
+		UnOrderedReverseNode<long long, double>* CPPreversenode94;
+		UnOrderedReverseNode<long long, wchar_t>* CPPreversenode95;
+		UnOrderedReverseNode<long long, bool>* CPPreversenode96;
+		UnOrderedReverseNode<long long, std::wstring>* CPPreversenode97;
+		UnOrderedReverseNode<long long, __int64>* CPPreversenode98;
+
+		UnOrderedReverseNode<unsigned long long, unsigned char>* CPPreversenode99;
+		UnOrderedReverseNode<unsigned long long, char>* CPPreversenode100;
+		UnOrderedReverseNode<unsigned long long, short>* CPPreversenode101;
+		UnOrderedReverseNode<unsigned long long, unsigned short>* CPPreversenode102;
+		UnOrderedReverseNode<unsigned long long, int>* CPPreversenode103;
+		UnOrderedReverseNode<unsigned long long, unsigned int>* CPPreversenode104;
+		UnOrderedReverseNode<unsigned long long, long long>* CPPreversenode105;
+		UnOrderedReverseNode<unsigned long long, unsigned long long>* CPPreversenode106;
+		UnOrderedReverseNode<unsigned long long, float>* CPPreversenode107;
+		UnOrderedReverseNode<unsigned long long, double>* CPPreversenode108;
+		UnOrderedReverseNode<unsigned long long, wchar_t>* CPPreversenode109;
+		UnOrderedReverseNode<unsigned long long, bool>* CPPreversenode110;
+		UnOrderedReverseNode<unsigned long long, std::wstring>* CPPreversenode111;
+		UnOrderedReverseNode<unsigned long long, __int64>* CPPreversenode112;
+
+		UnOrderedReverseNode<float, unsigned char>* CPPreversenode113;
+		UnOrderedReverseNode<float, char>* CPPreversenode114;
+		UnOrderedReverseNode<float, short>* CPPreversenode115;
+		UnOrderedReverseNode<float, unsigned short>* CPPreversenode116;
+		UnOrderedReverseNode<float, int>* CPPreversenode117;
+		UnOrderedReverseNode<float, unsigned int>* CPPreversenode118;
+		UnOrderedReverseNode<float, long long>* CPPreversenode119;
+		UnOrderedReverseNode<float, unsigned long long>* CPPreversenode120;
+		UnOrderedReverseNode<float, float>* CPPreversenode121;
+		UnOrderedReverseNode<float, double>* CPPreversenode122;
+		UnOrderedReverseNode<float, wchar_t>* CPPreversenode123;
+		UnOrderedReverseNode<float, bool>* CPPreversenode124;
+		UnOrderedReverseNode<float, std::wstring>* CPPreversenode125;
+		UnOrderedReverseNode<float, __int64>* CPPreversenode126;
+
+		UnOrderedReverseNode<double, unsigned char>* CPPreversenode127;
+		UnOrderedReverseNode<double, char>* CPPreversenode128;
+		UnOrderedReverseNode<double, short>* CPPreversenode129;
+		UnOrderedReverseNode<double, unsigned short>* CPPreversenode130;
+		UnOrderedReverseNode<double, int>* CPPreversenode131;
+		UnOrderedReverseNode<double, unsigned int>* CPPreversenode132;
+		UnOrderedReverseNode<double, long long>* CPPreversenode133;
+		UnOrderedReverseNode<double, unsigned long long>* CPPreversenode134;
+		UnOrderedReverseNode<double, float>* CPPreversenode135;
+		UnOrderedReverseNode<double, double>* CPPreversenode136;
+		UnOrderedReverseNode<double, wchar_t>* CPPreversenode137;
+		UnOrderedReverseNode<double, bool>* CPPreversenode138;
+		UnOrderedReverseNode<double, std::wstring>* CPPreversenode139;
+		UnOrderedReverseNode<double, __int64>* CPPreversenode140;
+
+		UnOrderedReverseNode<wchar_t, unsigned char>* CPPreversenode141;
+		UnOrderedReverseNode<wchar_t, char>* CPPreversenode142;
+		UnOrderedReverseNode<wchar_t, short>* CPPreversenode143;
+		UnOrderedReverseNode<wchar_t, unsigned short>* CPPreversenode144;
+		UnOrderedReverseNode<wchar_t, int>* CPPreversenode145;
+		UnOrderedReverseNode<wchar_t, unsigned int>* CPPreversenode146;
+		UnOrderedReverseNode<wchar_t, long long>* CPPreversenode147;
+		UnOrderedReverseNode<wchar_t, unsigned long long>* CPPreversenode148;
+		UnOrderedReverseNode<wchar_t, float>* CPPreversenode149;
+		UnOrderedReverseNode<wchar_t, double>* CPPreversenode150;
+		UnOrderedReverseNode<wchar_t, wchar_t>* CPPreversenode151;
+		UnOrderedReverseNode<wchar_t, bool>* CPPreversenode152;
+		UnOrderedReverseNode<wchar_t, std::wstring>* CPPreversenode153;
+		UnOrderedReverseNode<wchar_t, __int64>* CPPreversenode154;
+
+		UnOrderedReverseNode<bool, unsigned char>* CPPreversenode155;
+		UnOrderedReverseNode<bool, char>* CPPreversenode156;
+		UnOrderedReverseNode<bool, short>* CPPreversenode157;
+		UnOrderedReverseNode<bool, unsigned short>* CPPreversenode158;
+		UnOrderedReverseNode<bool, int>* CPPreversenode159;
+		UnOrderedReverseNode<bool, unsigned int>* CPPreversenode160;
+		UnOrderedReverseNode<bool, long long>* CPPreversenode161;
+		UnOrderedReverseNode<bool, unsigned long long>* CPPreversenode162;
+		UnOrderedReverseNode<bool, float>* CPPreversenode163;
+		UnOrderedReverseNode<bool, double>* CPPreversenode164;
+		UnOrderedReverseNode<bool, wchar_t>* CPPreversenode165;
+		UnOrderedReverseNode<bool, bool>* CPPreversenode166;
+		UnOrderedReverseNode<bool, std::wstring>* CPPreversenode167;
+		UnOrderedReverseNode<bool, __int64>* CPPreversenode168;
+
+		UnOrderedReverseNode<std::wstring, unsigned char>* CPPreversenode169;
+		UnOrderedReverseNode<std::wstring, char>* CPPreversenode170;
+		UnOrderedReverseNode<std::wstring, short>* CPPreversenode171;
+		UnOrderedReverseNode<std::wstring, unsigned short>* CPPreversenode172;
+		UnOrderedReverseNode<std::wstring, int>* CPPreversenode173;
+		UnOrderedReverseNode<std::wstring, unsigned int>* CPPreversenode174;
+		UnOrderedReverseNode<std::wstring, long long>* CPPreversenode175;
+		UnOrderedReverseNode<std::wstring, unsigned long long>* CPPreversenode176;
+		UnOrderedReverseNode<std::wstring, float>* CPPreversenode177;
+		UnOrderedReverseNode<std::wstring, double>* CPPreversenode178;
+		UnOrderedReverseNode<std::wstring, wchar_t>* CPPreversenode179;
+		UnOrderedReverseNode<std::wstring, bool>* CPPreversenode180;
+		UnOrderedReverseNode<std::wstring, std::wstring>* CPPreversenode181;
+		UnOrderedReverseNode<std::wstring, __int64>* CPPreversenode182;
+
+		UnOrderedReverseNode<__int64, unsigned char>* CPPreversenode183;
+		UnOrderedReverseNode<__int64, char>* CPPreversenode184;
+		UnOrderedReverseNode<__int64, short>* CPPreversenode185;
+		UnOrderedReverseNode<__int64, unsigned short>* CPPreversenode186;
+		UnOrderedReverseNode<__int64, int>* CPPreversenode187;
+		UnOrderedReverseNode<__int64, unsigned int>* CPPreversenode188;
+		UnOrderedReverseNode<__int64, long long>* CPPreversenode189;
+		UnOrderedReverseNode<__int64, unsigned long long>* CPPreversenode190;
+		UnOrderedReverseNode<__int64, float>* CPPreversenode191;
+		UnOrderedReverseNode<__int64, double>* CPPreversenode192;
+		UnOrderedReverseNode<__int64, wchar_t>* CPPreversenode193;
+		UnOrderedReverseNode<__int64, bool>* CPPreversenode194;
+		UnOrderedReverseNode<__int64, std::wstring>* CPPreversenode195;
+		UnOrderedReverseNode<__int64, __int64>* CPPreversenode196;
+	};
+}
+

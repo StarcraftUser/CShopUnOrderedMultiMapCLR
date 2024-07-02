@@ -318,6 +318,11 @@ protected:
 	UnOrderedReverseNode<Key, Value> RIterNode;
 	//MultiConstNode<Key, Value> multiConstNode;
 public:
+	UnOrderedMultiMap() = default;
+	UnOrderedMultiMap(UnOrderedMultiMap& other)
+	{
+		multimapObject.Multimap = other.multimapObject.Multimap;
+	}
 	virtual void clear()
 	{
 		multimapObject.Multimap.clear();

@@ -136,6 +136,7 @@
     <ClCompile Include="UnOrderedCReverseNodeUnion.cpp" />
     <ClCompile Include="UnOrderedMultiConstNodeUnion.cpp" />
     <ClCompile Include="UnOrderedMultiMapContains.cpp" />
+    <ClCompile Include="UnOrderedMultiMapCopyConstructor.cpp" />
     <ClCompile Include="UnOrderedMultiMapMaxSize.cpp" />
     <ClCompile Include="UnOrderedMultiMapSwap.cpp" />
     <ClCompile Include="UnOrderedMultiMapUnion.cpp" />

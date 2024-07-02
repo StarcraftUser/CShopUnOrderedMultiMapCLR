@@ -188,6 +188,7 @@ namespace UnOrderedMultiMapWapper
 
 	public :
 		CSharpUnOrderedMultiMap();
+		CSharpUnOrderedMultiMap(CSharpUnOrderedMultiMap<Key, Value>^ other);
 		/*virtual*/ ~CSharpUnOrderedMultiMap();
 		/*virtual*/ void clear();
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ emplace(Key key, Value value);

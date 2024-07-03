@@ -12,8 +12,6 @@ Because direct conversion was not possible, I had to use a workaround.
 
 I wrote the code with the mindset of "making do with what I have."
 
-When instantiating variables, templates and generics determine the types of the key-value pairs.
-
 The workaround involved pre-declaring all types that could be used as template parameters in C++, and implementing the use of the appropriate std::unordered_multimap based on the generic key and value types.
 
 This workaround resulted in significantly long code.
@@ -59,8 +57,6 @@ C++/CLI를 이용하여 std::unordered_multimap을 C#에서 사용할 수 있게
 직접 변환이 안되기 때문에 우회하는 방법을 사용하였습니다.
 
 이가 없으면 잇몸으로 씹는다는 생각으로 코드를 작성하게 되었습니다.
-
-변수를 인스턴스화하게 되면 템플릿과 제네릭이 키-값의 타입을 정하게 됩니다.
 
 어떤 식으로 우회를 했냐 하면 C++의 키-값 템플릿에 들어갈 수 있는 타입의 종류를 미리 모두 선언하였고, 제네릭의 키, 값 타입에 따라 호환되는 종류의 std::unordered_multimap을 사용하도록 구현하였습니다.
 

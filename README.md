@@ -34,6 +34,8 @@ I stored classes and structures in a dictionary and used the index in the unorde
 
 Unfortunately, it seems to be incompatible with Unity.
 
+It can be used when creating a simple lottery-style application as a C# Windows Forms app
+
 If there are any mistakes or good ideas, please let me know.
 
 This code is embarrassing to publish.
@@ -79,6 +81,8 @@ C#에서 포인터 주소값을 저장하려고 하였으나, 주소 검출에 �
 클래스와 구조체를 딕셔너리에 저장하고 인덱스를 unordered_multimap에 저장하는 방식으로 우회하여 구현하였습니다.
 
 안타깝게도 유니티와는 호환이 안되는 것 같습니다.
+
+C# Windows Forms 앱으로 간단한 추첨기 같은 파일을 만들 때, 사용 가능할 것으로 판단됩니다.
 
 잘못된 부분이 있거나 좋은 아이디어가 있으시다면 알려주시면 감사하겠습니다.
 

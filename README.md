@@ -32,6 +32,8 @@ C#에서 포인터 주소값을 저장하려고 하였으나, 주소 검출에 �
 
 클래스와 구조체를 딕셔너리에 저장하고 인덱스를 unordered_multimap에 저장하는 방식으로 우회하여 구현하였습니다.
 
+안타깝게도 유니티와는 호환이 안되는 것 같습니다.
+
 잘못된 부분이 있거나 좋은 아이디어가 있으시다면 알려주시면 감사하겠습니다.
 
 코드를 공개하기에는 부끄러운 코드입니다.
@@ -75,6 +77,8 @@ I tried to store the pointer address in C#, but address detection failed.
 Despite various attempts, it seemed beyond my ability, so I found another workaround.
 
 I stored classes and structures in a dictionary and used the index in the unordered_multimap to implement the solution.
+
+Unfortunately, it seems to be incompatible with Unity.
 
 If there are any mistakes or good ideas, please let me know.
 

@@ -34,7 +34,7 @@ I stored classes and structures in a dictionary and used the index in the unorde
 
 Unfortunately, it seems to be incompatible with Unity.
 
-It can be used when creating a simple lottery-style application as a C# Windows Forms app
+It can be used when creating a simple lottery-style application as a C# Windows Forms app.
 
 If there are any mistakes or good ideas, please let me know.
 

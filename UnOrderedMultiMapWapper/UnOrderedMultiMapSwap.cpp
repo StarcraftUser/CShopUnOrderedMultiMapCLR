@@ -213,6 +213,12 @@ void UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::Swap(UnOrdere
 		SWAP_CASE(196)
 	}
 
+	{
+		auto temp = nDictionaryCount;
+		nDictionaryCount = OtherCSharpUnOrderedMultiMap->nDictionaryCount;
+		OtherCSharpUnOrderedMultiMap->nDictionaryCount = temp;
+	}
+
 	if (gKeyClassDictionary && OtherCSharpUnOrderedMultiMap->gKeyClassDictionary)
 	{
 		auto temp = gKeyClassDictionary;

@@ -4,6 +4,7 @@ generic<typename Key, typename Value>
 inline UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>::CShorpUnOrderedMultiConstNode()
 {
 	gIntKeyClassDictionary = nullptr;
+	gValueClassDictionary = nullptr;
 	multiConstNodeUnion = new Utilities::UnOrderedMultiConstNodeUnion();
 	Type^ keyType = Key::typeid;
 	Type^ valueType = Value::typeid;
@@ -2516,88 +2517,87 @@ Value UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>::GetVal
 		managedValue = gcnew String(multiConstNodeUnion->CPPmulticonstnode195->GetValue().c_str());
 		return safe_cast<Value>(managedValue);
 	case 14:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode14->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode14->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 28:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode28->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode28->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 42:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode42->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode42->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 56:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode56->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode56->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 70:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode70->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode70->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 84:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode84->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode84->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 98:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode98->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode98->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 112:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode112->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode112->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 126:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode126->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode126->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 140:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode140->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode140->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 154:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode154->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode154->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 168:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode168->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode168->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 182:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode182->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode182->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 196:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(multiConstNodeUnion->CPPmulticonstnode196->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(multiConstNodeUnion->CPPmulticonstnode196->GetValue(), objtarget))
 		{
 			return objtarget;
-			UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->Count;
 		}
 		else break;
 	}
@@ -4089,6 +4089,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>^ UnOrderedMul
 	if (thisObj->nKeyValueType != other->nKeyValueType) return thisObj;
 
 	if (other->gIntKeyClassDictionary) thisObj->gIntKeyClassDictionary = other->gIntKeyClassDictionary;
+	if (other->gValueClassDictionary) thisObj->gValueClassDictionary = other->gValueClassDictionary;
 
 	switch (thisObj->nKeyValueType)
 	{
@@ -4513,6 +4514,13 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>::SetIntK
 {
 	if (ClassDictionary == nullptr) return;
 	gIntKeyClassDictionary = ClassDictionary;
+}
+
+generic<typename Key, typename Value>
+void UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>::SetValueClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Value>^ ClassDictionary)
+{
+	if (gValueClassDictionary == nullptr) return;
+	gValueClassDictionary = ClassDictionary;
 }
 
 //generic<typename Key, typename Value>

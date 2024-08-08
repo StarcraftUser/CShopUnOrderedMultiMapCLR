@@ -14,6 +14,10 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::~CSharpUnOrderedMu
 		gIntKeyClassDictionary->Clear();
 		gKeyClassDictionary->Clear();
 	}
+	if (gValueClassDictionary)
+	{
+		gValueClassDictionary->Clear();
+	}
 }
 
 

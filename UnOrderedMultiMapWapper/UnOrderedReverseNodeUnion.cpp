@@ -4,6 +4,7 @@ generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::CShorpUnOrderedReverseNode()
 {
 	gIntKeyClassDictionary = nullptr;
+	gValueClassDictionary = nullptr;
 	reverseNodeUnion = new Utilities::UnOrderedReverseNodeUnion();
 	Type^ keyType = Key::typeid;
 	Type^ valueType = Value::typeid;
@@ -2514,85 +2515,85 @@ Value UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::GetValue(
 		managedValue = gcnew String(reverseNodeUnion->CPPreversenode195->GetValue().c_str());
 		return safe_cast<Value>(managedValue);
 	case 14:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode14->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode14->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 28:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode28->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode28->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 42:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode42->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode42->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 56:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode56->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode56->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 70:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode70->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode70->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 84:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode84->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode84->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 98:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode98->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode98->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 112:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode112->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode112->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 126:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode126->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode126->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 140:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode140->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode140->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 154:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode154->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode154->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 168:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode168->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode168->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 182:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode182->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode182->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
 		else break;
 	case 196:
-		if (UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::ValueClassDictionary()->TryGetValue(reverseNodeUnion->CPPreversenode196->GetValue(), objtarget))
+		if (gValueClassDictionary != nullptr && gValueClassDictionary->TryGetValue(reverseNodeUnion->CPPreversenode196->GetValue(), objtarget))
 		{
 			return objtarget;
 		}
@@ -4085,6 +4086,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>^ UnOrderedMultiM
 
 	if (thisObj->nKeyValueType != other->nKeyValueType) return thisObj;
 	if (other->gIntKeyClassDictionary) thisObj->gIntKeyClassDictionary = other->gIntKeyClassDictionary;
+	if (other->gValueClassDictionary) thisObj->gValueClassDictionary = other->gValueClassDictionary;
 	switch (thisObj->nKeyValueType)
 	{
 	case 0: default:
@@ -4508,6 +4510,13 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::SetIntKeyC
 {
 	if (ClassDictionary == nullptr) return;
 	gIntKeyClassDictionary = ClassDictionary;
+}
+
+generic<typename Key, typename Value>
+void UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::SetValueClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Value>^ ClassDictionary)
+{
+	if (gValueClassDictionary == nullptr) return;
+	gValueClassDictionary = ClassDictionary;
 }
 
 //generic<typename Key, typename Value>

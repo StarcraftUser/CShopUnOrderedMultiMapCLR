@@ -10,6 +10,7 @@ namespace UnOrderedMultiMapWapper
 	private:
 		Utilities::UnOrderedMultiNodeUnion* multiNodeUnion;
 		System::Collections::Generic::Dictionary<System::Int64, Key>^ gIntKeyClassDictionary;
+		System::Collections::Generic::Dictionary<System::Int64, Value>^ gValueClassDictionary;
 		int nKeyValueType = 0;
 		int isInitialized = 0;
 		/*virtual*/ void Next();
@@ -30,6 +31,7 @@ namespace UnOrderedMultiMapWapper
 			return this->isInitialized;
 		}
 		/*virtual*/ void SetIntKeyClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Key>^ ClassDictionary);
+		/*virtual*/ void SetValueClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Value>^ ClassDictionary);
 	public:
 		CShorpUnOrderedMultiNode();
 		/*virtual*/ ~CShorpUnOrderedMultiNode();
@@ -53,6 +55,7 @@ namespace UnOrderedMultiMapWapper
 	private:
 		Utilities::UnOrderedMultiConstNodeUnion* multiConstNodeUnion;
 		System::Collections::Generic::Dictionary<System::Int64, Key>^ gIntKeyClassDictionary;
+		System::Collections::Generic::Dictionary<System::Int64, Value>^ gValueClassDictionary;
 		int nKeyValueType = 0;
 		int isInitialized = 0;
 		/*virtual*/ void Next();
@@ -73,6 +76,7 @@ namespace UnOrderedMultiMapWapper
 			return this->isInitialized;
 		}
 		/*virtual*/ void SetIntKeyClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Key>^ ClassDictionary);
+		/*virtual*/ void SetValueClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Value>^ ClassDictionary);
 	public:
 		CShorpUnOrderedMultiConstNode();
 		/*virtual*/ ~CShorpUnOrderedMultiConstNode();
@@ -94,6 +98,7 @@ namespace UnOrderedMultiMapWapper
 	private:
 		Utilities::UnOrderedReverseNodeUnion* reverseNodeUnion;
 		System::Collections::Generic::Dictionary<System::Int64, Key>^ gIntKeyClassDictionary;
+		System::Collections::Generic::Dictionary<System::Int64, Value>^ gValueClassDictionary;
 		int nKeyValueType = 0;
 		int isInitialized = 0;
 		/*virtual*/ void Next();
@@ -114,6 +119,7 @@ namespace UnOrderedMultiMapWapper
 			return this->isInitialized;
 		}
 		/*virtual*/ void SetIntKeyClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Key>^ ClassDictionary);
+		/*virtual*/ void SetValueClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Value>^ ClassDictionary);
 	public:
 		CShorpUnOrderedReverseNode();
 		/*virtual*/ ~CShorpUnOrderedReverseNode();
@@ -136,6 +142,7 @@ namespace UnOrderedMultiMapWapper
 	private:
 		Utilities::UnOrderedCReverseNodeUnion* creverseNodeUnion;
 		System::Collections::Generic::Dictionary<System::Int64, Key>^ gIntKeyClassDictionary;
+		System::Collections::Generic::Dictionary<System::Int64, Value>^ gValueClassDictionary;
 		int nKeyValueType = 0;
 		int isInitialized = 0;
 		/*virtual*/ void Next();
@@ -156,6 +163,7 @@ namespace UnOrderedMultiMapWapper
 			return this->isInitialized;
 		}
 		/*virtual*/ void SetIntKeyClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Key>^ ClassDictionary);
+		/*virtual*/ void SetValueClassDictionary(System::Collections::Generic::Dictionary<System::Int64, Value>^ ClassDictionary);
 	public:
 		CShorpUnOrderedCReverseNode();
 		/*virtual*/ ~CShorpUnOrderedCReverseNode();
@@ -181,9 +189,9 @@ namespace UnOrderedMultiMapWapper
 		CShorpUnOrderedReverseNode<Key, Value>^ RIterNode;
 		System::Collections::Generic::Dictionary<Key, System::Int64>^ gKeyClassDictionary = nullptr;
 		System::Collections::Generic::Dictionary<System::Int64, Key>^ gIntKeyClassDictionary = nullptr;
-		static System::Collections::Generic::Dictionary<System::Int64, Value>^ gValueClassDictionary = nullptr;
-		static System::Int64 nDictionaryValueCount = 0;
-		System::Int64 nDictionaryKeyCount = 0;
+		System::Collections::Generic::Dictionary<System::Int64, Value>^ gValueClassDictionary = nullptr;
+		//static System::Int64 nDictionaryValueCount = 0;
+		System::Int64 nDictionaryCount = 0;
 		int nKeyValueType = 0;
 
 	public :
@@ -229,7 +237,7 @@ namespace UnOrderedMultiMapWapper
 			return gcnew CSharpUnOrderedMultiMapEnumerator(this);
 		}
 	internal:
-		static System::Collections::Generic::Dictionary<System::Int64, Value>^ ValueClassDictionary();
+		System::Collections::Generic::Dictionary<System::Int64, Value>^ ValueClassDictionary();
 		System::Collections::Generic::Dictionary<System::Int64, Key>^ KeyClassDictionary();
 	private:
 		ref class CSharpUnOrderedMultiMapEnumerator : public System::Collections::IEnumerator

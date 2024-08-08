@@ -6,7 +6,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 {
 	if (Object::ReferenceEquals(other, nullptr)) return;
 
-	nDictionaryKeyCount = other->nDictionaryKeyCount;
+	nDictionaryCount = other->nDictionaryCount;
 
 	multimapUnion = new Utilities::UnOrderedMultiMapUnion();
 	multiNode = gcnew CShorpUnOrderedMultiNode<Key, Value>();
@@ -18,7 +18,6 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 	int ValueNum = 0;
 	bool bgClassKeyDictionaryInit = false;
 	bool bgClassValueDictionaryInit = false;
-	bool bCopyKeyValue = false;
 	if (keyType->Equals(System::Byte::typeid))
 	{
 		KeyNum = 0;
@@ -211,8 +210,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap13 = new UnOrderedMultiMap<unsigned char, std::wstring>(*other->multimapUnion->CPPmultimap13);
 		break;
 	case 14:
-		multimapUnion->CPPmultimap14 = new UnOrderedMultiMap<unsigned char, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap14 = new UnOrderedMultiMap<unsigned char, __int64>(*other->multimapUnion->CPPmultimap14);
 		break;
 	case 15:
 		multimapUnion->CPPmultimap15 = new UnOrderedMultiMap<char, unsigned char>(*other->multimapUnion->CPPmultimap15);
@@ -254,8 +252,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap27 = new UnOrderedMultiMap<char, std::wstring>(*other->multimapUnion->CPPmultimap27);
 		break;
 	case 28:
-		multimapUnion->CPPmultimap28 = new UnOrderedMultiMap<char, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap28 = new UnOrderedMultiMap<char, __int64>(*other->multimapUnion->CPPmultimap28);
 		break;
 	case 29:
 		multimapUnion->CPPmultimap29 = new UnOrderedMultiMap<short, unsigned char>(*other->multimapUnion->CPPmultimap29);
@@ -297,8 +294,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap41 = new UnOrderedMultiMap<short, std::wstring>(*other->multimapUnion->CPPmultimap41);
 		break;
 	case 42:
-		multimapUnion->CPPmultimap42 = new UnOrderedMultiMap<short, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap42 = new UnOrderedMultiMap<short, __int64>(*other->multimapUnion->CPPmultimap42);
 		break;
 	case 43:
 		multimapUnion->CPPmultimap43 = new UnOrderedMultiMap<unsigned short, unsigned char>(*other->multimapUnion->CPPmultimap43);
@@ -340,8 +336,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap55 = new UnOrderedMultiMap<unsigned short, std::wstring>(*other->multimapUnion->CPPmultimap55);
 		break;
 	case 56:
-		multimapUnion->CPPmultimap56 = new UnOrderedMultiMap<unsigned short, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap56 = new UnOrderedMultiMap<unsigned short, __int64>(*other->multimapUnion->CPPmultimap56);
 		break;
 	case 57:
 		multimapUnion->CPPmultimap57 = new UnOrderedMultiMap<int, unsigned char>(*other->multimapUnion->CPPmultimap57);
@@ -383,8 +378,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap69 = new UnOrderedMultiMap<int, std::wstring>(*other->multimapUnion->CPPmultimap69);
 		break;
 	case 70:
-		multimapUnion->CPPmultimap70 = new UnOrderedMultiMap<int, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap70 = new UnOrderedMultiMap<int, __int64>(*other->multimapUnion->CPPmultimap70);
 		break;
 	case 71:
 		multimapUnion->CPPmultimap71 = new UnOrderedMultiMap<unsigned int, unsigned char>(*other->multimapUnion->CPPmultimap71);
@@ -426,8 +420,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap83 = new UnOrderedMultiMap<unsigned int, std::wstring>(*other->multimapUnion->CPPmultimap83);
 		break;
 	case 84:
-		multimapUnion->CPPmultimap84 = new UnOrderedMultiMap<unsigned int, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap84 = new UnOrderedMultiMap<unsigned int, __int64>(*other->multimapUnion->CPPmultimap84);
 		break;
 	case 85:
 		multimapUnion->CPPmultimap85 = new UnOrderedMultiMap<long long, unsigned char>(*other->multimapUnion->CPPmultimap85);
@@ -469,8 +462,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap97 = new UnOrderedMultiMap<long long, std::wstring>(*other->multimapUnion->CPPmultimap97);
 		break;
 	case 98:
-		multimapUnion->CPPmultimap98 = new UnOrderedMultiMap<long long, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap98 = new UnOrderedMultiMap<long long, __int64>(*other->multimapUnion->CPPmultimap98);
 		break;
 	case 99:
 		multimapUnion->CPPmultimap99 = new UnOrderedMultiMap<unsigned long long, unsigned char>(*other->multimapUnion->CPPmultimap99);
@@ -512,8 +504,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap111 = new UnOrderedMultiMap<unsigned long long, std::wstring>(*other->multimapUnion->CPPmultimap111);
 		break;
 	case 112:
-		multimapUnion->CPPmultimap112 = new UnOrderedMultiMap<unsigned long long, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap112 = new UnOrderedMultiMap<unsigned long long, __int64>(*other->multimapUnion->CPPmultimap112);
 		break;
 	case 113:
 		multimapUnion->CPPmultimap113 = new UnOrderedMultiMap<float, unsigned char>(*other->multimapUnion->CPPmultimap113);
@@ -555,8 +546,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap125 = new UnOrderedMultiMap<float, std::wstring>(*other->multimapUnion->CPPmultimap125);
 		break;
 	case 126:
-		multimapUnion->CPPmultimap126 = new UnOrderedMultiMap<float, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap126 = new UnOrderedMultiMap<float, __int64>(*other->multimapUnion->CPPmultimap126);
 		break;
 	case 127:
 		multimapUnion->CPPmultimap127 = new UnOrderedMultiMap<double, unsigned char>(*other->multimapUnion->CPPmultimap127);
@@ -598,8 +588,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap139 = new UnOrderedMultiMap<double, std::wstring>(*other->multimapUnion->CPPmultimap139);
 		break;
 	case 140:
-		multimapUnion->CPPmultimap140 = new UnOrderedMultiMap<double, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap140 = new UnOrderedMultiMap<double, __int64>(*other->multimapUnion->CPPmultimap140);
 		break;
 	case 141:
 		multimapUnion->CPPmultimap141 = new UnOrderedMultiMap<wchar_t, unsigned char>(*other->multimapUnion->CPPmultimap141);
@@ -641,8 +630,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap153 = new UnOrderedMultiMap<wchar_t, std::wstring>(*other->multimapUnion->CPPmultimap153);
 		break;
 	case 154:
-		multimapUnion->CPPmultimap154 = new UnOrderedMultiMap<wchar_t, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap154 = new UnOrderedMultiMap<wchar_t, __int64>(*other->multimapUnion->CPPmultimap154);
 		break;
 	case 155:
 		multimapUnion->CPPmultimap155 = new UnOrderedMultiMap<bool, unsigned char>(*other->multimapUnion->CPPmultimap155);
@@ -684,8 +672,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap167 = new UnOrderedMultiMap<bool, std::wstring>(*other->multimapUnion->CPPmultimap167);
 		break;
 	case 168:
-		multimapUnion->CPPmultimap168 = new UnOrderedMultiMap<bool, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap168 = new UnOrderedMultiMap<bool, __int64>(*other->multimapUnion->CPPmultimap168);
 		break;
 	case 169:
 		multimapUnion->CPPmultimap169 = new UnOrderedMultiMap<std::wstring, unsigned char>(*other->multimapUnion->CPPmultimap169);
@@ -727,8 +714,7 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap181 = new UnOrderedMultiMap<std::wstring, std::wstring>(*other->multimapUnion->CPPmultimap181);
 		break;
 	case 182:
-		multimapUnion->CPPmultimap182 = new UnOrderedMultiMap<std::wstring, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap182 = new UnOrderedMultiMap<std::wstring, __int64>(*other->multimapUnion->CPPmultimap182);
 		break;
 	case 183:
 		multimapUnion->CPPmultimap183 = new UnOrderedMultiMap<__int64, unsigned char>(*other->multimapUnion->CPPmultimap183);
@@ -770,31 +756,30 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		multimapUnion->CPPmultimap195 = new UnOrderedMultiMap<__int64, std::wstring>(*other->multimapUnion->CPPmultimap195);
 		break;
 	case 196:
-		multimapUnion->CPPmultimap196 = new UnOrderedMultiMap<__int64, __int64>();
-		bCopyKeyValue = true;
+		multimapUnion->CPPmultimap196 = new UnOrderedMultiMap<__int64, __int64>(*other->multimapUnion->CPPmultimap196);
 		break;
 	}
 
 	if (bgClassValueDictionaryInit == true)
 		if (gValueClassDictionary == nullptr)
-			gValueClassDictionary = gcnew System::Collections::Generic::Dictionary<System::Int64, Value>();
+		{
+			gValueClassDictionary = gcnew System::Collections::Generic::Dictionary<System::Int64, Value>(other->gValueClassDictionary);
+
+			multiNode->SetValueClassDictionary(gValueClassDictionary);
+			KeyEndNode->SetValueClassDictionary(gValueClassDictionary);
+			RIterNode->SetValueClassDictionary(gValueClassDictionary);
+		}
 	if (bgClassKeyDictionaryInit == true)
 	{
 
 		if (gKeyClassDictionary == nullptr)
 		{
-			if (bCopyKeyValue == false)
-				gKeyClassDictionary = gcnew System::Collections::Generic::Dictionary<Key, System::Int64>(other->gKeyClassDictionary);
-			else
-				gKeyClassDictionary = gcnew System::Collections::Generic::Dictionary<Key, System::Int64>();
+			gKeyClassDictionary = gcnew System::Collections::Generic::Dictionary<Key, System::Int64>(other->gKeyClassDictionary);
 		}
 
 		if (gIntKeyClassDictionary == nullptr)
 		{
-			if (bCopyKeyValue == false)
-				gIntKeyClassDictionary = gcnew System::Collections::Generic::Dictionary<System::Int64, Key>(other->gIntKeyClassDictionary);
-			else
-				gIntKeyClassDictionary = gcnew System::Collections::Generic::Dictionary<System::Int64, Key>();
+			gIntKeyClassDictionary = gcnew System::Collections::Generic::Dictionary<System::Int64, Key>(other->gIntKeyClassDictionary);
 		}
 
 		multiNode->SetIntKeyClassDictionary(gIntKeyClassDictionary);
@@ -802,11 +787,11 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		RIterNode->SetIntKeyClassDictionary(gIntKeyClassDictionary);
 	}
 
-	if (bCopyKeyValue)
-	{
-		for (auto iter = other->begin(); iter != other->end(); ++iter)
-		{
-			emplace(iter->GetKey(), iter->GetValue());
-		}
-	}
 }
+	//if (bCopyKeyValue)
+	//{
+	//	for (auto iter = other->begin(); iter != other->end(); ++iter)
+	//	{
+	//		emplace(iter->GetKey(), iter->GetValue());
+	//	}
+	//}

@@ -218,6 +218,14 @@ void UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::Swap(UnOrdere
 		auto temp = gKeyClassDictionary;
 		gKeyClassDictionary = OtherCSharpUnOrderedMultiMap->gKeyClassDictionary;
 		OtherCSharpUnOrderedMultiMap->gKeyClassDictionary = temp;
+
+		multiNode->SetValueClassDictionary(gValueClassDictionary);
+		KeyEndNode->SetValueClassDictionary(gValueClassDictionary);
+		RIterNode->SetValueClassDictionary(gValueClassDictionary);
+
+		OtherCSharpUnOrderedMultiMap->multiNode->SetValueClassDictionary(OtherCSharpUnOrderedMultiMap->gValueClassDictionary);
+		OtherCSharpUnOrderedMultiMap->KeyEndNode->SetValueClassDictionary(OtherCSharpUnOrderedMultiMap->gValueClassDictionary);
+		OtherCSharpUnOrderedMultiMap->RIterNode->SetValueClassDictionary(OtherCSharpUnOrderedMultiMap->gValueClassDictionary);
 	}
 	if (gIntKeyClassDictionary && OtherCSharpUnOrderedMultiMap->gIntKeyClassDictionary)
 	{

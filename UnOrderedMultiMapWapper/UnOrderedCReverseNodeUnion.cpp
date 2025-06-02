@@ -764,6 +764,11 @@ UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>^ UnOrderedMulti
 	return newCopy;
 }
 
+#define UnOrderedCReverseNode_Next_CASE(NUM) \
+	case NUM: \
+		(*(creverseNodeUnion->CPPcreversenode##NUM))++; \
+		return;
+
 generic<typename Key, typename Value>
 inline void UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::Next()
 {
@@ -773,596 +778,209 @@ inline void UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::Ne
 	{
 	case 0: default:
 		return;
-	case 1:
-		(*(creverseNodeUnion->CPPcreversenode1))++;
-		return;
-	case 2:
-		(*(creverseNodeUnion->CPPcreversenode2))++;
-		return;
-	case 3:
-		(*(creverseNodeUnion->CPPcreversenode3))++;
-		return;
-	case 4:
-		(*(creverseNodeUnion->CPPcreversenode4))++;
-		return;
-	case 5:
-		(*(creverseNodeUnion->CPPcreversenode5))++;
-		return;
-	case 6:
-		(*(creverseNodeUnion->CPPcreversenode6))++;
-		return;
-	case 7:
-		(*(creverseNodeUnion->CPPcreversenode7))++;
-		return;
-	case 8:
-		(*(creverseNodeUnion->CPPcreversenode8))++;
-		return;
-	case 9:
-		(*(creverseNodeUnion->CPPcreversenode9))++;
-		return;
-	case 10:
-		(*(creverseNodeUnion->CPPcreversenode10))++;
-		return;
-	case 11:
-		(*(creverseNodeUnion->CPPcreversenode11))++;
-		return;
-	case 12:
-		(*(creverseNodeUnion->CPPcreversenode12))++;
-		return;
-	case 13:
-		(*(creverseNodeUnion->CPPcreversenode13))++;
-		return;
-	case 14:
-		(*(creverseNodeUnion->CPPcreversenode14))++;
-		return;
-	case 15:
-		(*(creverseNodeUnion->CPPcreversenode15))++;
-		return;
-	case 16:
-		(*(creverseNodeUnion->CPPcreversenode16))++;
-		return;
-	case 17:
-		(*(creverseNodeUnion->CPPcreversenode17))++;
-		return;
-	case 18:
-		(*(creverseNodeUnion->CPPcreversenode18))++;
-		return;
-	case 19:
-		(*(creverseNodeUnion->CPPcreversenode19))++;
-		return;
-	case 20:
-		(*(creverseNodeUnion->CPPcreversenode20))++;
-		return;
-	case 21:
-		(*(creverseNodeUnion->CPPcreversenode21))++;
-		return;
-	case 22:
-		(*(creverseNodeUnion->CPPcreversenode22))++;
-		return;
-	case 23:
-		(*(creverseNodeUnion->CPPcreversenode23))++;
-		return;
-	case 24:
-		(*(creverseNodeUnion->CPPcreversenode24))++;
-		return;
-	case 25:
-		(*(creverseNodeUnion->CPPcreversenode25))++;
-		return;
-	case 26:
-		(*(creverseNodeUnion->CPPcreversenode26))++;
-		return;
-	case 27:
-		(*(creverseNodeUnion->CPPcreversenode27))++;
-		return;
-	case 28:
-		(*(creverseNodeUnion->CPPcreversenode28))++;
-		return;
-	case 29:
-		(*(creverseNodeUnion->CPPcreversenode29))++;
-		return;
-	case 30:
-		(*(creverseNodeUnion->CPPcreversenode30))++;
-		return;
-	case 31:
-		(*(creverseNodeUnion->CPPcreversenode31))++;
-		return;
-	case 32:
-		(*(creverseNodeUnion->CPPcreversenode32))++;
-		return;
-	case 33:
-		(*(creverseNodeUnion->CPPcreversenode33))++;
-		return;
-	case 34:
-		(*(creverseNodeUnion->CPPcreversenode34))++;
-		return;
-	case 35:
-		(*(creverseNodeUnion->CPPcreversenode35))++;
-		return;
-	case 36:
-		(*(creverseNodeUnion->CPPcreversenode36))++;
-		return;
-	case 37:
-		(*(creverseNodeUnion->CPPcreversenode37))++;
-		return;
-	case 38:
-		(*(creverseNodeUnion->CPPcreversenode38))++;
-		return;
-	case 39:
-		(*(creverseNodeUnion->CPPcreversenode39))++;
-		return;
-	case 40:
-		(*(creverseNodeUnion->CPPcreversenode40))++;
-		return;
-	case 41:
-		(*(creverseNodeUnion->CPPcreversenode41))++;
-		return;
-	case 42:
-		(*(creverseNodeUnion->CPPcreversenode42))++;
-		return;
-	case 43:
-		(*(creverseNodeUnion->CPPcreversenode43))++;
-		return;
-	case 44:
-		(*(creverseNodeUnion->CPPcreversenode44))++;
-		return;
-	case 45:
-		(*(creverseNodeUnion->CPPcreversenode45))++;
-		return;
-	case 46:
-		(*(creverseNodeUnion->CPPcreversenode46))++;
-		return;
-	case 47:
-		(*(creverseNodeUnion->CPPcreversenode47))++;
-		return;
-	case 48:
-		(*(creverseNodeUnion->CPPcreversenode48))++;
-		return;
-	case 49:
-		(*(creverseNodeUnion->CPPcreversenode49))++;
-		return;
-	case 50:
-		(*(creverseNodeUnion->CPPcreversenode50))++;
-		return;
-	case 51:
-		(*(creverseNodeUnion->CPPcreversenode51))++;
-		return;
-	case 52:
-		(*(creverseNodeUnion->CPPcreversenode52))++;
-		return;
-	case 53:
-		(*(creverseNodeUnion->CPPcreversenode53))++;
-		return;
-	case 54:
-		(*(creverseNodeUnion->CPPcreversenode54))++;
-		return;
-	case 55:
-		(*(creverseNodeUnion->CPPcreversenode55))++;
-		return;
-	case 56:
-		(*(creverseNodeUnion->CPPcreversenode56))++;
-		return;
-	case 57:
-		(*(creverseNodeUnion->CPPcreversenode57))++;
-		return;
-	case 58:
-		(*(creverseNodeUnion->CPPcreversenode58))++;
-		return;
-	case 59:
-		(*(creverseNodeUnion->CPPcreversenode59))++;
-		return;
-	case 60:
-		(*(creverseNodeUnion->CPPcreversenode60))++;
-		return;
-	case 61:
-		(*(creverseNodeUnion->CPPcreversenode61))++;
-		return;
-	case 62:
-		(*(creverseNodeUnion->CPPcreversenode62))++;
-		return;
-	case 63:
-		(*(creverseNodeUnion->CPPcreversenode63))++;
-		return;
-	case 64:
-		(*(creverseNodeUnion->CPPcreversenode64))++;
-		return;
-	case 65:
-		(*(creverseNodeUnion->CPPcreversenode65))++;
-		return;
-	case 66:
-		(*(creverseNodeUnion->CPPcreversenode66))++;
-		return;
-	case 67:
-		(*(creverseNodeUnion->CPPcreversenode67))++;
-		return;
-	case 68:
-		(*(creverseNodeUnion->CPPcreversenode68))++;
-		return;
-	case 69:
-		(*(creverseNodeUnion->CPPcreversenode69))++;
-		return;
-	case 70:
-		(*(creverseNodeUnion->CPPcreversenode70))++;
-		return;
-	case 71:
-		(*(creverseNodeUnion->CPPcreversenode71))++;
-		return;
-	case 72:
-		(*(creverseNodeUnion->CPPcreversenode72))++;
-		return;
-	case 73:
-		(*(creverseNodeUnion->CPPcreversenode73))++;
-		return;
-	case 74:
-		(*(creverseNodeUnion->CPPcreversenode74))++;
-		return;
-	case 75:
-		(*(creverseNodeUnion->CPPcreversenode75))++;
-		return;
-	case 76:
-		(*(creverseNodeUnion->CPPcreversenode76))++;
-		return;
-	case 77:
-		(*(creverseNodeUnion->CPPcreversenode77))++;
-		return;
-	case 78:
-		(*(creverseNodeUnion->CPPcreversenode78))++;
-		return;
-	case 79:
-		(*(creverseNodeUnion->CPPcreversenode79))++;
-		return;
-	case 80:
-		(*(creverseNodeUnion->CPPcreversenode80))++;
-		return;
-	case 81:
-		(*(creverseNodeUnion->CPPcreversenode81))++;
-		return;
-	case 82:
-		(*(creverseNodeUnion->CPPcreversenode82))++;
-		return;
-	case 83:
-		(*(creverseNodeUnion->CPPcreversenode83))++;
-		return;
-	case 84:
-		(*(creverseNodeUnion->CPPcreversenode84))++;
-		return;
-	case 85:
-		(*(creverseNodeUnion->CPPcreversenode85))++;
-		return;
-	case 86:
-		(*(creverseNodeUnion->CPPcreversenode86))++;
-		return;
-	case 87:
-		(*(creverseNodeUnion->CPPcreversenode87))++;
-		return;
-	case 88:
-		(*(creverseNodeUnion->CPPcreversenode88))++;
-		return;
-	case 89:
-		(*(creverseNodeUnion->CPPcreversenode89))++;
-		return;
-	case 90:
-		(*(creverseNodeUnion->CPPcreversenode90))++;
-		return;
-	case 91:
-		(*(creverseNodeUnion->CPPcreversenode91))++;
-		return;
-	case 92:
-		(*(creverseNodeUnion->CPPcreversenode92))++;
-		return;
-	case 93:
-		(*(creverseNodeUnion->CPPcreversenode93))++;
-		return;
-	case 94:
-		(*(creverseNodeUnion->CPPcreversenode94))++;
-		return;
-	case 95:
-		(*(creverseNodeUnion->CPPcreversenode95))++;
-		return;
-	case 96:
-		(*(creverseNodeUnion->CPPcreversenode96))++;
-		return;
-	case 97:
-		(*(creverseNodeUnion->CPPcreversenode97))++;
-		return;
-	case 98:
-		(*(creverseNodeUnion->CPPcreversenode98))++;
-		return;
-	case 99:
-		(*(creverseNodeUnion->CPPcreversenode99))++;
-		return;
-	case 100:
-		(*(creverseNodeUnion->CPPcreversenode100))++;
-		return;
-	case 101:
-		(*(creverseNodeUnion->CPPcreversenode101))++;
-		return;
-	case 102:
-		(*(creverseNodeUnion->CPPcreversenode102))++;
-		return;
-	case 103:
-		(*(creverseNodeUnion->CPPcreversenode103))++;
-		return;
-	case 104:
-		(*(creverseNodeUnion->CPPcreversenode104))++;
-		return;
-	case 105:
-		(*(creverseNodeUnion->CPPcreversenode105))++;
-		return;
-	case 106:
-		(*(creverseNodeUnion->CPPcreversenode106))++;
-		return;
-	case 107:
-		(*(creverseNodeUnion->CPPcreversenode107))++;
-		return;
-	case 108:
-		(*(creverseNodeUnion->CPPcreversenode108))++;
-		return;
-	case 109:
-		(*(creverseNodeUnion->CPPcreversenode109))++;
-		return;
-	case 110:
-		(*(creverseNodeUnion->CPPcreversenode110))++;
-		return;
-	case 111:
-		(*(creverseNodeUnion->CPPcreversenode111))++;
-		return;
-	case 112:
-		(*(creverseNodeUnion->CPPcreversenode112))++;
-		return;
-	case 113:
-		(*(creverseNodeUnion->CPPcreversenode113))++;
-		return;
-	case 114:
-		(*(creverseNodeUnion->CPPcreversenode114))++;
-		return;
-	case 115:
-		(*(creverseNodeUnion->CPPcreversenode115))++;
-		return;
-	case 116:
-		(*(creverseNodeUnion->CPPcreversenode116))++;
-		return;
-	case 117:
-		(*(creverseNodeUnion->CPPcreversenode117))++;
-		return;
-	case 118:
-		(*(creverseNodeUnion->CPPcreversenode118))++;
-		return;
-	case 119:
-		(*(creverseNodeUnion->CPPcreversenode119))++;
-		return;
-	case 120:
-		(*(creverseNodeUnion->CPPcreversenode120))++;
-		return;
-	case 121:
-		(*(creverseNodeUnion->CPPcreversenode121))++;
-		return;
-	case 122:
-		(*(creverseNodeUnion->CPPcreversenode122))++;
-		return;
-	case 123:
-		(*(creverseNodeUnion->CPPcreversenode123))++;
-		return;
-	case 124:
-		(*(creverseNodeUnion->CPPcreversenode124))++;
-		return;
-	case 125:
-		(*(creverseNodeUnion->CPPcreversenode125))++;
-		return;
-	case 126:
-		(*(creverseNodeUnion->CPPcreversenode126))++;
-		return;
-	case 127:
-		(*(creverseNodeUnion->CPPcreversenode127))++;
-		return;
-	case 128:
-		(*(creverseNodeUnion->CPPcreversenode128))++;
-		return;
-	case 129:
-		(*(creverseNodeUnion->CPPcreversenode129))++;
-		return;
-	case 130:
-		(*(creverseNodeUnion->CPPcreversenode130))++;
-		return;
-	case 131:
-		(*(creverseNodeUnion->CPPcreversenode131))++;
-		return;
-	case 132:
-		(*(creverseNodeUnion->CPPcreversenode132))++;
-		return;
-	case 133:
-		(*(creverseNodeUnion->CPPcreversenode133))++;
-		return;
-	case 134:
-		(*(creverseNodeUnion->CPPcreversenode134))++;
-		return;
-	case 135:
-		(*(creverseNodeUnion->CPPcreversenode135))++;
-		return;
-	case 136:
-		(*(creverseNodeUnion->CPPcreversenode136))++;
-		return;
-	case 137:
-		(*(creverseNodeUnion->CPPcreversenode137))++;
-		return;
-	case 138:
-		(*(creverseNodeUnion->CPPcreversenode138))++;
-		return;
-	case 139:
-		(*(creverseNodeUnion->CPPcreversenode139))++;
-		return;
-	case 140:
-		(*(creverseNodeUnion->CPPcreversenode140))++;
-		return;
-	case 141:
-		(*(creverseNodeUnion->CPPcreversenode141))++;
-		return;
-	case 142:
-		(*(creverseNodeUnion->CPPcreversenode142))++;
-		return;
-	case 143:
-		(*(creverseNodeUnion->CPPcreversenode143))++;
-		return;
-	case 144:
-		(*(creverseNodeUnion->CPPcreversenode144))++;
-		return;
-	case 145:
-		(*(creverseNodeUnion->CPPcreversenode145))++;
-		return;
-	case 146:
-		(*(creverseNodeUnion->CPPcreversenode146))++;
-		return;
-	case 147:
-		(*(creverseNodeUnion->CPPcreversenode147))++;
-		return;
-	case 148:
-		(*(creverseNodeUnion->CPPcreversenode148))++;
-		return;
-	case 149:
-		(*(creverseNodeUnion->CPPcreversenode149))++;
-		return;
-	case 150:
-		(*(creverseNodeUnion->CPPcreversenode150))++;
-		return;
-	case 151:
-		(*(creverseNodeUnion->CPPcreversenode151))++;
-		return;
-	case 152:
-		(*(creverseNodeUnion->CPPcreversenode152))++;
-		return;
-	case 153:
-		(*(creverseNodeUnion->CPPcreversenode153))++;
-		return;
-	case 154:
-		(*(creverseNodeUnion->CPPcreversenode154))++;
-		return;
-	case 155:
-		(*(creverseNodeUnion->CPPcreversenode155))++;
-		return;
-	case 156:
-		(*(creverseNodeUnion->CPPcreversenode156))++;
-		return;
-	case 157:
-		(*(creverseNodeUnion->CPPcreversenode157))++;
-		return;
-	case 158:
-		(*(creverseNodeUnion->CPPcreversenode158))++;
-		return;
-	case 159:
-		(*(creverseNodeUnion->CPPcreversenode159))++;
-		return;
-	case 160:
-		(*(creverseNodeUnion->CPPcreversenode160))++;
-		return;
-	case 161:
-		(*(creverseNodeUnion->CPPcreversenode161))++;
-		return;
-	case 162:
-		(*(creverseNodeUnion->CPPcreversenode162))++;
-		return;
-	case 163:
-		(*(creverseNodeUnion->CPPcreversenode163))++;
-		return;
-	case 164:
-		(*(creverseNodeUnion->CPPcreversenode164))++;
-		return;
-	case 165:
-		(*(creverseNodeUnion->CPPcreversenode165))++;
-		return;
-	case 166:
-		(*(creverseNodeUnion->CPPcreversenode166))++;
-		return;
-	case 167:
-		(*(creverseNodeUnion->CPPcreversenode167))++;
-		return;
-	case 168:
-		(*(creverseNodeUnion->CPPcreversenode168))++;
-		return;
-	case 169:
-		(*(creverseNodeUnion->CPPcreversenode169))++;
-		return;
-	case 170:
-		(*(creverseNodeUnion->CPPcreversenode170))++;
-		return;
-	case 171:
-		(*(creverseNodeUnion->CPPcreversenode171))++;
-		return;
-	case 172:
-		(*(creverseNodeUnion->CPPcreversenode172))++;
-		return;
-	case 173:
-		(*(creverseNodeUnion->CPPcreversenode173))++;
-		return;
-	case 174:
-		(*(creverseNodeUnion->CPPcreversenode174))++;
-		return;
-	case 175:
-		(*(creverseNodeUnion->CPPcreversenode175))++;
-		return;
-	case 176:
-		(*(creverseNodeUnion->CPPcreversenode176))++;
-		return;
-	case 177:
-		(*(creverseNodeUnion->CPPcreversenode177))++;
-		return;
-	case 178:
-		(*(creverseNodeUnion->CPPcreversenode178))++;
-		return;
-	case 179:
-		(*(creverseNodeUnion->CPPcreversenode179))++;
-		return;
-	case 180:
-		(*(creverseNodeUnion->CPPcreversenode180))++;
-		return;
-	case 181:
-		(*(creverseNodeUnion->CPPcreversenode181))++;
-		return;
-	case 182:
-		(*(creverseNodeUnion->CPPcreversenode182))++;
-		return;
-	case 183:
-		(*(creverseNodeUnion->CPPcreversenode183))++;
-		return;
-	case 184:
-		(*(creverseNodeUnion->CPPcreversenode184))++;
-		return;
-	case 185:
-		(*(creverseNodeUnion->CPPcreversenode185))++;
-		return;
-	case 186:
-		(*(creverseNodeUnion->CPPcreversenode186))++;
-		return;
-	case 187:
-		(*(creverseNodeUnion->CPPcreversenode187))++;
-		return;
-	case 188:
-		(*(creverseNodeUnion->CPPcreversenode188))++;
-		return;
-	case 189:
-		(*(creverseNodeUnion->CPPcreversenode189))++;
-		return;
-	case 190:
-		(*(creverseNodeUnion->CPPcreversenode190))++;
-		return;
-	case 191:
-		(*(creverseNodeUnion->CPPcreversenode191))++;
-		return;
-	case 192:
-		(*(creverseNodeUnion->CPPcreversenode192))++;
-		return;
-	case 193:
-		(*(creverseNodeUnion->CPPcreversenode193))++;
-		return;
-	case 194:
-		(*(creverseNodeUnion->CPPcreversenode194))++;
-		return;
-	case 195:
-		(*(creverseNodeUnion->CPPcreversenode195))++;
-		return;
-	case 196:
-		(*(creverseNodeUnion->CPPcreversenode196))++;
-		return;
+		UnOrderedCReverseNode_Next_CASE(1)
+		UnOrderedCReverseNode_Next_CASE(2)
+		UnOrderedCReverseNode_Next_CASE(3)
+		UnOrderedCReverseNode_Next_CASE(4)
+		UnOrderedCReverseNode_Next_CASE(5)
+		UnOrderedCReverseNode_Next_CASE(6)
+		UnOrderedCReverseNode_Next_CASE(7)
+		UnOrderedCReverseNode_Next_CASE(8)
+		UnOrderedCReverseNode_Next_CASE(9)
+		UnOrderedCReverseNode_Next_CASE(10)
+		UnOrderedCReverseNode_Next_CASE(11)
+		UnOrderedCReverseNode_Next_CASE(12)
+		UnOrderedCReverseNode_Next_CASE(13)
+		UnOrderedCReverseNode_Next_CASE(14)
+		UnOrderedCReverseNode_Next_CASE(15)
+		UnOrderedCReverseNode_Next_CASE(16)
+		UnOrderedCReverseNode_Next_CASE(17)
+		UnOrderedCReverseNode_Next_CASE(18)
+		UnOrderedCReverseNode_Next_CASE(19)
+		UnOrderedCReverseNode_Next_CASE(20)
+		UnOrderedCReverseNode_Next_CASE(21)
+		UnOrderedCReverseNode_Next_CASE(22)
+		UnOrderedCReverseNode_Next_CASE(23)
+		UnOrderedCReverseNode_Next_CASE(24)
+		UnOrderedCReverseNode_Next_CASE(25)
+		UnOrderedCReverseNode_Next_CASE(26)
+		UnOrderedCReverseNode_Next_CASE(27)
+		UnOrderedCReverseNode_Next_CASE(28)
+		UnOrderedCReverseNode_Next_CASE(29)
+		UnOrderedCReverseNode_Next_CASE(30)
+		UnOrderedCReverseNode_Next_CASE(31)
+		UnOrderedCReverseNode_Next_CASE(32)
+		UnOrderedCReverseNode_Next_CASE(33)
+		UnOrderedCReverseNode_Next_CASE(34)
+		UnOrderedCReverseNode_Next_CASE(35)
+		UnOrderedCReverseNode_Next_CASE(36)
+		UnOrderedCReverseNode_Next_CASE(37)
+		UnOrderedCReverseNode_Next_CASE(38)
+		UnOrderedCReverseNode_Next_CASE(39)
+		UnOrderedCReverseNode_Next_CASE(40)
+		UnOrderedCReverseNode_Next_CASE(41)
+		UnOrderedCReverseNode_Next_CASE(42)
+		UnOrderedCReverseNode_Next_CASE(43)
+		UnOrderedCReverseNode_Next_CASE(44)
+		UnOrderedCReverseNode_Next_CASE(45)
+		UnOrderedCReverseNode_Next_CASE(46)
+		UnOrderedCReverseNode_Next_CASE(47)
+		UnOrderedCReverseNode_Next_CASE(48)
+		UnOrderedCReverseNode_Next_CASE(49)
+		UnOrderedCReverseNode_Next_CASE(50)
+		UnOrderedCReverseNode_Next_CASE(51)
+		UnOrderedCReverseNode_Next_CASE(52)
+		UnOrderedCReverseNode_Next_CASE(53)
+		UnOrderedCReverseNode_Next_CASE(54)
+		UnOrderedCReverseNode_Next_CASE(55)
+		UnOrderedCReverseNode_Next_CASE(56)
+		UnOrderedCReverseNode_Next_CASE(57)
+		UnOrderedCReverseNode_Next_CASE(58)
+		UnOrderedCReverseNode_Next_CASE(59)
+		UnOrderedCReverseNode_Next_CASE(60)
+		UnOrderedCReverseNode_Next_CASE(61)
+		UnOrderedCReverseNode_Next_CASE(62)
+		UnOrderedCReverseNode_Next_CASE(63)
+		UnOrderedCReverseNode_Next_CASE(64)
+		UnOrderedCReverseNode_Next_CASE(65)
+		UnOrderedCReverseNode_Next_CASE(66)
+		UnOrderedCReverseNode_Next_CASE(67)
+		UnOrderedCReverseNode_Next_CASE(68)
+		UnOrderedCReverseNode_Next_CASE(69)
+		UnOrderedCReverseNode_Next_CASE(70)
+		UnOrderedCReverseNode_Next_CASE(71)
+		UnOrderedCReverseNode_Next_CASE(72)
+		UnOrderedCReverseNode_Next_CASE(73)
+		UnOrderedCReverseNode_Next_CASE(74)
+		UnOrderedCReverseNode_Next_CASE(75)
+		UnOrderedCReverseNode_Next_CASE(76)
+		UnOrderedCReverseNode_Next_CASE(77)
+		UnOrderedCReverseNode_Next_CASE(78)
+		UnOrderedCReverseNode_Next_CASE(79)
+		UnOrderedCReverseNode_Next_CASE(80)
+		UnOrderedCReverseNode_Next_CASE(81)
+		UnOrderedCReverseNode_Next_CASE(82)
+		UnOrderedCReverseNode_Next_CASE(83)
+		UnOrderedCReverseNode_Next_CASE(84)
+		UnOrderedCReverseNode_Next_CASE(85)
+		UnOrderedCReverseNode_Next_CASE(86)
+		UnOrderedCReverseNode_Next_CASE(87)
+		UnOrderedCReverseNode_Next_CASE(88)
+		UnOrderedCReverseNode_Next_CASE(89)
+		UnOrderedCReverseNode_Next_CASE(90)
+		UnOrderedCReverseNode_Next_CASE(91)
+		UnOrderedCReverseNode_Next_CASE(92)
+		UnOrderedCReverseNode_Next_CASE(93)
+		UnOrderedCReverseNode_Next_CASE(94)
+		UnOrderedCReverseNode_Next_CASE(95)
+		UnOrderedCReverseNode_Next_CASE(96)
+		UnOrderedCReverseNode_Next_CASE(97)
+		UnOrderedCReverseNode_Next_CASE(98)
+		UnOrderedCReverseNode_Next_CASE(99)
+		UnOrderedCReverseNode_Next_CASE(100)
+		UnOrderedCReverseNode_Next_CASE(101)
+		UnOrderedCReverseNode_Next_CASE(102)
+		UnOrderedCReverseNode_Next_CASE(103)
+		UnOrderedCReverseNode_Next_CASE(104)
+		UnOrderedCReverseNode_Next_CASE(105)
+		UnOrderedCReverseNode_Next_CASE(106)
+		UnOrderedCReverseNode_Next_CASE(107)
+		UnOrderedCReverseNode_Next_CASE(108)
+		UnOrderedCReverseNode_Next_CASE(109)
+		UnOrderedCReverseNode_Next_CASE(110)
+		UnOrderedCReverseNode_Next_CASE(111)
+		UnOrderedCReverseNode_Next_CASE(112)
+		UnOrderedCReverseNode_Next_CASE(113)
+		UnOrderedCReverseNode_Next_CASE(114)
+		UnOrderedCReverseNode_Next_CASE(115)
+		UnOrderedCReverseNode_Next_CASE(116)
+		UnOrderedCReverseNode_Next_CASE(117)
+		UnOrderedCReverseNode_Next_CASE(118)
+		UnOrderedCReverseNode_Next_CASE(119)
+		UnOrderedCReverseNode_Next_CASE(120)
+		UnOrderedCReverseNode_Next_CASE(121)
+		UnOrderedCReverseNode_Next_CASE(122)
+		UnOrderedCReverseNode_Next_CASE(123)
+		UnOrderedCReverseNode_Next_CASE(124)
+		UnOrderedCReverseNode_Next_CASE(125)
+		UnOrderedCReverseNode_Next_CASE(126)
+		UnOrderedCReverseNode_Next_CASE(127)
+		UnOrderedCReverseNode_Next_CASE(128)
+		UnOrderedCReverseNode_Next_CASE(129)
+		UnOrderedCReverseNode_Next_CASE(130)
+		UnOrderedCReverseNode_Next_CASE(131)
+		UnOrderedCReverseNode_Next_CASE(132)
+		UnOrderedCReverseNode_Next_CASE(133)
+		UnOrderedCReverseNode_Next_CASE(134)
+		UnOrderedCReverseNode_Next_CASE(135)
+		UnOrderedCReverseNode_Next_CASE(136)
+		UnOrderedCReverseNode_Next_CASE(137)
+		UnOrderedCReverseNode_Next_CASE(138)
+		UnOrderedCReverseNode_Next_CASE(139)
+		UnOrderedCReverseNode_Next_CASE(140)
+		UnOrderedCReverseNode_Next_CASE(141)
+		UnOrderedCReverseNode_Next_CASE(142)
+		UnOrderedCReverseNode_Next_CASE(143)
+		UnOrderedCReverseNode_Next_CASE(144)
+		UnOrderedCReverseNode_Next_CASE(145)
+		UnOrderedCReverseNode_Next_CASE(146)
+		UnOrderedCReverseNode_Next_CASE(147)
+		UnOrderedCReverseNode_Next_CASE(148)
+		UnOrderedCReverseNode_Next_CASE(149)
+		UnOrderedCReverseNode_Next_CASE(150)
+		UnOrderedCReverseNode_Next_CASE(151)
+		UnOrderedCReverseNode_Next_CASE(152)
+		UnOrderedCReverseNode_Next_CASE(153)
+		UnOrderedCReverseNode_Next_CASE(154)
+		UnOrderedCReverseNode_Next_CASE(155)
+		UnOrderedCReverseNode_Next_CASE(156)
+		UnOrderedCReverseNode_Next_CASE(157)
+		UnOrderedCReverseNode_Next_CASE(158)
+		UnOrderedCReverseNode_Next_CASE(159)
+		UnOrderedCReverseNode_Next_CASE(160)
+		UnOrderedCReverseNode_Next_CASE(161)
+		UnOrderedCReverseNode_Next_CASE(162)
+		UnOrderedCReverseNode_Next_CASE(163)
+		UnOrderedCReverseNode_Next_CASE(164)
+		UnOrderedCReverseNode_Next_CASE(165)
+		UnOrderedCReverseNode_Next_CASE(166)
+		UnOrderedCReverseNode_Next_CASE(167)
+		UnOrderedCReverseNode_Next_CASE(168)
+		UnOrderedCReverseNode_Next_CASE(169)
+		UnOrderedCReverseNode_Next_CASE(170)
+		UnOrderedCReverseNode_Next_CASE(171)
+		UnOrderedCReverseNode_Next_CASE(172)
+		UnOrderedCReverseNode_Next_CASE(173)
+		UnOrderedCReverseNode_Next_CASE(174)
+		UnOrderedCReverseNode_Next_CASE(175)
+		UnOrderedCReverseNode_Next_CASE(176)
+		UnOrderedCReverseNode_Next_CASE(177)
+		UnOrderedCReverseNode_Next_CASE(178)
+		UnOrderedCReverseNode_Next_CASE(179)
+		UnOrderedCReverseNode_Next_CASE(180)
+		UnOrderedCReverseNode_Next_CASE(181)
+		UnOrderedCReverseNode_Next_CASE(182)
+		UnOrderedCReverseNode_Next_CASE(183)
+		UnOrderedCReverseNode_Next_CASE(184)
+		UnOrderedCReverseNode_Next_CASE(185)
+		UnOrderedCReverseNode_Next_CASE(186)
+		UnOrderedCReverseNode_Next_CASE(187)
+		UnOrderedCReverseNode_Next_CASE(188)
+		UnOrderedCReverseNode_Next_CASE(189)
+		UnOrderedCReverseNode_Next_CASE(190)
+		UnOrderedCReverseNode_Next_CASE(191)
+		UnOrderedCReverseNode_Next_CASE(192)
+		UnOrderedCReverseNode_Next_CASE(193)
+		UnOrderedCReverseNode_Next_CASE(194)
+		UnOrderedCReverseNode_Next_CASE(195)
+		UnOrderedCReverseNode_Next_CASE(196)
 	}
 }
+
+#define UnOrderedCReverseNode_Previous_CASE(NUM) \
+	case NUM: \
+		(*(creverseNodeUnion->CPPcreversenode##NUM))--; \
+		return;
 
 generic<typename Key, typename Value>
 void UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::Previous()
@@ -1373,596 +991,208 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::Previous(
 	{
 	case 0: default:
 		return;
-	case 1:
-		(*(creverseNodeUnion->CPPcreversenode1))--;
-		return;
-	case 2:
-		(*(creverseNodeUnion->CPPcreversenode2))--;
-		return;
-	case 3:
-		(*(creverseNodeUnion->CPPcreversenode3))--;
-		return;
-	case 4:
-		(*(creverseNodeUnion->CPPcreversenode4))--;
-		return;
-	case 5:
-		(*(creverseNodeUnion->CPPcreversenode5))--;
-		return;
-	case 6:
-		(*(creverseNodeUnion->CPPcreversenode6))--;
-		return;
-	case 7:
-		(*(creverseNodeUnion->CPPcreversenode7))--;
-		return;
-	case 8:
-		(*(creverseNodeUnion->CPPcreversenode8))--;
-		return;
-	case 9:
-		(*(creverseNodeUnion->CPPcreversenode9))--;
-		return;
-	case 10:
-		(*(creverseNodeUnion->CPPcreversenode10))--;
-		return;
-	case 11:
-		(*(creverseNodeUnion->CPPcreversenode11))--;
-		return;
-	case 12:
-		(*(creverseNodeUnion->CPPcreversenode12))--;
-		return;
-	case 13:
-		(*(creverseNodeUnion->CPPcreversenode13))--;
-		return;
-	case 14:
-		(*(creverseNodeUnion->CPPcreversenode14))--;
-		return;
-	case 15:
-		(*(creverseNodeUnion->CPPcreversenode15))--;
-		return;
-	case 16:
-		(*(creverseNodeUnion->CPPcreversenode16))--;
-		return;
-	case 17:
-		(*(creverseNodeUnion->CPPcreversenode17))--;
-		return;
-	case 18:
-		(*(creverseNodeUnion->CPPcreversenode18))--;
-		return;
-	case 19:
-		(*(creverseNodeUnion->CPPcreversenode19))--;
-		return;
-	case 20:
-		(*(creverseNodeUnion->CPPcreversenode20))--;
-		return;
-	case 21:
-		(*(creverseNodeUnion->CPPcreversenode21))--;
-		return;
-	case 22:
-		(*(creverseNodeUnion->CPPcreversenode22))--;
-		return;
-	case 23:
-		(*(creverseNodeUnion->CPPcreversenode23))--;
-		return;
-	case 24:
-		(*(creverseNodeUnion->CPPcreversenode24))--;
-		return;
-	case 25:
-		(*(creverseNodeUnion->CPPcreversenode25))--;
-		return;
-	case 26:
-		(*(creverseNodeUnion->CPPcreversenode26))--;
-		return;
-	case 27:
-		(*(creverseNodeUnion->CPPcreversenode27))--;
-		return;
-	case 28:
-		(*(creverseNodeUnion->CPPcreversenode28))--;
-		return;
-	case 29:
-		(*(creverseNodeUnion->CPPcreversenode29))--;
-		return;
-	case 30:
-		(*(creverseNodeUnion->CPPcreversenode30))--;
-		return;
-	case 31:
-		(*(creverseNodeUnion->CPPcreversenode31))--;
-		return;
-	case 32:
-		(*(creverseNodeUnion->CPPcreversenode32))--;
-		return;
-	case 33:
-		(*(creverseNodeUnion->CPPcreversenode33))--;
-		return;
-	case 34:
-		(*(creverseNodeUnion->CPPcreversenode34))--;
-		return;
-	case 35:
-		(*(creverseNodeUnion->CPPcreversenode35))--;
-		return;
-	case 36:
-		(*(creverseNodeUnion->CPPcreversenode36))--;
-		return;
-	case 37:
-		(*(creverseNodeUnion->CPPcreversenode37))--;
-		return;
-	case 38:
-		(*(creverseNodeUnion->CPPcreversenode38))--;
-		return;
-	case 39:
-		(*(creverseNodeUnion->CPPcreversenode39))--;
-		return;
-	case 40:
-		(*(creverseNodeUnion->CPPcreversenode40))--;
-		return;
-	case 41:
-		(*(creverseNodeUnion->CPPcreversenode41))--;
-		return;
-	case 42:
-		(*(creverseNodeUnion->CPPcreversenode42))--;
-		return;
-	case 43:
-		(*(creverseNodeUnion->CPPcreversenode43))--;
-		return;
-	case 44:
-		(*(creverseNodeUnion->CPPcreversenode44))--;
-		return;
-	case 45:
-		(*(creverseNodeUnion->CPPcreversenode45))--;
-		return;
-	case 46:
-		(*(creverseNodeUnion->CPPcreversenode46))--;
-		return;
-	case 47:
-		(*(creverseNodeUnion->CPPcreversenode47))--;
-		return;
-	case 48:
-		(*(creverseNodeUnion->CPPcreversenode48))--;
-		return;
-	case 49:
-		(*(creverseNodeUnion->CPPcreversenode49))--;
-		return;
-	case 50:
-		(*(creverseNodeUnion->CPPcreversenode50))--;
-		return;
-	case 51:
-		(*(creverseNodeUnion->CPPcreversenode51))--;
-		return;
-	case 52:
-		(*(creverseNodeUnion->CPPcreversenode52))--;
-		return;
-	case 53:
-		(*(creverseNodeUnion->CPPcreversenode53))--;
-		return;
-	case 54:
-		(*(creverseNodeUnion->CPPcreversenode54))--;
-		return;
-	case 55:
-		(*(creverseNodeUnion->CPPcreversenode55))--;
-		return;
-	case 56:
-		(*(creverseNodeUnion->CPPcreversenode56))--;
-		return;
-	case 57:
-		(*(creverseNodeUnion->CPPcreversenode57))--;
-		return;
-	case 58:
-		(*(creverseNodeUnion->CPPcreversenode58))--;
-		return;
-	case 59:
-		(*(creverseNodeUnion->CPPcreversenode59))--;
-		return;
-	case 60:
-		(*(creverseNodeUnion->CPPcreversenode60))--;
-		return;
-	case 61:
-		(*(creverseNodeUnion->CPPcreversenode61))--;
-		return;
-	case 62:
-		(*(creverseNodeUnion->CPPcreversenode62))--;
-		return;
-	case 63:
-		(*(creverseNodeUnion->CPPcreversenode63))--;
-		return;
-	case 64:
-		(*(creverseNodeUnion->CPPcreversenode64))--;
-		return;
-	case 65:
-		(*(creverseNodeUnion->CPPcreversenode65))--;
-		return;
-	case 66:
-		(*(creverseNodeUnion->CPPcreversenode66))--;
-		return;
-	case 67:
-		(*(creverseNodeUnion->CPPcreversenode67))--;
-		return;
-	case 68:
-		(*(creverseNodeUnion->CPPcreversenode68))--;
-		return;
-	case 69:
-		(*(creverseNodeUnion->CPPcreversenode69))--;
-		return;
-	case 70:
-		(*(creverseNodeUnion->CPPcreversenode70))--;
-		return;
-	case 71:
-		(*(creverseNodeUnion->CPPcreversenode71))--;
-		return;
-	case 72:
-		(*(creverseNodeUnion->CPPcreversenode72))--;
-		return;
-	case 73:
-		(*(creverseNodeUnion->CPPcreversenode73))--;
-		return;
-	case 74:
-		(*(creverseNodeUnion->CPPcreversenode74))--;
-		return;
-	case 75:
-		(*(creverseNodeUnion->CPPcreversenode75))--;
-		return;
-	case 76:
-		(*(creverseNodeUnion->CPPcreversenode76))--;
-		return;
-	case 77:
-		(*(creverseNodeUnion->CPPcreversenode77))--;
-		return;
-	case 78:
-		(*(creverseNodeUnion->CPPcreversenode78))--;
-		return;
-	case 79:
-		(*(creverseNodeUnion->CPPcreversenode79))--;
-		return;
-	case 80:
-		(*(creverseNodeUnion->CPPcreversenode80))--;
-		return;
-	case 81:
-		(*(creverseNodeUnion->CPPcreversenode81))--;
-		return;
-	case 82:
-		(*(creverseNodeUnion->CPPcreversenode82))--;
-		return;
-	case 83:
-		(*(creverseNodeUnion->CPPcreversenode83))--;
-		return;
-	case 84:
-		(*(creverseNodeUnion->CPPcreversenode84))--;
-		return;
-	case 85:
-		(*(creverseNodeUnion->CPPcreversenode85))--;
-		return;
-	case 86:
-		(*(creverseNodeUnion->CPPcreversenode86))--;
-		return;
-	case 87:
-		(*(creverseNodeUnion->CPPcreversenode87))--;
-		return;
-	case 88:
-		(*(creverseNodeUnion->CPPcreversenode88))--;
-		return;
-	case 89:
-		(*(creverseNodeUnion->CPPcreversenode89))--;
-		return;
-	case 90:
-		(*(creverseNodeUnion->CPPcreversenode90))--;
-		return;
-	case 91:
-		(*(creverseNodeUnion->CPPcreversenode91))--;
-		return;
-	case 92:
-		(*(creverseNodeUnion->CPPcreversenode92))--;
-		return;
-	case 93:
-		(*(creverseNodeUnion->CPPcreversenode93))--;
-		return;
-	case 94:
-		(*(creverseNodeUnion->CPPcreversenode94))--;
-		return;
-	case 95:
-		(*(creverseNodeUnion->CPPcreversenode95))--;
-		return;
-	case 96:
-		(*(creverseNodeUnion->CPPcreversenode96))--;
-		return;
-	case 97:
-		(*(creverseNodeUnion->CPPcreversenode97))--;
-		return;
-	case 98:
-		(*(creverseNodeUnion->CPPcreversenode98))--;
-		return;
-	case 99:
-		(*(creverseNodeUnion->CPPcreversenode99))--;
-		return;
-	case 100:
-		(*(creverseNodeUnion->CPPcreversenode100))--;
-		return;
-	case 101:
-		(*(creverseNodeUnion->CPPcreversenode101))--;
-		return;
-	case 102:
-		(*(creverseNodeUnion->CPPcreversenode102))--;
-		return;
-	case 103:
-		(*(creverseNodeUnion->CPPcreversenode103))--;
-		return;
-	case 104:
-		(*(creverseNodeUnion->CPPcreversenode104))--;
-		return;
-	case 105:
-		(*(creverseNodeUnion->CPPcreversenode105))--;
-		return;
-	case 106:
-		(*(creverseNodeUnion->CPPcreversenode106))--;
-		return;
-	case 107:
-		(*(creverseNodeUnion->CPPcreversenode107))--;
-		return;
-	case 108:
-		(*(creverseNodeUnion->CPPcreversenode108))--;
-		return;
-	case 109:
-		(*(creverseNodeUnion->CPPcreversenode109))--;
-		return;
-	case 110:
-		(*(creverseNodeUnion->CPPcreversenode110))--;
-		return;
-	case 111:
-		(*(creverseNodeUnion->CPPcreversenode111))--;
-		return;
-	case 112:
-		(*(creverseNodeUnion->CPPcreversenode112))--;
-		return;
-	case 113:
-		(*(creverseNodeUnion->CPPcreversenode113))--;
-		return;
-	case 114:
-		(*(creverseNodeUnion->CPPcreversenode114))--;
-		return;
-	case 115:
-		(*(creverseNodeUnion->CPPcreversenode115))--;
-		return;
-	case 116:
-		(*(creverseNodeUnion->CPPcreversenode116))--;
-		return;
-	case 117:
-		(*(creverseNodeUnion->CPPcreversenode117))--;
-		return;
-	case 118:
-		(*(creverseNodeUnion->CPPcreversenode118))--;
-		return;
-	case 119:
-		(*(creverseNodeUnion->CPPcreversenode119))--;
-		return;
-	case 120:
-		(*(creverseNodeUnion->CPPcreversenode120))--;
-		return;
-	case 121:
-		(*(creverseNodeUnion->CPPcreversenode121))--;
-		return;
-	case 122:
-		(*(creverseNodeUnion->CPPcreversenode122))--;
-		return;
-	case 123:
-		(*(creverseNodeUnion->CPPcreversenode123))--;
-		return;
-	case 124:
-		(*(creverseNodeUnion->CPPcreversenode124))--;
-		return;
-	case 125:
-		(*(creverseNodeUnion->CPPcreversenode125))--;
-		return;
-	case 126:
-		(*(creverseNodeUnion->CPPcreversenode126))--;
-		return;
-	case 127:
-		(*(creverseNodeUnion->CPPcreversenode127))--;
-		return;
-	case 128:
-		(*(creverseNodeUnion->CPPcreversenode128))--;
-		return;
-	case 129:
-		(*(creverseNodeUnion->CPPcreversenode129))--;
-		return;
-	case 130:
-		(*(creverseNodeUnion->CPPcreversenode130))--;
-		return;
-	case 131:
-		(*(creverseNodeUnion->CPPcreversenode131))--;
-		return;
-	case 132:
-		(*(creverseNodeUnion->CPPcreversenode132))--;
-		return;
-	case 133:
-		(*(creverseNodeUnion->CPPcreversenode133))--;
-		return;
-	case 134:
-		(*(creverseNodeUnion->CPPcreversenode134))--;
-		return;
-	case 135:
-		(*(creverseNodeUnion->CPPcreversenode135))--;
-		return;
-	case 136:
-		(*(creverseNodeUnion->CPPcreversenode136))--;
-		return;
-	case 137:
-		(*(creverseNodeUnion->CPPcreversenode137))--;
-		return;
-	case 138:
-		(*(creverseNodeUnion->CPPcreversenode138))--;
-		return;
-	case 139:
-		(*(creverseNodeUnion->CPPcreversenode139))--;
-		return;
-	case 140:
-		(*(creverseNodeUnion->CPPcreversenode140))--;
-		return;
-	case 141:
-		(*(creverseNodeUnion->CPPcreversenode141))--;
-		return;
-	case 142:
-		(*(creverseNodeUnion->CPPcreversenode142))--;
-		return;
-	case 143:
-		(*(creverseNodeUnion->CPPcreversenode143))--;
-		return;
-	case 144:
-		(*(creverseNodeUnion->CPPcreversenode144))--;
-		return;
-	case 145:
-		(*(creverseNodeUnion->CPPcreversenode145))--;
-		return;
-	case 146:
-		(*(creverseNodeUnion->CPPcreversenode146))--;
-		return;
-	case 147:
-		(*(creverseNodeUnion->CPPcreversenode147))--;
-		return;
-	case 148:
-		(*(creverseNodeUnion->CPPcreversenode148))--;
-		return;
-	case 149:
-		(*(creverseNodeUnion->CPPcreversenode149))--;
-		return;
-	case 150:
-		(*(creverseNodeUnion->CPPcreversenode150))--;
-		return;
-	case 151:
-		(*(creverseNodeUnion->CPPcreversenode151))--;
-		return;
-	case 152:
-		(*(creverseNodeUnion->CPPcreversenode152))--;
-		return;
-	case 153:
-		(*(creverseNodeUnion->CPPcreversenode153))--;
-		return;
-	case 154:
-		(*(creverseNodeUnion->CPPcreversenode154))--;
-		return;
-	case 155:
-		(*(creverseNodeUnion->CPPcreversenode155))--;
-		return;
-	case 156:
-		(*(creverseNodeUnion->CPPcreversenode156))--;
-		return;
-	case 157:
-		(*(creverseNodeUnion->CPPcreversenode157))--;
-		return;
-	case 158:
-		(*(creverseNodeUnion->CPPcreversenode158))--;
-		return;
-	case 159:
-		(*(creverseNodeUnion->CPPcreversenode159))--;
-		return;
-	case 160:
-		(*(creverseNodeUnion->CPPcreversenode160))--;
-		return;
-	case 161:
-		(*(creverseNodeUnion->CPPcreversenode161))--;
-		return;
-	case 162:
-		(*(creverseNodeUnion->CPPcreversenode162))--;
-		return;
-	case 163:
-		(*(creverseNodeUnion->CPPcreversenode163))--;
-		return;
-	case 164:
-		(*(creverseNodeUnion->CPPcreversenode164))--;
-		return;
-	case 165:
-		(*(creverseNodeUnion->CPPcreversenode165))--;
-		return;
-	case 166:
-		(*(creverseNodeUnion->CPPcreversenode166))--;
-		return;
-	case 167:
-		(*(creverseNodeUnion->CPPcreversenode167))--;
-		return;
-	case 168:
-		(*(creverseNodeUnion->CPPcreversenode168))--;
-		return;
-	case 169:
-		(*(creverseNodeUnion->CPPcreversenode169))--;
-		return;
-	case 170:
-		(*(creverseNodeUnion->CPPcreversenode170))--;
-		return;
-	case 171:
-		(*(creverseNodeUnion->CPPcreversenode171))--;
-		return;
-	case 172:
-		(*(creverseNodeUnion->CPPcreversenode172))--;
-		return;
-	case 173:
-		(*(creverseNodeUnion->CPPcreversenode173))--;
-		return;
-	case 174:
-		(*(creverseNodeUnion->CPPcreversenode174))--;
-		return;
-	case 175:
-		(*(creverseNodeUnion->CPPcreversenode175))--;
-		return;
-	case 176:
-		(*(creverseNodeUnion->CPPcreversenode176))--;
-		return;
-	case 177:
-		(*(creverseNodeUnion->CPPcreversenode177))--;
-		return;
-	case 178:
-		(*(creverseNodeUnion->CPPcreversenode178))--;
-		return;
-	case 179:
-		(*(creverseNodeUnion->CPPcreversenode179))--;
-		return;
-	case 180:
-		(*(creverseNodeUnion->CPPcreversenode180))--;
-		return;
-	case 181:
-		(*(creverseNodeUnion->CPPcreversenode181))--;
-		return;
-	case 182:
-		(*(creverseNodeUnion->CPPcreversenode182))--;
-		return;
-	case 183:
-		(*(creverseNodeUnion->CPPcreversenode183))--;
-		return;
-	case 184:
-		(*(creverseNodeUnion->CPPcreversenode184))--;
-		return;
-	case 185:
-		(*(creverseNodeUnion->CPPcreversenode185))--;
-		return;
-	case 186:
-		(*(creverseNodeUnion->CPPcreversenode186))--;
-		return;
-	case 187:
-		(*(creverseNodeUnion->CPPcreversenode187))--;
-		return;
-	case 188:
-		(*(creverseNodeUnion->CPPcreversenode188))--;
-		return;
-	case 189:
-		(*(creverseNodeUnion->CPPcreversenode189))--;
-		return;
-	case 190:
-		(*(creverseNodeUnion->CPPcreversenode190))--;
-		return;
-	case 191:
-		(*(creverseNodeUnion->CPPcreversenode191))--;
-		return;
-	case 192:
-		(*(creverseNodeUnion->CPPcreversenode192))--;
-		return;
-	case 193:
-		(*(creverseNodeUnion->CPPcreversenode193))--;
-		return;
-	case 194:
-		(*(creverseNodeUnion->CPPcreversenode194))--;
-		return;
-	case 195:
-		(*(creverseNodeUnion->CPPcreversenode195))--;
-		return;
-	case 196:
-		(*(creverseNodeUnion->CPPcreversenode196))--;
-		return;
+		UnOrderedCReverseNode_Previous_CASE(1)
+		UnOrderedCReverseNode_Previous_CASE(2)
+		UnOrderedCReverseNode_Previous_CASE(3)
+		UnOrderedCReverseNode_Previous_CASE(4)
+		UnOrderedCReverseNode_Previous_CASE(5)
+		UnOrderedCReverseNode_Previous_CASE(6)
+		UnOrderedCReverseNode_Previous_CASE(7)
+		UnOrderedCReverseNode_Previous_CASE(8)
+		UnOrderedCReverseNode_Previous_CASE(9)
+		UnOrderedCReverseNode_Previous_CASE(10)
+		UnOrderedCReverseNode_Previous_CASE(11)
+		UnOrderedCReverseNode_Previous_CASE(12)
+		UnOrderedCReverseNode_Previous_CASE(13)
+		UnOrderedCReverseNode_Previous_CASE(14)
+		UnOrderedCReverseNode_Previous_CASE(15)
+		UnOrderedCReverseNode_Previous_CASE(16)
+		UnOrderedCReverseNode_Previous_CASE(17)
+		UnOrderedCReverseNode_Previous_CASE(18)
+		UnOrderedCReverseNode_Previous_CASE(19)
+		UnOrderedCReverseNode_Previous_CASE(20)
+		UnOrderedCReverseNode_Previous_CASE(21)
+		UnOrderedCReverseNode_Previous_CASE(22)
+		UnOrderedCReverseNode_Previous_CASE(23)
+		UnOrderedCReverseNode_Previous_CASE(24)
+		UnOrderedCReverseNode_Previous_CASE(25)
+		UnOrderedCReverseNode_Previous_CASE(26)
+		UnOrderedCReverseNode_Previous_CASE(27)
+		UnOrderedCReverseNode_Previous_CASE(28)
+		UnOrderedCReverseNode_Previous_CASE(29)
+		UnOrderedCReverseNode_Previous_CASE(30)
+		UnOrderedCReverseNode_Previous_CASE(31)
+		UnOrderedCReverseNode_Previous_CASE(32)
+		UnOrderedCReverseNode_Previous_CASE(33)
+		UnOrderedCReverseNode_Previous_CASE(34)
+		UnOrderedCReverseNode_Previous_CASE(35)
+		UnOrderedCReverseNode_Previous_CASE(36)
+		UnOrderedCReverseNode_Previous_CASE(37)
+		UnOrderedCReverseNode_Previous_CASE(38)
+		UnOrderedCReverseNode_Previous_CASE(39)
+		UnOrderedCReverseNode_Previous_CASE(40)
+		UnOrderedCReverseNode_Previous_CASE(41)
+		UnOrderedCReverseNode_Previous_CASE(42)
+		UnOrderedCReverseNode_Previous_CASE(43)
+		UnOrderedCReverseNode_Previous_CASE(44)
+		UnOrderedCReverseNode_Previous_CASE(45)
+		UnOrderedCReverseNode_Previous_CASE(46)
+		UnOrderedCReverseNode_Previous_CASE(47)
+		UnOrderedCReverseNode_Previous_CASE(48)
+		UnOrderedCReverseNode_Previous_CASE(49)
+		UnOrderedCReverseNode_Previous_CASE(50)
+		UnOrderedCReverseNode_Previous_CASE(51)
+		UnOrderedCReverseNode_Previous_CASE(52)
+		UnOrderedCReverseNode_Previous_CASE(53)
+		UnOrderedCReverseNode_Previous_CASE(54)
+		UnOrderedCReverseNode_Previous_CASE(55)
+		UnOrderedCReverseNode_Previous_CASE(56)
+		UnOrderedCReverseNode_Previous_CASE(57)
+		UnOrderedCReverseNode_Previous_CASE(58)
+		UnOrderedCReverseNode_Previous_CASE(59)
+		UnOrderedCReverseNode_Previous_CASE(60)
+		UnOrderedCReverseNode_Previous_CASE(61)
+		UnOrderedCReverseNode_Previous_CASE(62)
+		UnOrderedCReverseNode_Previous_CASE(63)
+		UnOrderedCReverseNode_Previous_CASE(64)
+		UnOrderedCReverseNode_Previous_CASE(65)
+		UnOrderedCReverseNode_Previous_CASE(66)
+		UnOrderedCReverseNode_Previous_CASE(67)
+		UnOrderedCReverseNode_Previous_CASE(68)
+		UnOrderedCReverseNode_Previous_CASE(69)
+		UnOrderedCReverseNode_Previous_CASE(70)
+		UnOrderedCReverseNode_Previous_CASE(71)
+		UnOrderedCReverseNode_Previous_CASE(72)
+		UnOrderedCReverseNode_Previous_CASE(73)
+		UnOrderedCReverseNode_Previous_CASE(74)
+		UnOrderedCReverseNode_Previous_CASE(75)
+		UnOrderedCReverseNode_Previous_CASE(76)
+		UnOrderedCReverseNode_Previous_CASE(77)
+		UnOrderedCReverseNode_Previous_CASE(78)
+		UnOrderedCReverseNode_Previous_CASE(79)
+		UnOrderedCReverseNode_Previous_CASE(80)
+		UnOrderedCReverseNode_Previous_CASE(81)
+		UnOrderedCReverseNode_Previous_CASE(82)
+		UnOrderedCReverseNode_Previous_CASE(83)
+		UnOrderedCReverseNode_Previous_CASE(84)
+		UnOrderedCReverseNode_Previous_CASE(85)
+		UnOrderedCReverseNode_Previous_CASE(86)
+		UnOrderedCReverseNode_Previous_CASE(87)
+		UnOrderedCReverseNode_Previous_CASE(88)
+		UnOrderedCReverseNode_Previous_CASE(89)
+		UnOrderedCReverseNode_Previous_CASE(90)
+		UnOrderedCReverseNode_Previous_CASE(91)
+		UnOrderedCReverseNode_Previous_CASE(92)
+		UnOrderedCReverseNode_Previous_CASE(93)
+		UnOrderedCReverseNode_Previous_CASE(94)
+		UnOrderedCReverseNode_Previous_CASE(95)
+		UnOrderedCReverseNode_Previous_CASE(96)
+		UnOrderedCReverseNode_Previous_CASE(97)
+		UnOrderedCReverseNode_Previous_CASE(98)
+		UnOrderedCReverseNode_Previous_CASE(99)
+		UnOrderedCReverseNode_Previous_CASE(100)
+		UnOrderedCReverseNode_Previous_CASE(101)
+		UnOrderedCReverseNode_Previous_CASE(102)
+		UnOrderedCReverseNode_Previous_CASE(103)
+		UnOrderedCReverseNode_Previous_CASE(104)
+		UnOrderedCReverseNode_Previous_CASE(105)
+		UnOrderedCReverseNode_Previous_CASE(106)
+		UnOrderedCReverseNode_Previous_CASE(107)
+		UnOrderedCReverseNode_Previous_CASE(108)
+		UnOrderedCReverseNode_Previous_CASE(109)
+		UnOrderedCReverseNode_Previous_CASE(110)
+		UnOrderedCReverseNode_Previous_CASE(111)
+		UnOrderedCReverseNode_Previous_CASE(112)
+		UnOrderedCReverseNode_Previous_CASE(113)
+		UnOrderedCReverseNode_Previous_CASE(114)
+		UnOrderedCReverseNode_Previous_CASE(115)
+		UnOrderedCReverseNode_Previous_CASE(116)
+		UnOrderedCReverseNode_Previous_CASE(117)
+		UnOrderedCReverseNode_Previous_CASE(118)
+		UnOrderedCReverseNode_Previous_CASE(119)
+		UnOrderedCReverseNode_Previous_CASE(120)
+		UnOrderedCReverseNode_Previous_CASE(121)
+		UnOrderedCReverseNode_Previous_CASE(122)
+		UnOrderedCReverseNode_Previous_CASE(123)
+		UnOrderedCReverseNode_Previous_CASE(124)
+		UnOrderedCReverseNode_Previous_CASE(125)
+		UnOrderedCReverseNode_Previous_CASE(126)
+		UnOrderedCReverseNode_Previous_CASE(127)
+		UnOrderedCReverseNode_Previous_CASE(128)
+		UnOrderedCReverseNode_Previous_CASE(129)
+		UnOrderedCReverseNode_Previous_CASE(130)
+		UnOrderedCReverseNode_Previous_CASE(131)
+		UnOrderedCReverseNode_Previous_CASE(132)
+		UnOrderedCReverseNode_Previous_CASE(133)
+		UnOrderedCReverseNode_Previous_CASE(134)
+		UnOrderedCReverseNode_Previous_CASE(135)
+		UnOrderedCReverseNode_Previous_CASE(136)
+		UnOrderedCReverseNode_Previous_CASE(137)
+		UnOrderedCReverseNode_Previous_CASE(138)
+		UnOrderedCReverseNode_Previous_CASE(139)
+		UnOrderedCReverseNode_Previous_CASE(140)
+		UnOrderedCReverseNode_Previous_CASE(141)
+		UnOrderedCReverseNode_Previous_CASE(142)
+		UnOrderedCReverseNode_Previous_CASE(143)
+		UnOrderedCReverseNode_Previous_CASE(144)
+		UnOrderedCReverseNode_Previous_CASE(145)
+		UnOrderedCReverseNode_Previous_CASE(146)
+		UnOrderedCReverseNode_Previous_CASE(147)
+		UnOrderedCReverseNode_Previous_CASE(148)
+		UnOrderedCReverseNode_Previous_CASE(149)
+		UnOrderedCReverseNode_Previous_CASE(150)
+		UnOrderedCReverseNode_Previous_CASE(151)
+		UnOrderedCReverseNode_Previous_CASE(152)
+		UnOrderedCReverseNode_Previous_CASE(153)
+		UnOrderedCReverseNode_Previous_CASE(154)
+		UnOrderedCReverseNode_Previous_CASE(155)
+		UnOrderedCReverseNode_Previous_CASE(156)
+		UnOrderedCReverseNode_Previous_CASE(157)
+		UnOrderedCReverseNode_Previous_CASE(158)
+		UnOrderedCReverseNode_Previous_CASE(159)
+		UnOrderedCReverseNode_Previous_CASE(160)
+		UnOrderedCReverseNode_Previous_CASE(161)
+		UnOrderedCReverseNode_Previous_CASE(162)
+		UnOrderedCReverseNode_Previous_CASE(163)
+		UnOrderedCReverseNode_Previous_CASE(164)
+		UnOrderedCReverseNode_Previous_CASE(165)
+		UnOrderedCReverseNode_Previous_CASE(166)
+		UnOrderedCReverseNode_Previous_CASE(167)
+		UnOrderedCReverseNode_Previous_CASE(168)
+		UnOrderedCReverseNode_Previous_CASE(169)
+		UnOrderedCReverseNode_Previous_CASE(170)
+		UnOrderedCReverseNode_Previous_CASE(171)
+		UnOrderedCReverseNode_Previous_CASE(172)
+		UnOrderedCReverseNode_Previous_CASE(173)
+		UnOrderedCReverseNode_Previous_CASE(174)
+		UnOrderedCReverseNode_Previous_CASE(175)
+		UnOrderedCReverseNode_Previous_CASE(176)
+		UnOrderedCReverseNode_Previous_CASE(177)
+		UnOrderedCReverseNode_Previous_CASE(178)
+		UnOrderedCReverseNode_Previous_CASE(179)
+		UnOrderedCReverseNode_Previous_CASE(180)
+		UnOrderedCReverseNode_Previous_CASE(181)
+		UnOrderedCReverseNode_Previous_CASE(182)
+		UnOrderedCReverseNode_Previous_CASE(183)
+		UnOrderedCReverseNode_Previous_CASE(184)
+		UnOrderedCReverseNode_Previous_CASE(185)
+		UnOrderedCReverseNode_Previous_CASE(186)
+		UnOrderedCReverseNode_Previous_CASE(187)
+		UnOrderedCReverseNode_Previous_CASE(188)
+		UnOrderedCReverseNode_Previous_CASE(189)
+		UnOrderedCReverseNode_Previous_CASE(190)
+		UnOrderedCReverseNode_Previous_CASE(191)
+		UnOrderedCReverseNode_Previous_CASE(192)
+		UnOrderedCReverseNode_Previous_CASE(193)
+		UnOrderedCReverseNode_Previous_CASE(194)
+		UnOrderedCReverseNode_Previous_CASE(195)
+		UnOrderedCReverseNode_Previous_CASE(196)
 	}
 }
+
+#define UnOrderedCReverseNode_Compare_Equals_CASE(NUM) \
+	case NUM: \
+		return (*(thisObj->creverseNodeUnion->CPPcreversenode##NUM) == *(other->creverseNodeUnion->CPPcreversenode##NUM));
 
 generic<typename Key, typename Value>
 bool UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::operator==(const CShorpUnOrderedCReverseNode<Key, Value>^ thisObj, const CShorpUnOrderedCReverseNode<Key, Value>^ other)
@@ -1977,401 +1207,209 @@ bool UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::operator=
 	{
 	case 0: default:
 		return false;
-	case 1:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode1) == *(other->creverseNodeUnion->CPPcreversenode1));
-	case 2:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode2) == *(other->creverseNodeUnion->CPPcreversenode2));
-	case 3:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode3) == *(other->creverseNodeUnion->CPPcreversenode3));
-	case 4:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode4) == *(other->creverseNodeUnion->CPPcreversenode4));
-	case 5:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode5) == *(other->creverseNodeUnion->CPPcreversenode5));
-	case 6:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode6) == *(other->creverseNodeUnion->CPPcreversenode6));
-	case 7:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode7) == *(other->creverseNodeUnion->CPPcreversenode7));
-	case 8:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode8) == *(other->creverseNodeUnion->CPPcreversenode8));
-	case 9:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode9) == *(other->creverseNodeUnion->CPPcreversenode9));
-	case 10:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode10) == *(other->creverseNodeUnion->CPPcreversenode10));
-	case 11:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode11) == *(other->creverseNodeUnion->CPPcreversenode11));
-	case 12:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode12) == *(other->creverseNodeUnion->CPPcreversenode12));
-	case 13:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode13) == *(other->creverseNodeUnion->CPPcreversenode13));
-	case 14:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode14) == *(other->creverseNodeUnion->CPPcreversenode14));
-	case 15:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode15) == *(other->creverseNodeUnion->CPPcreversenode15));
-	case 16:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode16) == *(other->creverseNodeUnion->CPPcreversenode16));
-	case 17:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode17) == *(other->creverseNodeUnion->CPPcreversenode17));
-	case 18:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode18) == *(other->creverseNodeUnion->CPPcreversenode18));
-	case 19:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode19) == *(other->creverseNodeUnion->CPPcreversenode19));
-	case 20:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode20) == *(other->creverseNodeUnion->CPPcreversenode20));
-	case 21:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode21) == *(other->creverseNodeUnion->CPPcreversenode21));
-	case 22:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode22) == *(other->creverseNodeUnion->CPPcreversenode22));
-	case 23:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode23) == *(other->creverseNodeUnion->CPPcreversenode23));
-	case 24:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode24) == *(other->creverseNodeUnion->CPPcreversenode24));
-	case 25:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode25) == *(other->creverseNodeUnion->CPPcreversenode25));
-	case 26:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode26) == *(other->creverseNodeUnion->CPPcreversenode26));
-	case 27:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode27) == *(other->creverseNodeUnion->CPPcreversenode27));
-	case 28:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode28) == *(other->creverseNodeUnion->CPPcreversenode28));
-	case 29:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode29) == *(other->creverseNodeUnion->CPPcreversenode29));
-	case 30:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode30) == *(other->creverseNodeUnion->CPPcreversenode30));
-	case 31:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode31) == *(other->creverseNodeUnion->CPPcreversenode31));
-	case 32:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode32) == *(other->creverseNodeUnion->CPPcreversenode32));
-	case 33:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode33) == *(other->creverseNodeUnion->CPPcreversenode33));
-	case 34:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode34) == *(other->creverseNodeUnion->CPPcreversenode34));
-	case 35:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode35) == *(other->creverseNodeUnion->CPPcreversenode35));
-	case 36:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode36) == *(other->creverseNodeUnion->CPPcreversenode36));
-	case 37:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode37) == *(other->creverseNodeUnion->CPPcreversenode37));
-	case 38:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode38) == *(other->creverseNodeUnion->CPPcreversenode38));
-	case 39:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode39) == *(other->creverseNodeUnion->CPPcreversenode39));
-	case 40:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode40) == *(other->creverseNodeUnion->CPPcreversenode40));
-	case 41:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode41) == *(other->creverseNodeUnion->CPPcreversenode41));
-	case 42:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode42) == *(other->creverseNodeUnion->CPPcreversenode42));
-	case 43:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode43) == *(other->creverseNodeUnion->CPPcreversenode43));
-	case 44:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode44) == *(other->creverseNodeUnion->CPPcreversenode44));
-	case 45:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode45) == *(other->creverseNodeUnion->CPPcreversenode45));
-	case 46:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode46) == *(other->creverseNodeUnion->CPPcreversenode46));
-	case 47:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode47) == *(other->creverseNodeUnion->CPPcreversenode47));
-	case 48:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode48) == *(other->creverseNodeUnion->CPPcreversenode48));
-	case 49:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode49) == *(other->creverseNodeUnion->CPPcreversenode49));
-	case 50:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode50) == *(other->creverseNodeUnion->CPPcreversenode50));
-	case 51:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode51) == *(other->creverseNodeUnion->CPPcreversenode51));
-	case 52:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode52) == *(other->creverseNodeUnion->CPPcreversenode52));
-	case 53:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode53) == *(other->creverseNodeUnion->CPPcreversenode53));
-	case 54:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode54) == *(other->creverseNodeUnion->CPPcreversenode54));
-	case 55:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode55) == *(other->creverseNodeUnion->CPPcreversenode55));
-	case 56:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode56) == *(other->creverseNodeUnion->CPPcreversenode56));
-	case 57:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode57) == *(other->creverseNodeUnion->CPPcreversenode57));
-	case 58:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode58) == *(other->creverseNodeUnion->CPPcreversenode58));
-	case 59:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode59) == *(other->creverseNodeUnion->CPPcreversenode59));
-	case 60:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode60) == *(other->creverseNodeUnion->CPPcreversenode60));
-	case 61:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode61) == *(other->creverseNodeUnion->CPPcreversenode61));
-	case 62:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode62) == *(other->creverseNodeUnion->CPPcreversenode62));
-	case 63:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode63) == *(other->creverseNodeUnion->CPPcreversenode63));
-	case 64:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode64) == *(other->creverseNodeUnion->CPPcreversenode64));
-	case 65:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode65) == *(other->creverseNodeUnion->CPPcreversenode65));
-	case 66:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode66) == *(other->creverseNodeUnion->CPPcreversenode66));
-	case 67:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode67) == *(other->creverseNodeUnion->CPPcreversenode67));
-	case 68:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode68) == *(other->creverseNodeUnion->CPPcreversenode68));
-	case 69:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode69) == *(other->creverseNodeUnion->CPPcreversenode69));
-	case 70:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode70) == *(other->creverseNodeUnion->CPPcreversenode70));
-	case 71:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode71) == *(other->creverseNodeUnion->CPPcreversenode71));
-	case 72:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode72) == *(other->creverseNodeUnion->CPPcreversenode72));
-	case 73:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode73) == *(other->creverseNodeUnion->CPPcreversenode73));
-	case 74:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode74) == *(other->creverseNodeUnion->CPPcreversenode74));
-	case 75:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode75) == *(other->creverseNodeUnion->CPPcreversenode75));
-	case 76:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode76) == *(other->creverseNodeUnion->CPPcreversenode76));
-	case 77:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode77) == *(other->creverseNodeUnion->CPPcreversenode77));
-	case 78:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode78) == *(other->creverseNodeUnion->CPPcreversenode78));
-	case 79:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode79) == *(other->creverseNodeUnion->CPPcreversenode79));
-	case 80:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode80) == *(other->creverseNodeUnion->CPPcreversenode80));
-	case 81:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode81) == *(other->creverseNodeUnion->CPPcreversenode81));
-	case 82:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode82) == *(other->creverseNodeUnion->CPPcreversenode82));
-	case 83:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode83) == *(other->creverseNodeUnion->CPPcreversenode83));
-	case 84:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode84) == *(other->creverseNodeUnion->CPPcreversenode84));
-	case 85:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode85) == *(other->creverseNodeUnion->CPPcreversenode85));
-	case 86:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode86) == *(other->creverseNodeUnion->CPPcreversenode86));
-	case 87:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode87) == *(other->creverseNodeUnion->CPPcreversenode87));
-	case 88:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode88) == *(other->creverseNodeUnion->CPPcreversenode88));
-	case 89:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode89) == *(other->creverseNodeUnion->CPPcreversenode89));
-	case 90:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode90) == *(other->creverseNodeUnion->CPPcreversenode90));
-	case 91:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode91) == *(other->creverseNodeUnion->CPPcreversenode91));
-	case 92:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode92) == *(other->creverseNodeUnion->CPPcreversenode92));
-	case 93:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode93) == *(other->creverseNodeUnion->CPPcreversenode93));
-	case 94:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode94) == *(other->creverseNodeUnion->CPPcreversenode94));
-	case 95:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode95) == *(other->creverseNodeUnion->CPPcreversenode95));
-	case 96:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode96) == *(other->creverseNodeUnion->CPPcreversenode96));
-	case 97:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode97) == *(other->creverseNodeUnion->CPPcreversenode97));
-	case 98:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode98) == *(other->creverseNodeUnion->CPPcreversenode98));
-	case 99:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode99) == *(other->creverseNodeUnion->CPPcreversenode99));
-	case 100:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode100) == *(other->creverseNodeUnion->CPPcreversenode100));
-	case 101:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode101) == *(other->creverseNodeUnion->CPPcreversenode101));
-	case 102:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode102) == *(other->creverseNodeUnion->CPPcreversenode102));
-	case 103:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode103) == *(other->creverseNodeUnion->CPPcreversenode103));
-	case 104:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode104) == *(other->creverseNodeUnion->CPPcreversenode104));
-	case 105:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode105) == *(other->creverseNodeUnion->CPPcreversenode105));
-	case 106:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode106) == *(other->creverseNodeUnion->CPPcreversenode106));
-	case 107:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode107) == *(other->creverseNodeUnion->CPPcreversenode107));
-	case 108:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode108) == *(other->creverseNodeUnion->CPPcreversenode108));
-	case 109:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode109) == *(other->creverseNodeUnion->CPPcreversenode109));
-	case 110:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode110) == *(other->creverseNodeUnion->CPPcreversenode110));
-	case 111:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode111) == *(other->creverseNodeUnion->CPPcreversenode111));
-	case 112:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode112) == *(other->creverseNodeUnion->CPPcreversenode112));
-	case 113:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode113) == *(other->creverseNodeUnion->CPPcreversenode113));
-	case 114:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode114) == *(other->creverseNodeUnion->CPPcreversenode114));
-	case 115:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode115) == *(other->creverseNodeUnion->CPPcreversenode115));
-	case 116:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode116) == *(other->creverseNodeUnion->CPPcreversenode116));
-	case 117:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode117) == *(other->creverseNodeUnion->CPPcreversenode117));
-	case 118:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode118) == *(other->creverseNodeUnion->CPPcreversenode118));
-	case 119:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode119) == *(other->creverseNodeUnion->CPPcreversenode119));
-	case 120:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode120) == *(other->creverseNodeUnion->CPPcreversenode120));
-	case 121:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode121) == *(other->creverseNodeUnion->CPPcreversenode121));
-	case 122:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode122) == *(other->creverseNodeUnion->CPPcreversenode122));
-	case 123:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode123) == *(other->creverseNodeUnion->CPPcreversenode123));
-	case 124:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode124) == *(other->creverseNodeUnion->CPPcreversenode124));
-	case 125:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode125) == *(other->creverseNodeUnion->CPPcreversenode125));
-	case 126:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode126) == *(other->creverseNodeUnion->CPPcreversenode126));
-	case 127:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode127) == *(other->creverseNodeUnion->CPPcreversenode127));
-	case 128:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode128) == *(other->creverseNodeUnion->CPPcreversenode128));
-	case 129:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode129) == *(other->creverseNodeUnion->CPPcreversenode129));
-	case 130:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode130) == *(other->creverseNodeUnion->CPPcreversenode130));
-	case 131:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode131) == *(other->creverseNodeUnion->CPPcreversenode131));
-	case 132:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode132) == *(other->creverseNodeUnion->CPPcreversenode132));
-	case 133:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode133) == *(other->creverseNodeUnion->CPPcreversenode133));
-	case 134:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode134) == *(other->creverseNodeUnion->CPPcreversenode134));
-	case 135:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode135) == *(other->creverseNodeUnion->CPPcreversenode135));
-	case 136:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode136) == *(other->creverseNodeUnion->CPPcreversenode136));
-	case 137:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode137) == *(other->creverseNodeUnion->CPPcreversenode137));
-	case 138:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode138) == *(other->creverseNodeUnion->CPPcreversenode138));
-	case 139:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode139) == *(other->creverseNodeUnion->CPPcreversenode139));
-	case 140:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode140) == *(other->creverseNodeUnion->CPPcreversenode140));
-	case 141:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode141) == *(other->creverseNodeUnion->CPPcreversenode141));
-	case 142:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode142) == *(other->creverseNodeUnion->CPPcreversenode142));
-	case 143:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode143) == *(other->creverseNodeUnion->CPPcreversenode143));
-	case 144:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode144) == *(other->creverseNodeUnion->CPPcreversenode144));
-	case 145:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode145) == *(other->creverseNodeUnion->CPPcreversenode145));
-	case 146:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode146) == *(other->creverseNodeUnion->CPPcreversenode146));
-	case 147:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode147) == *(other->creverseNodeUnion->CPPcreversenode147));
-	case 148:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode148) == *(other->creverseNodeUnion->CPPcreversenode148));
-	case 149:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode149) == *(other->creverseNodeUnion->CPPcreversenode149));
-	case 150:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode150) == *(other->creverseNodeUnion->CPPcreversenode150));
-	case 151:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode151) == *(other->creverseNodeUnion->CPPcreversenode151));
-	case 152:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode152) == *(other->creverseNodeUnion->CPPcreversenode152));
-	case 153:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode153) == *(other->creverseNodeUnion->CPPcreversenode153));
-	case 154:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode154) == *(other->creverseNodeUnion->CPPcreversenode154));
-	case 155:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode155) == *(other->creverseNodeUnion->CPPcreversenode155));
-	case 156:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode156) == *(other->creverseNodeUnion->CPPcreversenode156));
-	case 157:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode157) == *(other->creverseNodeUnion->CPPcreversenode157));
-	case 158:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode158) == *(other->creverseNodeUnion->CPPcreversenode158));
-	case 159:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode159) == *(other->creverseNodeUnion->CPPcreversenode159));
-	case 160:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode160) == *(other->creverseNodeUnion->CPPcreversenode160));
-	case 161:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode161) == *(other->creverseNodeUnion->CPPcreversenode161));
-	case 162:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode162) == *(other->creverseNodeUnion->CPPcreversenode162));
-	case 163:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode163) == *(other->creverseNodeUnion->CPPcreversenode163));
-	case 164:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode164) == *(other->creverseNodeUnion->CPPcreversenode164));
-	case 165:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode165) == *(other->creverseNodeUnion->CPPcreversenode165));
-	case 166:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode166) == *(other->creverseNodeUnion->CPPcreversenode166));
-	case 167:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode167) == *(other->creverseNodeUnion->CPPcreversenode167));
-	case 168:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode168) == *(other->creverseNodeUnion->CPPcreversenode168));
-	case 169:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode169) == *(other->creverseNodeUnion->CPPcreversenode169));
-	case 170:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode170) == *(other->creverseNodeUnion->CPPcreversenode170));
-	case 171:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode171) == *(other->creverseNodeUnion->CPPcreversenode171));
-	case 172:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode172) == *(other->creverseNodeUnion->CPPcreversenode172));
-	case 173:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode173) == *(other->creverseNodeUnion->CPPcreversenode173));
-	case 174:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode174) == *(other->creverseNodeUnion->CPPcreversenode174));
-	case 175:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode175) == *(other->creverseNodeUnion->CPPcreversenode175));
-	case 176:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode176) == *(other->creverseNodeUnion->CPPcreversenode176));
-	case 177:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode177) == *(other->creverseNodeUnion->CPPcreversenode177));
-	case 178:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode178) == *(other->creverseNodeUnion->CPPcreversenode178));
-	case 179:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode179) == *(other->creverseNodeUnion->CPPcreversenode179));
-	case 180:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode180) == *(other->creverseNodeUnion->CPPcreversenode180));
-	case 181:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode181) == *(other->creverseNodeUnion->CPPcreversenode181));
-	case 182:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode182) == *(other->creverseNodeUnion->CPPcreversenode182));
-	case 183:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode183) == *(other->creverseNodeUnion->CPPcreversenode183));
-	case 184:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode184) == *(other->creverseNodeUnion->CPPcreversenode184));
-	case 185:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode185) == *(other->creverseNodeUnion->CPPcreversenode185));
-	case 186:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode186) == *(other->creverseNodeUnion->CPPcreversenode186));
-	case 187:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode187) == *(other->creverseNodeUnion->CPPcreversenode187));
-	case 188:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode188) == *(other->creverseNodeUnion->CPPcreversenode188));
-	case 189:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode189) == *(other->creverseNodeUnion->CPPcreversenode189));
-	case 190:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode190) == *(other->creverseNodeUnion->CPPcreversenode190));
-	case 191:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode191) == *(other->creverseNodeUnion->CPPcreversenode191));
-	case 192:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode192) == *(other->creverseNodeUnion->CPPcreversenode192));
-	case 193:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode193) == *(other->creverseNodeUnion->CPPcreversenode193));
-	case 194:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode194) == *(other->creverseNodeUnion->CPPcreversenode194));
-	case 195:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode195) == *(other->creverseNodeUnion->CPPcreversenode195));
-	case 196:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode196) == *(other->creverseNodeUnion->CPPcreversenode196));
+		UnOrderedCReverseNode_Compare_Equals_CASE(1)
+		UnOrderedCReverseNode_Compare_Equals_CASE(2)
+		UnOrderedCReverseNode_Compare_Equals_CASE(3)
+		UnOrderedCReverseNode_Compare_Equals_CASE(4)
+		UnOrderedCReverseNode_Compare_Equals_CASE(5)
+		UnOrderedCReverseNode_Compare_Equals_CASE(6)
+		UnOrderedCReverseNode_Compare_Equals_CASE(7)
+		UnOrderedCReverseNode_Compare_Equals_CASE(8)
+		UnOrderedCReverseNode_Compare_Equals_CASE(9)
+		UnOrderedCReverseNode_Compare_Equals_CASE(10)
+		UnOrderedCReverseNode_Compare_Equals_CASE(11)
+		UnOrderedCReverseNode_Compare_Equals_CASE(12)
+		UnOrderedCReverseNode_Compare_Equals_CASE(13)
+		UnOrderedCReverseNode_Compare_Equals_CASE(14)
+		UnOrderedCReverseNode_Compare_Equals_CASE(15)
+		UnOrderedCReverseNode_Compare_Equals_CASE(16)
+		UnOrderedCReverseNode_Compare_Equals_CASE(17)
+		UnOrderedCReverseNode_Compare_Equals_CASE(18)
+		UnOrderedCReverseNode_Compare_Equals_CASE(19)
+		UnOrderedCReverseNode_Compare_Equals_CASE(20)
+		UnOrderedCReverseNode_Compare_Equals_CASE(21)
+		UnOrderedCReverseNode_Compare_Equals_CASE(22)
+		UnOrderedCReverseNode_Compare_Equals_CASE(23)
+		UnOrderedCReverseNode_Compare_Equals_CASE(24)
+		UnOrderedCReverseNode_Compare_Equals_CASE(25)
+		UnOrderedCReverseNode_Compare_Equals_CASE(26)
+		UnOrderedCReverseNode_Compare_Equals_CASE(27)
+		UnOrderedCReverseNode_Compare_Equals_CASE(28)
+		UnOrderedCReverseNode_Compare_Equals_CASE(29)
+		UnOrderedCReverseNode_Compare_Equals_CASE(30)
+		UnOrderedCReverseNode_Compare_Equals_CASE(31)
+		UnOrderedCReverseNode_Compare_Equals_CASE(32)
+		UnOrderedCReverseNode_Compare_Equals_CASE(33)
+		UnOrderedCReverseNode_Compare_Equals_CASE(34)
+		UnOrderedCReverseNode_Compare_Equals_CASE(35)
+		UnOrderedCReverseNode_Compare_Equals_CASE(36)
+		UnOrderedCReverseNode_Compare_Equals_CASE(37)
+		UnOrderedCReverseNode_Compare_Equals_CASE(38)
+		UnOrderedCReverseNode_Compare_Equals_CASE(39)
+		UnOrderedCReverseNode_Compare_Equals_CASE(40)
+		UnOrderedCReverseNode_Compare_Equals_CASE(41)
+		UnOrderedCReverseNode_Compare_Equals_CASE(42)
+		UnOrderedCReverseNode_Compare_Equals_CASE(43)
+		UnOrderedCReverseNode_Compare_Equals_CASE(44)
+		UnOrderedCReverseNode_Compare_Equals_CASE(45)
+		UnOrderedCReverseNode_Compare_Equals_CASE(46)
+		UnOrderedCReverseNode_Compare_Equals_CASE(47)
+		UnOrderedCReverseNode_Compare_Equals_CASE(48)
+		UnOrderedCReverseNode_Compare_Equals_CASE(49)
+		UnOrderedCReverseNode_Compare_Equals_CASE(50)
+		UnOrderedCReverseNode_Compare_Equals_CASE(51)
+		UnOrderedCReverseNode_Compare_Equals_CASE(52)
+		UnOrderedCReverseNode_Compare_Equals_CASE(53)
+		UnOrderedCReverseNode_Compare_Equals_CASE(54)
+		UnOrderedCReverseNode_Compare_Equals_CASE(55)
+		UnOrderedCReverseNode_Compare_Equals_CASE(56)
+		UnOrderedCReverseNode_Compare_Equals_CASE(57)
+		UnOrderedCReverseNode_Compare_Equals_CASE(58)
+		UnOrderedCReverseNode_Compare_Equals_CASE(59)
+		UnOrderedCReverseNode_Compare_Equals_CASE(60)
+		UnOrderedCReverseNode_Compare_Equals_CASE(61)
+		UnOrderedCReverseNode_Compare_Equals_CASE(62)
+		UnOrderedCReverseNode_Compare_Equals_CASE(63)
+		UnOrderedCReverseNode_Compare_Equals_CASE(64)
+		UnOrderedCReverseNode_Compare_Equals_CASE(65)
+		UnOrderedCReverseNode_Compare_Equals_CASE(66)
+		UnOrderedCReverseNode_Compare_Equals_CASE(67)
+		UnOrderedCReverseNode_Compare_Equals_CASE(68)
+		UnOrderedCReverseNode_Compare_Equals_CASE(69)
+		UnOrderedCReverseNode_Compare_Equals_CASE(70)
+		UnOrderedCReverseNode_Compare_Equals_CASE(71)
+		UnOrderedCReverseNode_Compare_Equals_CASE(72)
+		UnOrderedCReverseNode_Compare_Equals_CASE(73)
+		UnOrderedCReverseNode_Compare_Equals_CASE(74)
+		UnOrderedCReverseNode_Compare_Equals_CASE(75)
+		UnOrderedCReverseNode_Compare_Equals_CASE(76)
+		UnOrderedCReverseNode_Compare_Equals_CASE(77)
+		UnOrderedCReverseNode_Compare_Equals_CASE(78)
+		UnOrderedCReverseNode_Compare_Equals_CASE(79)
+		UnOrderedCReverseNode_Compare_Equals_CASE(80)
+		UnOrderedCReverseNode_Compare_Equals_CASE(81)
+		UnOrderedCReverseNode_Compare_Equals_CASE(82)
+		UnOrderedCReverseNode_Compare_Equals_CASE(83)
+		UnOrderedCReverseNode_Compare_Equals_CASE(84)
+		UnOrderedCReverseNode_Compare_Equals_CASE(85)
+		UnOrderedCReverseNode_Compare_Equals_CASE(86)
+		UnOrderedCReverseNode_Compare_Equals_CASE(87)
+		UnOrderedCReverseNode_Compare_Equals_CASE(88)
+		UnOrderedCReverseNode_Compare_Equals_CASE(89)
+		UnOrderedCReverseNode_Compare_Equals_CASE(90)
+		UnOrderedCReverseNode_Compare_Equals_CASE(91)
+		UnOrderedCReverseNode_Compare_Equals_CASE(92)
+		UnOrderedCReverseNode_Compare_Equals_CASE(93)
+		UnOrderedCReverseNode_Compare_Equals_CASE(94)
+		UnOrderedCReverseNode_Compare_Equals_CASE(95)
+		UnOrderedCReverseNode_Compare_Equals_CASE(96)
+		UnOrderedCReverseNode_Compare_Equals_CASE(97)
+		UnOrderedCReverseNode_Compare_Equals_CASE(98)
+		UnOrderedCReverseNode_Compare_Equals_CASE(99)
+		UnOrderedCReverseNode_Compare_Equals_CASE(100)
+		UnOrderedCReverseNode_Compare_Equals_CASE(101)
+		UnOrderedCReverseNode_Compare_Equals_CASE(102)
+		UnOrderedCReverseNode_Compare_Equals_CASE(103)
+		UnOrderedCReverseNode_Compare_Equals_CASE(104)
+		UnOrderedCReverseNode_Compare_Equals_CASE(105)
+		UnOrderedCReverseNode_Compare_Equals_CASE(106)
+		UnOrderedCReverseNode_Compare_Equals_CASE(107)
+		UnOrderedCReverseNode_Compare_Equals_CASE(108)
+		UnOrderedCReverseNode_Compare_Equals_CASE(109)
+		UnOrderedCReverseNode_Compare_Equals_CASE(110)
+		UnOrderedCReverseNode_Compare_Equals_CASE(111)
+		UnOrderedCReverseNode_Compare_Equals_CASE(112)
+		UnOrderedCReverseNode_Compare_Equals_CASE(113)
+		UnOrderedCReverseNode_Compare_Equals_CASE(114)
+		UnOrderedCReverseNode_Compare_Equals_CASE(115)
+		UnOrderedCReverseNode_Compare_Equals_CASE(116)
+		UnOrderedCReverseNode_Compare_Equals_CASE(117)
+		UnOrderedCReverseNode_Compare_Equals_CASE(118)
+		UnOrderedCReverseNode_Compare_Equals_CASE(119)
+		UnOrderedCReverseNode_Compare_Equals_CASE(120)
+		UnOrderedCReverseNode_Compare_Equals_CASE(121)
+		UnOrderedCReverseNode_Compare_Equals_CASE(122)
+		UnOrderedCReverseNode_Compare_Equals_CASE(123)
+		UnOrderedCReverseNode_Compare_Equals_CASE(124)
+		UnOrderedCReverseNode_Compare_Equals_CASE(125)
+		UnOrderedCReverseNode_Compare_Equals_CASE(126)
+		UnOrderedCReverseNode_Compare_Equals_CASE(127)
+		UnOrderedCReverseNode_Compare_Equals_CASE(128)
+		UnOrderedCReverseNode_Compare_Equals_CASE(129)
+		UnOrderedCReverseNode_Compare_Equals_CASE(130)
+		UnOrderedCReverseNode_Compare_Equals_CASE(131)
+		UnOrderedCReverseNode_Compare_Equals_CASE(132)
+		UnOrderedCReverseNode_Compare_Equals_CASE(133)
+		UnOrderedCReverseNode_Compare_Equals_CASE(134)
+		UnOrderedCReverseNode_Compare_Equals_CASE(135)
+		UnOrderedCReverseNode_Compare_Equals_CASE(136)
+		UnOrderedCReverseNode_Compare_Equals_CASE(137)
+		UnOrderedCReverseNode_Compare_Equals_CASE(138)
+		UnOrderedCReverseNode_Compare_Equals_CASE(139)
+		UnOrderedCReverseNode_Compare_Equals_CASE(140)
+		UnOrderedCReverseNode_Compare_Equals_CASE(141)
+		UnOrderedCReverseNode_Compare_Equals_CASE(142)
+		UnOrderedCReverseNode_Compare_Equals_CASE(143)
+		UnOrderedCReverseNode_Compare_Equals_CASE(144)
+		UnOrderedCReverseNode_Compare_Equals_CASE(145)
+		UnOrderedCReverseNode_Compare_Equals_CASE(146)
+		UnOrderedCReverseNode_Compare_Equals_CASE(147)
+		UnOrderedCReverseNode_Compare_Equals_CASE(148)
+		UnOrderedCReverseNode_Compare_Equals_CASE(149)
+		UnOrderedCReverseNode_Compare_Equals_CASE(150)
+		UnOrderedCReverseNode_Compare_Equals_CASE(151)
+		UnOrderedCReverseNode_Compare_Equals_CASE(152)
+		UnOrderedCReverseNode_Compare_Equals_CASE(153)
+		UnOrderedCReverseNode_Compare_Equals_CASE(154)
+		UnOrderedCReverseNode_Compare_Equals_CASE(155)
+		UnOrderedCReverseNode_Compare_Equals_CASE(156)
+		UnOrderedCReverseNode_Compare_Equals_CASE(157)
+		UnOrderedCReverseNode_Compare_Equals_CASE(158)
+		UnOrderedCReverseNode_Compare_Equals_CASE(159)
+		UnOrderedCReverseNode_Compare_Equals_CASE(160)
+		UnOrderedCReverseNode_Compare_Equals_CASE(161)
+		UnOrderedCReverseNode_Compare_Equals_CASE(162)
+		UnOrderedCReverseNode_Compare_Equals_CASE(163)
+		UnOrderedCReverseNode_Compare_Equals_CASE(164)
+		UnOrderedCReverseNode_Compare_Equals_CASE(165)
+		UnOrderedCReverseNode_Compare_Equals_CASE(166)
+		UnOrderedCReverseNode_Compare_Equals_CASE(167)
+		UnOrderedCReverseNode_Compare_Equals_CASE(168)
+		UnOrderedCReverseNode_Compare_Equals_CASE(169)
+		UnOrderedCReverseNode_Compare_Equals_CASE(170)
+		UnOrderedCReverseNode_Compare_Equals_CASE(171)
+		UnOrderedCReverseNode_Compare_Equals_CASE(172)
+		UnOrderedCReverseNode_Compare_Equals_CASE(173)
+		UnOrderedCReverseNode_Compare_Equals_CASE(174)
+		UnOrderedCReverseNode_Compare_Equals_CASE(175)
+		UnOrderedCReverseNode_Compare_Equals_CASE(176)
+		UnOrderedCReverseNode_Compare_Equals_CASE(177)
+		UnOrderedCReverseNode_Compare_Equals_CASE(178)
+		UnOrderedCReverseNode_Compare_Equals_CASE(179)
+		UnOrderedCReverseNode_Compare_Equals_CASE(180)
+		UnOrderedCReverseNode_Compare_Equals_CASE(181)
+		UnOrderedCReverseNode_Compare_Equals_CASE(182)
+		UnOrderedCReverseNode_Compare_Equals_CASE(183)
+		UnOrderedCReverseNode_Compare_Equals_CASE(184)
+		UnOrderedCReverseNode_Compare_Equals_CASE(185)
+		UnOrderedCReverseNode_Compare_Equals_CASE(186)
+		UnOrderedCReverseNode_Compare_Equals_CASE(187)
+		UnOrderedCReverseNode_Compare_Equals_CASE(188)
+		UnOrderedCReverseNode_Compare_Equals_CASE(189)
+		UnOrderedCReverseNode_Compare_Equals_CASE(190)
+		UnOrderedCReverseNode_Compare_Equals_CASE(191)
+		UnOrderedCReverseNode_Compare_Equals_CASE(192)
+		UnOrderedCReverseNode_Compare_Equals_CASE(193)
+		UnOrderedCReverseNode_Compare_Equals_CASE(194)
+		UnOrderedCReverseNode_Compare_Equals_CASE(195)
+		UnOrderedCReverseNode_Compare_Equals_CASE(196)
 	}
 	return false;
 }
+
+#define UnOrderedCReverseNode_Compare_NotEquals_CASE(NUM) \
+	case NUM: \
+		return (*(thisObj->creverseNodeUnion->CPPcreversenode##NUM) != *(other->creverseNodeUnion->CPPcreversenode##NUM));
 
 generic<typename Key, typename Value>
 bool UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::operator!=(const CShorpUnOrderedCReverseNode<Key, Value>^ thisObj, const CShorpUnOrderedCReverseNode<Key, Value>^ other)
@@ -2387,401 +1425,210 @@ bool UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::operator!
 	{
 	case 0: default:
 		return false;
-	case 1:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode1) != *(other->creverseNodeUnion->CPPcreversenode1));
-	case 2:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode2) != *(other->creverseNodeUnion->CPPcreversenode2));
-	case 3:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode3) != *(other->creverseNodeUnion->CPPcreversenode3));
-	case 4:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode4) != *(other->creverseNodeUnion->CPPcreversenode4));
-	case 5:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode5) != *(other->creverseNodeUnion->CPPcreversenode5));
-	case 6:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode6) != *(other->creverseNodeUnion->CPPcreversenode6));
-	case 7:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode7) != *(other->creverseNodeUnion->CPPcreversenode7));
-	case 8:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode8) != *(other->creverseNodeUnion->CPPcreversenode8));
-	case 9:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode9) != *(other->creverseNodeUnion->CPPcreversenode9));
-	case 10:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode10) != *(other->creverseNodeUnion->CPPcreversenode10));
-	case 11:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode11) != *(other->creverseNodeUnion->CPPcreversenode11));
-	case 12:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode12) != *(other->creverseNodeUnion->CPPcreversenode12));
-	case 13:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode13) != *(other->creverseNodeUnion->CPPcreversenode13));
-	case 14:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode14) != *(other->creverseNodeUnion->CPPcreversenode14));
-	case 15:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode15) != *(other->creverseNodeUnion->CPPcreversenode15));
-	case 16:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode16) != *(other->creverseNodeUnion->CPPcreversenode16));
-	case 17:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode17) != *(other->creverseNodeUnion->CPPcreversenode17));
-	case 18:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode18) != *(other->creverseNodeUnion->CPPcreversenode18));
-	case 19:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode19) != *(other->creverseNodeUnion->CPPcreversenode19));
-	case 20:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode20) != *(other->creverseNodeUnion->CPPcreversenode20));
-	case 21:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode21) != *(other->creverseNodeUnion->CPPcreversenode21));
-	case 22:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode22) != *(other->creverseNodeUnion->CPPcreversenode22));
-	case 23:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode23) != *(other->creverseNodeUnion->CPPcreversenode23));
-	case 24:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode24) != *(other->creverseNodeUnion->CPPcreversenode24));
-	case 25:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode25) != *(other->creverseNodeUnion->CPPcreversenode25));
-	case 26:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode26) != *(other->creverseNodeUnion->CPPcreversenode26));
-	case 27:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode27) != *(other->creverseNodeUnion->CPPcreversenode27));
-	case 28:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode28) != *(other->creverseNodeUnion->CPPcreversenode28));
-	case 29:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode29) != *(other->creverseNodeUnion->CPPcreversenode29));
-	case 30:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode30) != *(other->creverseNodeUnion->CPPcreversenode30));
-	case 31:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode31) != *(other->creverseNodeUnion->CPPcreversenode31));
-	case 32:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode32) != *(other->creverseNodeUnion->CPPcreversenode32));
-	case 33:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode33) != *(other->creverseNodeUnion->CPPcreversenode33));
-	case 34:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode34) != *(other->creverseNodeUnion->CPPcreversenode34));
-	case 35:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode35) != *(other->creverseNodeUnion->CPPcreversenode35));
-	case 36:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode36) != *(other->creverseNodeUnion->CPPcreversenode36));
-	case 37:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode37) != *(other->creverseNodeUnion->CPPcreversenode37));
-	case 38:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode38) != *(other->creverseNodeUnion->CPPcreversenode38));
-	case 39:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode39) != *(other->creverseNodeUnion->CPPcreversenode39));
-	case 40:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode40) != *(other->creverseNodeUnion->CPPcreversenode40));
-	case 41:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode41) != *(other->creverseNodeUnion->CPPcreversenode41));
-	case 42:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode42) != *(other->creverseNodeUnion->CPPcreversenode42));
-	case 43:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode43) != *(other->creverseNodeUnion->CPPcreversenode43));
-	case 44:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode44) != *(other->creverseNodeUnion->CPPcreversenode44));
-	case 45:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode45) != *(other->creverseNodeUnion->CPPcreversenode45));
-	case 46:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode46) != *(other->creverseNodeUnion->CPPcreversenode46));
-	case 47:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode47) != *(other->creverseNodeUnion->CPPcreversenode47));
-	case 48:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode48) != *(other->creverseNodeUnion->CPPcreversenode48));
-	case 49:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode49) != *(other->creverseNodeUnion->CPPcreversenode49));
-	case 50:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode50) != *(other->creverseNodeUnion->CPPcreversenode50));
-	case 51:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode51) != *(other->creverseNodeUnion->CPPcreversenode51));
-	case 52:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode52) != *(other->creverseNodeUnion->CPPcreversenode52));
-	case 53:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode53) != *(other->creverseNodeUnion->CPPcreversenode53));
-	case 54:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode54) != *(other->creverseNodeUnion->CPPcreversenode54));
-	case 55:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode55) != *(other->creverseNodeUnion->CPPcreversenode55));
-	case 56:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode56) != *(other->creverseNodeUnion->CPPcreversenode56));
-	case 57:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode57) != *(other->creverseNodeUnion->CPPcreversenode57));
-	case 58:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode58) != *(other->creverseNodeUnion->CPPcreversenode58));
-	case 59:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode59) != *(other->creverseNodeUnion->CPPcreversenode59));
-	case 60:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode60) != *(other->creverseNodeUnion->CPPcreversenode60));
-	case 61:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode61) != *(other->creverseNodeUnion->CPPcreversenode61));
-	case 62:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode62) != *(other->creverseNodeUnion->CPPcreversenode62));
-	case 63:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode63) != *(other->creverseNodeUnion->CPPcreversenode63));
-	case 64:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode64) != *(other->creverseNodeUnion->CPPcreversenode64));
-	case 65:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode65) != *(other->creverseNodeUnion->CPPcreversenode65));
-	case 66:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode66) != *(other->creverseNodeUnion->CPPcreversenode66));
-	case 67:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode67) != *(other->creverseNodeUnion->CPPcreversenode67));
-	case 68:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode68) != *(other->creverseNodeUnion->CPPcreversenode68));
-	case 69:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode69) != *(other->creverseNodeUnion->CPPcreversenode69));
-	case 70:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode70) != *(other->creverseNodeUnion->CPPcreversenode70));
-	case 71:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode71) != *(other->creverseNodeUnion->CPPcreversenode71));
-	case 72:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode72) != *(other->creverseNodeUnion->CPPcreversenode72));
-	case 73:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode73) != *(other->creverseNodeUnion->CPPcreversenode73));
-	case 74:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode74) != *(other->creverseNodeUnion->CPPcreversenode74));
-	case 75:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode75) != *(other->creverseNodeUnion->CPPcreversenode75));
-	case 76:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode76) != *(other->creverseNodeUnion->CPPcreversenode76));
-	case 77:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode77) != *(other->creverseNodeUnion->CPPcreversenode77));
-	case 78:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode78) != *(other->creverseNodeUnion->CPPcreversenode78));
-	case 79:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode79) != *(other->creverseNodeUnion->CPPcreversenode79));
-	case 80:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode80) != *(other->creverseNodeUnion->CPPcreversenode80));
-	case 81:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode81) != *(other->creverseNodeUnion->CPPcreversenode81));
-	case 82:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode82) != *(other->creverseNodeUnion->CPPcreversenode82));
-	case 83:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode83) != *(other->creverseNodeUnion->CPPcreversenode83));
-	case 84:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode84) != *(other->creverseNodeUnion->CPPcreversenode84));
-	case 85:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode85) != *(other->creverseNodeUnion->CPPcreversenode85));
-	case 86:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode86) != *(other->creverseNodeUnion->CPPcreversenode86));
-	case 87:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode87) != *(other->creverseNodeUnion->CPPcreversenode87));
-	case 88:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode88) != *(other->creverseNodeUnion->CPPcreversenode88));
-	case 89:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode89) != *(other->creverseNodeUnion->CPPcreversenode89));
-	case 90:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode90) != *(other->creverseNodeUnion->CPPcreversenode90));
-	case 91:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode91) != *(other->creverseNodeUnion->CPPcreversenode91));
-	case 92:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode92) != *(other->creverseNodeUnion->CPPcreversenode92));
-	case 93:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode93) != *(other->creverseNodeUnion->CPPcreversenode93));
-	case 94:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode94) != *(other->creverseNodeUnion->CPPcreversenode94));
-	case 95:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode95) != *(other->creverseNodeUnion->CPPcreversenode95));
-	case 96:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode96) != *(other->creverseNodeUnion->CPPcreversenode96));
-	case 97:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode97) != *(other->creverseNodeUnion->CPPcreversenode97));
-	case 98:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode98) != *(other->creverseNodeUnion->CPPcreversenode98));
-	case 99:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode99) != *(other->creverseNodeUnion->CPPcreversenode99));
-	case 100:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode100) != *(other->creverseNodeUnion->CPPcreversenode100));
-	case 101:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode101) != *(other->creverseNodeUnion->CPPcreversenode101));
-	case 102:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode102) != *(other->creverseNodeUnion->CPPcreversenode102));
-	case 103:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode103) != *(other->creverseNodeUnion->CPPcreversenode103));
-	case 104:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode104) != *(other->creverseNodeUnion->CPPcreversenode104));
-	case 105:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode105) != *(other->creverseNodeUnion->CPPcreversenode105));
-	case 106:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode106) != *(other->creverseNodeUnion->CPPcreversenode106));
-	case 107:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode107) != *(other->creverseNodeUnion->CPPcreversenode107));
-	case 108:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode108) != *(other->creverseNodeUnion->CPPcreversenode108));
-	case 109:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode109) != *(other->creverseNodeUnion->CPPcreversenode109));
-	case 110:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode110) != *(other->creverseNodeUnion->CPPcreversenode110));
-	case 111:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode111) != *(other->creverseNodeUnion->CPPcreversenode111));
-	case 112:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode112) != *(other->creverseNodeUnion->CPPcreversenode112));
-	case 113:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode113) != *(other->creverseNodeUnion->CPPcreversenode113));
-	case 114:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode114) != *(other->creverseNodeUnion->CPPcreversenode114));
-	case 115:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode115) != *(other->creverseNodeUnion->CPPcreversenode115));
-	case 116:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode116) != *(other->creverseNodeUnion->CPPcreversenode116));
-	case 117:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode117) != *(other->creverseNodeUnion->CPPcreversenode117));
-	case 118:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode118) != *(other->creverseNodeUnion->CPPcreversenode118));
-	case 119:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode119) != *(other->creverseNodeUnion->CPPcreversenode119));
-	case 120:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode120) != *(other->creverseNodeUnion->CPPcreversenode120));
-	case 121:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode121) != *(other->creverseNodeUnion->CPPcreversenode121));
-	case 122:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode122) != *(other->creverseNodeUnion->CPPcreversenode122));
-	case 123:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode123) != *(other->creverseNodeUnion->CPPcreversenode123));
-	case 124:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode124) != *(other->creverseNodeUnion->CPPcreversenode124));
-	case 125:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode125) != *(other->creverseNodeUnion->CPPcreversenode125));
-	case 126:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode126) != *(other->creverseNodeUnion->CPPcreversenode126));
-	case 127:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode127) != *(other->creverseNodeUnion->CPPcreversenode127));
-	case 128:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode128) != *(other->creverseNodeUnion->CPPcreversenode128));
-	case 129:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode129) != *(other->creverseNodeUnion->CPPcreversenode129));
-	case 130:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode130) != *(other->creverseNodeUnion->CPPcreversenode130));
-	case 131:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode131) != *(other->creverseNodeUnion->CPPcreversenode131));
-	case 132:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode132) != *(other->creverseNodeUnion->CPPcreversenode132));
-	case 133:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode133) != *(other->creverseNodeUnion->CPPcreversenode133));
-	case 134:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode134) != *(other->creverseNodeUnion->CPPcreversenode134));
-	case 135:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode135) != *(other->creverseNodeUnion->CPPcreversenode135));
-	case 136:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode136) != *(other->creverseNodeUnion->CPPcreversenode136));
-	case 137:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode137) != *(other->creverseNodeUnion->CPPcreversenode137));
-	case 138:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode138) != *(other->creverseNodeUnion->CPPcreversenode138));
-	case 139:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode139) != *(other->creverseNodeUnion->CPPcreversenode139));
-	case 140:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode140) != *(other->creverseNodeUnion->CPPcreversenode140));
-	case 141:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode141) != *(other->creverseNodeUnion->CPPcreversenode141));
-	case 142:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode142) != *(other->creverseNodeUnion->CPPcreversenode142));
-	case 143:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode143) != *(other->creverseNodeUnion->CPPcreversenode143));
-	case 144:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode144) != *(other->creverseNodeUnion->CPPcreversenode144));
-	case 145:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode145) != *(other->creverseNodeUnion->CPPcreversenode145));
-	case 146:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode146) != *(other->creverseNodeUnion->CPPcreversenode146));
-	case 147:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode147) != *(other->creverseNodeUnion->CPPcreversenode147));
-	case 148:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode148) != *(other->creverseNodeUnion->CPPcreversenode148));
-	case 149:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode149) != *(other->creverseNodeUnion->CPPcreversenode149));
-	case 150:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode150) != *(other->creverseNodeUnion->CPPcreversenode150));
-	case 151:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode151) != *(other->creverseNodeUnion->CPPcreversenode151));
-	case 152:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode152) != *(other->creverseNodeUnion->CPPcreversenode152));
-	case 153:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode153) != *(other->creverseNodeUnion->CPPcreversenode153));
-	case 154:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode154) != *(other->creverseNodeUnion->CPPcreversenode154));
-	case 155:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode155) != *(other->creverseNodeUnion->CPPcreversenode155));
-	case 156:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode156) != *(other->creverseNodeUnion->CPPcreversenode156));
-	case 157:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode157) != *(other->creverseNodeUnion->CPPcreversenode157));
-	case 158:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode158) != *(other->creverseNodeUnion->CPPcreversenode158));
-	case 159:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode159) != *(other->creverseNodeUnion->CPPcreversenode159));
-	case 160:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode160) != *(other->creverseNodeUnion->CPPcreversenode160));
-	case 161:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode161) != *(other->creverseNodeUnion->CPPcreversenode161));
-	case 162:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode162) != *(other->creverseNodeUnion->CPPcreversenode162));
-	case 163:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode163) != *(other->creverseNodeUnion->CPPcreversenode163));
-	case 164:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode164) != *(other->creverseNodeUnion->CPPcreversenode164));
-	case 165:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode165) != *(other->creverseNodeUnion->CPPcreversenode165));
-	case 166:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode166) != *(other->creverseNodeUnion->CPPcreversenode166));
-	case 167:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode167) != *(other->creverseNodeUnion->CPPcreversenode167));
-	case 168:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode168) != *(other->creverseNodeUnion->CPPcreversenode168));
-	case 169:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode169) != *(other->creverseNodeUnion->CPPcreversenode169));
-	case 170:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode170) != *(other->creverseNodeUnion->CPPcreversenode170));
-	case 171:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode171) != *(other->creverseNodeUnion->CPPcreversenode171));
-	case 172:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode172) != *(other->creverseNodeUnion->CPPcreversenode172));
-	case 173:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode173) != *(other->creverseNodeUnion->CPPcreversenode173));
-	case 174:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode174) != *(other->creverseNodeUnion->CPPcreversenode174));
-	case 175:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode175) != *(other->creverseNodeUnion->CPPcreversenode175));
-	case 176:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode176) != *(other->creverseNodeUnion->CPPcreversenode176));
-	case 177:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode177) != *(other->creverseNodeUnion->CPPcreversenode177));
-	case 178:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode178) != *(other->creverseNodeUnion->CPPcreversenode178));
-	case 179:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode179) != *(other->creverseNodeUnion->CPPcreversenode179));
-	case 180:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode180) != *(other->creverseNodeUnion->CPPcreversenode180));
-	case 181:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode181) != *(other->creverseNodeUnion->CPPcreversenode181));
-	case 182:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode182) != *(other->creverseNodeUnion->CPPcreversenode182));
-	case 183:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode183) != *(other->creverseNodeUnion->CPPcreversenode183));
-	case 184:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode184) != *(other->creverseNodeUnion->CPPcreversenode184));
-	case 185:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode185) != *(other->creverseNodeUnion->CPPcreversenode185));
-	case 186:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode186) != *(other->creverseNodeUnion->CPPcreversenode186));
-	case 187:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode187) != *(other->creverseNodeUnion->CPPcreversenode187));
-	case 188:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode188) != *(other->creverseNodeUnion->CPPcreversenode188));
-	case 189:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode189) != *(other->creverseNodeUnion->CPPcreversenode189));
-	case 190:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode190) != *(other->creverseNodeUnion->CPPcreversenode190));
-	case 191:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode191) != *(other->creverseNodeUnion->CPPcreversenode191));
-	case 192:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode192) != *(other->creverseNodeUnion->CPPcreversenode192));
-	case 193:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode193) != *(other->creverseNodeUnion->CPPcreversenode193));
-	case 194:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode194) != *(other->creverseNodeUnion->CPPcreversenode194));
-	case 195:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode195) != *(other->creverseNodeUnion->CPPcreversenode195));
-	case 196:
-		return (*(thisObj->creverseNodeUnion->CPPcreversenode196) != *(other->creverseNodeUnion->CPPcreversenode196));
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(1)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(2)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(3)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(4)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(5)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(6)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(7)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(8)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(9)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(10)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(11)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(12)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(13)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(14)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(15)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(16)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(17)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(18)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(19)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(20)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(21)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(22)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(23)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(24)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(25)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(26)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(27)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(28)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(29)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(30)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(31)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(32)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(33)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(34)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(35)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(36)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(37)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(38)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(39)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(40)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(41)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(42)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(43)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(44)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(45)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(46)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(47)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(48)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(49)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(50)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(51)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(52)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(53)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(54)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(55)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(56)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(57)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(58)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(59)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(60)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(61)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(62)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(63)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(64)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(65)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(66)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(67)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(68)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(69)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(70)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(71)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(72)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(73)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(74)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(75)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(76)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(77)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(78)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(79)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(80)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(81)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(82)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(83)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(84)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(85)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(86)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(87)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(88)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(89)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(90)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(91)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(92)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(93)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(94)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(95)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(96)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(97)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(98)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(99)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(100)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(101)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(102)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(103)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(104)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(105)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(106)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(107)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(108)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(109)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(110)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(111)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(112)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(113)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(114)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(115)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(116)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(117)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(118)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(119)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(120)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(121)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(122)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(123)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(124)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(125)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(126)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(127)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(128)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(129)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(130)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(131)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(132)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(133)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(134)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(135)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(136)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(137)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(138)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(139)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(140)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(141)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(142)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(143)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(144)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(145)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(146)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(147)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(148)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(149)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(150)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(151)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(152)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(153)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(154)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(155)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(156)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(157)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(158)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(159)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(160)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(161)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(162)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(163)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(164)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(165)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(166)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(167)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(168)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(169)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(170)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(171)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(172)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(173)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(174)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(175)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(176)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(177)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(178)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(179)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(180)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(181)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(182)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(183)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(184)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(185)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(186)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(187)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(188)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(189)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(190)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(191)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(192)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(193)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(194)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(195)
+		UnOrderedCReverseNode_Compare_NotEquals_CASE(196)
 	}
 	return false;
 }
+
+#define UnOrderedCReverseNode_Copy_CASE(NUM) \
+	case NUM: \
+		(*(thisObj->creverseNodeUnion->CPPcreversenode##NUM) = *(other->creverseNodeUnion->CPPcreversenode##NUM)); \
+		break;
 
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>^ UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>::operator%(CShorpUnOrderedCReverseNode<Key, Value>^ thisObj, CShorpUnOrderedCReverseNode<Key, Value>^ other)
@@ -2798,398 +1645,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>^ UnOrderedMulti
 	{
 	case 0: default:
 		break;
-	case 1:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode1) = *(other->creverseNodeUnion->CPPcreversenode1)); break;
-	case 2:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode2) = *(other->creverseNodeUnion->CPPcreversenode2)); break;
-	case 3:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode3) = *(other->creverseNodeUnion->CPPcreversenode3)); break;
-	case 4:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode4) = *(other->creverseNodeUnion->CPPcreversenode4)); break;
-	case 5:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode5) = *(other->creverseNodeUnion->CPPcreversenode5)); break;
-	case 6:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode6) = *(other->creverseNodeUnion->CPPcreversenode6)); break;
-	case 7:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode7) = *(other->creverseNodeUnion->CPPcreversenode7)); break;
-	case 8:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode8) = *(other->creverseNodeUnion->CPPcreversenode8)); break;
-	case 9:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode9) = *(other->creverseNodeUnion->CPPcreversenode9)); break;
-	case 10:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode10) = *(other->creverseNodeUnion->CPPcreversenode10)); break;
-	case 11:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode11) = *(other->creverseNodeUnion->CPPcreversenode11)); break;
-	case 12:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode12) = *(other->creverseNodeUnion->CPPcreversenode12)); break;
-	case 13:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode13) = *(other->creverseNodeUnion->CPPcreversenode13)); break;
-	case 14:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode14) = *(other->creverseNodeUnion->CPPcreversenode14)); break;
-	case 15:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode15) = *(other->creverseNodeUnion->CPPcreversenode15)); break;
-	case 16:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode16) = *(other->creverseNodeUnion->CPPcreversenode16)); break;
-	case 17:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode17) = *(other->creverseNodeUnion->CPPcreversenode17)); break;
-	case 18:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode18) = *(other->creverseNodeUnion->CPPcreversenode18)); break;
-	case 19:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode19) = *(other->creverseNodeUnion->CPPcreversenode19)); break;
-	case 20:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode20) = *(other->creverseNodeUnion->CPPcreversenode20)); break;
-	case 21:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode21) = *(other->creverseNodeUnion->CPPcreversenode21)); break;
-	case 22:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode22) = *(other->creverseNodeUnion->CPPcreversenode22)); break;
-	case 23:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode23) = *(other->creverseNodeUnion->CPPcreversenode23)); break;
-	case 24:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode24) = *(other->creverseNodeUnion->CPPcreversenode24)); break;
-	case 25:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode25) = *(other->creverseNodeUnion->CPPcreversenode25)); break;
-	case 26:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode26) = *(other->creverseNodeUnion->CPPcreversenode26)); break;
-	case 27:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode27) = *(other->creverseNodeUnion->CPPcreversenode27)); break;
-	case 28:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode28) = *(other->creverseNodeUnion->CPPcreversenode28)); break;
-	case 29:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode29) = *(other->creverseNodeUnion->CPPcreversenode29)); break;
-	case 30:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode30) = *(other->creverseNodeUnion->CPPcreversenode30)); break;
-	case 31:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode31) = *(other->creverseNodeUnion->CPPcreversenode31)); break;
-	case 32:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode32) = *(other->creverseNodeUnion->CPPcreversenode32)); break;
-	case 33:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode33) = *(other->creverseNodeUnion->CPPcreversenode33)); break;
-	case 34:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode34) = *(other->creverseNodeUnion->CPPcreversenode34)); break;
-	case 35:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode35) = *(other->creverseNodeUnion->CPPcreversenode35)); break;
-	case 36:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode36) = *(other->creverseNodeUnion->CPPcreversenode36)); break;
-	case 37:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode37) = *(other->creverseNodeUnion->CPPcreversenode37)); break;
-	case 38:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode38) = *(other->creverseNodeUnion->CPPcreversenode38)); break;
-	case 39:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode39) = *(other->creverseNodeUnion->CPPcreversenode39)); break;
-	case 40:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode40) = *(other->creverseNodeUnion->CPPcreversenode40)); break;
-	case 41:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode41) = *(other->creverseNodeUnion->CPPcreversenode41)); break;
-	case 42:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode42) = *(other->creverseNodeUnion->CPPcreversenode42)); break;
-	case 43:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode43) = *(other->creverseNodeUnion->CPPcreversenode43)); break;
-	case 44:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode44) = *(other->creverseNodeUnion->CPPcreversenode44)); break;
-	case 45:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode45) = *(other->creverseNodeUnion->CPPcreversenode45)); break;
-	case 46:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode46) = *(other->creverseNodeUnion->CPPcreversenode46)); break;
-	case 47:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode47) = *(other->creverseNodeUnion->CPPcreversenode47)); break;
-	case 48:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode48) = *(other->creverseNodeUnion->CPPcreversenode48)); break;
-	case 49:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode49) = *(other->creverseNodeUnion->CPPcreversenode49)); break;
-	case 50:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode50) = *(other->creverseNodeUnion->CPPcreversenode50)); break;
-	case 51:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode51) = *(other->creverseNodeUnion->CPPcreversenode51)); break;
-	case 52:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode52) = *(other->creverseNodeUnion->CPPcreversenode52)); break;
-	case 53:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode53) = *(other->creverseNodeUnion->CPPcreversenode53)); break;
-	case 54:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode54) = *(other->creverseNodeUnion->CPPcreversenode54)); break;
-	case 55:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode55) = *(other->creverseNodeUnion->CPPcreversenode55)); break;
-	case 56:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode56) = *(other->creverseNodeUnion->CPPcreversenode56)); break;
-	case 57:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode57) = *(other->creverseNodeUnion->CPPcreversenode57)); break;
-	case 58:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode58) = *(other->creverseNodeUnion->CPPcreversenode58)); break;
-	case 59:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode59) = *(other->creverseNodeUnion->CPPcreversenode59)); break;
-	case 60:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode60) = *(other->creverseNodeUnion->CPPcreversenode60)); break;
-	case 61:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode61) = *(other->creverseNodeUnion->CPPcreversenode61)); break;
-	case 62:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode62) = *(other->creverseNodeUnion->CPPcreversenode62)); break;
-	case 63:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode63) = *(other->creverseNodeUnion->CPPcreversenode63)); break;
-	case 64:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode64) = *(other->creverseNodeUnion->CPPcreversenode64)); break;
-	case 65:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode65) = *(other->creverseNodeUnion->CPPcreversenode65)); break;
-	case 66:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode66) = *(other->creverseNodeUnion->CPPcreversenode66)); break;
-	case 67:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode67) = *(other->creverseNodeUnion->CPPcreversenode67)); break;
-	case 68:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode68) = *(other->creverseNodeUnion->CPPcreversenode68)); break;
-	case 69:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode69) = *(other->creverseNodeUnion->CPPcreversenode69)); break;
-	case 70:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode70) = *(other->creverseNodeUnion->CPPcreversenode70)); break;
-	case 71:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode71) = *(other->creverseNodeUnion->CPPcreversenode71)); break;
-	case 72:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode72) = *(other->creverseNodeUnion->CPPcreversenode72)); break;
-	case 73:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode73) = *(other->creverseNodeUnion->CPPcreversenode73)); break;
-	case 74:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode74) = *(other->creverseNodeUnion->CPPcreversenode74)); break;
-	case 75:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode75) = *(other->creverseNodeUnion->CPPcreversenode75)); break;
-	case 76:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode76) = *(other->creverseNodeUnion->CPPcreversenode76)); break;
-	case 77:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode77) = *(other->creverseNodeUnion->CPPcreversenode77)); break;
-	case 78:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode78) = *(other->creverseNodeUnion->CPPcreversenode78)); break;
-	case 79:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode79) = *(other->creverseNodeUnion->CPPcreversenode79)); break;
-	case 80:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode80) = *(other->creverseNodeUnion->CPPcreversenode80)); break;
-	case 81:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode81) = *(other->creverseNodeUnion->CPPcreversenode81)); break;
-	case 82:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode82) = *(other->creverseNodeUnion->CPPcreversenode82)); break;
-	case 83:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode83) = *(other->creverseNodeUnion->CPPcreversenode83)); break;
-	case 84:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode84) = *(other->creverseNodeUnion->CPPcreversenode84)); break;
-	case 85:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode85) = *(other->creverseNodeUnion->CPPcreversenode85)); break;
-	case 86:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode86) = *(other->creverseNodeUnion->CPPcreversenode86)); break;
-	case 87:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode87) = *(other->creverseNodeUnion->CPPcreversenode87)); break;
-	case 88:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode88) = *(other->creverseNodeUnion->CPPcreversenode88)); break;
-	case 89:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode89) = *(other->creverseNodeUnion->CPPcreversenode89)); break;
-	case 90:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode90) = *(other->creverseNodeUnion->CPPcreversenode90)); break;
-	case 91:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode91) = *(other->creverseNodeUnion->CPPcreversenode91)); break;
-	case 92:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode92) = *(other->creverseNodeUnion->CPPcreversenode92)); break;
-	case 93:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode93) = *(other->creverseNodeUnion->CPPcreversenode93)); break;
-	case 94:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode94) = *(other->creverseNodeUnion->CPPcreversenode94)); break;
-	case 95:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode95) = *(other->creverseNodeUnion->CPPcreversenode95)); break;
-	case 96:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode96) = *(other->creverseNodeUnion->CPPcreversenode96)); break;
-	case 97:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode97) = *(other->creverseNodeUnion->CPPcreversenode97)); break;
-	case 98:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode98) = *(other->creverseNodeUnion->CPPcreversenode98)); break;
-	case 99:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode99) = *(other->creverseNodeUnion->CPPcreversenode99)); break;
-	case 100:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode100) = *(other->creverseNodeUnion->CPPcreversenode100)); break;
-	case 101:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode101) = *(other->creverseNodeUnion->CPPcreversenode101)); break;
-	case 102:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode102) = *(other->creverseNodeUnion->CPPcreversenode102)); break;
-	case 103:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode103) = *(other->creverseNodeUnion->CPPcreversenode103)); break;
-	case 104:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode104) = *(other->creverseNodeUnion->CPPcreversenode104)); break;
-	case 105:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode105) = *(other->creverseNodeUnion->CPPcreversenode105)); break;
-	case 106:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode106) = *(other->creverseNodeUnion->CPPcreversenode106)); break;
-	case 107:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode107) = *(other->creverseNodeUnion->CPPcreversenode107)); break;
-	case 108:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode108) = *(other->creverseNodeUnion->CPPcreversenode108)); break;
-	case 109:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode109) = *(other->creverseNodeUnion->CPPcreversenode109)); break;
-	case 110:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode110) = *(other->creverseNodeUnion->CPPcreversenode110)); break;
-	case 111:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode111) = *(other->creverseNodeUnion->CPPcreversenode111)); break;
-	case 112:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode112) = *(other->creverseNodeUnion->CPPcreversenode112)); break;
-	case 113:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode113) = *(other->creverseNodeUnion->CPPcreversenode113)); break;
-	case 114:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode114) = *(other->creverseNodeUnion->CPPcreversenode114)); break;
-	case 115:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode115) = *(other->creverseNodeUnion->CPPcreversenode115)); break;
-	case 116:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode116) = *(other->creverseNodeUnion->CPPcreversenode116)); break;
-	case 117:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode117) = *(other->creverseNodeUnion->CPPcreversenode117)); break;
-	case 118:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode118) = *(other->creverseNodeUnion->CPPcreversenode118)); break;
-	case 119:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode119) = *(other->creverseNodeUnion->CPPcreversenode119)); break;
-	case 120:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode120) = *(other->creverseNodeUnion->CPPcreversenode120)); break;
-	case 121:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode121) = *(other->creverseNodeUnion->CPPcreversenode121)); break;
-	case 122:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode122) = *(other->creverseNodeUnion->CPPcreversenode122)); break;
-	case 123:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode123) = *(other->creverseNodeUnion->CPPcreversenode123)); break;
-	case 124:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode124) = *(other->creverseNodeUnion->CPPcreversenode124)); break;
-	case 125:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode125) = *(other->creverseNodeUnion->CPPcreversenode125)); break;
-	case 126:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode126) = *(other->creverseNodeUnion->CPPcreversenode126)); break;
-	case 127:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode127) = *(other->creverseNodeUnion->CPPcreversenode127)); break;
-	case 128:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode128) = *(other->creverseNodeUnion->CPPcreversenode128)); break;
-	case 129:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode129) = *(other->creverseNodeUnion->CPPcreversenode129)); break;
-	case 130:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode130) = *(other->creverseNodeUnion->CPPcreversenode130)); break;
-	case 131:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode131) = *(other->creverseNodeUnion->CPPcreversenode131)); break;
-	case 132:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode132) = *(other->creverseNodeUnion->CPPcreversenode132)); break;
-	case 133:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode133) = *(other->creverseNodeUnion->CPPcreversenode133)); break;
-	case 134:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode134) = *(other->creverseNodeUnion->CPPcreversenode134)); break;
-	case 135:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode135) = *(other->creverseNodeUnion->CPPcreversenode135)); break;
-	case 136:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode136) = *(other->creverseNodeUnion->CPPcreversenode136)); break;
-	case 137:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode137) = *(other->creverseNodeUnion->CPPcreversenode137)); break;
-	case 138:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode138) = *(other->creverseNodeUnion->CPPcreversenode138)); break;
-	case 139:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode139) = *(other->creverseNodeUnion->CPPcreversenode139)); break;
-	case 140:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode140) = *(other->creverseNodeUnion->CPPcreversenode140)); break;
-	case 141:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode141) = *(other->creverseNodeUnion->CPPcreversenode141)); break;
-	case 142:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode142) = *(other->creverseNodeUnion->CPPcreversenode142)); break;
-	case 143:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode143) = *(other->creverseNodeUnion->CPPcreversenode143)); break;
-	case 144:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode144) = *(other->creverseNodeUnion->CPPcreversenode144)); break;
-	case 145:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode145) = *(other->creverseNodeUnion->CPPcreversenode145)); break;
-	case 146:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode146) = *(other->creverseNodeUnion->CPPcreversenode146)); break;
-	case 147:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode147) = *(other->creverseNodeUnion->CPPcreversenode147)); break;
-	case 148:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode148) = *(other->creverseNodeUnion->CPPcreversenode148)); break;
-	case 149:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode149) = *(other->creverseNodeUnion->CPPcreversenode149)); break;
-	case 150:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode150) = *(other->creverseNodeUnion->CPPcreversenode150)); break;
-	case 151:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode151) = *(other->creverseNodeUnion->CPPcreversenode151)); break;
-	case 152:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode152) = *(other->creverseNodeUnion->CPPcreversenode152)); break;
-	case 153:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode153) = *(other->creverseNodeUnion->CPPcreversenode153)); break;
-	case 154:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode154) = *(other->creverseNodeUnion->CPPcreversenode154)); break;
-	case 155:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode155) = *(other->creverseNodeUnion->CPPcreversenode155)); break;
-	case 156:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode156) = *(other->creverseNodeUnion->CPPcreversenode156)); break;
-	case 157:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode157) = *(other->creverseNodeUnion->CPPcreversenode157)); break;
-	case 158:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode158) = *(other->creverseNodeUnion->CPPcreversenode158)); break;
-	case 159:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode159) = *(other->creverseNodeUnion->CPPcreversenode159)); break;
-	case 160:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode160) = *(other->creverseNodeUnion->CPPcreversenode160)); break;
-	case 161:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode161) = *(other->creverseNodeUnion->CPPcreversenode161)); break;
-	case 162:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode162) = *(other->creverseNodeUnion->CPPcreversenode162)); break;
-	case 163:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode163) = *(other->creverseNodeUnion->CPPcreversenode163)); break;
-	case 164:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode164) = *(other->creverseNodeUnion->CPPcreversenode164)); break;
-	case 165:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode165) = *(other->creverseNodeUnion->CPPcreversenode165)); break;
-	case 166:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode166) = *(other->creverseNodeUnion->CPPcreversenode166)); break;
-	case 167:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode167) = *(other->creverseNodeUnion->CPPcreversenode167)); break;
-	case 168:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode168) = *(other->creverseNodeUnion->CPPcreversenode168)); break;
-	case 169:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode169) = *(other->creverseNodeUnion->CPPcreversenode169)); break;
-	case 170:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode170) = *(other->creverseNodeUnion->CPPcreversenode170)); break;
-	case 171:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode171) = *(other->creverseNodeUnion->CPPcreversenode171)); break;
-	case 172:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode172) = *(other->creverseNodeUnion->CPPcreversenode172)); break;
-	case 173:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode173) = *(other->creverseNodeUnion->CPPcreversenode173)); break;
-	case 174:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode174) = *(other->creverseNodeUnion->CPPcreversenode174)); break;
-	case 175:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode175) = *(other->creverseNodeUnion->CPPcreversenode175)); break;
-	case 176:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode176) = *(other->creverseNodeUnion->CPPcreversenode176)); break;
-	case 177:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode177) = *(other->creverseNodeUnion->CPPcreversenode177)); break;
-	case 178:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode178) = *(other->creverseNodeUnion->CPPcreversenode178)); break;
-	case 179:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode179) = *(other->creverseNodeUnion->CPPcreversenode179)); break;
-	case 180:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode180) = *(other->creverseNodeUnion->CPPcreversenode180)); break;
-	case 181:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode181) = *(other->creverseNodeUnion->CPPcreversenode181)); break;
-	case 182:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode182) = *(other->creverseNodeUnion->CPPcreversenode182)); break;
-	case 183:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode183) = *(other->creverseNodeUnion->CPPcreversenode183)); break;
-	case 184:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode184) = *(other->creverseNodeUnion->CPPcreversenode184)); break;
-	case 185:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode185) = *(other->creverseNodeUnion->CPPcreversenode185)); break;
-	case 186:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode186) = *(other->creverseNodeUnion->CPPcreversenode186)); break;
-	case 187:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode187) = *(other->creverseNodeUnion->CPPcreversenode187)); break;
-	case 188:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode188) = *(other->creverseNodeUnion->CPPcreversenode188)); break;
-	case 189:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode189) = *(other->creverseNodeUnion->CPPcreversenode189)); break;
-	case 190:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode190) = *(other->creverseNodeUnion->CPPcreversenode190)); break;
-	case 191:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode191) = *(other->creverseNodeUnion->CPPcreversenode191)); break;
-	case 192:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode192) = *(other->creverseNodeUnion->CPPcreversenode192)); break;
-	case 193:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode193) = *(other->creverseNodeUnion->CPPcreversenode193)); break;
-	case 194:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode194) = *(other->creverseNodeUnion->CPPcreversenode194)); break;
-	case 195:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode195) = *(other->creverseNodeUnion->CPPcreversenode195)); break;
-	case 196:
-		(*(thisObj->creverseNodeUnion->CPPcreversenode196) = *(other->creverseNodeUnion->CPPcreversenode196)); break;
+		UnOrderedCReverseNode_Copy_CASE(1)
+		UnOrderedCReverseNode_Copy_CASE(2)
+		UnOrderedCReverseNode_Copy_CASE(3)
+		UnOrderedCReverseNode_Copy_CASE(4)
+		UnOrderedCReverseNode_Copy_CASE(5)
+		UnOrderedCReverseNode_Copy_CASE(6)
+		UnOrderedCReverseNode_Copy_CASE(7)
+		UnOrderedCReverseNode_Copy_CASE(8)
+		UnOrderedCReverseNode_Copy_CASE(9)
+		UnOrderedCReverseNode_Copy_CASE(10)
+		UnOrderedCReverseNode_Copy_CASE(11)
+		UnOrderedCReverseNode_Copy_CASE(12)
+		UnOrderedCReverseNode_Copy_CASE(13)
+		UnOrderedCReverseNode_Copy_CASE(14)
+		UnOrderedCReverseNode_Copy_CASE(15)
+		UnOrderedCReverseNode_Copy_CASE(16)
+		UnOrderedCReverseNode_Copy_CASE(17)
+		UnOrderedCReverseNode_Copy_CASE(18)
+		UnOrderedCReverseNode_Copy_CASE(19)
+		UnOrderedCReverseNode_Copy_CASE(20)
+		UnOrderedCReverseNode_Copy_CASE(21)
+		UnOrderedCReverseNode_Copy_CASE(22)
+		UnOrderedCReverseNode_Copy_CASE(23)
+		UnOrderedCReverseNode_Copy_CASE(24)
+		UnOrderedCReverseNode_Copy_CASE(25)
+		UnOrderedCReverseNode_Copy_CASE(26)
+		UnOrderedCReverseNode_Copy_CASE(27)
+		UnOrderedCReverseNode_Copy_CASE(28)
+		UnOrderedCReverseNode_Copy_CASE(29)
+		UnOrderedCReverseNode_Copy_CASE(30)
+		UnOrderedCReverseNode_Copy_CASE(31)
+		UnOrderedCReverseNode_Copy_CASE(32)
+		UnOrderedCReverseNode_Copy_CASE(33)
+		UnOrderedCReverseNode_Copy_CASE(34)
+		UnOrderedCReverseNode_Copy_CASE(35)
+		UnOrderedCReverseNode_Copy_CASE(36)
+		UnOrderedCReverseNode_Copy_CASE(37)
+		UnOrderedCReverseNode_Copy_CASE(38)
+		UnOrderedCReverseNode_Copy_CASE(39)
+		UnOrderedCReverseNode_Copy_CASE(40)
+		UnOrderedCReverseNode_Copy_CASE(41)
+		UnOrderedCReverseNode_Copy_CASE(42)
+		UnOrderedCReverseNode_Copy_CASE(43)
+		UnOrderedCReverseNode_Copy_CASE(44)
+		UnOrderedCReverseNode_Copy_CASE(45)
+		UnOrderedCReverseNode_Copy_CASE(46)
+		UnOrderedCReverseNode_Copy_CASE(47)
+		UnOrderedCReverseNode_Copy_CASE(48)
+		UnOrderedCReverseNode_Copy_CASE(49)
+		UnOrderedCReverseNode_Copy_CASE(50)
+		UnOrderedCReverseNode_Copy_CASE(51)
+		UnOrderedCReverseNode_Copy_CASE(52)
+		UnOrderedCReverseNode_Copy_CASE(53)
+		UnOrderedCReverseNode_Copy_CASE(54)
+		UnOrderedCReverseNode_Copy_CASE(55)
+		UnOrderedCReverseNode_Copy_CASE(56)
+		UnOrderedCReverseNode_Copy_CASE(57)
+		UnOrderedCReverseNode_Copy_CASE(58)
+		UnOrderedCReverseNode_Copy_CASE(59)
+		UnOrderedCReverseNode_Copy_CASE(60)
+		UnOrderedCReverseNode_Copy_CASE(61)
+		UnOrderedCReverseNode_Copy_CASE(62)
+		UnOrderedCReverseNode_Copy_CASE(63)
+		UnOrderedCReverseNode_Copy_CASE(64)
+		UnOrderedCReverseNode_Copy_CASE(65)
+		UnOrderedCReverseNode_Copy_CASE(66)
+		UnOrderedCReverseNode_Copy_CASE(67)
+		UnOrderedCReverseNode_Copy_CASE(68)
+		UnOrderedCReverseNode_Copy_CASE(69)
+		UnOrderedCReverseNode_Copy_CASE(70)
+		UnOrderedCReverseNode_Copy_CASE(71)
+		UnOrderedCReverseNode_Copy_CASE(72)
+		UnOrderedCReverseNode_Copy_CASE(73)
+		UnOrderedCReverseNode_Copy_CASE(74)
+		UnOrderedCReverseNode_Copy_CASE(75)
+		UnOrderedCReverseNode_Copy_CASE(76)
+		UnOrderedCReverseNode_Copy_CASE(77)
+		UnOrderedCReverseNode_Copy_CASE(78)
+		UnOrderedCReverseNode_Copy_CASE(79)
+		UnOrderedCReverseNode_Copy_CASE(80)
+		UnOrderedCReverseNode_Copy_CASE(81)
+		UnOrderedCReverseNode_Copy_CASE(82)
+		UnOrderedCReverseNode_Copy_CASE(83)
+		UnOrderedCReverseNode_Copy_CASE(84)
+		UnOrderedCReverseNode_Copy_CASE(85)
+		UnOrderedCReverseNode_Copy_CASE(86)
+		UnOrderedCReverseNode_Copy_CASE(87)
+		UnOrderedCReverseNode_Copy_CASE(88)
+		UnOrderedCReverseNode_Copy_CASE(89)
+		UnOrderedCReverseNode_Copy_CASE(90)
+		UnOrderedCReverseNode_Copy_CASE(91)
+		UnOrderedCReverseNode_Copy_CASE(92)
+		UnOrderedCReverseNode_Copy_CASE(93)
+		UnOrderedCReverseNode_Copy_CASE(94)
+		UnOrderedCReverseNode_Copy_CASE(95)
+		UnOrderedCReverseNode_Copy_CASE(96)
+		UnOrderedCReverseNode_Copy_CASE(97)
+		UnOrderedCReverseNode_Copy_CASE(98)
+		UnOrderedCReverseNode_Copy_CASE(99)
+		UnOrderedCReverseNode_Copy_CASE(100)
+		UnOrderedCReverseNode_Copy_CASE(101)
+		UnOrderedCReverseNode_Copy_CASE(102)
+		UnOrderedCReverseNode_Copy_CASE(103)
+		UnOrderedCReverseNode_Copy_CASE(104)
+		UnOrderedCReverseNode_Copy_CASE(105)
+		UnOrderedCReverseNode_Copy_CASE(106)
+		UnOrderedCReverseNode_Copy_CASE(107)
+		UnOrderedCReverseNode_Copy_CASE(108)
+		UnOrderedCReverseNode_Copy_CASE(109)
+		UnOrderedCReverseNode_Copy_CASE(110)
+		UnOrderedCReverseNode_Copy_CASE(111)
+		UnOrderedCReverseNode_Copy_CASE(112)
+		UnOrderedCReverseNode_Copy_CASE(113)
+		UnOrderedCReverseNode_Copy_CASE(114)
+		UnOrderedCReverseNode_Copy_CASE(115)
+		UnOrderedCReverseNode_Copy_CASE(116)
+		UnOrderedCReverseNode_Copy_CASE(117)
+		UnOrderedCReverseNode_Copy_CASE(118)
+		UnOrderedCReverseNode_Copy_CASE(119)
+		UnOrderedCReverseNode_Copy_CASE(120)
+		UnOrderedCReverseNode_Copy_CASE(121)
+		UnOrderedCReverseNode_Copy_CASE(122)
+		UnOrderedCReverseNode_Copy_CASE(123)
+		UnOrderedCReverseNode_Copy_CASE(124)
+		UnOrderedCReverseNode_Copy_CASE(125)
+		UnOrderedCReverseNode_Copy_CASE(126)
+		UnOrderedCReverseNode_Copy_CASE(127)
+		UnOrderedCReverseNode_Copy_CASE(128)
+		UnOrderedCReverseNode_Copy_CASE(129)
+		UnOrderedCReverseNode_Copy_CASE(130)
+		UnOrderedCReverseNode_Copy_CASE(131)
+		UnOrderedCReverseNode_Copy_CASE(132)
+		UnOrderedCReverseNode_Copy_CASE(133)
+		UnOrderedCReverseNode_Copy_CASE(134)
+		UnOrderedCReverseNode_Copy_CASE(135)
+		UnOrderedCReverseNode_Copy_CASE(136)
+		UnOrderedCReverseNode_Copy_CASE(137)
+		UnOrderedCReverseNode_Copy_CASE(138)
+		UnOrderedCReverseNode_Copy_CASE(139)
+		UnOrderedCReverseNode_Copy_CASE(140)
+		UnOrderedCReverseNode_Copy_CASE(141)
+		UnOrderedCReverseNode_Copy_CASE(142)
+		UnOrderedCReverseNode_Copy_CASE(143)
+		UnOrderedCReverseNode_Copy_CASE(144)
+		UnOrderedCReverseNode_Copy_CASE(145)
+		UnOrderedCReverseNode_Copy_CASE(146)
+		UnOrderedCReverseNode_Copy_CASE(147)
+		UnOrderedCReverseNode_Copy_CASE(148)
+		UnOrderedCReverseNode_Copy_CASE(149)
+		UnOrderedCReverseNode_Copy_CASE(150)
+		UnOrderedCReverseNode_Copy_CASE(151)
+		UnOrderedCReverseNode_Copy_CASE(152)
+		UnOrderedCReverseNode_Copy_CASE(153)
+		UnOrderedCReverseNode_Copy_CASE(154)
+		UnOrderedCReverseNode_Copy_CASE(155)
+		UnOrderedCReverseNode_Copy_CASE(156)
+		UnOrderedCReverseNode_Copy_CASE(157)
+		UnOrderedCReverseNode_Copy_CASE(158)
+		UnOrderedCReverseNode_Copy_CASE(159)
+		UnOrderedCReverseNode_Copy_CASE(160)
+		UnOrderedCReverseNode_Copy_CASE(161)
+		UnOrderedCReverseNode_Copy_CASE(162)
+		UnOrderedCReverseNode_Copy_CASE(163)
+		UnOrderedCReverseNode_Copy_CASE(164)
+		UnOrderedCReverseNode_Copy_CASE(165)
+		UnOrderedCReverseNode_Copy_CASE(166)
+		UnOrderedCReverseNode_Copy_CASE(167)
+		UnOrderedCReverseNode_Copy_CASE(168)
+		UnOrderedCReverseNode_Copy_CASE(169)
+		UnOrderedCReverseNode_Copy_CASE(170)
+		UnOrderedCReverseNode_Copy_CASE(171)
+		UnOrderedCReverseNode_Copy_CASE(172)
+		UnOrderedCReverseNode_Copy_CASE(173)
+		UnOrderedCReverseNode_Copy_CASE(174)
+		UnOrderedCReverseNode_Copy_CASE(175)
+		UnOrderedCReverseNode_Copy_CASE(176)
+		UnOrderedCReverseNode_Copy_CASE(177)
+		UnOrderedCReverseNode_Copy_CASE(178)
+		UnOrderedCReverseNode_Copy_CASE(179)
+		UnOrderedCReverseNode_Copy_CASE(180)
+		UnOrderedCReverseNode_Copy_CASE(181)
+		UnOrderedCReverseNode_Copy_CASE(182)
+		UnOrderedCReverseNode_Copy_CASE(183)
+		UnOrderedCReverseNode_Copy_CASE(184)
+		UnOrderedCReverseNode_Copy_CASE(185)
+		UnOrderedCReverseNode_Copy_CASE(186)
+		UnOrderedCReverseNode_Copy_CASE(187)
+		UnOrderedCReverseNode_Copy_CASE(188)
+		UnOrderedCReverseNode_Copy_CASE(189)
+		UnOrderedCReverseNode_Copy_CASE(190)
+		UnOrderedCReverseNode_Copy_CASE(191)
+		UnOrderedCReverseNode_Copy_CASE(192)
+		UnOrderedCReverseNode_Copy_CASE(193)
+		UnOrderedCReverseNode_Copy_CASE(194)
+		UnOrderedCReverseNode_Copy_CASE(195)
+		UnOrderedCReverseNode_Copy_CASE(196)
 	}
 	return thisObj;
 }

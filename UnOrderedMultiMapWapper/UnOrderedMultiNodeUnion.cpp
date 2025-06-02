@@ -757,6 +757,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::~CShorpUnOrderedM
 	delete multiNodeUnion;
 }
 
+#define UnOrderedMultiNode_Next_CASE(NUM) \
+	case NUM: \
+		(*(multiNodeUnion->CPPmultinode##NUM))++; \
+		return;
 
 generic<typename Key, typename Value>
 void UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::Next()
@@ -767,596 +771,209 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::Next()
 	{
 	case 0: default:
 		return;
-	case 1:
-		(*(multiNodeUnion->CPPmultinode1))++;
-		return;
-	case 2:
-		(*(multiNodeUnion->CPPmultinode2))++;
-		return;
-	case 3:
-		(*(multiNodeUnion->CPPmultinode3))++;
-		return;
-	case 4:
-		(*(multiNodeUnion->CPPmultinode4))++;
-		return;
-	case 5:
-		(*(multiNodeUnion->CPPmultinode5))++;
-		return;
-	case 6:
-		(*(multiNodeUnion->CPPmultinode6))++;
-		return;
-	case 7:
-		(*(multiNodeUnion->CPPmultinode7))++;
-		return;
-	case 8:
-		(*(multiNodeUnion->CPPmultinode8))++;
-		return;
-	case 9:
-		(*(multiNodeUnion->CPPmultinode9))++;
-		return;
-	case 10:
-		(*(multiNodeUnion->CPPmultinode10))++;
-		return;
-	case 11:
-		(*(multiNodeUnion->CPPmultinode11))++;
-		return;
-	case 12:
-		(*(multiNodeUnion->CPPmultinode12))++;
-		return;
-	case 13:
-		(*(multiNodeUnion->CPPmultinode13))++;
-		return;
-	case 14:
-		(*(multiNodeUnion->CPPmultinode14))++;
-		return;
-	case 15:
-		(*(multiNodeUnion->CPPmultinode15))++;
-		return;
-	case 16:
-		(*(multiNodeUnion->CPPmultinode16))++;
-		return;
-	case 17:
-		(*(multiNodeUnion->CPPmultinode17))++;
-		return;
-	case 18:
-		(*(multiNodeUnion->CPPmultinode18))++;
-		return;
-	case 19:
-		(*(multiNodeUnion->CPPmultinode19))++;
-		return;
-	case 20:
-		(*(multiNodeUnion->CPPmultinode20))++;
-		return;
-	case 21:
-		(*(multiNodeUnion->CPPmultinode21))++;
-		return;
-	case 22:
-		(*(multiNodeUnion->CPPmultinode22))++;
-		return;
-	case 23:
-		(*(multiNodeUnion->CPPmultinode23))++;
-		return;
-	case 24:
-		(*(multiNodeUnion->CPPmultinode24))++;
-		return;
-	case 25:
-		(*(multiNodeUnion->CPPmultinode25))++;
-		return;
-	case 26:
-		(*(multiNodeUnion->CPPmultinode26))++;
-		return;
-	case 27:
-		(*(multiNodeUnion->CPPmultinode27))++;
-		return;
-	case 28:
-		(*(multiNodeUnion->CPPmultinode28))++;
-		return;
-	case 29:
-		(*(multiNodeUnion->CPPmultinode29))++;
-		return;
-	case 30:
-		(*(multiNodeUnion->CPPmultinode30))++;
-		return;
-	case 31:
-		(*(multiNodeUnion->CPPmultinode31))++;
-		return;
-	case 32:
-		(*(multiNodeUnion->CPPmultinode32))++;
-		return;
-	case 33:
-		(*(multiNodeUnion->CPPmultinode33))++;
-		return;
-	case 34:
-		(*(multiNodeUnion->CPPmultinode34))++;
-		return;
-	case 35:
-		(*(multiNodeUnion->CPPmultinode35))++;
-		return;
-	case 36:
-		(*(multiNodeUnion->CPPmultinode36))++;
-		return;
-	case 37:
-		(*(multiNodeUnion->CPPmultinode37))++;
-		return;
-	case 38:
-		(*(multiNodeUnion->CPPmultinode38))++;
-		return;
-	case 39:
-		(*(multiNodeUnion->CPPmultinode39))++;
-		return;
-	case 40:
-		(*(multiNodeUnion->CPPmultinode40))++;
-		return;
-	case 41:
-		(*(multiNodeUnion->CPPmultinode41))++;
-		return;
-	case 42:
-		(*(multiNodeUnion->CPPmultinode42))++;
-		return;
-	case 43:
-		(*(multiNodeUnion->CPPmultinode43))++;
-		return;
-	case 44:
-		(*(multiNodeUnion->CPPmultinode44))++;
-		return;
-	case 45:
-		(*(multiNodeUnion->CPPmultinode45))++;
-		return;
-	case 46:
-		(*(multiNodeUnion->CPPmultinode46))++;
-		return;
-	case 47:
-		(*(multiNodeUnion->CPPmultinode47))++;
-		return;
-	case 48:
-		(*(multiNodeUnion->CPPmultinode48))++;
-		return;
-	case 49:
-		(*(multiNodeUnion->CPPmultinode49))++;
-		return;
-	case 50:
-		(*(multiNodeUnion->CPPmultinode50))++;
-		return;
-	case 51:
-		(*(multiNodeUnion->CPPmultinode51))++;
-		return;
-	case 52:
-		(*(multiNodeUnion->CPPmultinode52))++;
-		return;
-	case 53:
-		(*(multiNodeUnion->CPPmultinode53))++;
-		return;
-	case 54:
-		(*(multiNodeUnion->CPPmultinode54))++;
-		return;
-	case 55:
-		(*(multiNodeUnion->CPPmultinode55))++;
-		return;
-	case 56:
-		(*(multiNodeUnion->CPPmultinode56))++;
-		return;
-	case 57:
-		(*(multiNodeUnion->CPPmultinode57))++;
-		return;
-	case 58:
-		(*(multiNodeUnion->CPPmultinode58))++;
-		return;
-	case 59:
-		(*(multiNodeUnion->CPPmultinode59))++;
-		return;
-	case 60:
-		(*(multiNodeUnion->CPPmultinode60))++;
-		return;
-	case 61:
-		(*(multiNodeUnion->CPPmultinode61))++;
-		return;
-	case 62:
-		(*(multiNodeUnion->CPPmultinode62))++;
-		return;
-	case 63:
-		(*(multiNodeUnion->CPPmultinode63))++;
-		return;
-	case 64:
-		(*(multiNodeUnion->CPPmultinode64))++;
-		return;
-	case 65:
-		(*(multiNodeUnion->CPPmultinode65))++;
-		return;
-	case 66:
-		(*(multiNodeUnion->CPPmultinode66))++;
-		return;
-	case 67:
-		(*(multiNodeUnion->CPPmultinode67))++;
-		return;
-	case 68:
-		(*(multiNodeUnion->CPPmultinode68))++;
-		return;
-	case 69:
-		(*(multiNodeUnion->CPPmultinode69))++;
-		return;
-	case 70:
-		(*(multiNodeUnion->CPPmultinode70))++;
-		return;
-	case 71:
-		(*(multiNodeUnion->CPPmultinode71))++;
-		return;
-	case 72:
-		(*(multiNodeUnion->CPPmultinode72))++;
-		return;
-	case 73:
-		(*(multiNodeUnion->CPPmultinode73))++;
-		return;
-	case 74:
-		(*(multiNodeUnion->CPPmultinode74))++;
-		return;
-	case 75:
-		(*(multiNodeUnion->CPPmultinode75))++;
-		return;
-	case 76:
-		(*(multiNodeUnion->CPPmultinode76))++;
-		return;
-	case 77:
-		(*(multiNodeUnion->CPPmultinode77))++;
-		return;
-	case 78:
-		(*(multiNodeUnion->CPPmultinode78))++;
-		return;
-	case 79:
-		(*(multiNodeUnion->CPPmultinode79))++;
-		return;
-	case 80:
-		(*(multiNodeUnion->CPPmultinode80))++;
-		return;
-	case 81:
-		(*(multiNodeUnion->CPPmultinode81))++;
-		return;
-	case 82:
-		(*(multiNodeUnion->CPPmultinode82))++;
-		return;
-	case 83:
-		(*(multiNodeUnion->CPPmultinode83))++;
-		return;
-	case 84:
-		(*(multiNodeUnion->CPPmultinode84))++;
-		return;
-	case 85:
-		(*(multiNodeUnion->CPPmultinode85))++;
-		return;
-	case 86:
-		(*(multiNodeUnion->CPPmultinode86))++;
-		return;
-	case 87:
-		(*(multiNodeUnion->CPPmultinode87))++;
-		return;
-	case 88:
-		(*(multiNodeUnion->CPPmultinode88))++;
-		return;
-	case 89:
-		(*(multiNodeUnion->CPPmultinode89))++;
-		return;
-	case 90:
-		(*(multiNodeUnion->CPPmultinode90))++;
-		return;
-	case 91:
-		(*(multiNodeUnion->CPPmultinode91))++;
-		return;
-	case 92:
-		(*(multiNodeUnion->CPPmultinode92))++;
-		return;
-	case 93:
-		(*(multiNodeUnion->CPPmultinode93))++;
-		return;
-	case 94:
-		(*(multiNodeUnion->CPPmultinode94))++;
-		return;
-	case 95:
-		(*(multiNodeUnion->CPPmultinode95))++;
-		return;
-	case 96:
-		(*(multiNodeUnion->CPPmultinode96))++;
-		return;
-	case 97:
-		(*(multiNodeUnion->CPPmultinode97))++;
-		return;
-	case 98:
-		(*(multiNodeUnion->CPPmultinode98))++;
-		return;
-	case 99:
-		(*(multiNodeUnion->CPPmultinode99))++;
-		return;
-	case 100:
-		(*(multiNodeUnion->CPPmultinode100))++;
-		return;
-	case 101:
-		(*(multiNodeUnion->CPPmultinode101))++;
-		return;
-	case 102:
-		(*(multiNodeUnion->CPPmultinode102))++;
-		return;
-	case 103:
-		(*(multiNodeUnion->CPPmultinode103))++;
-		return;
-	case 104:
-		(*(multiNodeUnion->CPPmultinode104))++;
-		return;
-	case 105:
-		(*(multiNodeUnion->CPPmultinode105))++;
-		return;
-	case 106:
-		(*(multiNodeUnion->CPPmultinode106))++;
-		return;
-	case 107:
-		(*(multiNodeUnion->CPPmultinode107))++;
-		return;
-	case 108:
-		(*(multiNodeUnion->CPPmultinode108))++;
-		return;
-	case 109:
-		(*(multiNodeUnion->CPPmultinode109))++;
-		return;
-	case 110:
-		(*(multiNodeUnion->CPPmultinode110))++;
-		return;
-	case 111:
-		(*(multiNodeUnion->CPPmultinode111))++;
-		return;
-	case 112:
-		(*(multiNodeUnion->CPPmultinode112))++;
-		return;
-	case 113:
-		(*(multiNodeUnion->CPPmultinode113))++;
-		return;
-	case 114:
-		(*(multiNodeUnion->CPPmultinode114))++;
-		return;
-	case 115:
-		(*(multiNodeUnion->CPPmultinode115))++;
-		return;
-	case 116:
-		(*(multiNodeUnion->CPPmultinode116))++;
-		return;
-	case 117:
-		(*(multiNodeUnion->CPPmultinode117))++;
-		return;
-	case 118:
-		(*(multiNodeUnion->CPPmultinode118))++;
-		return;
-	case 119:
-		(*(multiNodeUnion->CPPmultinode119))++;
-		return;
-	case 120:
-		(*(multiNodeUnion->CPPmultinode120))++;
-		return;
-	case 121:
-		(*(multiNodeUnion->CPPmultinode121))++;
-		return;
-	case 122:
-		(*(multiNodeUnion->CPPmultinode122))++;
-		return;
-	case 123:
-		(*(multiNodeUnion->CPPmultinode123))++;
-		return;
-	case 124:
-		(*(multiNodeUnion->CPPmultinode124))++;
-		return;
-	case 125:
-		(*(multiNodeUnion->CPPmultinode125))++;
-		return;
-	case 126:
-		(*(multiNodeUnion->CPPmultinode126))++;
-		return;
-	case 127:
-		(*(multiNodeUnion->CPPmultinode127))++;
-		return;
-	case 128:
-		(*(multiNodeUnion->CPPmultinode128))++;
-		return;
-	case 129:
-		(*(multiNodeUnion->CPPmultinode129))++;
-		return;
-	case 130:
-		(*(multiNodeUnion->CPPmultinode130))++;
-		return;
-	case 131:
-		(*(multiNodeUnion->CPPmultinode131))++;
-		return;
-	case 132:
-		(*(multiNodeUnion->CPPmultinode132))++;
-		return;
-	case 133:
-		(*(multiNodeUnion->CPPmultinode133))++;
-		return;
-	case 134:
-		(*(multiNodeUnion->CPPmultinode134))++;
-		return;
-	case 135:
-		(*(multiNodeUnion->CPPmultinode135))++;
-		return;
-	case 136:
-		(*(multiNodeUnion->CPPmultinode136))++;
-		return;
-	case 137:
-		(*(multiNodeUnion->CPPmultinode137))++;
-		return;
-	case 138:
-		(*(multiNodeUnion->CPPmultinode138))++;
-		return;
-	case 139:
-		(*(multiNodeUnion->CPPmultinode139))++;
-		return;
-	case 140:
-		(*(multiNodeUnion->CPPmultinode140))++;
-		return;
-	case 141:
-		(*(multiNodeUnion->CPPmultinode141))++;
-		return;
-	case 142:
-		(*(multiNodeUnion->CPPmultinode142))++;
-		return;
-	case 143:
-		(*(multiNodeUnion->CPPmultinode143))++;
-		return;
-	case 144:
-		(*(multiNodeUnion->CPPmultinode144))++;
-		return;
-	case 145:
-		(*(multiNodeUnion->CPPmultinode145))++;
-		return;
-	case 146:
-		(*(multiNodeUnion->CPPmultinode146))++;
-		return;
-	case 147:
-		(*(multiNodeUnion->CPPmultinode147))++;
-		return;
-	case 148:
-		(*(multiNodeUnion->CPPmultinode148))++;
-		return;
-	case 149:
-		(*(multiNodeUnion->CPPmultinode149))++;
-		return;
-	case 150:
-		(*(multiNodeUnion->CPPmultinode150))++;
-		return;
-	case 151:
-		(*(multiNodeUnion->CPPmultinode151))++;
-		return;
-	case 152:
-		(*(multiNodeUnion->CPPmultinode152))++;
-		return;
-	case 153:
-		(*(multiNodeUnion->CPPmultinode153))++;
-		return;
-	case 154:
-		(*(multiNodeUnion->CPPmultinode154))++;
-		return;
-	case 155:
-		(*(multiNodeUnion->CPPmultinode155))++;
-		return;
-	case 156:
-		(*(multiNodeUnion->CPPmultinode156))++;
-		return;
-	case 157:
-		(*(multiNodeUnion->CPPmultinode157))++;
-		return;
-	case 158:
-		(*(multiNodeUnion->CPPmultinode158))++;
-		return;
-	case 159:
-		(*(multiNodeUnion->CPPmultinode159))++;
-		return;
-	case 160:
-		(*(multiNodeUnion->CPPmultinode160))++;
-		return;
-	case 161:
-		(*(multiNodeUnion->CPPmultinode161))++;
-		return;
-	case 162:
-		(*(multiNodeUnion->CPPmultinode162))++;
-		return;
-	case 163:
-		(*(multiNodeUnion->CPPmultinode163))++;
-		return;
-	case 164:
-		(*(multiNodeUnion->CPPmultinode164))++;
-		return;
-	case 165:
-		(*(multiNodeUnion->CPPmultinode165))++;
-		return;
-	case 166:
-		(*(multiNodeUnion->CPPmultinode166))++;
-		return;
-	case 167:
-		(*(multiNodeUnion->CPPmultinode167))++;
-		return;
-	case 168:
-		(*(multiNodeUnion->CPPmultinode168))++;
-		return;
-	case 169:
-		(*(multiNodeUnion->CPPmultinode169))++;
-		return;
-	case 170:
-		(*(multiNodeUnion->CPPmultinode170))++;
-		return;
-	case 171:
-		(*(multiNodeUnion->CPPmultinode171))++;
-		return;
-	case 172:
-		(*(multiNodeUnion->CPPmultinode172))++;
-		return;
-	case 173:
-		(*(multiNodeUnion->CPPmultinode173))++;
-		return;
-	case 174:
-		(*(multiNodeUnion->CPPmultinode174))++;
-		return;
-	case 175:
-		(*(multiNodeUnion->CPPmultinode175))++;
-		return;
-	case 176:
-		(*(multiNodeUnion->CPPmultinode176))++;
-		return;
-	case 177:
-		(*(multiNodeUnion->CPPmultinode177))++;
-		return;
-	case 178:
-		(*(multiNodeUnion->CPPmultinode178))++;
-		return;
-	case 179:
-		(*(multiNodeUnion->CPPmultinode179))++;
-		return;
-	case 180:
-		(*(multiNodeUnion->CPPmultinode180))++;
-		return;
-	case 181:
-		(*(multiNodeUnion->CPPmultinode181))++;
-		return;
-	case 182:
-		(*(multiNodeUnion->CPPmultinode182))++;
-		return;
-	case 183:
-		(*(multiNodeUnion->CPPmultinode183))++;
-		return;
-	case 184:
-		(*(multiNodeUnion->CPPmultinode184))++;
-		return;
-	case 185:
-		(*(multiNodeUnion->CPPmultinode185))++;
-		return;
-	case 186:
-		(*(multiNodeUnion->CPPmultinode186))++;
-		return;
-	case 187:
-		(*(multiNodeUnion->CPPmultinode187))++;
-		return;
-	case 188:
-		(*(multiNodeUnion->CPPmultinode188))++;
-		return;
-	case 189:
-		(*(multiNodeUnion->CPPmultinode189))++;
-		return;
-	case 190:
-		(*(multiNodeUnion->CPPmultinode190))++;
-		return;
-	case 191:
-		(*(multiNodeUnion->CPPmultinode191))++;
-		return;
-	case 192:
-		(*(multiNodeUnion->CPPmultinode192))++;
-		return;
-	case 193:
-		(*(multiNodeUnion->CPPmultinode193))++;
-		return;
-	case 194:
-		(*(multiNodeUnion->CPPmultinode194))++;
-		return;
-	case 195:
-		(*(multiNodeUnion->CPPmultinode195))++;
-		return;
-	case 196:
-		(*(multiNodeUnion->CPPmultinode196))++;
-		return;
+		UnOrderedMultiNode_Next_CASE(1)
+		UnOrderedMultiNode_Next_CASE(2)
+		UnOrderedMultiNode_Next_CASE(3)
+		UnOrderedMultiNode_Next_CASE(4)
+		UnOrderedMultiNode_Next_CASE(5)
+		UnOrderedMultiNode_Next_CASE(6)
+		UnOrderedMultiNode_Next_CASE(7)
+		UnOrderedMultiNode_Next_CASE(8)
+		UnOrderedMultiNode_Next_CASE(9)
+		UnOrderedMultiNode_Next_CASE(10)
+		UnOrderedMultiNode_Next_CASE(11)
+		UnOrderedMultiNode_Next_CASE(12)
+		UnOrderedMultiNode_Next_CASE(13)
+		UnOrderedMultiNode_Next_CASE(14)
+		UnOrderedMultiNode_Next_CASE(15)
+		UnOrderedMultiNode_Next_CASE(16)
+		UnOrderedMultiNode_Next_CASE(17)
+		UnOrderedMultiNode_Next_CASE(18)
+		UnOrderedMultiNode_Next_CASE(19)
+		UnOrderedMultiNode_Next_CASE(20)
+		UnOrderedMultiNode_Next_CASE(21)
+		UnOrderedMultiNode_Next_CASE(22)
+		UnOrderedMultiNode_Next_CASE(23)
+		UnOrderedMultiNode_Next_CASE(24)
+		UnOrderedMultiNode_Next_CASE(25)
+		UnOrderedMultiNode_Next_CASE(26)
+		UnOrderedMultiNode_Next_CASE(27)
+		UnOrderedMultiNode_Next_CASE(28)
+		UnOrderedMultiNode_Next_CASE(29)
+		UnOrderedMultiNode_Next_CASE(30)
+		UnOrderedMultiNode_Next_CASE(31)
+		UnOrderedMultiNode_Next_CASE(32)
+		UnOrderedMultiNode_Next_CASE(33)
+		UnOrderedMultiNode_Next_CASE(34)
+		UnOrderedMultiNode_Next_CASE(35)
+		UnOrderedMultiNode_Next_CASE(36)
+		UnOrderedMultiNode_Next_CASE(37)
+		UnOrderedMultiNode_Next_CASE(38)
+		UnOrderedMultiNode_Next_CASE(39)
+		UnOrderedMultiNode_Next_CASE(40)
+		UnOrderedMultiNode_Next_CASE(41)
+		UnOrderedMultiNode_Next_CASE(42)
+		UnOrderedMultiNode_Next_CASE(43)
+		UnOrderedMultiNode_Next_CASE(44)
+		UnOrderedMultiNode_Next_CASE(45)
+		UnOrderedMultiNode_Next_CASE(46)
+		UnOrderedMultiNode_Next_CASE(47)
+		UnOrderedMultiNode_Next_CASE(48)
+		UnOrderedMultiNode_Next_CASE(49)
+		UnOrderedMultiNode_Next_CASE(50)
+		UnOrderedMultiNode_Next_CASE(51)
+		UnOrderedMultiNode_Next_CASE(52)
+		UnOrderedMultiNode_Next_CASE(53)
+		UnOrderedMultiNode_Next_CASE(54)
+		UnOrderedMultiNode_Next_CASE(55)
+		UnOrderedMultiNode_Next_CASE(56)
+		UnOrderedMultiNode_Next_CASE(57)
+		UnOrderedMultiNode_Next_CASE(58)
+		UnOrderedMultiNode_Next_CASE(59)
+		UnOrderedMultiNode_Next_CASE(60)
+		UnOrderedMultiNode_Next_CASE(61)
+		UnOrderedMultiNode_Next_CASE(62)
+		UnOrderedMultiNode_Next_CASE(63)
+		UnOrderedMultiNode_Next_CASE(64)
+		UnOrderedMultiNode_Next_CASE(65)
+		UnOrderedMultiNode_Next_CASE(66)
+		UnOrderedMultiNode_Next_CASE(67)
+		UnOrderedMultiNode_Next_CASE(68)
+		UnOrderedMultiNode_Next_CASE(69)
+		UnOrderedMultiNode_Next_CASE(70)
+		UnOrderedMultiNode_Next_CASE(71)
+		UnOrderedMultiNode_Next_CASE(72)
+		UnOrderedMultiNode_Next_CASE(73)
+		UnOrderedMultiNode_Next_CASE(74)
+		UnOrderedMultiNode_Next_CASE(75)
+		UnOrderedMultiNode_Next_CASE(76)
+		UnOrderedMultiNode_Next_CASE(77)
+		UnOrderedMultiNode_Next_CASE(78)
+		UnOrderedMultiNode_Next_CASE(79)
+		UnOrderedMultiNode_Next_CASE(80)
+		UnOrderedMultiNode_Next_CASE(81)
+		UnOrderedMultiNode_Next_CASE(82)
+		UnOrderedMultiNode_Next_CASE(83)
+		UnOrderedMultiNode_Next_CASE(84)
+		UnOrderedMultiNode_Next_CASE(85)
+		UnOrderedMultiNode_Next_CASE(86)
+		UnOrderedMultiNode_Next_CASE(87)
+		UnOrderedMultiNode_Next_CASE(88)
+		UnOrderedMultiNode_Next_CASE(89)
+		UnOrderedMultiNode_Next_CASE(90)
+		UnOrderedMultiNode_Next_CASE(91)
+		UnOrderedMultiNode_Next_CASE(92)
+		UnOrderedMultiNode_Next_CASE(93)
+		UnOrderedMultiNode_Next_CASE(94)
+		UnOrderedMultiNode_Next_CASE(95)
+		UnOrderedMultiNode_Next_CASE(96)
+		UnOrderedMultiNode_Next_CASE(97)
+		UnOrderedMultiNode_Next_CASE(98)
+		UnOrderedMultiNode_Next_CASE(99)
+		UnOrderedMultiNode_Next_CASE(100)
+		UnOrderedMultiNode_Next_CASE(101)
+		UnOrderedMultiNode_Next_CASE(102)
+		UnOrderedMultiNode_Next_CASE(103)
+		UnOrderedMultiNode_Next_CASE(104)
+		UnOrderedMultiNode_Next_CASE(105)
+		UnOrderedMultiNode_Next_CASE(106)
+		UnOrderedMultiNode_Next_CASE(107)
+		UnOrderedMultiNode_Next_CASE(108)
+		UnOrderedMultiNode_Next_CASE(109)
+		UnOrderedMultiNode_Next_CASE(110)
+		UnOrderedMultiNode_Next_CASE(111)
+		UnOrderedMultiNode_Next_CASE(112)
+		UnOrderedMultiNode_Next_CASE(113)
+		UnOrderedMultiNode_Next_CASE(114)
+		UnOrderedMultiNode_Next_CASE(115)
+		UnOrderedMultiNode_Next_CASE(116)
+		UnOrderedMultiNode_Next_CASE(117)
+		UnOrderedMultiNode_Next_CASE(118)
+		UnOrderedMultiNode_Next_CASE(119)
+		UnOrderedMultiNode_Next_CASE(120)
+		UnOrderedMultiNode_Next_CASE(121)
+		UnOrderedMultiNode_Next_CASE(122)
+		UnOrderedMultiNode_Next_CASE(123)
+		UnOrderedMultiNode_Next_CASE(124)
+		UnOrderedMultiNode_Next_CASE(125)
+		UnOrderedMultiNode_Next_CASE(126)
+		UnOrderedMultiNode_Next_CASE(127)
+		UnOrderedMultiNode_Next_CASE(128)
+		UnOrderedMultiNode_Next_CASE(129)
+		UnOrderedMultiNode_Next_CASE(130)
+		UnOrderedMultiNode_Next_CASE(131)
+		UnOrderedMultiNode_Next_CASE(132)
+		UnOrderedMultiNode_Next_CASE(133)
+		UnOrderedMultiNode_Next_CASE(134)
+		UnOrderedMultiNode_Next_CASE(135)
+		UnOrderedMultiNode_Next_CASE(136)
+		UnOrderedMultiNode_Next_CASE(137)
+		UnOrderedMultiNode_Next_CASE(138)
+		UnOrderedMultiNode_Next_CASE(139)
+		UnOrderedMultiNode_Next_CASE(140)
+		UnOrderedMultiNode_Next_CASE(141)
+		UnOrderedMultiNode_Next_CASE(142)
+		UnOrderedMultiNode_Next_CASE(143)
+		UnOrderedMultiNode_Next_CASE(144)
+		UnOrderedMultiNode_Next_CASE(145)
+		UnOrderedMultiNode_Next_CASE(146)
+		UnOrderedMultiNode_Next_CASE(147)
+		UnOrderedMultiNode_Next_CASE(148)
+		UnOrderedMultiNode_Next_CASE(149)
+		UnOrderedMultiNode_Next_CASE(150)
+		UnOrderedMultiNode_Next_CASE(151)
+		UnOrderedMultiNode_Next_CASE(152)
+		UnOrderedMultiNode_Next_CASE(153)
+		UnOrderedMultiNode_Next_CASE(154)
+		UnOrderedMultiNode_Next_CASE(155)
+		UnOrderedMultiNode_Next_CASE(156)
+		UnOrderedMultiNode_Next_CASE(157)
+		UnOrderedMultiNode_Next_CASE(158)
+		UnOrderedMultiNode_Next_CASE(159)
+		UnOrderedMultiNode_Next_CASE(160)
+		UnOrderedMultiNode_Next_CASE(161)
+		UnOrderedMultiNode_Next_CASE(162)
+		UnOrderedMultiNode_Next_CASE(163)
+		UnOrderedMultiNode_Next_CASE(164)
+		UnOrderedMultiNode_Next_CASE(165)
+		UnOrderedMultiNode_Next_CASE(166)
+		UnOrderedMultiNode_Next_CASE(167)
+		UnOrderedMultiNode_Next_CASE(168)
+		UnOrderedMultiNode_Next_CASE(169)
+		UnOrderedMultiNode_Next_CASE(170)
+		UnOrderedMultiNode_Next_CASE(171)
+		UnOrderedMultiNode_Next_CASE(172)
+		UnOrderedMultiNode_Next_CASE(173)
+		UnOrderedMultiNode_Next_CASE(174)
+		UnOrderedMultiNode_Next_CASE(175)
+		UnOrderedMultiNode_Next_CASE(176)
+		UnOrderedMultiNode_Next_CASE(177)
+		UnOrderedMultiNode_Next_CASE(178)
+		UnOrderedMultiNode_Next_CASE(179)
+		UnOrderedMultiNode_Next_CASE(180)
+		UnOrderedMultiNode_Next_CASE(181)
+		UnOrderedMultiNode_Next_CASE(182)
+		UnOrderedMultiNode_Next_CASE(183)
+		UnOrderedMultiNode_Next_CASE(184)
+		UnOrderedMultiNode_Next_CASE(185)
+		UnOrderedMultiNode_Next_CASE(186)
+		UnOrderedMultiNode_Next_CASE(187)
+		UnOrderedMultiNode_Next_CASE(188)
+		UnOrderedMultiNode_Next_CASE(189)
+		UnOrderedMultiNode_Next_CASE(190)
+		UnOrderedMultiNode_Next_CASE(191)
+		UnOrderedMultiNode_Next_CASE(192)
+		UnOrderedMultiNode_Next_CASE(193)
+		UnOrderedMultiNode_Next_CASE(194)
+		UnOrderedMultiNode_Next_CASE(195)
+		UnOrderedMultiNode_Next_CASE(196)
 	}
 }
+
+#define UnOrderedMultiNode_Previous_CASE(NUM) \
+	case NUM: \
+		(*(multiNodeUnion->CPPmultinode##NUM))--; \
+		return;
 
 generic<typename Key, typename Value>
 void UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::Previous()
@@ -1367,594 +984,202 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::Previous()
 	{
 	case 0: default:
 		return;
-	case 1:
-		(*(multiNodeUnion->CPPmultinode1))--;
-		return;
-	case 2:
-		(*(multiNodeUnion->CPPmultinode2))--;
-		return;
-	case 3:
-		(*(multiNodeUnion->CPPmultinode3))--;
-		return;
-	case 4:
-		(*(multiNodeUnion->CPPmultinode4))--;
-		return;
-	case 5:
-		(*(multiNodeUnion->CPPmultinode5))--;
-		return;
-	case 6:
-		(*(multiNodeUnion->CPPmultinode6))--;
-		return;
-	case 7:
-		(*(multiNodeUnion->CPPmultinode7))--;
-		return;
-	case 8:
-		(*(multiNodeUnion->CPPmultinode8))--;
-		return;
-	case 9:
-		(*(multiNodeUnion->CPPmultinode9))--;
-		return;
-	case 10:
-		(*(multiNodeUnion->CPPmultinode10))--;
-		return;
-	case 11:
-		(*(multiNodeUnion->CPPmultinode11))--;
-		return;
-	case 12:
-		(*(multiNodeUnion->CPPmultinode12))--;
-		return;
-	case 13:
-		(*(multiNodeUnion->CPPmultinode13))--;
-		return;
-	case 14:
-		(*(multiNodeUnion->CPPmultinode14))--;
-		return;
-	case 15:
-		(*(multiNodeUnion->CPPmultinode15))--;
-		return;
-	case 16:
-		(*(multiNodeUnion->CPPmultinode16))--;
-		return;
-	case 17:
-		(*(multiNodeUnion->CPPmultinode17))--;
-		return;
-	case 18:
-		(*(multiNodeUnion->CPPmultinode18))--;
-		return;
-	case 19:
-		(*(multiNodeUnion->CPPmultinode19))--;
-		return;
-	case 20:
-		(*(multiNodeUnion->CPPmultinode20))--;
-		return;
-	case 21:
-		(*(multiNodeUnion->CPPmultinode21))--;
-		return;
-	case 22:
-		(*(multiNodeUnion->CPPmultinode22))--;
-		return;
-	case 23:
-		(*(multiNodeUnion->CPPmultinode23))--;
-		return;
-	case 24:
-		(*(multiNodeUnion->CPPmultinode24))--;
-		return;
-	case 25:
-		(*(multiNodeUnion->CPPmultinode25))--;
-		return;
-	case 26:
-		(*(multiNodeUnion->CPPmultinode26))--;
-		return;
-	case 27:
-		(*(multiNodeUnion->CPPmultinode27))--;
-		return;
-	case 28:
-		(*(multiNodeUnion->CPPmultinode28))--;
-		return;
-	case 29:
-		(*(multiNodeUnion->CPPmultinode29))--;
-		return;
-	case 30:
-		(*(multiNodeUnion->CPPmultinode30))--;
-		return;
-	case 31:
-		(*(multiNodeUnion->CPPmultinode31))--;
-		return;
-	case 32:
-		(*(multiNodeUnion->CPPmultinode32))--;
-		return;
-	case 33:
-		(*(multiNodeUnion->CPPmultinode33))--;
-		return;
-	case 34:
-		(*(multiNodeUnion->CPPmultinode34))--;
-		return;
-	case 35:
-		(*(multiNodeUnion->CPPmultinode35))--;
-		return;
-	case 36:
-		(*(multiNodeUnion->CPPmultinode36))--;
-		return;
-	case 37:
-		(*(multiNodeUnion->CPPmultinode37))--;
-		return;
-	case 38:
-		(*(multiNodeUnion->CPPmultinode38))--;
-		return;
-	case 39:
-		(*(multiNodeUnion->CPPmultinode39))--;
-		return;
-	case 40:
-		(*(multiNodeUnion->CPPmultinode40))--;
-		return;
-	case 41:
-		(*(multiNodeUnion->CPPmultinode41))--;
-		return;
-	case 42:
-		(*(multiNodeUnion->CPPmultinode42))--;
-		return;
-	case 43:
-		(*(multiNodeUnion->CPPmultinode43))--;
-		return;
-	case 44:
-		(*(multiNodeUnion->CPPmultinode44))--;
-		return;
-	case 45:
-		(*(multiNodeUnion->CPPmultinode45))--;
-		return;
-	case 46:
-		(*(multiNodeUnion->CPPmultinode46))--;
-		return;
-	case 47:
-		(*(multiNodeUnion->CPPmultinode47))--;
-		return;
-	case 48:
-		(*(multiNodeUnion->CPPmultinode48))--;
-		return;
-	case 49:
-		(*(multiNodeUnion->CPPmultinode49))--;
-		return;
-	case 50:
-		(*(multiNodeUnion->CPPmultinode50))--;
-		return;
-	case 51:
-		(*(multiNodeUnion->CPPmultinode51))--;
-		return;
-	case 52:
-		(*(multiNodeUnion->CPPmultinode52))--;
-		return;
-	case 53:
-		(*(multiNodeUnion->CPPmultinode53))--;
-		return;
-	case 54:
-		(*(multiNodeUnion->CPPmultinode54))--;
-		return;
-	case 55:
-		(*(multiNodeUnion->CPPmultinode55))--;
-		return;
-	case 56:
-		(*(multiNodeUnion->CPPmultinode56))--;
-		return;
-	case 57:
-		(*(multiNodeUnion->CPPmultinode57))--;
-		return;
-	case 58:
-		(*(multiNodeUnion->CPPmultinode58))--;
-		return;
-	case 59:
-		(*(multiNodeUnion->CPPmultinode59))--;
-		return;
-	case 60:
-		(*(multiNodeUnion->CPPmultinode60))--;
-		return;
-	case 61:
-		(*(multiNodeUnion->CPPmultinode61))--;
-		return;
-	case 62:
-		(*(multiNodeUnion->CPPmultinode62))--;
-		return;
-	case 63:
-		(*(multiNodeUnion->CPPmultinode63))--;
-		return;
-	case 64:
-		(*(multiNodeUnion->CPPmultinode64))--;
-		return;
-	case 65:
-		(*(multiNodeUnion->CPPmultinode65))--;
-		return;
-	case 66:
-		(*(multiNodeUnion->CPPmultinode66))--;
-		return;
-	case 67:
-		(*(multiNodeUnion->CPPmultinode67))--;
-		return;
-	case 68:
-		(*(multiNodeUnion->CPPmultinode68))--;
-		return;
-	case 69:
-		(*(multiNodeUnion->CPPmultinode69))--;
-		return;
-	case 70:
-		(*(multiNodeUnion->CPPmultinode70))--;
-		return;
-	case 71:
-		(*(multiNodeUnion->CPPmultinode71))--;
-		return;
-	case 72:
-		(*(multiNodeUnion->CPPmultinode72))--;
-		return;
-	case 73:
-		(*(multiNodeUnion->CPPmultinode73))--;
-		return;
-	case 74:
-		(*(multiNodeUnion->CPPmultinode74))--;
-		return;
-	case 75:
-		(*(multiNodeUnion->CPPmultinode75))--;
-		return;
-	case 76:
-		(*(multiNodeUnion->CPPmultinode76))--;
-		return;
-	case 77:
-		(*(multiNodeUnion->CPPmultinode77))--;
-		return;
-	case 78:
-		(*(multiNodeUnion->CPPmultinode78))--;
-		return;
-	case 79:
-		(*(multiNodeUnion->CPPmultinode79))--;
-		return;
-	case 80:
-		(*(multiNodeUnion->CPPmultinode80))--;
-		return;
-	case 81:
-		(*(multiNodeUnion->CPPmultinode81))--;
-		return;
-	case 82:
-		(*(multiNodeUnion->CPPmultinode82))--;
-		return;
-	case 83:
-		(*(multiNodeUnion->CPPmultinode83))--;
-		return;
-	case 84:
-		(*(multiNodeUnion->CPPmultinode84))--;
-		return;
-	case 85:
-		(*(multiNodeUnion->CPPmultinode85))--;
-		return;
-	case 86:
-		(*(multiNodeUnion->CPPmultinode86))--;
-		return;
-	case 87:
-		(*(multiNodeUnion->CPPmultinode87))--;
-		return;
-	case 88:
-		(*(multiNodeUnion->CPPmultinode88))--;
-		return;
-	case 89:
-		(*(multiNodeUnion->CPPmultinode89))--;
-		return;
-	case 90:
-		(*(multiNodeUnion->CPPmultinode90))--;
-		return;
-	case 91:
-		(*(multiNodeUnion->CPPmultinode91))--;
-		return;
-	case 92:
-		(*(multiNodeUnion->CPPmultinode92))--;
-		return;
-	case 93:
-		(*(multiNodeUnion->CPPmultinode93))--;
-		return;
-	case 94:
-		(*(multiNodeUnion->CPPmultinode94))--;
-		return;
-	case 95:
-		(*(multiNodeUnion->CPPmultinode95))--;
-		return;
-	case 96:
-		(*(multiNodeUnion->CPPmultinode96))--;
-		return;
-	case 97:
-		(*(multiNodeUnion->CPPmultinode97))--;
-		return;
-	case 98:
-		(*(multiNodeUnion->CPPmultinode98))--;
-		return;
-	case 99:
-		(*(multiNodeUnion->CPPmultinode99))--;
-		return;
-	case 100:
-		(*(multiNodeUnion->CPPmultinode100))--;
-		return;
-	case 101:
-		(*(multiNodeUnion->CPPmultinode101))--;
-		return;
-	case 102:
-		(*(multiNodeUnion->CPPmultinode102))--;
-		return;
-	case 103:
-		(*(multiNodeUnion->CPPmultinode103))--;
-		return;
-	case 104:
-		(*(multiNodeUnion->CPPmultinode104))--;
-		return;
-	case 105:
-		(*(multiNodeUnion->CPPmultinode105))--;
-		return;
-	case 106:
-		(*(multiNodeUnion->CPPmultinode106))--;
-		return;
-	case 107:
-		(*(multiNodeUnion->CPPmultinode107))--;
-		return;
-	case 108:
-		(*(multiNodeUnion->CPPmultinode108))--;
-		return;
-	case 109:
-		(*(multiNodeUnion->CPPmultinode109))--;
-		return;
-	case 110:
-		(*(multiNodeUnion->CPPmultinode110))--;
-		return;
-	case 111:
-		(*(multiNodeUnion->CPPmultinode111))--;
-		return;
-	case 112:
-		(*(multiNodeUnion->CPPmultinode112))--;
-		return;
-	case 113:
-		(*(multiNodeUnion->CPPmultinode113))--;
-		return;
-	case 114:
-		(*(multiNodeUnion->CPPmultinode114))--;
-		return;
-	case 115:
-		(*(multiNodeUnion->CPPmultinode115))--;
-		return;
-	case 116:
-		(*(multiNodeUnion->CPPmultinode116))--;
-		return;
-	case 117:
-		(*(multiNodeUnion->CPPmultinode117))--;
-		return;
-	case 118:
-		(*(multiNodeUnion->CPPmultinode118))--;
-		return;
-	case 119:
-		(*(multiNodeUnion->CPPmultinode119))--;
-		return;
-	case 120:
-		(*(multiNodeUnion->CPPmultinode120))--;
-		return;
-	case 121:
-		(*(multiNodeUnion->CPPmultinode121))--;
-		return;
-	case 122:
-		(*(multiNodeUnion->CPPmultinode122))--;
-		return;
-	case 123:
-		(*(multiNodeUnion->CPPmultinode123))--;
-		return;
-	case 124:
-		(*(multiNodeUnion->CPPmultinode124))--;
-		return;
-	case 125:
-		(*(multiNodeUnion->CPPmultinode125))--;
-		return;
-	case 126:
-		(*(multiNodeUnion->CPPmultinode126))--;
-		return;
-	case 127:
-		(*(multiNodeUnion->CPPmultinode127))--;
-		return;
-	case 128:
-		(*(multiNodeUnion->CPPmultinode128))--;
-		return;
-	case 129:
-		(*(multiNodeUnion->CPPmultinode129))--;
-		return;
-	case 130:
-		(*(multiNodeUnion->CPPmultinode130))--;
-		return;
-	case 131:
-		(*(multiNodeUnion->CPPmultinode131))--;
-		return;
-	case 132:
-		(*(multiNodeUnion->CPPmultinode132))--;
-		return;
-	case 133:
-		(*(multiNodeUnion->CPPmultinode133))--;
-		return;
-	case 134:
-		(*(multiNodeUnion->CPPmultinode134))--;
-		return;
-	case 135:
-		(*(multiNodeUnion->CPPmultinode135))--;
-		return;
-	case 136:
-		(*(multiNodeUnion->CPPmultinode136))--;
-		return;
-	case 137:
-		(*(multiNodeUnion->CPPmultinode137))--;
-		return;
-	case 138:
-		(*(multiNodeUnion->CPPmultinode138))--;
-		return;
-	case 139:
-		(*(multiNodeUnion->CPPmultinode139))--;
-		return;
-	case 140:
-		(*(multiNodeUnion->CPPmultinode140))--;
-		return;
-	case 141:
-		(*(multiNodeUnion->CPPmultinode141))--;
-		return;
-	case 142:
-		(*(multiNodeUnion->CPPmultinode142))--;
-		return;
-	case 143:
-		(*(multiNodeUnion->CPPmultinode143))--;
-		return;
-	case 144:
-		(*(multiNodeUnion->CPPmultinode144))--;
-		return;
-	case 145:
-		(*(multiNodeUnion->CPPmultinode145))--;
-		return;
-	case 146:
-		(*(multiNodeUnion->CPPmultinode146))--;
-		return;
-	case 147:
-		(*(multiNodeUnion->CPPmultinode147))--;
-		return;
-	case 148:
-		(*(multiNodeUnion->CPPmultinode148))--;
-		return;
-	case 149:
-		(*(multiNodeUnion->CPPmultinode149))--;
-		return;
-	case 150:
-		(*(multiNodeUnion->CPPmultinode150))--;
-		return;
-	case 151:
-		(*(multiNodeUnion->CPPmultinode151))--;
-		return;
-	case 152:
-		(*(multiNodeUnion->CPPmultinode152))--;
-		return;
-	case 153:
-		(*(multiNodeUnion->CPPmultinode153))--;
-		return;
-	case 154:
-		(*(multiNodeUnion->CPPmultinode154))--;
-		return;
-	case 155:
-		(*(multiNodeUnion->CPPmultinode155))--;
-		return;
-	case 156:
-		(*(multiNodeUnion->CPPmultinode156))--;
-		return;
-	case 157:
-		(*(multiNodeUnion->CPPmultinode157))--;
-		return;
-	case 158:
-		(*(multiNodeUnion->CPPmultinode158))--;
-		return;
-	case 159:
-		(*(multiNodeUnion->CPPmultinode159))--;
-		return;
-	case 160:
-		(*(multiNodeUnion->CPPmultinode160))--;
-		return;
-	case 161:
-		(*(multiNodeUnion->CPPmultinode161))--;
-		return;
-	case 162:
-		(*(multiNodeUnion->CPPmultinode162))--;
-		return;
-	case 163:
-		(*(multiNodeUnion->CPPmultinode163))--;
-		return;
-	case 164:
-		(*(multiNodeUnion->CPPmultinode164))--;
-		return;
-	case 165:
-		(*(multiNodeUnion->CPPmultinode165))--;
-		return;
-	case 166:
-		(*(multiNodeUnion->CPPmultinode166))--;
-		return;
-	case 167:
-		(*(multiNodeUnion->CPPmultinode167))--;
-		return;
-	case 168:
-		(*(multiNodeUnion->CPPmultinode168))--;
-		return;
-	case 169:
-		(*(multiNodeUnion->CPPmultinode169))--;
-		return;
-	case 170:
-		(*(multiNodeUnion->CPPmultinode170))--;
-		return;
-	case 171:
-		(*(multiNodeUnion->CPPmultinode171))--;
-		return;
-	case 172:
-		(*(multiNodeUnion->CPPmultinode172))--;
-		return;
-	case 173:
-		(*(multiNodeUnion->CPPmultinode173))--;
-		return;
-	case 174:
-		(*(multiNodeUnion->CPPmultinode174))--;
-		return;
-	case 175:
-		(*(multiNodeUnion->CPPmultinode175))--;
-		return;
-	case 176:
-		(*(multiNodeUnion->CPPmultinode176))--;
-		return;
-	case 177:
-		(*(multiNodeUnion->CPPmultinode177))--;
-		return;
-	case 178:
-		(*(multiNodeUnion->CPPmultinode178))--;
-		return;
-	case 179:
-		(*(multiNodeUnion->CPPmultinode179))--;
-		return;
-	case 180:
-		(*(multiNodeUnion->CPPmultinode180))--;
-		return;
-	case 181:
-		(*(multiNodeUnion->CPPmultinode181))--;
-		return;
-	case 182:
-		(*(multiNodeUnion->CPPmultinode182))--;
-		return;
-	case 183:
-		(*(multiNodeUnion->CPPmultinode183))--;
-		return;
-	case 184:
-		(*(multiNodeUnion->CPPmultinode184))--;
-		return;
-	case 185:
-		(*(multiNodeUnion->CPPmultinode185))--;
-		return;
-	case 186:
-		(*(multiNodeUnion->CPPmultinode186))--;
-		return;
-	case 187:
-		(*(multiNodeUnion->CPPmultinode187))--;
-		return;
-	case 188:
-		(*(multiNodeUnion->CPPmultinode188))--;
-		return;
-	case 189:
-		(*(multiNodeUnion->CPPmultinode189))--;
-		return;
-	case 190:
-		(*(multiNodeUnion->CPPmultinode190))--;
-		return;
-	case 191:
-		(*(multiNodeUnion->CPPmultinode191))--;
-		return;
-	case 192:
-		(*(multiNodeUnion->CPPmultinode192))--;
-		return;
-	case 193:
-		(*(multiNodeUnion->CPPmultinode193))--;
-		return;
-	case 194:
-		(*(multiNodeUnion->CPPmultinode194))--;
-		return;
-	case 195:
-		(*(multiNodeUnion->CPPmultinode195))--;
-		return;
-	case 196:
-		(*(multiNodeUnion->CPPmultinode196))--;
-		return;
+		UnOrderedMultiNode_Previous_CASE(1)
+		UnOrderedMultiNode_Previous_CASE(2)
+		UnOrderedMultiNode_Previous_CASE(3)
+		UnOrderedMultiNode_Previous_CASE(4)
+		UnOrderedMultiNode_Previous_CASE(5)
+		UnOrderedMultiNode_Previous_CASE(6)
+		UnOrderedMultiNode_Previous_CASE(7)
+		UnOrderedMultiNode_Previous_CASE(8)
+		UnOrderedMultiNode_Previous_CASE(9)
+		UnOrderedMultiNode_Previous_CASE(10)
+		UnOrderedMultiNode_Previous_CASE(11)
+		UnOrderedMultiNode_Previous_CASE(12)
+		UnOrderedMultiNode_Previous_CASE(13)
+		UnOrderedMultiNode_Previous_CASE(14)
+		UnOrderedMultiNode_Previous_CASE(15)
+		UnOrderedMultiNode_Previous_CASE(16)
+		UnOrderedMultiNode_Previous_CASE(17)
+		UnOrderedMultiNode_Previous_CASE(18)
+		UnOrderedMultiNode_Previous_CASE(19)
+		UnOrderedMultiNode_Previous_CASE(20)
+		UnOrderedMultiNode_Previous_CASE(21)
+		UnOrderedMultiNode_Previous_CASE(22)
+		UnOrderedMultiNode_Previous_CASE(23)
+		UnOrderedMultiNode_Previous_CASE(24)
+		UnOrderedMultiNode_Previous_CASE(25)
+		UnOrderedMultiNode_Previous_CASE(26)
+		UnOrderedMultiNode_Previous_CASE(27)
+		UnOrderedMultiNode_Previous_CASE(28)
+		UnOrderedMultiNode_Previous_CASE(29)
+		UnOrderedMultiNode_Previous_CASE(30)
+		UnOrderedMultiNode_Previous_CASE(31)
+		UnOrderedMultiNode_Previous_CASE(32)
+		UnOrderedMultiNode_Previous_CASE(33)
+		UnOrderedMultiNode_Previous_CASE(34)
+		UnOrderedMultiNode_Previous_CASE(35)
+		UnOrderedMultiNode_Previous_CASE(36)
+		UnOrderedMultiNode_Previous_CASE(37)
+		UnOrderedMultiNode_Previous_CASE(38)
+		UnOrderedMultiNode_Previous_CASE(39)
+		UnOrderedMultiNode_Previous_CASE(40)
+		UnOrderedMultiNode_Previous_CASE(41)
+		UnOrderedMultiNode_Previous_CASE(42)
+		UnOrderedMultiNode_Previous_CASE(43)
+		UnOrderedMultiNode_Previous_CASE(44)
+		UnOrderedMultiNode_Previous_CASE(45)
+		UnOrderedMultiNode_Previous_CASE(46)
+		UnOrderedMultiNode_Previous_CASE(47)
+		UnOrderedMultiNode_Previous_CASE(48)
+		UnOrderedMultiNode_Previous_CASE(49)
+		UnOrderedMultiNode_Previous_CASE(50)
+		UnOrderedMultiNode_Previous_CASE(51)
+		UnOrderedMultiNode_Previous_CASE(52)
+		UnOrderedMultiNode_Previous_CASE(53)
+		UnOrderedMultiNode_Previous_CASE(54)
+		UnOrderedMultiNode_Previous_CASE(55)
+		UnOrderedMultiNode_Previous_CASE(56)
+		UnOrderedMultiNode_Previous_CASE(57)
+		UnOrderedMultiNode_Previous_CASE(58)
+		UnOrderedMultiNode_Previous_CASE(59)
+		UnOrderedMultiNode_Previous_CASE(60)
+		UnOrderedMultiNode_Previous_CASE(61)
+		UnOrderedMultiNode_Previous_CASE(62)
+		UnOrderedMultiNode_Previous_CASE(63)
+		UnOrderedMultiNode_Previous_CASE(64)
+		UnOrderedMultiNode_Previous_CASE(65)
+		UnOrderedMultiNode_Previous_CASE(66)
+		UnOrderedMultiNode_Previous_CASE(67)
+		UnOrderedMultiNode_Previous_CASE(68)
+		UnOrderedMultiNode_Previous_CASE(69)
+		UnOrderedMultiNode_Previous_CASE(70)
+		UnOrderedMultiNode_Previous_CASE(71)
+		UnOrderedMultiNode_Previous_CASE(72)
+		UnOrderedMultiNode_Previous_CASE(73)
+		UnOrderedMultiNode_Previous_CASE(74)
+		UnOrderedMultiNode_Previous_CASE(75)
+		UnOrderedMultiNode_Previous_CASE(76)
+		UnOrderedMultiNode_Previous_CASE(77)
+		UnOrderedMultiNode_Previous_CASE(78)
+		UnOrderedMultiNode_Previous_CASE(79)
+		UnOrderedMultiNode_Previous_CASE(80)
+		UnOrderedMultiNode_Previous_CASE(81)
+		UnOrderedMultiNode_Previous_CASE(82)
+		UnOrderedMultiNode_Previous_CASE(83)
+		UnOrderedMultiNode_Previous_CASE(84)
+		UnOrderedMultiNode_Previous_CASE(85)
+		UnOrderedMultiNode_Previous_CASE(86)
+		UnOrderedMultiNode_Previous_CASE(87)
+		UnOrderedMultiNode_Previous_CASE(88)
+		UnOrderedMultiNode_Previous_CASE(89)
+		UnOrderedMultiNode_Previous_CASE(90)
+		UnOrderedMultiNode_Previous_CASE(91)
+		UnOrderedMultiNode_Previous_CASE(92)
+		UnOrderedMultiNode_Previous_CASE(93)
+		UnOrderedMultiNode_Previous_CASE(94)
+		UnOrderedMultiNode_Previous_CASE(95)
+		UnOrderedMultiNode_Previous_CASE(96)
+		UnOrderedMultiNode_Previous_CASE(97)
+		UnOrderedMultiNode_Previous_CASE(98)
+		UnOrderedMultiNode_Previous_CASE(99)
+		UnOrderedMultiNode_Previous_CASE(100)
+		UnOrderedMultiNode_Previous_CASE(101)
+		UnOrderedMultiNode_Previous_CASE(102)
+		UnOrderedMultiNode_Previous_CASE(103)
+		UnOrderedMultiNode_Previous_CASE(104)
+		UnOrderedMultiNode_Previous_CASE(105)
+		UnOrderedMultiNode_Previous_CASE(106)
+		UnOrderedMultiNode_Previous_CASE(107)
+		UnOrderedMultiNode_Previous_CASE(108)
+		UnOrderedMultiNode_Previous_CASE(109)
+		UnOrderedMultiNode_Previous_CASE(110)
+		UnOrderedMultiNode_Previous_CASE(111)
+		UnOrderedMultiNode_Previous_CASE(112)
+		UnOrderedMultiNode_Previous_CASE(113)
+		UnOrderedMultiNode_Previous_CASE(114)
+		UnOrderedMultiNode_Previous_CASE(115)
+		UnOrderedMultiNode_Previous_CASE(116)
+		UnOrderedMultiNode_Previous_CASE(117)
+		UnOrderedMultiNode_Previous_CASE(118)
+		UnOrderedMultiNode_Previous_CASE(119)
+		UnOrderedMultiNode_Previous_CASE(120)
+		UnOrderedMultiNode_Previous_CASE(121)
+		UnOrderedMultiNode_Previous_CASE(122)
+		UnOrderedMultiNode_Previous_CASE(123)
+		UnOrderedMultiNode_Previous_CASE(124)
+		UnOrderedMultiNode_Previous_CASE(125)
+		UnOrderedMultiNode_Previous_CASE(126)
+		UnOrderedMultiNode_Previous_CASE(127)
+		UnOrderedMultiNode_Previous_CASE(128)
+		UnOrderedMultiNode_Previous_CASE(129)
+		UnOrderedMultiNode_Previous_CASE(130)
+		UnOrderedMultiNode_Previous_CASE(131)
+		UnOrderedMultiNode_Previous_CASE(132)
+		UnOrderedMultiNode_Previous_CASE(133)
+		UnOrderedMultiNode_Previous_CASE(134)
+		UnOrderedMultiNode_Previous_CASE(135)
+		UnOrderedMultiNode_Previous_CASE(136)
+		UnOrderedMultiNode_Previous_CASE(137)
+		UnOrderedMultiNode_Previous_CASE(138)
+		UnOrderedMultiNode_Previous_CASE(139)
+		UnOrderedMultiNode_Previous_CASE(140)
+		UnOrderedMultiNode_Previous_CASE(141)
+		UnOrderedMultiNode_Previous_CASE(142)
+		UnOrderedMultiNode_Previous_CASE(143)
+		UnOrderedMultiNode_Previous_CASE(144)
+		UnOrderedMultiNode_Previous_CASE(145)
+		UnOrderedMultiNode_Previous_CASE(146)
+		UnOrderedMultiNode_Previous_CASE(147)
+		UnOrderedMultiNode_Previous_CASE(148)
+		UnOrderedMultiNode_Previous_CASE(149)
+		UnOrderedMultiNode_Previous_CASE(150)
+		UnOrderedMultiNode_Previous_CASE(151)
+		UnOrderedMultiNode_Previous_CASE(152)
+		UnOrderedMultiNode_Previous_CASE(153)
+		UnOrderedMultiNode_Previous_CASE(154)
+		UnOrderedMultiNode_Previous_CASE(155)
+		UnOrderedMultiNode_Previous_CASE(156)
+		UnOrderedMultiNode_Previous_CASE(157)
+		UnOrderedMultiNode_Previous_CASE(158)
+		UnOrderedMultiNode_Previous_CASE(159)
+		UnOrderedMultiNode_Previous_CASE(160)
+		UnOrderedMultiNode_Previous_CASE(161)
+		UnOrderedMultiNode_Previous_CASE(162)
+		UnOrderedMultiNode_Previous_CASE(163)
+		UnOrderedMultiNode_Previous_CASE(164)
+		UnOrderedMultiNode_Previous_CASE(165)
+		UnOrderedMultiNode_Previous_CASE(166)
+		UnOrderedMultiNode_Previous_CASE(167)
+		UnOrderedMultiNode_Previous_CASE(168)
+		UnOrderedMultiNode_Previous_CASE(169)
+		UnOrderedMultiNode_Previous_CASE(170)
+		UnOrderedMultiNode_Previous_CASE(171)
+		UnOrderedMultiNode_Previous_CASE(172)
+		UnOrderedMultiNode_Previous_CASE(173)
+		UnOrderedMultiNode_Previous_CASE(174)
+		UnOrderedMultiNode_Previous_CASE(175)
+		UnOrderedMultiNode_Previous_CASE(176)
+		UnOrderedMultiNode_Previous_CASE(177)
+		UnOrderedMultiNode_Previous_CASE(178)
+		UnOrderedMultiNode_Previous_CASE(179)
+		UnOrderedMultiNode_Previous_CASE(180)
+		UnOrderedMultiNode_Previous_CASE(181)
+		UnOrderedMultiNode_Previous_CASE(182)
+		UnOrderedMultiNode_Previous_CASE(183)
+		UnOrderedMultiNode_Previous_CASE(184)
+		UnOrderedMultiNode_Previous_CASE(185)
+		UnOrderedMultiNode_Previous_CASE(186)
+		UnOrderedMultiNode_Previous_CASE(187)
+		UnOrderedMultiNode_Previous_CASE(188)
+		UnOrderedMultiNode_Previous_CASE(189)
+		UnOrderedMultiNode_Previous_CASE(190)
+		UnOrderedMultiNode_Previous_CASE(191)
+		UnOrderedMultiNode_Previous_CASE(192)
+		UnOrderedMultiNode_Previous_CASE(193)
+		UnOrderedMultiNode_Previous_CASE(194)
+		UnOrderedMultiNode_Previous_CASE(195)
+		UnOrderedMultiNode_Previous_CASE(196)
 	}
 }
 
@@ -3261,6 +2486,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	return newCopy;
 }
 
+#define UnOrderedMultiNode_Compare_Equals_CASE(NUM) \
+	case NUM: \
+		return (*(thisObj->multiNodeUnion->CPPmultinode##NUM) == *(other->multiNodeUnion->CPPmultinode##NUM));
+
 generic<typename Key, typename Value>
 bool UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::operator==(const CShorpUnOrderedMultiNode<Key, Value>^ thisObj, const CShorpUnOrderedMultiNode<Key, Value>^ other)
 {
@@ -3274,401 +2503,209 @@ bool UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::operator==(c
 	{
 	case 0: default:
 		return false;
-	case 1:
-		return (*(thisObj->multiNodeUnion->CPPmultinode1) == *(other->multiNodeUnion->CPPmultinode1));
-	case 2:
-		return (*(thisObj->multiNodeUnion->CPPmultinode2) == *(other->multiNodeUnion->CPPmultinode2));
-	case 3:
-		return (*(thisObj->multiNodeUnion->CPPmultinode3) == *(other->multiNodeUnion->CPPmultinode3));
-	case 4:
-		return (*(thisObj->multiNodeUnion->CPPmultinode4) == *(other->multiNodeUnion->CPPmultinode4));
-	case 5:
-		return (*(thisObj->multiNodeUnion->CPPmultinode5) == *(other->multiNodeUnion->CPPmultinode5));
-	case 6:
-		return (*(thisObj->multiNodeUnion->CPPmultinode6) == *(other->multiNodeUnion->CPPmultinode6));
-	case 7:
-		return (*(thisObj->multiNodeUnion->CPPmultinode7) == *(other->multiNodeUnion->CPPmultinode7));
-	case 8:
-		return (*(thisObj->multiNodeUnion->CPPmultinode8) == *(other->multiNodeUnion->CPPmultinode8));
-	case 9:
-		return (*(thisObj->multiNodeUnion->CPPmultinode9) == *(other->multiNodeUnion->CPPmultinode9));
-	case 10:
-		return (*(thisObj->multiNodeUnion->CPPmultinode10) == *(other->multiNodeUnion->CPPmultinode10));
-	case 11:
-		return (*(thisObj->multiNodeUnion->CPPmultinode11) == *(other->multiNodeUnion->CPPmultinode11));
-	case 12:
-		return (*(thisObj->multiNodeUnion->CPPmultinode12) == *(other->multiNodeUnion->CPPmultinode12));
-	case 13:
-		return (*(thisObj->multiNodeUnion->CPPmultinode13) == *(other->multiNodeUnion->CPPmultinode13));
-	case 14:
-		return (*(thisObj->multiNodeUnion->CPPmultinode14) == *(other->multiNodeUnion->CPPmultinode14));
-	case 15:
-		return (*(thisObj->multiNodeUnion->CPPmultinode15) == *(other->multiNodeUnion->CPPmultinode15));
-	case 16:
-		return (*(thisObj->multiNodeUnion->CPPmultinode16) == *(other->multiNodeUnion->CPPmultinode16));
-	case 17:
-		return (*(thisObj->multiNodeUnion->CPPmultinode17) == *(other->multiNodeUnion->CPPmultinode17));
-	case 18:
-		return (*(thisObj->multiNodeUnion->CPPmultinode18) == *(other->multiNodeUnion->CPPmultinode18));
-	case 19:
-		return (*(thisObj->multiNodeUnion->CPPmultinode19) == *(other->multiNodeUnion->CPPmultinode19));
-	case 20:
-		return (*(thisObj->multiNodeUnion->CPPmultinode20) == *(other->multiNodeUnion->CPPmultinode20));
-	case 21:
-		return (*(thisObj->multiNodeUnion->CPPmultinode21) == *(other->multiNodeUnion->CPPmultinode21));
-	case 22:
-		return (*(thisObj->multiNodeUnion->CPPmultinode22) == *(other->multiNodeUnion->CPPmultinode22));
-	case 23:
-		return (*(thisObj->multiNodeUnion->CPPmultinode23) == *(other->multiNodeUnion->CPPmultinode23));
-	case 24:
-		return (*(thisObj->multiNodeUnion->CPPmultinode24) == *(other->multiNodeUnion->CPPmultinode24));
-	case 25:
-		return (*(thisObj->multiNodeUnion->CPPmultinode25) == *(other->multiNodeUnion->CPPmultinode25));
-	case 26:
-		return (*(thisObj->multiNodeUnion->CPPmultinode26) == *(other->multiNodeUnion->CPPmultinode26));
-	case 27:
-		return (*(thisObj->multiNodeUnion->CPPmultinode27) == *(other->multiNodeUnion->CPPmultinode27));
-	case 28:
-		return (*(thisObj->multiNodeUnion->CPPmultinode28) == *(other->multiNodeUnion->CPPmultinode28));
-	case 29:
-		return (*(thisObj->multiNodeUnion->CPPmultinode29) == *(other->multiNodeUnion->CPPmultinode29));
-	case 30:
-		return (*(thisObj->multiNodeUnion->CPPmultinode30) == *(other->multiNodeUnion->CPPmultinode30));
-	case 31:
-		return (*(thisObj->multiNodeUnion->CPPmultinode31) == *(other->multiNodeUnion->CPPmultinode31));
-	case 32:
-		return (*(thisObj->multiNodeUnion->CPPmultinode32) == *(other->multiNodeUnion->CPPmultinode32));
-	case 33:
-		return (*(thisObj->multiNodeUnion->CPPmultinode33) == *(other->multiNodeUnion->CPPmultinode33));
-	case 34:
-		return (*(thisObj->multiNodeUnion->CPPmultinode34) == *(other->multiNodeUnion->CPPmultinode34));
-	case 35:
-		return (*(thisObj->multiNodeUnion->CPPmultinode35) == *(other->multiNodeUnion->CPPmultinode35));
-	case 36:
-		return (*(thisObj->multiNodeUnion->CPPmultinode36) == *(other->multiNodeUnion->CPPmultinode36));
-	case 37:
-		return (*(thisObj->multiNodeUnion->CPPmultinode37) == *(other->multiNodeUnion->CPPmultinode37));
-	case 38:
-		return (*(thisObj->multiNodeUnion->CPPmultinode38) == *(other->multiNodeUnion->CPPmultinode38));
-	case 39:
-		return (*(thisObj->multiNodeUnion->CPPmultinode39) == *(other->multiNodeUnion->CPPmultinode39));
-	case 40:
-		return (*(thisObj->multiNodeUnion->CPPmultinode40) == *(other->multiNodeUnion->CPPmultinode40));
-	case 41:
-		return (*(thisObj->multiNodeUnion->CPPmultinode41) == *(other->multiNodeUnion->CPPmultinode41));
-	case 42:
-		return (*(thisObj->multiNodeUnion->CPPmultinode42) == *(other->multiNodeUnion->CPPmultinode42));
-	case 43:
-		return (*(thisObj->multiNodeUnion->CPPmultinode43) == *(other->multiNodeUnion->CPPmultinode43));
-	case 44:
-		return (*(thisObj->multiNodeUnion->CPPmultinode44) == *(other->multiNodeUnion->CPPmultinode44));
-	case 45:
-		return (*(thisObj->multiNodeUnion->CPPmultinode45) == *(other->multiNodeUnion->CPPmultinode45));
-	case 46:
-		return (*(thisObj->multiNodeUnion->CPPmultinode46) == *(other->multiNodeUnion->CPPmultinode46));
-	case 47:
-		return (*(thisObj->multiNodeUnion->CPPmultinode47) == *(other->multiNodeUnion->CPPmultinode47));
-	case 48:
-		return (*(thisObj->multiNodeUnion->CPPmultinode48) == *(other->multiNodeUnion->CPPmultinode48));
-	case 49:
-		return (*(thisObj->multiNodeUnion->CPPmultinode49) == *(other->multiNodeUnion->CPPmultinode49));
-	case 50:
-		return (*(thisObj->multiNodeUnion->CPPmultinode50) == *(other->multiNodeUnion->CPPmultinode50));
-	case 51:
-		return (*(thisObj->multiNodeUnion->CPPmultinode51) == *(other->multiNodeUnion->CPPmultinode51));
-	case 52:
-		return (*(thisObj->multiNodeUnion->CPPmultinode52) == *(other->multiNodeUnion->CPPmultinode52));
-	case 53:
-		return (*(thisObj->multiNodeUnion->CPPmultinode53) == *(other->multiNodeUnion->CPPmultinode53));
-	case 54:
-		return (*(thisObj->multiNodeUnion->CPPmultinode54) == *(other->multiNodeUnion->CPPmultinode54));
-	case 55:
-		return (*(thisObj->multiNodeUnion->CPPmultinode55) == *(other->multiNodeUnion->CPPmultinode55));
-	case 56:
-		return (*(thisObj->multiNodeUnion->CPPmultinode56) == *(other->multiNodeUnion->CPPmultinode56));
-	case 57:
-		return (*(thisObj->multiNodeUnion->CPPmultinode57) == *(other->multiNodeUnion->CPPmultinode57));
-	case 58:
-		return (*(thisObj->multiNodeUnion->CPPmultinode58) == *(other->multiNodeUnion->CPPmultinode58));
-	case 59:
-		return (*(thisObj->multiNodeUnion->CPPmultinode59) == *(other->multiNodeUnion->CPPmultinode59));
-	case 60:
-		return (*(thisObj->multiNodeUnion->CPPmultinode60) == *(other->multiNodeUnion->CPPmultinode60));
-	case 61:
-		return (*(thisObj->multiNodeUnion->CPPmultinode61) == *(other->multiNodeUnion->CPPmultinode61));
-	case 62:
-		return (*(thisObj->multiNodeUnion->CPPmultinode62) == *(other->multiNodeUnion->CPPmultinode62));
-	case 63:
-		return (*(thisObj->multiNodeUnion->CPPmultinode63) == *(other->multiNodeUnion->CPPmultinode63));
-	case 64:
-		return (*(thisObj->multiNodeUnion->CPPmultinode64) == *(other->multiNodeUnion->CPPmultinode64));
-	case 65:
-		return (*(thisObj->multiNodeUnion->CPPmultinode65) == *(other->multiNodeUnion->CPPmultinode65));
-	case 66:
-		return (*(thisObj->multiNodeUnion->CPPmultinode66) == *(other->multiNodeUnion->CPPmultinode66));
-	case 67:
-		return (*(thisObj->multiNodeUnion->CPPmultinode67) == *(other->multiNodeUnion->CPPmultinode67));
-	case 68:
-		return (*(thisObj->multiNodeUnion->CPPmultinode68) == *(other->multiNodeUnion->CPPmultinode68));
-	case 69:
-		return (*(thisObj->multiNodeUnion->CPPmultinode69) == *(other->multiNodeUnion->CPPmultinode69));
-	case 70:
-		return (*(thisObj->multiNodeUnion->CPPmultinode70) == *(other->multiNodeUnion->CPPmultinode70));
-	case 71:
-		return (*(thisObj->multiNodeUnion->CPPmultinode71) == *(other->multiNodeUnion->CPPmultinode71));
-	case 72:
-		return (*(thisObj->multiNodeUnion->CPPmultinode72) == *(other->multiNodeUnion->CPPmultinode72));
-	case 73:
-		return (*(thisObj->multiNodeUnion->CPPmultinode73) == *(other->multiNodeUnion->CPPmultinode73));
-	case 74:
-		return (*(thisObj->multiNodeUnion->CPPmultinode74) == *(other->multiNodeUnion->CPPmultinode74));
-	case 75:
-		return (*(thisObj->multiNodeUnion->CPPmultinode75) == *(other->multiNodeUnion->CPPmultinode75));
-	case 76:
-		return (*(thisObj->multiNodeUnion->CPPmultinode76) == *(other->multiNodeUnion->CPPmultinode76));
-	case 77:
-		return (*(thisObj->multiNodeUnion->CPPmultinode77) == *(other->multiNodeUnion->CPPmultinode77));
-	case 78:
-		return (*(thisObj->multiNodeUnion->CPPmultinode78) == *(other->multiNodeUnion->CPPmultinode78));
-	case 79:
-		return (*(thisObj->multiNodeUnion->CPPmultinode79) == *(other->multiNodeUnion->CPPmultinode79));
-	case 80:
-		return (*(thisObj->multiNodeUnion->CPPmultinode80) == *(other->multiNodeUnion->CPPmultinode80));
-	case 81:
-		return (*(thisObj->multiNodeUnion->CPPmultinode81) == *(other->multiNodeUnion->CPPmultinode81));
-	case 82:
-		return (*(thisObj->multiNodeUnion->CPPmultinode82) == *(other->multiNodeUnion->CPPmultinode82));
-	case 83:
-		return (*(thisObj->multiNodeUnion->CPPmultinode83) == *(other->multiNodeUnion->CPPmultinode83));
-	case 84:
-		return (*(thisObj->multiNodeUnion->CPPmultinode84) == *(other->multiNodeUnion->CPPmultinode84));
-	case 85:
-		return (*(thisObj->multiNodeUnion->CPPmultinode85) == *(other->multiNodeUnion->CPPmultinode85));
-	case 86:
-		return (*(thisObj->multiNodeUnion->CPPmultinode86) == *(other->multiNodeUnion->CPPmultinode86));
-	case 87:
-		return (*(thisObj->multiNodeUnion->CPPmultinode87) == *(other->multiNodeUnion->CPPmultinode87));
-	case 88:
-		return (*(thisObj->multiNodeUnion->CPPmultinode88) == *(other->multiNodeUnion->CPPmultinode88));
-	case 89:
-		return (*(thisObj->multiNodeUnion->CPPmultinode89) == *(other->multiNodeUnion->CPPmultinode89));
-	case 90:
-		return (*(thisObj->multiNodeUnion->CPPmultinode90) == *(other->multiNodeUnion->CPPmultinode90));
-	case 91:
-		return (*(thisObj->multiNodeUnion->CPPmultinode91) == *(other->multiNodeUnion->CPPmultinode91));
-	case 92:
-		return (*(thisObj->multiNodeUnion->CPPmultinode92) == *(other->multiNodeUnion->CPPmultinode92));
-	case 93:
-		return (*(thisObj->multiNodeUnion->CPPmultinode93) == *(other->multiNodeUnion->CPPmultinode93));
-	case 94:
-		return (*(thisObj->multiNodeUnion->CPPmultinode94) == *(other->multiNodeUnion->CPPmultinode94));
-	case 95:
-		return (*(thisObj->multiNodeUnion->CPPmultinode95) == *(other->multiNodeUnion->CPPmultinode95));
-	case 96:
-		return (*(thisObj->multiNodeUnion->CPPmultinode96) == *(other->multiNodeUnion->CPPmultinode96));
-	case 97:
-		return (*(thisObj->multiNodeUnion->CPPmultinode97) == *(other->multiNodeUnion->CPPmultinode97));
-	case 98:
-		return (*(thisObj->multiNodeUnion->CPPmultinode98) == *(other->multiNodeUnion->CPPmultinode98));
-	case 99:
-		return (*(thisObj->multiNodeUnion->CPPmultinode99) == *(other->multiNodeUnion->CPPmultinode99));
-	case 100:
-		return (*(thisObj->multiNodeUnion->CPPmultinode100) == *(other->multiNodeUnion->CPPmultinode100));
-	case 101:
-		return (*(thisObj->multiNodeUnion->CPPmultinode101) == *(other->multiNodeUnion->CPPmultinode101));
-	case 102:
-		return (*(thisObj->multiNodeUnion->CPPmultinode102) == *(other->multiNodeUnion->CPPmultinode102));
-	case 103:
-		return (*(thisObj->multiNodeUnion->CPPmultinode103) == *(other->multiNodeUnion->CPPmultinode103));
-	case 104:
-		return (*(thisObj->multiNodeUnion->CPPmultinode104) == *(other->multiNodeUnion->CPPmultinode104));
-	case 105:
-		return (*(thisObj->multiNodeUnion->CPPmultinode105) == *(other->multiNodeUnion->CPPmultinode105));
-	case 106:
-		return (*(thisObj->multiNodeUnion->CPPmultinode106) == *(other->multiNodeUnion->CPPmultinode106));
-	case 107:
-		return (*(thisObj->multiNodeUnion->CPPmultinode107) == *(other->multiNodeUnion->CPPmultinode107));
-	case 108:
-		return (*(thisObj->multiNodeUnion->CPPmultinode108) == *(other->multiNodeUnion->CPPmultinode108));
-	case 109:
-		return (*(thisObj->multiNodeUnion->CPPmultinode109) == *(other->multiNodeUnion->CPPmultinode109));
-	case 110:
-		return (*(thisObj->multiNodeUnion->CPPmultinode110) == *(other->multiNodeUnion->CPPmultinode110));
-	case 111:
-		return (*(thisObj->multiNodeUnion->CPPmultinode111) == *(other->multiNodeUnion->CPPmultinode111));
-	case 112:
-		return (*(thisObj->multiNodeUnion->CPPmultinode112) == *(other->multiNodeUnion->CPPmultinode112));
-	case 113:
-		return (*(thisObj->multiNodeUnion->CPPmultinode113) == *(other->multiNodeUnion->CPPmultinode113));
-	case 114:
-		return (*(thisObj->multiNodeUnion->CPPmultinode114) == *(other->multiNodeUnion->CPPmultinode114));
-	case 115:
-		return (*(thisObj->multiNodeUnion->CPPmultinode115) == *(other->multiNodeUnion->CPPmultinode115));
-	case 116:
-		return (*(thisObj->multiNodeUnion->CPPmultinode116) == *(other->multiNodeUnion->CPPmultinode116));
-	case 117:
-		return (*(thisObj->multiNodeUnion->CPPmultinode117) == *(other->multiNodeUnion->CPPmultinode117));
-	case 118:
-		return (*(thisObj->multiNodeUnion->CPPmultinode118) == *(other->multiNodeUnion->CPPmultinode118));
-	case 119:
-		return (*(thisObj->multiNodeUnion->CPPmultinode119) == *(other->multiNodeUnion->CPPmultinode119));
-	case 120:
-		return (*(thisObj->multiNodeUnion->CPPmultinode120) == *(other->multiNodeUnion->CPPmultinode120));
-	case 121:
-		return (*(thisObj->multiNodeUnion->CPPmultinode121) == *(other->multiNodeUnion->CPPmultinode121));
-	case 122:
-		return (*(thisObj->multiNodeUnion->CPPmultinode122) == *(other->multiNodeUnion->CPPmultinode122));
-	case 123:
-		return (*(thisObj->multiNodeUnion->CPPmultinode123) == *(other->multiNodeUnion->CPPmultinode123));
-	case 124:
-		return (*(thisObj->multiNodeUnion->CPPmultinode124) == *(other->multiNodeUnion->CPPmultinode124));
-	case 125:
-		return (*(thisObj->multiNodeUnion->CPPmultinode125) == *(other->multiNodeUnion->CPPmultinode125));
-	case 126:
-		return (*(thisObj->multiNodeUnion->CPPmultinode126) == *(other->multiNodeUnion->CPPmultinode126));
-	case 127:
-		return (*(thisObj->multiNodeUnion->CPPmultinode127) == *(other->multiNodeUnion->CPPmultinode127));
-	case 128:
-		return (*(thisObj->multiNodeUnion->CPPmultinode128) == *(other->multiNodeUnion->CPPmultinode128));
-	case 129:
-		return (*(thisObj->multiNodeUnion->CPPmultinode129) == *(other->multiNodeUnion->CPPmultinode129));
-	case 130:
-		return (*(thisObj->multiNodeUnion->CPPmultinode130) == *(other->multiNodeUnion->CPPmultinode130));
-	case 131:
-		return (*(thisObj->multiNodeUnion->CPPmultinode131) == *(other->multiNodeUnion->CPPmultinode131));
-	case 132:
-		return (*(thisObj->multiNodeUnion->CPPmultinode132) == *(other->multiNodeUnion->CPPmultinode132));
-	case 133:
-		return (*(thisObj->multiNodeUnion->CPPmultinode133) == *(other->multiNodeUnion->CPPmultinode133));
-	case 134:
-		return (*(thisObj->multiNodeUnion->CPPmultinode134) == *(other->multiNodeUnion->CPPmultinode134));
-	case 135:
-		return (*(thisObj->multiNodeUnion->CPPmultinode135) == *(other->multiNodeUnion->CPPmultinode135));
-	case 136:
-		return (*(thisObj->multiNodeUnion->CPPmultinode136) == *(other->multiNodeUnion->CPPmultinode136));
-	case 137:
-		return (*(thisObj->multiNodeUnion->CPPmultinode137) == *(other->multiNodeUnion->CPPmultinode137));
-	case 138:
-		return (*(thisObj->multiNodeUnion->CPPmultinode138) == *(other->multiNodeUnion->CPPmultinode138));
-	case 139:
-		return (*(thisObj->multiNodeUnion->CPPmultinode139) == *(other->multiNodeUnion->CPPmultinode139));
-	case 140:
-		return (*(thisObj->multiNodeUnion->CPPmultinode140) == *(other->multiNodeUnion->CPPmultinode140));
-	case 141:
-		return (*(thisObj->multiNodeUnion->CPPmultinode141) == *(other->multiNodeUnion->CPPmultinode141));
-	case 142:
-		return (*(thisObj->multiNodeUnion->CPPmultinode142) == *(other->multiNodeUnion->CPPmultinode142));
-	case 143:
-		return (*(thisObj->multiNodeUnion->CPPmultinode143) == *(other->multiNodeUnion->CPPmultinode143));
-	case 144:
-		return (*(thisObj->multiNodeUnion->CPPmultinode144) == *(other->multiNodeUnion->CPPmultinode144));
-	case 145:
-		return (*(thisObj->multiNodeUnion->CPPmultinode145) == *(other->multiNodeUnion->CPPmultinode145));
-	case 146:
-		return (*(thisObj->multiNodeUnion->CPPmultinode146) == *(other->multiNodeUnion->CPPmultinode146));
-	case 147:
-		return (*(thisObj->multiNodeUnion->CPPmultinode147) == *(other->multiNodeUnion->CPPmultinode147));
-	case 148:
-		return (*(thisObj->multiNodeUnion->CPPmultinode148) == *(other->multiNodeUnion->CPPmultinode148));
-	case 149:
-		return (*(thisObj->multiNodeUnion->CPPmultinode149) == *(other->multiNodeUnion->CPPmultinode149));
-	case 150:
-		return (*(thisObj->multiNodeUnion->CPPmultinode150) == *(other->multiNodeUnion->CPPmultinode150));
-	case 151:
-		return (*(thisObj->multiNodeUnion->CPPmultinode151) == *(other->multiNodeUnion->CPPmultinode151));
-	case 152:
-		return (*(thisObj->multiNodeUnion->CPPmultinode152) == *(other->multiNodeUnion->CPPmultinode152));
-	case 153:
-		return (*(thisObj->multiNodeUnion->CPPmultinode153) == *(other->multiNodeUnion->CPPmultinode153));
-	case 154:
-		return (*(thisObj->multiNodeUnion->CPPmultinode154) == *(other->multiNodeUnion->CPPmultinode154));
-	case 155:
-		return (*(thisObj->multiNodeUnion->CPPmultinode155) == *(other->multiNodeUnion->CPPmultinode155));
-	case 156:
-		return (*(thisObj->multiNodeUnion->CPPmultinode156) == *(other->multiNodeUnion->CPPmultinode156));
-	case 157:
-		return (*(thisObj->multiNodeUnion->CPPmultinode157) == *(other->multiNodeUnion->CPPmultinode157));
-	case 158:
-		return (*(thisObj->multiNodeUnion->CPPmultinode158) == *(other->multiNodeUnion->CPPmultinode158));
-	case 159:
-		return (*(thisObj->multiNodeUnion->CPPmultinode159) == *(other->multiNodeUnion->CPPmultinode159));
-	case 160:
-		return (*(thisObj->multiNodeUnion->CPPmultinode160) == *(other->multiNodeUnion->CPPmultinode160));
-	case 161:
-		return (*(thisObj->multiNodeUnion->CPPmultinode161) == *(other->multiNodeUnion->CPPmultinode161));
-	case 162:
-		return (*(thisObj->multiNodeUnion->CPPmultinode162) == *(other->multiNodeUnion->CPPmultinode162));
-	case 163:
-		return (*(thisObj->multiNodeUnion->CPPmultinode163) == *(other->multiNodeUnion->CPPmultinode163));
-	case 164:
-		return (*(thisObj->multiNodeUnion->CPPmultinode164) == *(other->multiNodeUnion->CPPmultinode164));
-	case 165:
-		return (*(thisObj->multiNodeUnion->CPPmultinode165) == *(other->multiNodeUnion->CPPmultinode165));
-	case 166:
-		return (*(thisObj->multiNodeUnion->CPPmultinode166) == *(other->multiNodeUnion->CPPmultinode166));
-	case 167:
-		return (*(thisObj->multiNodeUnion->CPPmultinode167) == *(other->multiNodeUnion->CPPmultinode167));
-	case 168:
-		return (*(thisObj->multiNodeUnion->CPPmultinode168) == *(other->multiNodeUnion->CPPmultinode168));
-	case 169:
-		return (*(thisObj->multiNodeUnion->CPPmultinode169) == *(other->multiNodeUnion->CPPmultinode169));
-	case 170:
-		return (*(thisObj->multiNodeUnion->CPPmultinode170) == *(other->multiNodeUnion->CPPmultinode170));
-	case 171:
-		return (*(thisObj->multiNodeUnion->CPPmultinode171) == *(other->multiNodeUnion->CPPmultinode171));
-	case 172:
-		return (*(thisObj->multiNodeUnion->CPPmultinode172) == *(other->multiNodeUnion->CPPmultinode172));
-	case 173:
-		return (*(thisObj->multiNodeUnion->CPPmultinode173) == *(other->multiNodeUnion->CPPmultinode173));
-	case 174:
-		return (*(thisObj->multiNodeUnion->CPPmultinode174) == *(other->multiNodeUnion->CPPmultinode174));
-	case 175:
-		return (*(thisObj->multiNodeUnion->CPPmultinode175) == *(other->multiNodeUnion->CPPmultinode175));
-	case 176:
-		return (*(thisObj->multiNodeUnion->CPPmultinode176) == *(other->multiNodeUnion->CPPmultinode176));
-	case 177:
-		return (*(thisObj->multiNodeUnion->CPPmultinode177) == *(other->multiNodeUnion->CPPmultinode177));
-	case 178:
-		return (*(thisObj->multiNodeUnion->CPPmultinode178) == *(other->multiNodeUnion->CPPmultinode178));
-	case 179:
-		return (*(thisObj->multiNodeUnion->CPPmultinode179) == *(other->multiNodeUnion->CPPmultinode179));
-	case 180:
-		return (*(thisObj->multiNodeUnion->CPPmultinode180) == *(other->multiNodeUnion->CPPmultinode180));
-	case 181:
-		return (*(thisObj->multiNodeUnion->CPPmultinode181) == *(other->multiNodeUnion->CPPmultinode181));
-	case 182:
-		return (*(thisObj->multiNodeUnion->CPPmultinode182) == *(other->multiNodeUnion->CPPmultinode182));
-	case 183:
-		return (*(thisObj->multiNodeUnion->CPPmultinode183) == *(other->multiNodeUnion->CPPmultinode183));
-	case 184:
-		return (*(thisObj->multiNodeUnion->CPPmultinode184) == *(other->multiNodeUnion->CPPmultinode184));
-	case 185:
-		return (*(thisObj->multiNodeUnion->CPPmultinode185) == *(other->multiNodeUnion->CPPmultinode185));
-	case 186:
-		return (*(thisObj->multiNodeUnion->CPPmultinode186) == *(other->multiNodeUnion->CPPmultinode186));
-	case 187:
-		return (*(thisObj->multiNodeUnion->CPPmultinode187) == *(other->multiNodeUnion->CPPmultinode187));
-	case 188:
-		return (*(thisObj->multiNodeUnion->CPPmultinode188) == *(other->multiNodeUnion->CPPmultinode188));
-	case 189:
-		return (*(thisObj->multiNodeUnion->CPPmultinode189) == *(other->multiNodeUnion->CPPmultinode189));
-	case 190:
-		return (*(thisObj->multiNodeUnion->CPPmultinode190) == *(other->multiNodeUnion->CPPmultinode190));
-	case 191:
-		return (*(thisObj->multiNodeUnion->CPPmultinode191) == *(other->multiNodeUnion->CPPmultinode191));
-	case 192:
-		return (*(thisObj->multiNodeUnion->CPPmultinode192) == *(other->multiNodeUnion->CPPmultinode192));
-	case 193:
-		return (*(thisObj->multiNodeUnion->CPPmultinode193) == *(other->multiNodeUnion->CPPmultinode193));
-	case 194:
-		return (*(thisObj->multiNodeUnion->CPPmultinode194) == *(other->multiNodeUnion->CPPmultinode194));
-	case 195:
-		return (*(thisObj->multiNodeUnion->CPPmultinode195) == *(other->multiNodeUnion->CPPmultinode195));
-	case 196:
-		return (*(thisObj->multiNodeUnion->CPPmultinode196) == *(other->multiNodeUnion->CPPmultinode196));
+		UnOrderedMultiNode_Compare_Equals_CASE(1)
+		UnOrderedMultiNode_Compare_Equals_CASE(2)
+		UnOrderedMultiNode_Compare_Equals_CASE(3)
+		UnOrderedMultiNode_Compare_Equals_CASE(4)
+		UnOrderedMultiNode_Compare_Equals_CASE(5)
+		UnOrderedMultiNode_Compare_Equals_CASE(6)
+		UnOrderedMultiNode_Compare_Equals_CASE(7)
+		UnOrderedMultiNode_Compare_Equals_CASE(8)
+		UnOrderedMultiNode_Compare_Equals_CASE(9)
+		UnOrderedMultiNode_Compare_Equals_CASE(10)
+		UnOrderedMultiNode_Compare_Equals_CASE(11)
+		UnOrderedMultiNode_Compare_Equals_CASE(12)
+		UnOrderedMultiNode_Compare_Equals_CASE(13)
+		UnOrderedMultiNode_Compare_Equals_CASE(14)
+		UnOrderedMultiNode_Compare_Equals_CASE(15)
+		UnOrderedMultiNode_Compare_Equals_CASE(16)
+		UnOrderedMultiNode_Compare_Equals_CASE(17)
+		UnOrderedMultiNode_Compare_Equals_CASE(18)
+		UnOrderedMultiNode_Compare_Equals_CASE(19)
+		UnOrderedMultiNode_Compare_Equals_CASE(20)
+		UnOrderedMultiNode_Compare_Equals_CASE(21)
+		UnOrderedMultiNode_Compare_Equals_CASE(22)
+		UnOrderedMultiNode_Compare_Equals_CASE(23)
+		UnOrderedMultiNode_Compare_Equals_CASE(24)
+		UnOrderedMultiNode_Compare_Equals_CASE(25)
+		UnOrderedMultiNode_Compare_Equals_CASE(26)
+		UnOrderedMultiNode_Compare_Equals_CASE(27)
+		UnOrderedMultiNode_Compare_Equals_CASE(28)
+		UnOrderedMultiNode_Compare_Equals_CASE(29)
+		UnOrderedMultiNode_Compare_Equals_CASE(30)
+		UnOrderedMultiNode_Compare_Equals_CASE(31)
+		UnOrderedMultiNode_Compare_Equals_CASE(32)
+		UnOrderedMultiNode_Compare_Equals_CASE(33)
+		UnOrderedMultiNode_Compare_Equals_CASE(34)
+		UnOrderedMultiNode_Compare_Equals_CASE(35)
+		UnOrderedMultiNode_Compare_Equals_CASE(36)
+		UnOrderedMultiNode_Compare_Equals_CASE(37)
+		UnOrderedMultiNode_Compare_Equals_CASE(38)
+		UnOrderedMultiNode_Compare_Equals_CASE(39)
+		UnOrderedMultiNode_Compare_Equals_CASE(40)
+		UnOrderedMultiNode_Compare_Equals_CASE(41)
+		UnOrderedMultiNode_Compare_Equals_CASE(42)
+		UnOrderedMultiNode_Compare_Equals_CASE(43)
+		UnOrderedMultiNode_Compare_Equals_CASE(44)
+		UnOrderedMultiNode_Compare_Equals_CASE(45)
+		UnOrderedMultiNode_Compare_Equals_CASE(46)
+		UnOrderedMultiNode_Compare_Equals_CASE(47)
+		UnOrderedMultiNode_Compare_Equals_CASE(48)
+		UnOrderedMultiNode_Compare_Equals_CASE(49)
+		UnOrderedMultiNode_Compare_Equals_CASE(50)
+		UnOrderedMultiNode_Compare_Equals_CASE(51)
+		UnOrderedMultiNode_Compare_Equals_CASE(52)
+		UnOrderedMultiNode_Compare_Equals_CASE(53)
+		UnOrderedMultiNode_Compare_Equals_CASE(54)
+		UnOrderedMultiNode_Compare_Equals_CASE(55)
+		UnOrderedMultiNode_Compare_Equals_CASE(56)
+		UnOrderedMultiNode_Compare_Equals_CASE(57)
+		UnOrderedMultiNode_Compare_Equals_CASE(58)
+		UnOrderedMultiNode_Compare_Equals_CASE(59)
+		UnOrderedMultiNode_Compare_Equals_CASE(60)
+		UnOrderedMultiNode_Compare_Equals_CASE(61)
+		UnOrderedMultiNode_Compare_Equals_CASE(62)
+		UnOrderedMultiNode_Compare_Equals_CASE(63)
+		UnOrderedMultiNode_Compare_Equals_CASE(64)
+		UnOrderedMultiNode_Compare_Equals_CASE(65)
+		UnOrderedMultiNode_Compare_Equals_CASE(66)
+		UnOrderedMultiNode_Compare_Equals_CASE(67)
+		UnOrderedMultiNode_Compare_Equals_CASE(68)
+		UnOrderedMultiNode_Compare_Equals_CASE(69)
+		UnOrderedMultiNode_Compare_Equals_CASE(70)
+		UnOrderedMultiNode_Compare_Equals_CASE(71)
+		UnOrderedMultiNode_Compare_Equals_CASE(72)
+		UnOrderedMultiNode_Compare_Equals_CASE(73)
+		UnOrderedMultiNode_Compare_Equals_CASE(74)
+		UnOrderedMultiNode_Compare_Equals_CASE(75)
+		UnOrderedMultiNode_Compare_Equals_CASE(76)
+		UnOrderedMultiNode_Compare_Equals_CASE(77)
+		UnOrderedMultiNode_Compare_Equals_CASE(78)
+		UnOrderedMultiNode_Compare_Equals_CASE(79)
+		UnOrderedMultiNode_Compare_Equals_CASE(80)
+		UnOrderedMultiNode_Compare_Equals_CASE(81)
+		UnOrderedMultiNode_Compare_Equals_CASE(82)
+		UnOrderedMultiNode_Compare_Equals_CASE(83)
+		UnOrderedMultiNode_Compare_Equals_CASE(84)
+		UnOrderedMultiNode_Compare_Equals_CASE(85)
+		UnOrderedMultiNode_Compare_Equals_CASE(86)
+		UnOrderedMultiNode_Compare_Equals_CASE(87)
+		UnOrderedMultiNode_Compare_Equals_CASE(88)
+		UnOrderedMultiNode_Compare_Equals_CASE(89)
+		UnOrderedMultiNode_Compare_Equals_CASE(90)
+		UnOrderedMultiNode_Compare_Equals_CASE(91)
+		UnOrderedMultiNode_Compare_Equals_CASE(92)
+		UnOrderedMultiNode_Compare_Equals_CASE(93)
+		UnOrderedMultiNode_Compare_Equals_CASE(94)
+		UnOrderedMultiNode_Compare_Equals_CASE(95)
+		UnOrderedMultiNode_Compare_Equals_CASE(96)
+		UnOrderedMultiNode_Compare_Equals_CASE(97)
+		UnOrderedMultiNode_Compare_Equals_CASE(98)
+		UnOrderedMultiNode_Compare_Equals_CASE(99)
+		UnOrderedMultiNode_Compare_Equals_CASE(100)
+		UnOrderedMultiNode_Compare_Equals_CASE(101)
+		UnOrderedMultiNode_Compare_Equals_CASE(102)
+		UnOrderedMultiNode_Compare_Equals_CASE(103)
+		UnOrderedMultiNode_Compare_Equals_CASE(104)
+		UnOrderedMultiNode_Compare_Equals_CASE(105)
+		UnOrderedMultiNode_Compare_Equals_CASE(106)
+		UnOrderedMultiNode_Compare_Equals_CASE(107)
+		UnOrderedMultiNode_Compare_Equals_CASE(108)
+		UnOrderedMultiNode_Compare_Equals_CASE(109)
+		UnOrderedMultiNode_Compare_Equals_CASE(110)
+		UnOrderedMultiNode_Compare_Equals_CASE(111)
+		UnOrderedMultiNode_Compare_Equals_CASE(112)
+		UnOrderedMultiNode_Compare_Equals_CASE(113)
+		UnOrderedMultiNode_Compare_Equals_CASE(114)
+		UnOrderedMultiNode_Compare_Equals_CASE(115)
+		UnOrderedMultiNode_Compare_Equals_CASE(116)
+		UnOrderedMultiNode_Compare_Equals_CASE(117)
+		UnOrderedMultiNode_Compare_Equals_CASE(118)
+		UnOrderedMultiNode_Compare_Equals_CASE(119)
+		UnOrderedMultiNode_Compare_Equals_CASE(120)
+		UnOrderedMultiNode_Compare_Equals_CASE(121)
+		UnOrderedMultiNode_Compare_Equals_CASE(122)
+		UnOrderedMultiNode_Compare_Equals_CASE(123)
+		UnOrderedMultiNode_Compare_Equals_CASE(124)
+		UnOrderedMultiNode_Compare_Equals_CASE(125)
+		UnOrderedMultiNode_Compare_Equals_CASE(126)
+		UnOrderedMultiNode_Compare_Equals_CASE(127)
+		UnOrderedMultiNode_Compare_Equals_CASE(128)
+		UnOrderedMultiNode_Compare_Equals_CASE(129)
+		UnOrderedMultiNode_Compare_Equals_CASE(130)
+		UnOrderedMultiNode_Compare_Equals_CASE(131)
+		UnOrderedMultiNode_Compare_Equals_CASE(132)
+		UnOrderedMultiNode_Compare_Equals_CASE(133)
+		UnOrderedMultiNode_Compare_Equals_CASE(134)
+		UnOrderedMultiNode_Compare_Equals_CASE(135)
+		UnOrderedMultiNode_Compare_Equals_CASE(136)
+		UnOrderedMultiNode_Compare_Equals_CASE(137)
+		UnOrderedMultiNode_Compare_Equals_CASE(138)
+		UnOrderedMultiNode_Compare_Equals_CASE(139)
+		UnOrderedMultiNode_Compare_Equals_CASE(140)
+		UnOrderedMultiNode_Compare_Equals_CASE(141)
+		UnOrderedMultiNode_Compare_Equals_CASE(142)
+		UnOrderedMultiNode_Compare_Equals_CASE(143)
+		UnOrderedMultiNode_Compare_Equals_CASE(144)
+		UnOrderedMultiNode_Compare_Equals_CASE(145)
+		UnOrderedMultiNode_Compare_Equals_CASE(146)
+		UnOrderedMultiNode_Compare_Equals_CASE(147)
+		UnOrderedMultiNode_Compare_Equals_CASE(148)
+		UnOrderedMultiNode_Compare_Equals_CASE(149)
+		UnOrderedMultiNode_Compare_Equals_CASE(150)
+		UnOrderedMultiNode_Compare_Equals_CASE(151)
+		UnOrderedMultiNode_Compare_Equals_CASE(152)
+		UnOrderedMultiNode_Compare_Equals_CASE(153)
+		UnOrderedMultiNode_Compare_Equals_CASE(154)
+		UnOrderedMultiNode_Compare_Equals_CASE(155)
+		UnOrderedMultiNode_Compare_Equals_CASE(156)
+		UnOrderedMultiNode_Compare_Equals_CASE(157)
+		UnOrderedMultiNode_Compare_Equals_CASE(158)
+		UnOrderedMultiNode_Compare_Equals_CASE(159)
+		UnOrderedMultiNode_Compare_Equals_CASE(160)
+		UnOrderedMultiNode_Compare_Equals_CASE(161)
+		UnOrderedMultiNode_Compare_Equals_CASE(162)
+		UnOrderedMultiNode_Compare_Equals_CASE(163)
+		UnOrderedMultiNode_Compare_Equals_CASE(164)
+		UnOrderedMultiNode_Compare_Equals_CASE(165)
+		UnOrderedMultiNode_Compare_Equals_CASE(166)
+		UnOrderedMultiNode_Compare_Equals_CASE(167)
+		UnOrderedMultiNode_Compare_Equals_CASE(168)
+		UnOrderedMultiNode_Compare_Equals_CASE(169)
+		UnOrderedMultiNode_Compare_Equals_CASE(170)
+		UnOrderedMultiNode_Compare_Equals_CASE(171)
+		UnOrderedMultiNode_Compare_Equals_CASE(172)
+		UnOrderedMultiNode_Compare_Equals_CASE(173)
+		UnOrderedMultiNode_Compare_Equals_CASE(174)
+		UnOrderedMultiNode_Compare_Equals_CASE(175)
+		UnOrderedMultiNode_Compare_Equals_CASE(176)
+		UnOrderedMultiNode_Compare_Equals_CASE(177)
+		UnOrderedMultiNode_Compare_Equals_CASE(178)
+		UnOrderedMultiNode_Compare_Equals_CASE(179)
+		UnOrderedMultiNode_Compare_Equals_CASE(180)
+		UnOrderedMultiNode_Compare_Equals_CASE(181)
+		UnOrderedMultiNode_Compare_Equals_CASE(182)
+		UnOrderedMultiNode_Compare_Equals_CASE(183)
+		UnOrderedMultiNode_Compare_Equals_CASE(184)
+		UnOrderedMultiNode_Compare_Equals_CASE(185)
+		UnOrderedMultiNode_Compare_Equals_CASE(186)
+		UnOrderedMultiNode_Compare_Equals_CASE(187)
+		UnOrderedMultiNode_Compare_Equals_CASE(188)
+		UnOrderedMultiNode_Compare_Equals_CASE(189)
+		UnOrderedMultiNode_Compare_Equals_CASE(190)
+		UnOrderedMultiNode_Compare_Equals_CASE(191)
+		UnOrderedMultiNode_Compare_Equals_CASE(192)
+		UnOrderedMultiNode_Compare_Equals_CASE(193)
+		UnOrderedMultiNode_Compare_Equals_CASE(194)
+		UnOrderedMultiNode_Compare_Equals_CASE(195)
+		UnOrderedMultiNode_Compare_Equals_CASE(196)
 	}
 	return false;
 }
+
+#define UnOrderedMultiNode_Compare_NotEquals_CASE(NUM) \
+	case NUM: \
+		return (*(thisObj->multiNodeUnion->CPPmultinode##NUM ) != *( other->multiNodeUnion->CPPmultinode##NUM));
 
 generic<typename Key, typename Value>
 bool UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::operator!=(const CShorpUnOrderedMultiNode<Key, Value>^ thisObj, const CShorpUnOrderedMultiNode<Key, Value>^ other)
@@ -3683,401 +2720,210 @@ bool UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::operator!=(c
 	{
 	case 0: default:
 		return false;
-	case 1:
-		return (*(thisObj->multiNodeUnion->CPPmultinode1 ) != *( other->multiNodeUnion->CPPmultinode1));
-	case 2:
-		return (*(thisObj->multiNodeUnion->CPPmultinode2 ) != *( other->multiNodeUnion->CPPmultinode2));
-	case 3:
-		return (*(thisObj->multiNodeUnion->CPPmultinode3 ) != *( other->multiNodeUnion->CPPmultinode3));
-	case 4:
-		return (*(thisObj->multiNodeUnion->CPPmultinode4 ) != *( other->multiNodeUnion->CPPmultinode4));
-	case 5:
-		return (*(thisObj->multiNodeUnion->CPPmultinode5 ) != *( other->multiNodeUnion->CPPmultinode5));
-	case 6:
-		return (*(thisObj->multiNodeUnion->CPPmultinode6 ) != *( other->multiNodeUnion->CPPmultinode6));
-	case 7:
-		return (*(thisObj->multiNodeUnion->CPPmultinode7 ) != *( other->multiNodeUnion->CPPmultinode7));
-	case 8:
-		return (*(thisObj->multiNodeUnion->CPPmultinode8 ) != *( other->multiNodeUnion->CPPmultinode8));
-	case 9:
-		return (*(thisObj->multiNodeUnion->CPPmultinode9 ) != *( other->multiNodeUnion->CPPmultinode9));
-	case 10:
-		return (*(thisObj->multiNodeUnion->CPPmultinode10 ) != *( other->multiNodeUnion->CPPmultinode10));
-	case 11:
-		return (*(thisObj->multiNodeUnion->CPPmultinode11 ) != *( other->multiNodeUnion->CPPmultinode11));
-	case 12:
-		return (*(thisObj->multiNodeUnion->CPPmultinode12 ) != *( other->multiNodeUnion->CPPmultinode12));
-	case 13:
-		return (*(thisObj->multiNodeUnion->CPPmultinode13 ) != *( other->multiNodeUnion->CPPmultinode13));
-	case 14:
-		return (*(thisObj->multiNodeUnion->CPPmultinode14 ) != *( other->multiNodeUnion->CPPmultinode14));
-	case 15:
-		return (*(thisObj->multiNodeUnion->CPPmultinode15 ) != *( other->multiNodeUnion->CPPmultinode15));
-	case 16:
-		return (*(thisObj->multiNodeUnion->CPPmultinode16 ) != *( other->multiNodeUnion->CPPmultinode16));
-	case 17:
-		return (*(thisObj->multiNodeUnion->CPPmultinode17 ) != *( other->multiNodeUnion->CPPmultinode17));
-	case 18:
-		return (*(thisObj->multiNodeUnion->CPPmultinode18 ) != *( other->multiNodeUnion->CPPmultinode18));
-	case 19:
-		return (*(thisObj->multiNodeUnion->CPPmultinode19 ) != *( other->multiNodeUnion->CPPmultinode19));
-	case 20:
-		return (*(thisObj->multiNodeUnion->CPPmultinode20 ) != *( other->multiNodeUnion->CPPmultinode20));
-	case 21:
-		return (*(thisObj->multiNodeUnion->CPPmultinode21 ) != *( other->multiNodeUnion->CPPmultinode21));
-	case 22:
-		return (*(thisObj->multiNodeUnion->CPPmultinode22 ) != *( other->multiNodeUnion->CPPmultinode22));
-	case 23:
-		return (*(thisObj->multiNodeUnion->CPPmultinode23 ) != *( other->multiNodeUnion->CPPmultinode23));
-	case 24:
-		return (*(thisObj->multiNodeUnion->CPPmultinode24 ) != *( other->multiNodeUnion->CPPmultinode24));
-	case 25:
-		return (*(thisObj->multiNodeUnion->CPPmultinode25 ) != *( other->multiNodeUnion->CPPmultinode25));
-	case 26:
-		return (*(thisObj->multiNodeUnion->CPPmultinode26 ) != *( other->multiNodeUnion->CPPmultinode26));
-	case 27:
-		return (*(thisObj->multiNodeUnion->CPPmultinode27 ) != *( other->multiNodeUnion->CPPmultinode27));
-	case 28:
-		return (*(thisObj->multiNodeUnion->CPPmultinode28 ) != *( other->multiNodeUnion->CPPmultinode28));
-	case 29:
-		return (*(thisObj->multiNodeUnion->CPPmultinode29 ) != *( other->multiNodeUnion->CPPmultinode29));
-	case 30:
-		return (*(thisObj->multiNodeUnion->CPPmultinode30 ) != *( other->multiNodeUnion->CPPmultinode30));
-	case 31:
-		return (*(thisObj->multiNodeUnion->CPPmultinode31 ) != *( other->multiNodeUnion->CPPmultinode31));
-	case 32:
-		return (*(thisObj->multiNodeUnion->CPPmultinode32 ) != *( other->multiNodeUnion->CPPmultinode32));
-	case 33:
-		return (*(thisObj->multiNodeUnion->CPPmultinode33 ) != *( other->multiNodeUnion->CPPmultinode33));
-	case 34:
-		return (*(thisObj->multiNodeUnion->CPPmultinode34 ) != *( other->multiNodeUnion->CPPmultinode34));
-	case 35:
-		return (*(thisObj->multiNodeUnion->CPPmultinode35 ) != *( other->multiNodeUnion->CPPmultinode35));
-	case 36:
-		return (*(thisObj->multiNodeUnion->CPPmultinode36 ) != *( other->multiNodeUnion->CPPmultinode36));
-	case 37:
-		return (*(thisObj->multiNodeUnion->CPPmultinode37 ) != *( other->multiNodeUnion->CPPmultinode37));
-	case 38:
-		return (*(thisObj->multiNodeUnion->CPPmultinode38 ) != *( other->multiNodeUnion->CPPmultinode38));
-	case 39:
-		return (*(thisObj->multiNodeUnion->CPPmultinode39 ) != *( other->multiNodeUnion->CPPmultinode39));
-	case 40:
-		return (*(thisObj->multiNodeUnion->CPPmultinode40 ) != *( other->multiNodeUnion->CPPmultinode40));
-	case 41:
-		return (*(thisObj->multiNodeUnion->CPPmultinode41 ) != *( other->multiNodeUnion->CPPmultinode41));
-	case 42:
-		return (*(thisObj->multiNodeUnion->CPPmultinode42 ) != *( other->multiNodeUnion->CPPmultinode42));
-	case 43:
-		return (*(thisObj->multiNodeUnion->CPPmultinode43 ) != *( other->multiNodeUnion->CPPmultinode43));
-	case 44:
-		return (*(thisObj->multiNodeUnion->CPPmultinode44 ) != *( other->multiNodeUnion->CPPmultinode44));
-	case 45:
-		return (*(thisObj->multiNodeUnion->CPPmultinode45 ) != *( other->multiNodeUnion->CPPmultinode45));
-	case 46:
-		return (*(thisObj->multiNodeUnion->CPPmultinode46 ) != *( other->multiNodeUnion->CPPmultinode46));
-	case 47:
-		return (*(thisObj->multiNodeUnion->CPPmultinode47 ) != *( other->multiNodeUnion->CPPmultinode47));
-	case 48:
-		return (*(thisObj->multiNodeUnion->CPPmultinode48 ) != *( other->multiNodeUnion->CPPmultinode48));
-	case 49:
-		return (*(thisObj->multiNodeUnion->CPPmultinode49 ) != *( other->multiNodeUnion->CPPmultinode49));
-	case 50:
-		return (*(thisObj->multiNodeUnion->CPPmultinode50 ) != *( other->multiNodeUnion->CPPmultinode50));
-	case 51:
-		return (*(thisObj->multiNodeUnion->CPPmultinode51 ) != *( other->multiNodeUnion->CPPmultinode51));
-	case 52:
-		return (*(thisObj->multiNodeUnion->CPPmultinode52 ) != *( other->multiNodeUnion->CPPmultinode52));
-	case 53:
-		return (*(thisObj->multiNodeUnion->CPPmultinode53 ) != *( other->multiNodeUnion->CPPmultinode53));
-	case 54:
-		return (*(thisObj->multiNodeUnion->CPPmultinode54 ) != *( other->multiNodeUnion->CPPmultinode54));
-	case 55:
-		return (*(thisObj->multiNodeUnion->CPPmultinode55 ) != *( other->multiNodeUnion->CPPmultinode55));
-	case 56:
-		return (*(thisObj->multiNodeUnion->CPPmultinode56 ) != *( other->multiNodeUnion->CPPmultinode56));
-	case 57:
-		return (*(thisObj->multiNodeUnion->CPPmultinode57 ) != *( other->multiNodeUnion->CPPmultinode57));
-	case 58:
-		return (*(thisObj->multiNodeUnion->CPPmultinode58 ) != *( other->multiNodeUnion->CPPmultinode58));
-	case 59:
-		return (*(thisObj->multiNodeUnion->CPPmultinode59 ) != *( other->multiNodeUnion->CPPmultinode59));
-	case 60:
-		return (*(thisObj->multiNodeUnion->CPPmultinode60 ) != *( other->multiNodeUnion->CPPmultinode60));
-	case 61:
-		return (*(thisObj->multiNodeUnion->CPPmultinode61 ) != *( other->multiNodeUnion->CPPmultinode61));
-	case 62:
-		return (*(thisObj->multiNodeUnion->CPPmultinode62 ) != *( other->multiNodeUnion->CPPmultinode62));
-	case 63:
-		return (*(thisObj->multiNodeUnion->CPPmultinode63 ) != *( other->multiNodeUnion->CPPmultinode63));
-	case 64:
-		return (*(thisObj->multiNodeUnion->CPPmultinode64 ) != *( other->multiNodeUnion->CPPmultinode64));
-	case 65:
-		return (*(thisObj->multiNodeUnion->CPPmultinode65 ) != *( other->multiNodeUnion->CPPmultinode65));
-	case 66:
-		return (*(thisObj->multiNodeUnion->CPPmultinode66 ) != *( other->multiNodeUnion->CPPmultinode66));
-	case 67:
-		return (*(thisObj->multiNodeUnion->CPPmultinode67 ) != *( other->multiNodeUnion->CPPmultinode67));
-	case 68:
-		return (*(thisObj->multiNodeUnion->CPPmultinode68 ) != *( other->multiNodeUnion->CPPmultinode68));
-	case 69:
-		return (*(thisObj->multiNodeUnion->CPPmultinode69 ) != *( other->multiNodeUnion->CPPmultinode69));
-	case 70:
-		return (*(thisObj->multiNodeUnion->CPPmultinode70 ) != *( other->multiNodeUnion->CPPmultinode70));
-	case 71:
-		return (*(thisObj->multiNodeUnion->CPPmultinode71 ) != *( other->multiNodeUnion->CPPmultinode71));
-	case 72:
-		return (*(thisObj->multiNodeUnion->CPPmultinode72 ) != *( other->multiNodeUnion->CPPmultinode72));
-	case 73:
-		return (*(thisObj->multiNodeUnion->CPPmultinode73 ) != *( other->multiNodeUnion->CPPmultinode73));
-	case 74:
-		return (*(thisObj->multiNodeUnion->CPPmultinode74 ) != *( other->multiNodeUnion->CPPmultinode74));
-	case 75:
-		return (*(thisObj->multiNodeUnion->CPPmultinode75 ) != *( other->multiNodeUnion->CPPmultinode75));
-	case 76:
-		return (*(thisObj->multiNodeUnion->CPPmultinode76 ) != *( other->multiNodeUnion->CPPmultinode76));
-	case 77:
-		return (*(thisObj->multiNodeUnion->CPPmultinode77 ) != *( other->multiNodeUnion->CPPmultinode77));
-	case 78:
-		return (*(thisObj->multiNodeUnion->CPPmultinode78 ) != *( other->multiNodeUnion->CPPmultinode78));
-	case 79:
-		return (*(thisObj->multiNodeUnion->CPPmultinode79 ) != *( other->multiNodeUnion->CPPmultinode79));
-	case 80:
-		return (*(thisObj->multiNodeUnion->CPPmultinode80 ) != *( other->multiNodeUnion->CPPmultinode80));
-	case 81:
-		return (*(thisObj->multiNodeUnion->CPPmultinode81 ) != *( other->multiNodeUnion->CPPmultinode81));
-	case 82:
-		return (*(thisObj->multiNodeUnion->CPPmultinode82 ) != *( other->multiNodeUnion->CPPmultinode82));
-	case 83:
-		return (*(thisObj->multiNodeUnion->CPPmultinode83 ) != *( other->multiNodeUnion->CPPmultinode83));
-	case 84:
-		return (*(thisObj->multiNodeUnion->CPPmultinode84 ) != *( other->multiNodeUnion->CPPmultinode84));
-	case 85:
-		return (*(thisObj->multiNodeUnion->CPPmultinode85 ) != *( other->multiNodeUnion->CPPmultinode85));
-	case 86:
-		return (*(thisObj->multiNodeUnion->CPPmultinode86 ) != *( other->multiNodeUnion->CPPmultinode86));
-	case 87:
-		return (*(thisObj->multiNodeUnion->CPPmultinode87 ) != *( other->multiNodeUnion->CPPmultinode87));
-	case 88:
-		return (*(thisObj->multiNodeUnion->CPPmultinode88 ) != *( other->multiNodeUnion->CPPmultinode88));
-	case 89:
-		return (*(thisObj->multiNodeUnion->CPPmultinode89 ) != *( other->multiNodeUnion->CPPmultinode89));
-	case 90:
-		return (*(thisObj->multiNodeUnion->CPPmultinode90 ) != *( other->multiNodeUnion->CPPmultinode90));
-	case 91:
-		return (*(thisObj->multiNodeUnion->CPPmultinode91 ) != *( other->multiNodeUnion->CPPmultinode91));
-	case 92:
-		return (*(thisObj->multiNodeUnion->CPPmultinode92 ) != *( other->multiNodeUnion->CPPmultinode92));
-	case 93:
-		return (*(thisObj->multiNodeUnion->CPPmultinode93 ) != *( other->multiNodeUnion->CPPmultinode93));
-	case 94:
-		return (*(thisObj->multiNodeUnion->CPPmultinode94 ) != *( other->multiNodeUnion->CPPmultinode94));
-	case 95:
-		return (*(thisObj->multiNodeUnion->CPPmultinode95 ) != *( other->multiNodeUnion->CPPmultinode95));
-	case 96:
-		return (*(thisObj->multiNodeUnion->CPPmultinode96 ) != *( other->multiNodeUnion->CPPmultinode96));
-	case 97:
-		return (*(thisObj->multiNodeUnion->CPPmultinode97 ) != *( other->multiNodeUnion->CPPmultinode97));
-	case 98:
-		return (*(thisObj->multiNodeUnion->CPPmultinode98 ) != *( other->multiNodeUnion->CPPmultinode98));
-	case 99:
-		return (*(thisObj->multiNodeUnion->CPPmultinode99 ) != *( other->multiNodeUnion->CPPmultinode99));
-	case 100:
-		return (*(thisObj->multiNodeUnion->CPPmultinode100 ) != *( other->multiNodeUnion->CPPmultinode100));
-	case 101:
-		return (*(thisObj->multiNodeUnion->CPPmultinode101 ) != *( other->multiNodeUnion->CPPmultinode101));
-	case 102:
-		return (*(thisObj->multiNodeUnion->CPPmultinode102 ) != *( other->multiNodeUnion->CPPmultinode102));
-	case 103:
-		return (*(thisObj->multiNodeUnion->CPPmultinode103 ) != *( other->multiNodeUnion->CPPmultinode103));
-	case 104:
-		return (*(thisObj->multiNodeUnion->CPPmultinode104 ) != *( other->multiNodeUnion->CPPmultinode104));
-	case 105:
-		return (*(thisObj->multiNodeUnion->CPPmultinode105 ) != *( other->multiNodeUnion->CPPmultinode105));
-	case 106:
-		return (*(thisObj->multiNodeUnion->CPPmultinode106 ) != *( other->multiNodeUnion->CPPmultinode106));
-	case 107:
-		return (*(thisObj->multiNodeUnion->CPPmultinode107 ) != *( other->multiNodeUnion->CPPmultinode107));
-	case 108:
-		return (*(thisObj->multiNodeUnion->CPPmultinode108 ) != *( other->multiNodeUnion->CPPmultinode108));
-	case 109:
-		return (*(thisObj->multiNodeUnion->CPPmultinode109 ) != *( other->multiNodeUnion->CPPmultinode109));
-	case 110:
-		return (*(thisObj->multiNodeUnion->CPPmultinode110 ) != *( other->multiNodeUnion->CPPmultinode110));
-	case 111:
-		return (*(thisObj->multiNodeUnion->CPPmultinode111 ) != *( other->multiNodeUnion->CPPmultinode111));
-	case 112:
-		return (*(thisObj->multiNodeUnion->CPPmultinode112 ) != *( other->multiNodeUnion->CPPmultinode112));
-	case 113:
-		return (*(thisObj->multiNodeUnion->CPPmultinode113 ) != *( other->multiNodeUnion->CPPmultinode113));
-	case 114:
-		return (*(thisObj->multiNodeUnion->CPPmultinode114 ) != *( other->multiNodeUnion->CPPmultinode114));
-	case 115:
-		return (*(thisObj->multiNodeUnion->CPPmultinode115 ) != *( other->multiNodeUnion->CPPmultinode115));
-	case 116:
-		return (*(thisObj->multiNodeUnion->CPPmultinode116 ) != *( other->multiNodeUnion->CPPmultinode116));
-	case 117:
-		return (*(thisObj->multiNodeUnion->CPPmultinode117 ) != *( other->multiNodeUnion->CPPmultinode117));
-	case 118:
-		return (*(thisObj->multiNodeUnion->CPPmultinode118 ) != *( other->multiNodeUnion->CPPmultinode118));
-	case 119:
-		return (*(thisObj->multiNodeUnion->CPPmultinode119 ) != *( other->multiNodeUnion->CPPmultinode119));
-	case 120:
-		return (*(thisObj->multiNodeUnion->CPPmultinode120 ) != *( other->multiNodeUnion->CPPmultinode120));
-	case 121:
-		return (*(thisObj->multiNodeUnion->CPPmultinode121 ) != *( other->multiNodeUnion->CPPmultinode121));
-	case 122:
-		return (*(thisObj->multiNodeUnion->CPPmultinode122 ) != *( other->multiNodeUnion->CPPmultinode122));
-	case 123:
-		return (*(thisObj->multiNodeUnion->CPPmultinode123 ) != *( other->multiNodeUnion->CPPmultinode123));
-	case 124:
-		return (*(thisObj->multiNodeUnion->CPPmultinode124 ) != *( other->multiNodeUnion->CPPmultinode124));
-	case 125:
-		return (*(thisObj->multiNodeUnion->CPPmultinode125 ) != *( other->multiNodeUnion->CPPmultinode125));
-	case 126:
-		return (*(thisObj->multiNodeUnion->CPPmultinode126 ) != *( other->multiNodeUnion->CPPmultinode126));
-	case 127:
-		return (*(thisObj->multiNodeUnion->CPPmultinode127 ) != *( other->multiNodeUnion->CPPmultinode127));
-	case 128:
-		return (*(thisObj->multiNodeUnion->CPPmultinode128 ) != *( other->multiNodeUnion->CPPmultinode128));
-	case 129:
-		return (*(thisObj->multiNodeUnion->CPPmultinode129 ) != *( other->multiNodeUnion->CPPmultinode129));
-	case 130:
-		return (*(thisObj->multiNodeUnion->CPPmultinode130 ) != *( other->multiNodeUnion->CPPmultinode130));
-	case 131:
-		return (*(thisObj->multiNodeUnion->CPPmultinode131 ) != *( other->multiNodeUnion->CPPmultinode131));
-	case 132:
-		return (*(thisObj->multiNodeUnion->CPPmultinode132 ) != *( other->multiNodeUnion->CPPmultinode132));
-	case 133:
-		return (*(thisObj->multiNodeUnion->CPPmultinode133 ) != *( other->multiNodeUnion->CPPmultinode133));
-	case 134:
-		return (*(thisObj->multiNodeUnion->CPPmultinode134 ) != *( other->multiNodeUnion->CPPmultinode134));
-	case 135:
-		return (*(thisObj->multiNodeUnion->CPPmultinode135 ) != *( other->multiNodeUnion->CPPmultinode135));
-	case 136:
-		return (*(thisObj->multiNodeUnion->CPPmultinode136 ) != *( other->multiNodeUnion->CPPmultinode136));
-	case 137:
-		return (*(thisObj->multiNodeUnion->CPPmultinode137 ) != *( other->multiNodeUnion->CPPmultinode137));
-	case 138:
-		return (*(thisObj->multiNodeUnion->CPPmultinode138 ) != *( other->multiNodeUnion->CPPmultinode138));
-	case 139:
-		return (*(thisObj->multiNodeUnion->CPPmultinode139 ) != *( other->multiNodeUnion->CPPmultinode139));
-	case 140:
-		return (*(thisObj->multiNodeUnion->CPPmultinode140 ) != *( other->multiNodeUnion->CPPmultinode140));
-	case 141:
-		return (*(thisObj->multiNodeUnion->CPPmultinode141 ) != *( other->multiNodeUnion->CPPmultinode141));
-	case 142:
-		return (*(thisObj->multiNodeUnion->CPPmultinode142 ) != *( other->multiNodeUnion->CPPmultinode142));
-	case 143:
-		return (*(thisObj->multiNodeUnion->CPPmultinode143 ) != *( other->multiNodeUnion->CPPmultinode143));
-	case 144:
-		return (*(thisObj->multiNodeUnion->CPPmultinode144 ) != *( other->multiNodeUnion->CPPmultinode144));
-	case 145:
-		return (*(thisObj->multiNodeUnion->CPPmultinode145 ) != *( other->multiNodeUnion->CPPmultinode145));
-	case 146:
-		return (*(thisObj->multiNodeUnion->CPPmultinode146 ) != *( other->multiNodeUnion->CPPmultinode146));
-	case 147:
-		return (*(thisObj->multiNodeUnion->CPPmultinode147 ) != *( other->multiNodeUnion->CPPmultinode147));
-	case 148:
-		return (*(thisObj->multiNodeUnion->CPPmultinode148 ) != *( other->multiNodeUnion->CPPmultinode148));
-	case 149:
-		return (*(thisObj->multiNodeUnion->CPPmultinode149 ) != *( other->multiNodeUnion->CPPmultinode149));
-	case 150:
-		return (*(thisObj->multiNodeUnion->CPPmultinode150 ) != *( other->multiNodeUnion->CPPmultinode150));
-	case 151:
-		return (*(thisObj->multiNodeUnion->CPPmultinode151 ) != *( other->multiNodeUnion->CPPmultinode151));
-	case 152:
-		return (*(thisObj->multiNodeUnion->CPPmultinode152 ) != *( other->multiNodeUnion->CPPmultinode152));
-	case 153:
-		return (*(thisObj->multiNodeUnion->CPPmultinode153 ) != *( other->multiNodeUnion->CPPmultinode153));
-	case 154:
-		return (*(thisObj->multiNodeUnion->CPPmultinode154 ) != *( other->multiNodeUnion->CPPmultinode154));
-	case 155:
-		return (*(thisObj->multiNodeUnion->CPPmultinode155 ) != *( other->multiNodeUnion->CPPmultinode155));
-	case 156:
-		return (*(thisObj->multiNodeUnion->CPPmultinode156 ) != *( other->multiNodeUnion->CPPmultinode156));
-	case 157:
-		return (*(thisObj->multiNodeUnion->CPPmultinode157 ) != *( other->multiNodeUnion->CPPmultinode157));
-	case 158:
-		return (*(thisObj->multiNodeUnion->CPPmultinode158 ) != *( other->multiNodeUnion->CPPmultinode158));
-	case 159:
-		return (*(thisObj->multiNodeUnion->CPPmultinode159 ) != *( other->multiNodeUnion->CPPmultinode159));
-	case 160:
-		return (*(thisObj->multiNodeUnion->CPPmultinode160 ) != *( other->multiNodeUnion->CPPmultinode160));
-	case 161:
-		return (*(thisObj->multiNodeUnion->CPPmultinode161 ) != *( other->multiNodeUnion->CPPmultinode161));
-	case 162:
-		return (*(thisObj->multiNodeUnion->CPPmultinode162 ) != *( other->multiNodeUnion->CPPmultinode162));
-	case 163:
-		return (*(thisObj->multiNodeUnion->CPPmultinode163 ) != *( other->multiNodeUnion->CPPmultinode163));
-	case 164:
-		return (*(thisObj->multiNodeUnion->CPPmultinode164 ) != *( other->multiNodeUnion->CPPmultinode164));
-	case 165:
-		return (*(thisObj->multiNodeUnion->CPPmultinode165 ) != *( other->multiNodeUnion->CPPmultinode165));
-	case 166:
-		return (*(thisObj->multiNodeUnion->CPPmultinode166 ) != *( other->multiNodeUnion->CPPmultinode166));
-	case 167:
-		return (*(thisObj->multiNodeUnion->CPPmultinode167 ) != *( other->multiNodeUnion->CPPmultinode167));
-	case 168:
-		return (*(thisObj->multiNodeUnion->CPPmultinode168 ) != *( other->multiNodeUnion->CPPmultinode168));
-	case 169:
-		return (*(thisObj->multiNodeUnion->CPPmultinode169 ) != *( other->multiNodeUnion->CPPmultinode169));
-	case 170:
-		return (*(thisObj->multiNodeUnion->CPPmultinode170 ) != *( other->multiNodeUnion->CPPmultinode170));
-	case 171:
-		return (*(thisObj->multiNodeUnion->CPPmultinode171 ) != *( other->multiNodeUnion->CPPmultinode171));
-	case 172:
-		return (*(thisObj->multiNodeUnion->CPPmultinode172 ) != *( other->multiNodeUnion->CPPmultinode172));
-	case 173:
-		return (*(thisObj->multiNodeUnion->CPPmultinode173 ) != *( other->multiNodeUnion->CPPmultinode173));
-	case 174:
-		return (*(thisObj->multiNodeUnion->CPPmultinode174 ) != *( other->multiNodeUnion->CPPmultinode174));
-	case 175:
-		return (*(thisObj->multiNodeUnion->CPPmultinode175 ) != *( other->multiNodeUnion->CPPmultinode175));
-	case 176:
-		return (*(thisObj->multiNodeUnion->CPPmultinode176 ) != *( other->multiNodeUnion->CPPmultinode176));
-	case 177:
-		return (*(thisObj->multiNodeUnion->CPPmultinode177 ) != *( other->multiNodeUnion->CPPmultinode177));
-	case 178:
-		return (*(thisObj->multiNodeUnion->CPPmultinode178 ) != *( other->multiNodeUnion->CPPmultinode178));
-	case 179:
-		return (*(thisObj->multiNodeUnion->CPPmultinode179 ) != *( other->multiNodeUnion->CPPmultinode179));
-	case 180:
-		return (*(thisObj->multiNodeUnion->CPPmultinode180 ) != *( other->multiNodeUnion->CPPmultinode180));
-	case 181:
-		return (*(thisObj->multiNodeUnion->CPPmultinode181 ) != *( other->multiNodeUnion->CPPmultinode181));
-	case 182:
-		return (*(thisObj->multiNodeUnion->CPPmultinode182 ) != *( other->multiNodeUnion->CPPmultinode182));
-	case 183:
-		return (*(thisObj->multiNodeUnion->CPPmultinode183 ) != *( other->multiNodeUnion->CPPmultinode183));
-	case 184:
-		return (*(thisObj->multiNodeUnion->CPPmultinode184 ) != *( other->multiNodeUnion->CPPmultinode184));
-	case 185:
-		return (*(thisObj->multiNodeUnion->CPPmultinode185 ) != *( other->multiNodeUnion->CPPmultinode185));
-	case 186:
-		return (*(thisObj->multiNodeUnion->CPPmultinode186 ) != *( other->multiNodeUnion->CPPmultinode186));
-	case 187:
-		return (*(thisObj->multiNodeUnion->CPPmultinode187 ) != *( other->multiNodeUnion->CPPmultinode187));
-	case 188:
-		return (*(thisObj->multiNodeUnion->CPPmultinode188 ) != *( other->multiNodeUnion->CPPmultinode188));
-	case 189:
-		return (*(thisObj->multiNodeUnion->CPPmultinode189 ) != *( other->multiNodeUnion->CPPmultinode189));
-	case 190:
-		return (*(thisObj->multiNodeUnion->CPPmultinode190 ) != *( other->multiNodeUnion->CPPmultinode190));
-	case 191:
-		return (*(thisObj->multiNodeUnion->CPPmultinode191 ) != *( other->multiNodeUnion->CPPmultinode191));
-	case 192:
-		return (*(thisObj->multiNodeUnion->CPPmultinode192 ) != *( other->multiNodeUnion->CPPmultinode192));
-	case 193:
-		return (*(thisObj->multiNodeUnion->CPPmultinode193 ) != *( other->multiNodeUnion->CPPmultinode193));
-	case 194:
-		return (*(thisObj->multiNodeUnion->CPPmultinode194 ) != *( other->multiNodeUnion->CPPmultinode194));
-	case 195:
-		return (*(thisObj->multiNodeUnion->CPPmultinode195 ) != *( other->multiNodeUnion->CPPmultinode195));
-	case 196:
-		return (*(thisObj->multiNodeUnion->CPPmultinode196 ) != *( other->multiNodeUnion->CPPmultinode196));
+		UnOrderedMultiNode_Compare_NotEquals_CASE(1)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(2)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(3)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(4)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(5)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(6)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(7)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(8)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(9)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(10)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(11)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(12)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(13)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(14)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(15)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(16)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(17)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(18)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(19)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(20)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(21)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(22)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(23)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(24)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(25)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(26)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(27)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(28)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(29)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(30)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(31)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(32)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(33)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(34)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(35)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(36)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(37)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(38)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(39)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(40)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(41)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(42)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(43)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(44)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(45)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(46)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(47)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(48)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(49)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(50)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(51)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(52)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(53)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(54)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(55)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(56)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(57)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(58)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(59)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(60)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(61)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(62)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(63)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(64)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(65)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(66)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(67)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(68)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(69)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(70)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(71)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(72)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(73)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(74)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(75)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(76)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(77)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(78)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(79)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(80)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(81)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(82)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(83)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(84)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(85)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(86)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(87)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(88)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(89)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(90)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(91)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(92)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(93)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(94)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(95)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(96)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(97)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(98)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(99)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(100)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(101)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(102)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(103)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(104)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(105)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(106)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(107)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(108)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(109)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(110)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(111)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(112)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(113)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(114)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(115)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(116)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(117)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(118)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(119)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(120)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(121)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(122)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(123)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(124)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(125)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(126)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(127)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(128)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(129)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(130)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(131)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(132)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(133)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(134)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(135)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(136)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(137)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(138)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(139)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(140)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(141)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(142)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(143)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(144)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(145)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(146)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(147)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(148)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(149)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(150)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(151)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(152)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(153)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(154)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(155)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(156)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(157)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(158)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(159)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(160)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(161)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(162)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(163)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(164)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(165)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(166)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(167)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(168)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(169)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(170)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(171)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(172)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(173)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(174)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(175)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(176)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(177)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(178)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(179)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(180)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(181)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(182)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(183)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(184)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(185)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(186)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(187)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(188)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(189)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(190)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(191)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(192)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(193)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(194)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(195)
+		UnOrderedMultiNode_Compare_NotEquals_CASE(196)
 	}
 	return false;
 }
+
+#define UnOrderedMultiNode_Copy_CASE(NUM) \
+	case NUM: \
+		(*(thisObj->multiNodeUnion->CPPmultinode##NUM) = *(other->multiNodeUnion->CPPmultinode##NUM)); \
+		break;
 
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::operator%(CShorpUnOrderedMultiNode<Key, Value>^ thisObj, CShorpUnOrderedMultiNode<Key, Value>^ other)
@@ -4096,398 +2942,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	{
 	case 0: default:
 		break;
-	case 1:
-		(*(thisObj->multiNodeUnion->CPPmultinode1) = *(other->multiNodeUnion->CPPmultinode1)); break;
-	case 2:
-		(*(thisObj->multiNodeUnion->CPPmultinode2) = *(other->multiNodeUnion->CPPmultinode2)); break;
-	case 3:
-		(*(thisObj->multiNodeUnion->CPPmultinode3) = *(other->multiNodeUnion->CPPmultinode3)); break;
-	case 4:
-		(*(thisObj->multiNodeUnion->CPPmultinode4) = *(other->multiNodeUnion->CPPmultinode4)); break;
-	case 5:
-		(*(thisObj->multiNodeUnion->CPPmultinode5) = *(other->multiNodeUnion->CPPmultinode5)); break;
-	case 6:
-		(*(thisObj->multiNodeUnion->CPPmultinode6) = *(other->multiNodeUnion->CPPmultinode6)); break;
-	case 7:
-		(*(thisObj->multiNodeUnion->CPPmultinode7) = *(other->multiNodeUnion->CPPmultinode7)); break;
-	case 8:
-		(*(thisObj->multiNodeUnion->CPPmultinode8) = *(other->multiNodeUnion->CPPmultinode8)); break;
-	case 9:
-		(*(thisObj->multiNodeUnion->CPPmultinode9) = *(other->multiNodeUnion->CPPmultinode9)); break;
-	case 10:
-		(*(thisObj->multiNodeUnion->CPPmultinode10) = *(other->multiNodeUnion->CPPmultinode10)); break;
-	case 11:
-		(*(thisObj->multiNodeUnion->CPPmultinode11) = *(other->multiNodeUnion->CPPmultinode11)); break;
-	case 12:
-		(*(thisObj->multiNodeUnion->CPPmultinode12) = *(other->multiNodeUnion->CPPmultinode12)); break;
-	case 13:
-		(*(thisObj->multiNodeUnion->CPPmultinode13) = *(other->multiNodeUnion->CPPmultinode13)); break;
-	case 14:
-		(*(thisObj->multiNodeUnion->CPPmultinode14) = *(other->multiNodeUnion->CPPmultinode14)); break;
-	case 15:
-		(*(thisObj->multiNodeUnion->CPPmultinode15) = *(other->multiNodeUnion->CPPmultinode15)); break;
-	case 16:
-		(*(thisObj->multiNodeUnion->CPPmultinode16) = *(other->multiNodeUnion->CPPmultinode16)); break;
-	case 17:
-		(*(thisObj->multiNodeUnion->CPPmultinode17) = *(other->multiNodeUnion->CPPmultinode17)); break;
-	case 18:
-		(*(thisObj->multiNodeUnion->CPPmultinode18) = *(other->multiNodeUnion->CPPmultinode18)); break;
-	case 19:
-		(*(thisObj->multiNodeUnion->CPPmultinode19) = *(other->multiNodeUnion->CPPmultinode19)); break;
-	case 20:
-		(*(thisObj->multiNodeUnion->CPPmultinode20) = *(other->multiNodeUnion->CPPmultinode20)); break;
-	case 21:
-		(*(thisObj->multiNodeUnion->CPPmultinode21) = *(other->multiNodeUnion->CPPmultinode21)); break;
-	case 22:
-		(*(thisObj->multiNodeUnion->CPPmultinode22) = *(other->multiNodeUnion->CPPmultinode22)); break;
-	case 23:
-		(*(thisObj->multiNodeUnion->CPPmultinode23) = *(other->multiNodeUnion->CPPmultinode23)); break;
-	case 24:
-		(*(thisObj->multiNodeUnion->CPPmultinode24) = *(other->multiNodeUnion->CPPmultinode24)); break;
-	case 25:
-		(*(thisObj->multiNodeUnion->CPPmultinode25) = *(other->multiNodeUnion->CPPmultinode25)); break;
-	case 26:
-		(*(thisObj->multiNodeUnion->CPPmultinode26) = *(other->multiNodeUnion->CPPmultinode26)); break;
-	case 27:
-		(*(thisObj->multiNodeUnion->CPPmultinode27) = *(other->multiNodeUnion->CPPmultinode27)); break;
-	case 28:
-		(*(thisObj->multiNodeUnion->CPPmultinode28) = *(other->multiNodeUnion->CPPmultinode28)); break;
-	case 29:
-		(*(thisObj->multiNodeUnion->CPPmultinode29) = *(other->multiNodeUnion->CPPmultinode29)); break;
-	case 30:
-		(*(thisObj->multiNodeUnion->CPPmultinode30) = *(other->multiNodeUnion->CPPmultinode30)); break;
-	case 31:
-		(*(thisObj->multiNodeUnion->CPPmultinode31) = *(other->multiNodeUnion->CPPmultinode31)); break;
-	case 32:
-		(*(thisObj->multiNodeUnion->CPPmultinode32) = *(other->multiNodeUnion->CPPmultinode32)); break;
-	case 33:
-		(*(thisObj->multiNodeUnion->CPPmultinode33) = *(other->multiNodeUnion->CPPmultinode33)); break;
-	case 34:
-		(*(thisObj->multiNodeUnion->CPPmultinode34) = *(other->multiNodeUnion->CPPmultinode34)); break;
-	case 35:
-		(*(thisObj->multiNodeUnion->CPPmultinode35) = *(other->multiNodeUnion->CPPmultinode35)); break;
-	case 36:
-		(*(thisObj->multiNodeUnion->CPPmultinode36) = *(other->multiNodeUnion->CPPmultinode36)); break;
-	case 37:
-		(*(thisObj->multiNodeUnion->CPPmultinode37) = *(other->multiNodeUnion->CPPmultinode37)); break;
-	case 38:
-		(*(thisObj->multiNodeUnion->CPPmultinode38) = *(other->multiNodeUnion->CPPmultinode38)); break;
-	case 39:
-		(*(thisObj->multiNodeUnion->CPPmultinode39) = *(other->multiNodeUnion->CPPmultinode39)); break;
-	case 40:
-		(*(thisObj->multiNodeUnion->CPPmultinode40) = *(other->multiNodeUnion->CPPmultinode40)); break;
-	case 41:
-		(*(thisObj->multiNodeUnion->CPPmultinode41) = *(other->multiNodeUnion->CPPmultinode41)); break;
-	case 42:
-		(*(thisObj->multiNodeUnion->CPPmultinode42) = *(other->multiNodeUnion->CPPmultinode42)); break;
-	case 43:
-		(*(thisObj->multiNodeUnion->CPPmultinode43) = *(other->multiNodeUnion->CPPmultinode43)); break;
-	case 44:
-		(*(thisObj->multiNodeUnion->CPPmultinode44) = *(other->multiNodeUnion->CPPmultinode44)); break;
-	case 45:
-		(*(thisObj->multiNodeUnion->CPPmultinode45) = *(other->multiNodeUnion->CPPmultinode45)); break;
-	case 46:
-		(*(thisObj->multiNodeUnion->CPPmultinode46) = *(other->multiNodeUnion->CPPmultinode46)); break;
-	case 47:
-		(*(thisObj->multiNodeUnion->CPPmultinode47) = *(other->multiNodeUnion->CPPmultinode47)); break;
-	case 48:
-		(*(thisObj->multiNodeUnion->CPPmultinode48) = *(other->multiNodeUnion->CPPmultinode48)); break;
-	case 49:
-		(*(thisObj->multiNodeUnion->CPPmultinode49) = *(other->multiNodeUnion->CPPmultinode49)); break;
-	case 50:
-		(*(thisObj->multiNodeUnion->CPPmultinode50) = *(other->multiNodeUnion->CPPmultinode50)); break;
-	case 51:
-		(*(thisObj->multiNodeUnion->CPPmultinode51) = *(other->multiNodeUnion->CPPmultinode51)); break;
-	case 52:
-		(*(thisObj->multiNodeUnion->CPPmultinode52) = *(other->multiNodeUnion->CPPmultinode52)); break;
-	case 53:
-		(*(thisObj->multiNodeUnion->CPPmultinode53) = *(other->multiNodeUnion->CPPmultinode53)); break;
-	case 54:
-		(*(thisObj->multiNodeUnion->CPPmultinode54) = *(other->multiNodeUnion->CPPmultinode54)); break;
-	case 55:
-		(*(thisObj->multiNodeUnion->CPPmultinode55) = *(other->multiNodeUnion->CPPmultinode55)); break;
-	case 56:
-		(*(thisObj->multiNodeUnion->CPPmultinode56) = *(other->multiNodeUnion->CPPmultinode56)); break;
-	case 57:
-		(*(thisObj->multiNodeUnion->CPPmultinode57) = *(other->multiNodeUnion->CPPmultinode57)); break;
-	case 58:
-		(*(thisObj->multiNodeUnion->CPPmultinode58) = *(other->multiNodeUnion->CPPmultinode58)); break;
-	case 59:
-		(*(thisObj->multiNodeUnion->CPPmultinode59) = *(other->multiNodeUnion->CPPmultinode59)); break;
-	case 60:
-		(*(thisObj->multiNodeUnion->CPPmultinode60) = *(other->multiNodeUnion->CPPmultinode60)); break;
-	case 61:
-		(*(thisObj->multiNodeUnion->CPPmultinode61) = *(other->multiNodeUnion->CPPmultinode61)); break;
-	case 62:
-		(*(thisObj->multiNodeUnion->CPPmultinode62) = *(other->multiNodeUnion->CPPmultinode62)); break;
-	case 63:
-		(*(thisObj->multiNodeUnion->CPPmultinode63) = *(other->multiNodeUnion->CPPmultinode63)); break;
-	case 64:
-		(*(thisObj->multiNodeUnion->CPPmultinode64) = *(other->multiNodeUnion->CPPmultinode64)); break;
-	case 65:
-		(*(thisObj->multiNodeUnion->CPPmultinode65) = *(other->multiNodeUnion->CPPmultinode65)); break;
-	case 66:
-		(*(thisObj->multiNodeUnion->CPPmultinode66) = *(other->multiNodeUnion->CPPmultinode66)); break;
-	case 67:
-		(*(thisObj->multiNodeUnion->CPPmultinode67) = *(other->multiNodeUnion->CPPmultinode67)); break;
-	case 68:
-		(*(thisObj->multiNodeUnion->CPPmultinode68) = *(other->multiNodeUnion->CPPmultinode68)); break;
-	case 69:
-		(*(thisObj->multiNodeUnion->CPPmultinode69) = *(other->multiNodeUnion->CPPmultinode69)); break;
-	case 70:
-		(*(thisObj->multiNodeUnion->CPPmultinode70) = *(other->multiNodeUnion->CPPmultinode70)); break;
-	case 71:
-		(*(thisObj->multiNodeUnion->CPPmultinode71) = *(other->multiNodeUnion->CPPmultinode71)); break;
-	case 72:
-		(*(thisObj->multiNodeUnion->CPPmultinode72) = *(other->multiNodeUnion->CPPmultinode72)); break;
-	case 73:
-		(*(thisObj->multiNodeUnion->CPPmultinode73) = *(other->multiNodeUnion->CPPmultinode73)); break;
-	case 74:
-		(*(thisObj->multiNodeUnion->CPPmultinode74) = *(other->multiNodeUnion->CPPmultinode74)); break;
-	case 75:
-		(*(thisObj->multiNodeUnion->CPPmultinode75) = *(other->multiNodeUnion->CPPmultinode75)); break;
-	case 76:
-		(*(thisObj->multiNodeUnion->CPPmultinode76) = *(other->multiNodeUnion->CPPmultinode76)); break;
-	case 77:
-		(*(thisObj->multiNodeUnion->CPPmultinode77) = *(other->multiNodeUnion->CPPmultinode77)); break;
-	case 78:
-		(*(thisObj->multiNodeUnion->CPPmultinode78) = *(other->multiNodeUnion->CPPmultinode78)); break;
-	case 79:
-		(*(thisObj->multiNodeUnion->CPPmultinode79) = *(other->multiNodeUnion->CPPmultinode79)); break;
-	case 80:
-		(*(thisObj->multiNodeUnion->CPPmultinode80) = *(other->multiNodeUnion->CPPmultinode80)); break;
-	case 81:
-		(*(thisObj->multiNodeUnion->CPPmultinode81) = *(other->multiNodeUnion->CPPmultinode81)); break;
-	case 82:
-		(*(thisObj->multiNodeUnion->CPPmultinode82) = *(other->multiNodeUnion->CPPmultinode82)); break;
-	case 83:
-		(*(thisObj->multiNodeUnion->CPPmultinode83) = *(other->multiNodeUnion->CPPmultinode83)); break;
-	case 84:
-		(*(thisObj->multiNodeUnion->CPPmultinode84) = *(other->multiNodeUnion->CPPmultinode84)); break;
-	case 85:
-		(*(thisObj->multiNodeUnion->CPPmultinode85) = *(other->multiNodeUnion->CPPmultinode85)); break;
-	case 86:
-		(*(thisObj->multiNodeUnion->CPPmultinode86) = *(other->multiNodeUnion->CPPmultinode86)); break;
-	case 87:
-		(*(thisObj->multiNodeUnion->CPPmultinode87) = *(other->multiNodeUnion->CPPmultinode87)); break;
-	case 88:
-		(*(thisObj->multiNodeUnion->CPPmultinode88) = *(other->multiNodeUnion->CPPmultinode88)); break;
-	case 89:
-		(*(thisObj->multiNodeUnion->CPPmultinode89) = *(other->multiNodeUnion->CPPmultinode89)); break;
-	case 90:
-		(*(thisObj->multiNodeUnion->CPPmultinode90) = *(other->multiNodeUnion->CPPmultinode90)); break;
-	case 91:
-		(*(thisObj->multiNodeUnion->CPPmultinode91) = *(other->multiNodeUnion->CPPmultinode91)); break;
-	case 92:
-		(*(thisObj->multiNodeUnion->CPPmultinode92) = *(other->multiNodeUnion->CPPmultinode92)); break;
-	case 93:
-		(*(thisObj->multiNodeUnion->CPPmultinode93) = *(other->multiNodeUnion->CPPmultinode93)); break;
-	case 94:
-		(*(thisObj->multiNodeUnion->CPPmultinode94) = *(other->multiNodeUnion->CPPmultinode94)); break;
-	case 95:
-		(*(thisObj->multiNodeUnion->CPPmultinode95) = *(other->multiNodeUnion->CPPmultinode95)); break;
-	case 96:
-		(*(thisObj->multiNodeUnion->CPPmultinode96) = *(other->multiNodeUnion->CPPmultinode96)); break;
-	case 97:
-		(*(thisObj->multiNodeUnion->CPPmultinode97) = *(other->multiNodeUnion->CPPmultinode97)); break;
-	case 98:
-		(*(thisObj->multiNodeUnion->CPPmultinode98) = *(other->multiNodeUnion->CPPmultinode98)); break;
-	case 99:
-		(*(thisObj->multiNodeUnion->CPPmultinode99) = *(other->multiNodeUnion->CPPmultinode99)); break;
-	case 100:
-		(*(thisObj->multiNodeUnion->CPPmultinode100) = *(other->multiNodeUnion->CPPmultinode100)); break;
-	case 101:
-		(*(thisObj->multiNodeUnion->CPPmultinode101) = *(other->multiNodeUnion->CPPmultinode101)); break;
-	case 102:
-		(*(thisObj->multiNodeUnion->CPPmultinode102) = *(other->multiNodeUnion->CPPmultinode102)); break;
-	case 103:
-		(*(thisObj->multiNodeUnion->CPPmultinode103) = *(other->multiNodeUnion->CPPmultinode103)); break;
-	case 104:
-		(*(thisObj->multiNodeUnion->CPPmultinode104) = *(other->multiNodeUnion->CPPmultinode104)); break;
-	case 105:
-		(*(thisObj->multiNodeUnion->CPPmultinode105) = *(other->multiNodeUnion->CPPmultinode105)); break;
-	case 106:
-		(*(thisObj->multiNodeUnion->CPPmultinode106) = *(other->multiNodeUnion->CPPmultinode106)); break;
-	case 107:
-		(*(thisObj->multiNodeUnion->CPPmultinode107) = *(other->multiNodeUnion->CPPmultinode107)); break;
-	case 108:
-		(*(thisObj->multiNodeUnion->CPPmultinode108) = *(other->multiNodeUnion->CPPmultinode108)); break;
-	case 109:
-		(*(thisObj->multiNodeUnion->CPPmultinode109) = *(other->multiNodeUnion->CPPmultinode109)); break;
-	case 110:
-		(*(thisObj->multiNodeUnion->CPPmultinode110) = *(other->multiNodeUnion->CPPmultinode110)); break;
-	case 111:
-		(*(thisObj->multiNodeUnion->CPPmultinode111) = *(other->multiNodeUnion->CPPmultinode111)); break;
-	case 112:
-		(*(thisObj->multiNodeUnion->CPPmultinode112) = *(other->multiNodeUnion->CPPmultinode112)); break;
-	case 113:
-		(*(thisObj->multiNodeUnion->CPPmultinode113) = *(other->multiNodeUnion->CPPmultinode113)); break;
-	case 114:
-		(*(thisObj->multiNodeUnion->CPPmultinode114) = *(other->multiNodeUnion->CPPmultinode114)); break;
-	case 115:
-		(*(thisObj->multiNodeUnion->CPPmultinode115) = *(other->multiNodeUnion->CPPmultinode115)); break;
-	case 116:
-		(*(thisObj->multiNodeUnion->CPPmultinode116) = *(other->multiNodeUnion->CPPmultinode116)); break;
-	case 117:
-		(*(thisObj->multiNodeUnion->CPPmultinode117) = *(other->multiNodeUnion->CPPmultinode117)); break;
-	case 118:
-		(*(thisObj->multiNodeUnion->CPPmultinode118) = *(other->multiNodeUnion->CPPmultinode118)); break;
-	case 119:
-		(*(thisObj->multiNodeUnion->CPPmultinode119) = *(other->multiNodeUnion->CPPmultinode119)); break;
-	case 120:
-		(*(thisObj->multiNodeUnion->CPPmultinode120) = *(other->multiNodeUnion->CPPmultinode120)); break;
-	case 121:
-		(*(thisObj->multiNodeUnion->CPPmultinode121) = *(other->multiNodeUnion->CPPmultinode121)); break;
-	case 122:
-		(*(thisObj->multiNodeUnion->CPPmultinode122) = *(other->multiNodeUnion->CPPmultinode122)); break;
-	case 123:
-		(*(thisObj->multiNodeUnion->CPPmultinode123) = *(other->multiNodeUnion->CPPmultinode123)); break;
-	case 124:
-		(*(thisObj->multiNodeUnion->CPPmultinode124) = *(other->multiNodeUnion->CPPmultinode124)); break;
-	case 125:
-		(*(thisObj->multiNodeUnion->CPPmultinode125) = *(other->multiNodeUnion->CPPmultinode125)); break;
-	case 126:
-		(*(thisObj->multiNodeUnion->CPPmultinode126) = *(other->multiNodeUnion->CPPmultinode126)); break;
-	case 127:
-		(*(thisObj->multiNodeUnion->CPPmultinode127) = *(other->multiNodeUnion->CPPmultinode127)); break;
-	case 128:
-		(*(thisObj->multiNodeUnion->CPPmultinode128) = *(other->multiNodeUnion->CPPmultinode128)); break;
-	case 129:
-		(*(thisObj->multiNodeUnion->CPPmultinode129) = *(other->multiNodeUnion->CPPmultinode129)); break;
-	case 130:
-		(*(thisObj->multiNodeUnion->CPPmultinode130) = *(other->multiNodeUnion->CPPmultinode130)); break;
-	case 131:
-		(*(thisObj->multiNodeUnion->CPPmultinode131) = *(other->multiNodeUnion->CPPmultinode131)); break;
-	case 132:
-		(*(thisObj->multiNodeUnion->CPPmultinode132) = *(other->multiNodeUnion->CPPmultinode132)); break;
-	case 133:
-		(*(thisObj->multiNodeUnion->CPPmultinode133) = *(other->multiNodeUnion->CPPmultinode133)); break;
-	case 134:
-		(*(thisObj->multiNodeUnion->CPPmultinode134) = *(other->multiNodeUnion->CPPmultinode134)); break;
-	case 135:
-		(*(thisObj->multiNodeUnion->CPPmultinode135) = *(other->multiNodeUnion->CPPmultinode135)); break;
-	case 136:
-		(*(thisObj->multiNodeUnion->CPPmultinode136) = *(other->multiNodeUnion->CPPmultinode136)); break;
-	case 137:
-		(*(thisObj->multiNodeUnion->CPPmultinode137) = *(other->multiNodeUnion->CPPmultinode137)); break;
-	case 138:
-		(*(thisObj->multiNodeUnion->CPPmultinode138) = *(other->multiNodeUnion->CPPmultinode138)); break;
-	case 139:
-		(*(thisObj->multiNodeUnion->CPPmultinode139) = *(other->multiNodeUnion->CPPmultinode139)); break;
-	case 140:
-		(*(thisObj->multiNodeUnion->CPPmultinode140) = *(other->multiNodeUnion->CPPmultinode140)); break;
-	case 141:
-		(*(thisObj->multiNodeUnion->CPPmultinode141) = *(other->multiNodeUnion->CPPmultinode141)); break;
-	case 142:
-		(*(thisObj->multiNodeUnion->CPPmultinode142) = *(other->multiNodeUnion->CPPmultinode142)); break;
-	case 143:
-		(*(thisObj->multiNodeUnion->CPPmultinode143) = *(other->multiNodeUnion->CPPmultinode143)); break;
-	case 144:
-		(*(thisObj->multiNodeUnion->CPPmultinode144) = *(other->multiNodeUnion->CPPmultinode144)); break;
-	case 145:
-		(*(thisObj->multiNodeUnion->CPPmultinode145) = *(other->multiNodeUnion->CPPmultinode145)); break;
-	case 146:
-		(*(thisObj->multiNodeUnion->CPPmultinode146) = *(other->multiNodeUnion->CPPmultinode146)); break;
-	case 147:
-		(*(thisObj->multiNodeUnion->CPPmultinode147) = *(other->multiNodeUnion->CPPmultinode147)); break;
-	case 148:
-		(*(thisObj->multiNodeUnion->CPPmultinode148) = *(other->multiNodeUnion->CPPmultinode148)); break;
-	case 149:
-		(*(thisObj->multiNodeUnion->CPPmultinode149) = *(other->multiNodeUnion->CPPmultinode149)); break;
-	case 150:
-		(*(thisObj->multiNodeUnion->CPPmultinode150) = *(other->multiNodeUnion->CPPmultinode150)); break;
-	case 151:
-		(*(thisObj->multiNodeUnion->CPPmultinode151) = *(other->multiNodeUnion->CPPmultinode151)); break;
-	case 152:
-		(*(thisObj->multiNodeUnion->CPPmultinode152) = *(other->multiNodeUnion->CPPmultinode152)); break;
-	case 153:
-		(*(thisObj->multiNodeUnion->CPPmultinode153) = *(other->multiNodeUnion->CPPmultinode153)); break;
-	case 154:
-		(*(thisObj->multiNodeUnion->CPPmultinode154) = *(other->multiNodeUnion->CPPmultinode154)); break;
-	case 155:
-		(*(thisObj->multiNodeUnion->CPPmultinode155) = *(other->multiNodeUnion->CPPmultinode155)); break;
-	case 156:
-		(*(thisObj->multiNodeUnion->CPPmultinode156) = *(other->multiNodeUnion->CPPmultinode156)); break;
-	case 157:
-		(*(thisObj->multiNodeUnion->CPPmultinode157) = *(other->multiNodeUnion->CPPmultinode157)); break;
-	case 158:
-		(*(thisObj->multiNodeUnion->CPPmultinode158) = *(other->multiNodeUnion->CPPmultinode158)); break;
-	case 159:
-		(*(thisObj->multiNodeUnion->CPPmultinode159) = *(other->multiNodeUnion->CPPmultinode159)); break;
-	case 160:
-		(*(thisObj->multiNodeUnion->CPPmultinode160) = *(other->multiNodeUnion->CPPmultinode160)); break;
-	case 161:
-		(*(thisObj->multiNodeUnion->CPPmultinode161) = *(other->multiNodeUnion->CPPmultinode161)); break;
-	case 162:
-		(*(thisObj->multiNodeUnion->CPPmultinode162) = *(other->multiNodeUnion->CPPmultinode162)); break;
-	case 163:
-		(*(thisObj->multiNodeUnion->CPPmultinode163) = *(other->multiNodeUnion->CPPmultinode163)); break;
-	case 164:
-		(*(thisObj->multiNodeUnion->CPPmultinode164) = *(other->multiNodeUnion->CPPmultinode164)); break;
-	case 165:
-		(*(thisObj->multiNodeUnion->CPPmultinode165) = *(other->multiNodeUnion->CPPmultinode165)); break;
-	case 166:
-		(*(thisObj->multiNodeUnion->CPPmultinode166) = *(other->multiNodeUnion->CPPmultinode166)); break;
-	case 167:
-		(*(thisObj->multiNodeUnion->CPPmultinode167) = *(other->multiNodeUnion->CPPmultinode167)); break;
-	case 168:
-		(*(thisObj->multiNodeUnion->CPPmultinode168) = *(other->multiNodeUnion->CPPmultinode168)); break;
-	case 169:
-		(*(thisObj->multiNodeUnion->CPPmultinode169) = *(other->multiNodeUnion->CPPmultinode169)); break;
-	case 170:
-		(*(thisObj->multiNodeUnion->CPPmultinode170) = *(other->multiNodeUnion->CPPmultinode170)); break;
-	case 171:
-		(*(thisObj->multiNodeUnion->CPPmultinode171) = *(other->multiNodeUnion->CPPmultinode171)); break;
-	case 172:
-		(*(thisObj->multiNodeUnion->CPPmultinode172) = *(other->multiNodeUnion->CPPmultinode172)); break;
-	case 173:
-		(*(thisObj->multiNodeUnion->CPPmultinode173) = *(other->multiNodeUnion->CPPmultinode173)); break;
-	case 174:
-		(*(thisObj->multiNodeUnion->CPPmultinode174) = *(other->multiNodeUnion->CPPmultinode174)); break;
-	case 175:
-		(*(thisObj->multiNodeUnion->CPPmultinode175) = *(other->multiNodeUnion->CPPmultinode175)); break;
-	case 176:
-		(*(thisObj->multiNodeUnion->CPPmultinode176) = *(other->multiNodeUnion->CPPmultinode176)); break;
-	case 177:
-		(*(thisObj->multiNodeUnion->CPPmultinode177) = *(other->multiNodeUnion->CPPmultinode177)); break;
-	case 178:
-		(*(thisObj->multiNodeUnion->CPPmultinode178) = *(other->multiNodeUnion->CPPmultinode178)); break;
-	case 179:
-		(*(thisObj->multiNodeUnion->CPPmultinode179) = *(other->multiNodeUnion->CPPmultinode179)); break;
-	case 180:
-		(*(thisObj->multiNodeUnion->CPPmultinode180) = *(other->multiNodeUnion->CPPmultinode180)); break;
-	case 181:
-		(*(thisObj->multiNodeUnion->CPPmultinode181) = *(other->multiNodeUnion->CPPmultinode181)); break;
-	case 182:
-		(*(thisObj->multiNodeUnion->CPPmultinode182) = *(other->multiNodeUnion->CPPmultinode182)); break;
-	case 183:
-		(*(thisObj->multiNodeUnion->CPPmultinode183) = *(other->multiNodeUnion->CPPmultinode183)); break;
-	case 184:
-		(*(thisObj->multiNodeUnion->CPPmultinode184) = *(other->multiNodeUnion->CPPmultinode184)); break;
-	case 185:
-		(*(thisObj->multiNodeUnion->CPPmultinode185) = *(other->multiNodeUnion->CPPmultinode185)); break;
-	case 186:
-		(*(thisObj->multiNodeUnion->CPPmultinode186) = *(other->multiNodeUnion->CPPmultinode186)); break;
-	case 187:
-		(*(thisObj->multiNodeUnion->CPPmultinode187) = *(other->multiNodeUnion->CPPmultinode187)); break;
-	case 188:
-		(*(thisObj->multiNodeUnion->CPPmultinode188) = *(other->multiNodeUnion->CPPmultinode188)); break;
-	case 189:
-		(*(thisObj->multiNodeUnion->CPPmultinode189) = *(other->multiNodeUnion->CPPmultinode189)); break;
-	case 190:
-		(*(thisObj->multiNodeUnion->CPPmultinode190) = *(other->multiNodeUnion->CPPmultinode190)); break;
-	case 191:
-		(*(thisObj->multiNodeUnion->CPPmultinode191) = *(other->multiNodeUnion->CPPmultinode191)); break;
-	case 192:
-		(*(thisObj->multiNodeUnion->CPPmultinode192) = *(other->multiNodeUnion->CPPmultinode192)); break;
-	case 193:
-		(*(thisObj->multiNodeUnion->CPPmultinode193) = *(other->multiNodeUnion->CPPmultinode193)); break;
-	case 194:
-		(*(thisObj->multiNodeUnion->CPPmultinode194) = *(other->multiNodeUnion->CPPmultinode194)); break;
-	case 195:
-		(*(thisObj->multiNodeUnion->CPPmultinode195) = *(other->multiNodeUnion->CPPmultinode195)); break;
-	case 196:
-		(*(thisObj->multiNodeUnion->CPPmultinode196) = *(other->multiNodeUnion->CPPmultinode196)); break;
+		UnOrderedMultiNode_Copy_CASE(1)
+		UnOrderedMultiNode_Copy_CASE(2)
+		UnOrderedMultiNode_Copy_CASE(3)
+		UnOrderedMultiNode_Copy_CASE(4)
+		UnOrderedMultiNode_Copy_CASE(5)
+		UnOrderedMultiNode_Copy_CASE(6)
+		UnOrderedMultiNode_Copy_CASE(7)
+		UnOrderedMultiNode_Copy_CASE(8)
+		UnOrderedMultiNode_Copy_CASE(9)
+		UnOrderedMultiNode_Copy_CASE(10)
+		UnOrderedMultiNode_Copy_CASE(11)
+		UnOrderedMultiNode_Copy_CASE(12)
+		UnOrderedMultiNode_Copy_CASE(13)
+		UnOrderedMultiNode_Copy_CASE(14)
+		UnOrderedMultiNode_Copy_CASE(15)
+		UnOrderedMultiNode_Copy_CASE(16)
+		UnOrderedMultiNode_Copy_CASE(17)
+		UnOrderedMultiNode_Copy_CASE(18)
+		UnOrderedMultiNode_Copy_CASE(19)
+		UnOrderedMultiNode_Copy_CASE(20)
+		UnOrderedMultiNode_Copy_CASE(21)
+		UnOrderedMultiNode_Copy_CASE(22)
+		UnOrderedMultiNode_Copy_CASE(23)
+		UnOrderedMultiNode_Copy_CASE(24)
+		UnOrderedMultiNode_Copy_CASE(25)
+		UnOrderedMultiNode_Copy_CASE(26)
+		UnOrderedMultiNode_Copy_CASE(27)
+		UnOrderedMultiNode_Copy_CASE(28)
+		UnOrderedMultiNode_Copy_CASE(29)
+		UnOrderedMultiNode_Copy_CASE(30)
+		UnOrderedMultiNode_Copy_CASE(31)
+		UnOrderedMultiNode_Copy_CASE(32)
+		UnOrderedMultiNode_Copy_CASE(33)
+		UnOrderedMultiNode_Copy_CASE(34)
+		UnOrderedMultiNode_Copy_CASE(35)
+		UnOrderedMultiNode_Copy_CASE(36)
+		UnOrderedMultiNode_Copy_CASE(37)
+		UnOrderedMultiNode_Copy_CASE(38)
+		UnOrderedMultiNode_Copy_CASE(39)
+		UnOrderedMultiNode_Copy_CASE(40)
+		UnOrderedMultiNode_Copy_CASE(41)
+		UnOrderedMultiNode_Copy_CASE(42)
+		UnOrderedMultiNode_Copy_CASE(43)
+		UnOrderedMultiNode_Copy_CASE(44)
+		UnOrderedMultiNode_Copy_CASE(45)
+		UnOrderedMultiNode_Copy_CASE(46)
+		UnOrderedMultiNode_Copy_CASE(47)
+		UnOrderedMultiNode_Copy_CASE(48)
+		UnOrderedMultiNode_Copy_CASE(49)
+		UnOrderedMultiNode_Copy_CASE(50)
+		UnOrderedMultiNode_Copy_CASE(51)
+		UnOrderedMultiNode_Copy_CASE(52)
+		UnOrderedMultiNode_Copy_CASE(53)
+		UnOrderedMultiNode_Copy_CASE(54)
+		UnOrderedMultiNode_Copy_CASE(55)
+		UnOrderedMultiNode_Copy_CASE(56)
+		UnOrderedMultiNode_Copy_CASE(57)
+		UnOrderedMultiNode_Copy_CASE(58)
+		UnOrderedMultiNode_Copy_CASE(59)
+		UnOrderedMultiNode_Copy_CASE(60)
+		UnOrderedMultiNode_Copy_CASE(61)
+		UnOrderedMultiNode_Copy_CASE(62)
+		UnOrderedMultiNode_Copy_CASE(63)
+		UnOrderedMultiNode_Copy_CASE(64)
+		UnOrderedMultiNode_Copy_CASE(65)
+		UnOrderedMultiNode_Copy_CASE(66)
+		UnOrderedMultiNode_Copy_CASE(67)
+		UnOrderedMultiNode_Copy_CASE(68)
+		UnOrderedMultiNode_Copy_CASE(69)
+		UnOrderedMultiNode_Copy_CASE(70)
+		UnOrderedMultiNode_Copy_CASE(71)
+		UnOrderedMultiNode_Copy_CASE(72)
+		UnOrderedMultiNode_Copy_CASE(73)
+		UnOrderedMultiNode_Copy_CASE(74)
+		UnOrderedMultiNode_Copy_CASE(75)
+		UnOrderedMultiNode_Copy_CASE(76)
+		UnOrderedMultiNode_Copy_CASE(77)
+		UnOrderedMultiNode_Copy_CASE(78)
+		UnOrderedMultiNode_Copy_CASE(79)
+		UnOrderedMultiNode_Copy_CASE(80)
+		UnOrderedMultiNode_Copy_CASE(81)
+		UnOrderedMultiNode_Copy_CASE(82)
+		UnOrderedMultiNode_Copy_CASE(83)
+		UnOrderedMultiNode_Copy_CASE(84)
+		UnOrderedMultiNode_Copy_CASE(85)
+		UnOrderedMultiNode_Copy_CASE(86)
+		UnOrderedMultiNode_Copy_CASE(87)
+		UnOrderedMultiNode_Copy_CASE(88)
+		UnOrderedMultiNode_Copy_CASE(89)
+		UnOrderedMultiNode_Copy_CASE(90)
+		UnOrderedMultiNode_Copy_CASE(91)
+		UnOrderedMultiNode_Copy_CASE(92)
+		UnOrderedMultiNode_Copy_CASE(93)
+		UnOrderedMultiNode_Copy_CASE(94)
+		UnOrderedMultiNode_Copy_CASE(95)
+		UnOrderedMultiNode_Copy_CASE(96)
+		UnOrderedMultiNode_Copy_CASE(97)
+		UnOrderedMultiNode_Copy_CASE(98)
+		UnOrderedMultiNode_Copy_CASE(99)
+		UnOrderedMultiNode_Copy_CASE(100)
+		UnOrderedMultiNode_Copy_CASE(101)
+		UnOrderedMultiNode_Copy_CASE(102)
+		UnOrderedMultiNode_Copy_CASE(103)
+		UnOrderedMultiNode_Copy_CASE(104)
+		UnOrderedMultiNode_Copy_CASE(105)
+		UnOrderedMultiNode_Copy_CASE(106)
+		UnOrderedMultiNode_Copy_CASE(107)
+		UnOrderedMultiNode_Copy_CASE(108)
+		UnOrderedMultiNode_Copy_CASE(109)
+		UnOrderedMultiNode_Copy_CASE(110)
+		UnOrderedMultiNode_Copy_CASE(111)
+		UnOrderedMultiNode_Copy_CASE(112)
+		UnOrderedMultiNode_Copy_CASE(113)
+		UnOrderedMultiNode_Copy_CASE(114)
+		UnOrderedMultiNode_Copy_CASE(115)
+		UnOrderedMultiNode_Copy_CASE(116)
+		UnOrderedMultiNode_Copy_CASE(117)
+		UnOrderedMultiNode_Copy_CASE(118)
+		UnOrderedMultiNode_Copy_CASE(119)
+		UnOrderedMultiNode_Copy_CASE(120)
+		UnOrderedMultiNode_Copy_CASE(121)
+		UnOrderedMultiNode_Copy_CASE(122)
+		UnOrderedMultiNode_Copy_CASE(123)
+		UnOrderedMultiNode_Copy_CASE(124)
+		UnOrderedMultiNode_Copy_CASE(125)
+		UnOrderedMultiNode_Copy_CASE(126)
+		UnOrderedMultiNode_Copy_CASE(127)
+		UnOrderedMultiNode_Copy_CASE(128)
+		UnOrderedMultiNode_Copy_CASE(129)
+		UnOrderedMultiNode_Copy_CASE(130)
+		UnOrderedMultiNode_Copy_CASE(131)
+		UnOrderedMultiNode_Copy_CASE(132)
+		UnOrderedMultiNode_Copy_CASE(133)
+		UnOrderedMultiNode_Copy_CASE(134)
+		UnOrderedMultiNode_Copy_CASE(135)
+		UnOrderedMultiNode_Copy_CASE(136)
+		UnOrderedMultiNode_Copy_CASE(137)
+		UnOrderedMultiNode_Copy_CASE(138)
+		UnOrderedMultiNode_Copy_CASE(139)
+		UnOrderedMultiNode_Copy_CASE(140)
+		UnOrderedMultiNode_Copy_CASE(141)
+		UnOrderedMultiNode_Copy_CASE(142)
+		UnOrderedMultiNode_Copy_CASE(143)
+		UnOrderedMultiNode_Copy_CASE(144)
+		UnOrderedMultiNode_Copy_CASE(145)
+		UnOrderedMultiNode_Copy_CASE(146)
+		UnOrderedMultiNode_Copy_CASE(147)
+		UnOrderedMultiNode_Copy_CASE(148)
+		UnOrderedMultiNode_Copy_CASE(149)
+		UnOrderedMultiNode_Copy_CASE(150)
+		UnOrderedMultiNode_Copy_CASE(151)
+		UnOrderedMultiNode_Copy_CASE(152)
+		UnOrderedMultiNode_Copy_CASE(153)
+		UnOrderedMultiNode_Copy_CASE(154)
+		UnOrderedMultiNode_Copy_CASE(155)
+		UnOrderedMultiNode_Copy_CASE(156)
+		UnOrderedMultiNode_Copy_CASE(157)
+		UnOrderedMultiNode_Copy_CASE(158)
+		UnOrderedMultiNode_Copy_CASE(159)
+		UnOrderedMultiNode_Copy_CASE(160)
+		UnOrderedMultiNode_Copy_CASE(161)
+		UnOrderedMultiNode_Copy_CASE(162)
+		UnOrderedMultiNode_Copy_CASE(163)
+		UnOrderedMultiNode_Copy_CASE(164)
+		UnOrderedMultiNode_Copy_CASE(165)
+		UnOrderedMultiNode_Copy_CASE(166)
+		UnOrderedMultiNode_Copy_CASE(167)
+		UnOrderedMultiNode_Copy_CASE(168)
+		UnOrderedMultiNode_Copy_CASE(169)
+		UnOrderedMultiNode_Copy_CASE(170)
+		UnOrderedMultiNode_Copy_CASE(171)
+		UnOrderedMultiNode_Copy_CASE(172)
+		UnOrderedMultiNode_Copy_CASE(173)
+		UnOrderedMultiNode_Copy_CASE(174)
+		UnOrderedMultiNode_Copy_CASE(175)
+		UnOrderedMultiNode_Copy_CASE(176)
+		UnOrderedMultiNode_Copy_CASE(177)
+		UnOrderedMultiNode_Copy_CASE(178)
+		UnOrderedMultiNode_Copy_CASE(179)
+		UnOrderedMultiNode_Copy_CASE(180)
+		UnOrderedMultiNode_Copy_CASE(181)
+		UnOrderedMultiNode_Copy_CASE(182)
+		UnOrderedMultiNode_Copy_CASE(183)
+		UnOrderedMultiNode_Copy_CASE(184)
+		UnOrderedMultiNode_Copy_CASE(185)
+		UnOrderedMultiNode_Copy_CASE(186)
+		UnOrderedMultiNode_Copy_CASE(187)
+		UnOrderedMultiNode_Copy_CASE(188)
+		UnOrderedMultiNode_Copy_CASE(189)
+		UnOrderedMultiNode_Copy_CASE(190)
+		UnOrderedMultiNode_Copy_CASE(191)
+		UnOrderedMultiNode_Copy_CASE(192)
+		UnOrderedMultiNode_Copy_CASE(193)
+		UnOrderedMultiNode_Copy_CASE(194)
+		UnOrderedMultiNode_Copy_CASE(195)
+		UnOrderedMultiNode_Copy_CASE(196)
 	}
 	return thisObj;
 }

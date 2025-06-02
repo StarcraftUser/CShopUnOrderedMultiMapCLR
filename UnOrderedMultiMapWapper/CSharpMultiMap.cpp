@@ -28,6 +28,10 @@ void MarshalString(String^ s, std::wstring& os)
 	Marshal::FreeHGlobal(IntPtr((void*)chars));
 }
 
+#define UnOrderedMultiMap_Clear_CASE(NUM) \
+	case NUM: \
+		multimapUnion->CPPmultimap##NUM->clear(); \
+		break;
 
 generic<typename Key, typename Value>
 void UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::clear()
@@ -36,594 +40,202 @@ void UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::clear()
 	{
 	case 0: default:
 		return;
-	case 1:
-		multimapUnion->CPPmultimap1->clear();
-		break;
-	case 2:
-		multimapUnion->CPPmultimap2->clear();
-		break;
-	case 3:
-		multimapUnion->CPPmultimap3->clear();
-		break;
-	case 4:
-		multimapUnion->CPPmultimap4->clear();
-		break;
-	case 5:
-		multimapUnion->CPPmultimap5->clear();
-		break;
-	case 6:
-		multimapUnion->CPPmultimap6->clear();
-		break;
-	case 7:
-		multimapUnion->CPPmultimap7->clear();
-		break;
-	case 8:
-		multimapUnion->CPPmultimap8->clear();
-		break;
-	case 9:
-		multimapUnion->CPPmultimap9->clear();
-		break;
-	case 10:
-		multimapUnion->CPPmultimap10->clear();
-		break;
-	case 11:
-		multimapUnion->CPPmultimap11->clear();
-		break;
-	case 12:
-		multimapUnion->CPPmultimap12->clear();
-		break;
-	case 13:
-		multimapUnion->CPPmultimap13->clear();
-		break;
-	case 14:
-		multimapUnion->CPPmultimap14->clear();
-		break;
-	case 15:
-		multimapUnion->CPPmultimap15->clear();
-		break;
-	case 16:
-		multimapUnion->CPPmultimap16->clear();
-		break;
-	case 17:
-		multimapUnion->CPPmultimap17->clear();
-		break;
-	case 18:
-		multimapUnion->CPPmultimap18->clear();
-		break;
-	case 19:
-		multimapUnion->CPPmultimap19->clear();
-		break;
-	case 20:
-		multimapUnion->CPPmultimap20->clear();
-		break;
-	case 21:
-		multimapUnion->CPPmultimap21->clear();
-		break;
-	case 22:
-		multimapUnion->CPPmultimap22->clear();
-		break;
-	case 23:
-		multimapUnion->CPPmultimap23->clear();
-		break;
-	case 24:
-		multimapUnion->CPPmultimap24->clear();
-		break;
-	case 25:
-		multimapUnion->CPPmultimap25->clear();
-		break;
-	case 26:
-		multimapUnion->CPPmultimap26->clear();
-		break;
-	case 27:
-		multimapUnion->CPPmultimap27->clear();
-		break;
-	case 28:
-		multimapUnion->CPPmultimap28->clear();
-		break;
-	case 29:
-		multimapUnion->CPPmultimap29->clear();
-		break;
-	case 30:
-		multimapUnion->CPPmultimap30->clear();
-		break;
-	case 31:
-		multimapUnion->CPPmultimap31->clear();
-		break;
-	case 32:
-		multimapUnion->CPPmultimap32->clear();
-		break;
-	case 33:
-		multimapUnion->CPPmultimap33->clear();
-		break;
-	case 34:
-		multimapUnion->CPPmultimap34->clear();
-		break;
-	case 35:
-		multimapUnion->CPPmultimap35->clear();
-		break;
-	case 36:
-		multimapUnion->CPPmultimap36->clear();
-		break;
-	case 37:
-		multimapUnion->CPPmultimap37->clear();
-		break;
-	case 38:
-		multimapUnion->CPPmultimap38->clear();
-		break;
-	case 39:
-		multimapUnion->CPPmultimap39->clear();
-		break;
-	case 40:
-		multimapUnion->CPPmultimap40->clear();
-		break;
-	case 41:
-		multimapUnion->CPPmultimap41->clear();
-		break;
-	case 42:
-		multimapUnion->CPPmultimap42->clear();
-		break;
-	case 43:
-		multimapUnion->CPPmultimap43->clear();
-		break;
-	case 44:
-		multimapUnion->CPPmultimap44->clear();
-		break;
-	case 45:
-		multimapUnion->CPPmultimap45->clear();
-		break;
-	case 46:
-		multimapUnion->CPPmultimap46->clear();
-		break;
-	case 47:
-		multimapUnion->CPPmultimap47->clear();
-		break;
-	case 48:
-		multimapUnion->CPPmultimap48->clear();
-		break;
-	case 49:
-		multimapUnion->CPPmultimap49->clear();
-		break;
-	case 50:
-		multimapUnion->CPPmultimap50->clear();
-		break;
-	case 51:
-		multimapUnion->CPPmultimap51->clear();
-		break;
-	case 52:
-		multimapUnion->CPPmultimap52->clear();
-		break;
-	case 53:
-		multimapUnion->CPPmultimap53->clear();
-		break;
-	case 54:
-		multimapUnion->CPPmultimap54->clear();
-		break;
-	case 55:
-		multimapUnion->CPPmultimap55->clear();
-		break;
-	case 56:
-		multimapUnion->CPPmultimap56->clear();
-		break;
-	case 57:
-		multimapUnion->CPPmultimap57->clear();
-		break;
-	case 58:
-		multimapUnion->CPPmultimap58->clear();
-		break;
-	case 59:
-		multimapUnion->CPPmultimap59->clear();
-		break;
-	case 60:
-		multimapUnion->CPPmultimap60->clear();
-		break;
-	case 61:
-		multimapUnion->CPPmultimap61->clear();
-		break;
-	case 62:
-		multimapUnion->CPPmultimap62->clear();
-		break;
-	case 63:
-		multimapUnion->CPPmultimap63->clear();
-		break;
-	case 64:
-		multimapUnion->CPPmultimap64->clear();
-		break;
-	case 65:
-		multimapUnion->CPPmultimap65->clear();
-		break;
-	case 66:
-		multimapUnion->CPPmultimap66->clear();
-		break;
-	case 67:
-		multimapUnion->CPPmultimap67->clear();
-		break;
-	case 68:
-		multimapUnion->CPPmultimap68->clear();
-		break;
-	case 69:
-		multimapUnion->CPPmultimap69->clear();
-		break;
-	case 70:
-		multimapUnion->CPPmultimap70->clear();
-		break;
-	case 71:
-		multimapUnion->CPPmultimap71->clear();
-		break;
-	case 72:
-		multimapUnion->CPPmultimap72->clear();
-		break;
-	case 73:
-		multimapUnion->CPPmultimap73->clear();
-		break;
-	case 74:
-		multimapUnion->CPPmultimap74->clear();
-		break;
-	case 75:
-		multimapUnion->CPPmultimap75->clear();
-		break;
-	case 76:
-		multimapUnion->CPPmultimap76->clear();
-		break;
-	case 77:
-		multimapUnion->CPPmultimap77->clear();
-		break;
-	case 78:
-		multimapUnion->CPPmultimap78->clear();
-		break;
-	case 79:
-		multimapUnion->CPPmultimap79->clear();
-		break;
-	case 80:
-		multimapUnion->CPPmultimap80->clear();
-		break;
-	case 81:
-		multimapUnion->CPPmultimap81->clear();
-		break;
-	case 82:
-		multimapUnion->CPPmultimap82->clear();
-		break;
-	case 83:
-		multimapUnion->CPPmultimap83->clear();
-		break;
-	case 84:
-		multimapUnion->CPPmultimap84->clear();
-		break;
-	case 85:
-		multimapUnion->CPPmultimap85->clear();
-		break;
-	case 86:
-		multimapUnion->CPPmultimap86->clear();
-		break;
-	case 87:
-		multimapUnion->CPPmultimap87->clear();
-		break;
-	case 88:
-		multimapUnion->CPPmultimap88->clear();
-		break;
-	case 89:
-		multimapUnion->CPPmultimap89->clear();
-		break;
-	case 90:
-		multimapUnion->CPPmultimap90->clear();
-		break;
-	case 91:
-		multimapUnion->CPPmultimap91->clear();
-		break;
-	case 92:
-		multimapUnion->CPPmultimap92->clear();
-		break;
-	case 93:
-		multimapUnion->CPPmultimap93->clear();
-		break;
-	case 94:
-		multimapUnion->CPPmultimap94->clear();
-		break;
-	case 95:
-		multimapUnion->CPPmultimap95->clear();
-		break;
-	case 96:
-		multimapUnion->CPPmultimap96->clear();
-		break;
-	case 97:
-		multimapUnion->CPPmultimap97->clear();
-		break;
-	case 98:
-		multimapUnion->CPPmultimap98->clear();
-		break;
-	case 99:
-		multimapUnion->CPPmultimap99->clear();
-		break;
-	case 100:
-		multimapUnion->CPPmultimap100->clear();
-		break;
-	case 101:
-		multimapUnion->CPPmultimap101->clear();
-		break;
-	case 102:
-		multimapUnion->CPPmultimap102->clear();
-		break;
-	case 103:
-		multimapUnion->CPPmultimap103->clear();
-		break;
-	case 104:
-		multimapUnion->CPPmultimap104->clear();
-		break;
-	case 105:
-		multimapUnion->CPPmultimap105->clear();
-		break;
-	case 106:
-		multimapUnion->CPPmultimap106->clear();
-		break;
-	case 107:
-		multimapUnion->CPPmultimap107->clear();
-		break;
-	case 108:
-		multimapUnion->CPPmultimap108->clear();
-		break;
-	case 109:
-		multimapUnion->CPPmultimap109->clear();
-		break;
-	case 110:
-		multimapUnion->CPPmultimap110->clear();
-		break;
-	case 111:
-		multimapUnion->CPPmultimap111->clear();
-		break;
-	case 112:
-		multimapUnion->CPPmultimap112->clear();
-		break;
-	case 113:
-		multimapUnion->CPPmultimap113->clear();
-		break;
-	case 114:
-		multimapUnion->CPPmultimap114->clear();
-		break;
-	case 115:
-		multimapUnion->CPPmultimap115->clear();
-		break;
-	case 116:
-		multimapUnion->CPPmultimap116->clear();
-		break;
-	case 117:
-		multimapUnion->CPPmultimap117->clear();
-		break;
-	case 118:
-		multimapUnion->CPPmultimap118->clear();
-		break;
-	case 119:
-		multimapUnion->CPPmultimap119->clear();
-		break;
-	case 120:
-		multimapUnion->CPPmultimap120->clear();
-		break;
-	case 121:
-		multimapUnion->CPPmultimap121->clear();
-		break;
-	case 122:
-		multimapUnion->CPPmultimap122->clear();
-		break;
-	case 123:
-		multimapUnion->CPPmultimap123->clear();
-		break;
-	case 124:
-		multimapUnion->CPPmultimap124->clear();
-		break;
-	case 125:
-		multimapUnion->CPPmultimap125->clear();
-		break;
-	case 126:
-		multimapUnion->CPPmultimap126->clear();
-		break;
-	case 127:
-		multimapUnion->CPPmultimap127->clear();
-		break;
-	case 128:
-		multimapUnion->CPPmultimap128->clear();
-		break;
-	case 129:
-		multimapUnion->CPPmultimap129->clear();
-		break;
-	case 130:
-		multimapUnion->CPPmultimap130->clear();
-		break;
-	case 131:
-		multimapUnion->CPPmultimap131->clear();
-		break;
-	case 132:
-		multimapUnion->CPPmultimap132->clear();
-		break;
-	case 133:
-		multimapUnion->CPPmultimap133->clear();
-		break;
-	case 134:
-		multimapUnion->CPPmultimap134->clear();
-		break;
-	case 135:
-		multimapUnion->CPPmultimap135->clear();
-		break;
-	case 136:
-		multimapUnion->CPPmultimap136->clear();
-		break;
-	case 137:
-		multimapUnion->CPPmultimap137->clear();
-		break;
-	case 138:
-		multimapUnion->CPPmultimap138->clear();
-		break;
-	case 139:
-		multimapUnion->CPPmultimap139->clear();
-		break;
-	case 140:
-		multimapUnion->CPPmultimap140->clear();
-		break;
-	case 141:
-		multimapUnion->CPPmultimap141->clear();
-		break;
-	case 142:
-		multimapUnion->CPPmultimap142->clear();
-		break;
-	case 143:
-		multimapUnion->CPPmultimap143->clear();
-		break;
-	case 144:
-		multimapUnion->CPPmultimap144->clear();
-		break;
-	case 145:
-		multimapUnion->CPPmultimap145->clear();
-		break;
-	case 146:
-		multimapUnion->CPPmultimap146->clear();
-		break;
-	case 147:
-		multimapUnion->CPPmultimap147->clear();
-		break;
-	case 148:
-		multimapUnion->CPPmultimap148->clear();
-		break;
-	case 149:
-		multimapUnion->CPPmultimap149->clear();
-		break;
-	case 150:
-		multimapUnion->CPPmultimap150->clear();
-		break;
-	case 151:
-		multimapUnion->CPPmultimap151->clear();
-		break;
-	case 152:
-		multimapUnion->CPPmultimap152->clear();
-		break;
-	case 153:
-		multimapUnion->CPPmultimap153->clear();
-		break;
-	case 154:
-		multimapUnion->CPPmultimap154->clear();
-		break;
-	case 155:
-		multimapUnion->CPPmultimap155->clear();
-		break;
-	case 156:
-		multimapUnion->CPPmultimap156->clear();
-		break;
-	case 157:
-		multimapUnion->CPPmultimap157->clear();
-		break;
-	case 158:
-		multimapUnion->CPPmultimap158->clear();
-		break;
-	case 159:
-		multimapUnion->CPPmultimap159->clear();
-		break;
-	case 160:
-		multimapUnion->CPPmultimap160->clear();
-		break;
-	case 161:
-		multimapUnion->CPPmultimap161->clear();
-		break;
-	case 162:
-		multimapUnion->CPPmultimap162->clear();
-		break;
-	case 163:
-		multimapUnion->CPPmultimap163->clear();
-		break;
-	case 164:
-		multimapUnion->CPPmultimap164->clear();
-		break;
-	case 165:
-		multimapUnion->CPPmultimap165->clear();
-		break;
-	case 166:
-		multimapUnion->CPPmultimap166->clear();
-		break;
-	case 167:
-		multimapUnion->CPPmultimap167->clear();
-		break;
-	case 168:
-		multimapUnion->CPPmultimap168->clear();
-		break;
-	case 169:
-		multimapUnion->CPPmultimap169->clear();
-		break;
-	case 170:
-		multimapUnion->CPPmultimap170->clear();
-		break;
-	case 171:
-		multimapUnion->CPPmultimap171->clear();
-		break;
-	case 172:
-		multimapUnion->CPPmultimap172->clear();
-		break;
-	case 173:
-		multimapUnion->CPPmultimap173->clear();
-		break;
-	case 174:
-		multimapUnion->CPPmultimap174->clear();
-		break;
-	case 175:
-		multimapUnion->CPPmultimap175->clear();
-		break;
-	case 176:
-		multimapUnion->CPPmultimap176->clear();
-		break;
-	case 177:
-		multimapUnion->CPPmultimap177->clear();
-		break;
-	case 178:
-		multimapUnion->CPPmultimap178->clear();
-		break;
-	case 179:
-		multimapUnion->CPPmultimap179->clear();
-		break;
-	case 180:
-		multimapUnion->CPPmultimap180->clear();
-		break;
-	case 181:
-		multimapUnion->CPPmultimap181->clear();
-		break;
-	case 182:
-		multimapUnion->CPPmultimap182->clear();
-		break;
-	case 183:
-		multimapUnion->CPPmultimap183->clear();
-		break;
-	case 184:
-		multimapUnion->CPPmultimap184->clear();
-		break;
-	case 185:
-		multimapUnion->CPPmultimap185->clear();
-		break;
-	case 186:
-		multimapUnion->CPPmultimap186->clear();
-		break;
-	case 187:
-		multimapUnion->CPPmultimap187->clear();
-		break;
-	case 188:
-		multimapUnion->CPPmultimap188->clear();
-		break;
-	case 189:
-		multimapUnion->CPPmultimap189->clear();
-		break;
-	case 190:
-		multimapUnion->CPPmultimap190->clear();
-		break;
-	case 191:
-		multimapUnion->CPPmultimap191->clear();
-		break;
-	case 192:
-		multimapUnion->CPPmultimap192->clear();
-		break;
-	case 193:
-		multimapUnion->CPPmultimap193->clear();
-		break;
-	case 194:
-		multimapUnion->CPPmultimap194->clear();
-		break;
-	case 195:
-		multimapUnion->CPPmultimap195->clear();
-		break;
-	case 196:
-		multimapUnion->CPPmultimap196->clear();
-		break;
+		UnOrderedMultiMap_Clear_CASE(1)
+		UnOrderedMultiMap_Clear_CASE(2)
+		UnOrderedMultiMap_Clear_CASE(3)
+		UnOrderedMultiMap_Clear_CASE(4)
+		UnOrderedMultiMap_Clear_CASE(5)
+		UnOrderedMultiMap_Clear_CASE(6)
+		UnOrderedMultiMap_Clear_CASE(7)
+		UnOrderedMultiMap_Clear_CASE(8)
+		UnOrderedMultiMap_Clear_CASE(9)
+		UnOrderedMultiMap_Clear_CASE(10)
+		UnOrderedMultiMap_Clear_CASE(11)
+		UnOrderedMultiMap_Clear_CASE(12)
+		UnOrderedMultiMap_Clear_CASE(13)
+		UnOrderedMultiMap_Clear_CASE(14)
+		UnOrderedMultiMap_Clear_CASE(15)
+		UnOrderedMultiMap_Clear_CASE(16)
+		UnOrderedMultiMap_Clear_CASE(17)
+		UnOrderedMultiMap_Clear_CASE(18)
+		UnOrderedMultiMap_Clear_CASE(19)
+		UnOrderedMultiMap_Clear_CASE(20)
+		UnOrderedMultiMap_Clear_CASE(21)
+		UnOrderedMultiMap_Clear_CASE(22)
+		UnOrderedMultiMap_Clear_CASE(23)
+		UnOrderedMultiMap_Clear_CASE(24)
+		UnOrderedMultiMap_Clear_CASE(25)
+		UnOrderedMultiMap_Clear_CASE(26)
+		UnOrderedMultiMap_Clear_CASE(27)
+		UnOrderedMultiMap_Clear_CASE(28)
+		UnOrderedMultiMap_Clear_CASE(29)
+		UnOrderedMultiMap_Clear_CASE(30)
+		UnOrderedMultiMap_Clear_CASE(31)
+		UnOrderedMultiMap_Clear_CASE(32)
+		UnOrderedMultiMap_Clear_CASE(33)
+		UnOrderedMultiMap_Clear_CASE(34)
+		UnOrderedMultiMap_Clear_CASE(35)
+		UnOrderedMultiMap_Clear_CASE(36)
+		UnOrderedMultiMap_Clear_CASE(37)
+		UnOrderedMultiMap_Clear_CASE(38)
+		UnOrderedMultiMap_Clear_CASE(39)
+		UnOrderedMultiMap_Clear_CASE(40)
+		UnOrderedMultiMap_Clear_CASE(41)
+		UnOrderedMultiMap_Clear_CASE(42)
+		UnOrderedMultiMap_Clear_CASE(43)
+		UnOrderedMultiMap_Clear_CASE(44)
+		UnOrderedMultiMap_Clear_CASE(45)
+		UnOrderedMultiMap_Clear_CASE(46)
+		UnOrderedMultiMap_Clear_CASE(47)
+		UnOrderedMultiMap_Clear_CASE(48)
+		UnOrderedMultiMap_Clear_CASE(49)
+		UnOrderedMultiMap_Clear_CASE(50)
+		UnOrderedMultiMap_Clear_CASE(51)
+		UnOrderedMultiMap_Clear_CASE(52)
+		UnOrderedMultiMap_Clear_CASE(53)
+		UnOrderedMultiMap_Clear_CASE(54)
+		UnOrderedMultiMap_Clear_CASE(55)
+		UnOrderedMultiMap_Clear_CASE(56)
+		UnOrderedMultiMap_Clear_CASE(57)
+		UnOrderedMultiMap_Clear_CASE(58)
+		UnOrderedMultiMap_Clear_CASE(59)
+		UnOrderedMultiMap_Clear_CASE(60)
+		UnOrderedMultiMap_Clear_CASE(61)
+		UnOrderedMultiMap_Clear_CASE(62)
+		UnOrderedMultiMap_Clear_CASE(63)
+		UnOrderedMultiMap_Clear_CASE(64)
+		UnOrderedMultiMap_Clear_CASE(65)
+		UnOrderedMultiMap_Clear_CASE(66)
+		UnOrderedMultiMap_Clear_CASE(67)
+		UnOrderedMultiMap_Clear_CASE(68)
+		UnOrderedMultiMap_Clear_CASE(69)
+		UnOrderedMultiMap_Clear_CASE(70)
+		UnOrderedMultiMap_Clear_CASE(71)
+		UnOrderedMultiMap_Clear_CASE(72)
+		UnOrderedMultiMap_Clear_CASE(73)
+		UnOrderedMultiMap_Clear_CASE(74)
+		UnOrderedMultiMap_Clear_CASE(75)
+		UnOrderedMultiMap_Clear_CASE(76)
+		UnOrderedMultiMap_Clear_CASE(77)
+		UnOrderedMultiMap_Clear_CASE(78)
+		UnOrderedMultiMap_Clear_CASE(79)
+		UnOrderedMultiMap_Clear_CASE(80)
+		UnOrderedMultiMap_Clear_CASE(81)
+		UnOrderedMultiMap_Clear_CASE(82)
+		UnOrderedMultiMap_Clear_CASE(83)
+		UnOrderedMultiMap_Clear_CASE(84)
+		UnOrderedMultiMap_Clear_CASE(85)
+		UnOrderedMultiMap_Clear_CASE(86)
+		UnOrderedMultiMap_Clear_CASE(87)
+		UnOrderedMultiMap_Clear_CASE(88)
+		UnOrderedMultiMap_Clear_CASE(89)
+		UnOrderedMultiMap_Clear_CASE(90)
+		UnOrderedMultiMap_Clear_CASE(91)
+		UnOrderedMultiMap_Clear_CASE(92)
+		UnOrderedMultiMap_Clear_CASE(93)
+		UnOrderedMultiMap_Clear_CASE(94)
+		UnOrderedMultiMap_Clear_CASE(95)
+		UnOrderedMultiMap_Clear_CASE(96)
+		UnOrderedMultiMap_Clear_CASE(97)
+		UnOrderedMultiMap_Clear_CASE(98)
+		UnOrderedMultiMap_Clear_CASE(99)
+		UnOrderedMultiMap_Clear_CASE(100)
+		UnOrderedMultiMap_Clear_CASE(101)
+		UnOrderedMultiMap_Clear_CASE(102)
+		UnOrderedMultiMap_Clear_CASE(103)
+		UnOrderedMultiMap_Clear_CASE(104)
+		UnOrderedMultiMap_Clear_CASE(105)
+		UnOrderedMultiMap_Clear_CASE(106)
+		UnOrderedMultiMap_Clear_CASE(107)
+		UnOrderedMultiMap_Clear_CASE(108)
+		UnOrderedMultiMap_Clear_CASE(109)
+		UnOrderedMultiMap_Clear_CASE(110)
+		UnOrderedMultiMap_Clear_CASE(111)
+		UnOrderedMultiMap_Clear_CASE(112)
+		UnOrderedMultiMap_Clear_CASE(113)
+		UnOrderedMultiMap_Clear_CASE(114)
+		UnOrderedMultiMap_Clear_CASE(115)
+		UnOrderedMultiMap_Clear_CASE(116)
+		UnOrderedMultiMap_Clear_CASE(117)
+		UnOrderedMultiMap_Clear_CASE(118)
+		UnOrderedMultiMap_Clear_CASE(119)
+		UnOrderedMultiMap_Clear_CASE(120)
+		UnOrderedMultiMap_Clear_CASE(121)
+		UnOrderedMultiMap_Clear_CASE(122)
+		UnOrderedMultiMap_Clear_CASE(123)
+		UnOrderedMultiMap_Clear_CASE(124)
+		UnOrderedMultiMap_Clear_CASE(125)
+		UnOrderedMultiMap_Clear_CASE(126)
+		UnOrderedMultiMap_Clear_CASE(127)
+		UnOrderedMultiMap_Clear_CASE(128)
+		UnOrderedMultiMap_Clear_CASE(129)
+		UnOrderedMultiMap_Clear_CASE(130)
+		UnOrderedMultiMap_Clear_CASE(131)
+		UnOrderedMultiMap_Clear_CASE(132)
+		UnOrderedMultiMap_Clear_CASE(133)
+		UnOrderedMultiMap_Clear_CASE(134)
+		UnOrderedMultiMap_Clear_CASE(135)
+		UnOrderedMultiMap_Clear_CASE(136)
+		UnOrderedMultiMap_Clear_CASE(137)
+		UnOrderedMultiMap_Clear_CASE(138)
+		UnOrderedMultiMap_Clear_CASE(139)
+		UnOrderedMultiMap_Clear_CASE(140)
+		UnOrderedMultiMap_Clear_CASE(141)
+		UnOrderedMultiMap_Clear_CASE(142)
+		UnOrderedMultiMap_Clear_CASE(143)
+		UnOrderedMultiMap_Clear_CASE(144)
+		UnOrderedMultiMap_Clear_CASE(145)
+		UnOrderedMultiMap_Clear_CASE(146)
+		UnOrderedMultiMap_Clear_CASE(147)
+		UnOrderedMultiMap_Clear_CASE(148)
+		UnOrderedMultiMap_Clear_CASE(149)
+		UnOrderedMultiMap_Clear_CASE(150)
+		UnOrderedMultiMap_Clear_CASE(151)
+		UnOrderedMultiMap_Clear_CASE(152)
+		UnOrderedMultiMap_Clear_CASE(153)
+		UnOrderedMultiMap_Clear_CASE(154)
+		UnOrderedMultiMap_Clear_CASE(155)
+		UnOrderedMultiMap_Clear_CASE(156)
+		UnOrderedMultiMap_Clear_CASE(157)
+		UnOrderedMultiMap_Clear_CASE(158)
+		UnOrderedMultiMap_Clear_CASE(159)
+		UnOrderedMultiMap_Clear_CASE(160)
+		UnOrderedMultiMap_Clear_CASE(161)
+		UnOrderedMultiMap_Clear_CASE(162)
+		UnOrderedMultiMap_Clear_CASE(163)
+		UnOrderedMultiMap_Clear_CASE(164)
+		UnOrderedMultiMap_Clear_CASE(165)
+		UnOrderedMultiMap_Clear_CASE(166)
+		UnOrderedMultiMap_Clear_CASE(167)
+		UnOrderedMultiMap_Clear_CASE(168)
+		UnOrderedMultiMap_Clear_CASE(169)
+		UnOrderedMultiMap_Clear_CASE(170)
+		UnOrderedMultiMap_Clear_CASE(171)
+		UnOrderedMultiMap_Clear_CASE(172)
+		UnOrderedMultiMap_Clear_CASE(173)
+		UnOrderedMultiMap_Clear_CASE(174)
+		UnOrderedMultiMap_Clear_CASE(175)
+		UnOrderedMultiMap_Clear_CASE(176)
+		UnOrderedMultiMap_Clear_CASE(177)
+		UnOrderedMultiMap_Clear_CASE(178)
+		UnOrderedMultiMap_Clear_CASE(179)
+		UnOrderedMultiMap_Clear_CASE(180)
+		UnOrderedMultiMap_Clear_CASE(181)
+		UnOrderedMultiMap_Clear_CASE(182)
+		UnOrderedMultiMap_Clear_CASE(183)
+		UnOrderedMultiMap_Clear_CASE(184)
+		UnOrderedMultiMap_Clear_CASE(185)
+		UnOrderedMultiMap_Clear_CASE(186)
+		UnOrderedMultiMap_Clear_CASE(187)
+		UnOrderedMultiMap_Clear_CASE(188)
+		UnOrderedMultiMap_Clear_CASE(189)
+		UnOrderedMultiMap_Clear_CASE(190)
+		UnOrderedMultiMap_Clear_CASE(191)
+		UnOrderedMultiMap_Clear_CASE(192)
+		UnOrderedMultiMap_Clear_CASE(193)
+		UnOrderedMultiMap_Clear_CASE(194)
+		UnOrderedMultiMap_Clear_CASE(195)
+		UnOrderedMultiMap_Clear_CASE(196)
 	}
 	if (gKeyClassDictionary)
 	{
@@ -1464,6 +1076,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	return multiNode->DeepCopy();
 }
 
+#define UnOrderedMultiMap_Size_CASE(NUM) \
+	case NUM: \
+		return static_cast<System::UInt64>(multimapUnion->CPPmultimap##NUM->size());
+
 generic<typename Key, typename Value>
 System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::size()
 {
@@ -1471,401 +1087,209 @@ System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::siz
 	{
 	case 0:	default:
 		return 0;
-	case 1:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap1->size());
-	case 2:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap2->size());
-	case 3:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap3->size());
-	case 4:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap4->size());
-	case 5:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap5->size());
-	case 6:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap6->size());
-	case 7:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap7->size());
-	case 8:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap8->size());
-	case 9:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap9->size());
-	case 10:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap10->size());
-	case 11:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap11->size());
-	case 12:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap12->size());
-	case 13:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap13->size());
-	case 14:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap14->size());
-	case 15:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap15->size());
-	case 16:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap16->size());
-	case 17:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap17->size());
-	case 18:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap18->size());
-	case 19:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap19->size());
-	case 20:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap20->size());
-	case 21:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap21->size());
-	case 22:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap22->size());
-	case 23:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap23->size());
-	case 24:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap24->size());
-	case 25:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap25->size());
-	case 26:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap26->size());
-	case 27:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap27->size());
-	case 28:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap28->size());
-	case 29:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap29->size());
-	case 30:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap30->size());
-	case 31:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap31->size());
-	case 32:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap32->size());
-	case 33:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap33->size());
-	case 34:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap34->size());
-	case 35:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap35->size());
-	case 36:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap36->size());
-	case 37:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap37->size());
-	case 38:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap38->size());
-	case 39:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap39->size());
-	case 40:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap40->size());
-	case 41:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap41->size());
-	case 42:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap42->size());
-	case 43:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap43->size());
-	case 44:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap44->size());
-	case 45:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap45->size());
-	case 46:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap46->size());
-	case 47:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap47->size());
-	case 48:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap48->size());
-	case 49:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap49->size());
-	case 50:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap50->size());
-	case 51:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap51->size());
-	case 52:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap52->size());
-	case 53:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap53->size());
-	case 54:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap54->size());
-	case 55:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap55->size());
-	case 56:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap56->size());
-	case 57:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap57->size());
-	case 58:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap58->size());
-	case 59:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap59->size());
-	case 60:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap60->size());
-	case 61:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap61->size());
-	case 62:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap62->size());
-	case 63:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap63->size());
-	case 64:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap64->size());
-	case 65:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap65->size());
-	case 66:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap66->size());
-	case 67:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap67->size());
-	case 68:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap68->size());
-	case 69:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap69->size());
-	case 70:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap70->size());
-	case 71:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap71->size());
-	case 72:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap72->size());
-	case 73:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap73->size());
-	case 74:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap74->size());
-	case 75:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap75->size());
-	case 76:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap76->size());
-	case 77:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap77->size());
-	case 78:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap78->size());
-	case 79:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap79->size());
-	case 80:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap80->size());
-	case 81:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap81->size());
-	case 82:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap82->size());
-	case 83:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap83->size());
-	case 84:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap84->size());
-	case 85:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap85->size());
-	case 86:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap86->size());
-	case 87:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap87->size());
-	case 88:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap88->size());
-	case 89:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap89->size());
-	case 90:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap90->size());
-	case 91:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap91->size());
-	case 92:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap92->size());
-	case 93:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap93->size());
-	case 94:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap94->size());
-	case 95:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap95->size());
-	case 96:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap96->size());
-	case 97:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap97->size());
-	case 98:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap98->size());
-	case 99:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap99->size());
-	case 100:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap100->size());
-	case 101:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap101->size());
-	case 102:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap102->size());
-	case 103:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap103->size());
-	case 104:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap104->size());
-	case 105:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap105->size());
-	case 106:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap106->size());
-	case 107:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap107->size());
-	case 108:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap108->size());
-	case 109:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap109->size());
-	case 110:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap110->size());
-	case 111:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap111->size());
-	case 112:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap112->size());
-	case 113:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap113->size());
-	case 114:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap114->size());
-	case 115:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap115->size());
-	case 116:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap116->size());
-	case 117:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap117->size());
-	case 118:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap118->size());
-	case 119:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap119->size());
-	case 120:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap120->size());
-	case 121:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap121->size());
-	case 122:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap122->size());
-	case 123:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap123->size());
-	case 124:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap124->size());
-	case 125:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap125->size());
-	case 126:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap126->size());
-	case 127:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap127->size());
-	case 128:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap128->size());
-	case 129:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap129->size());
-	case 130:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap130->size());
-	case 131:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap131->size());
-	case 132:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap132->size());
-	case 133:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap133->size());
-	case 134:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap134->size());
-	case 135:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap135->size());
-	case 136:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap136->size());
-	case 137:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap137->size());
-	case 138:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap138->size());
-	case 139:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap139->size());
-	case 140:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap140->size());
-	case 141:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap141->size());
-	case 142:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap142->size());
-	case 143:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap143->size());
-	case 144:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap144->size());
-	case 145:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap145->size());
-	case 146:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap146->size());
-	case 147:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap147->size());
-	case 148:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap148->size());
-	case 149:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap149->size());
-	case 150:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap150->size());
-	case 151:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap151->size());
-	case 152:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap152->size());
-	case 153:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap153->size());
-	case 154:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap154->size());
-	case 155:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap155->size());
-	case 156:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap156->size());
-	case 157:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap157->size());
-	case 158:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap158->size());
-	case 159:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap159->size());
-	case 160:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap160->size());
-	case 161:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap161->size());
-	case 162:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap162->size());
-	case 163:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap163->size());
-	case 164:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap164->size());
-	case 165:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap165->size());
-	case 166:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap166->size());
-	case 167:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap167->size());
-	case 168:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap168->size());
-	case 169:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap169->size());
-	case 170:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap170->size());
-	case 171:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap171->size());
-	case 172:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap172->size());
-	case 173:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap173->size());
-	case 174:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap174->size());
-	case 175:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap175->size());
-	case 176:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap176->size());
-	case 177:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap177->size());
-	case 178:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap178->size());
-	case 179:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap179->size());
-	case 180:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap180->size());
-	case 181:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap181->size());
-	case 182:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap182->size());
-	case 183:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap183->size());
-	case 184:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap184->size());
-	case 185:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap185->size());
-	case 186:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap186->size());
-	case 187:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap187->size());
-	case 188:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap188->size());
-	case 189:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap189->size());
-	case 190:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap190->size());
-	case 191:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap191->size());
-	case 192:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap192->size());
-	case 193:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap193->size());
-	case 194:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap194->size());
-	case 195:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap195->size());
-	case 196:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap196->size());
+		UnOrderedMultiMap_Size_CASE(1)
+		UnOrderedMultiMap_Size_CASE(2)
+		UnOrderedMultiMap_Size_CASE(3)
+		UnOrderedMultiMap_Size_CASE(4)
+		UnOrderedMultiMap_Size_CASE(5)
+		UnOrderedMultiMap_Size_CASE(6)
+		UnOrderedMultiMap_Size_CASE(7)
+		UnOrderedMultiMap_Size_CASE(8)
+		UnOrderedMultiMap_Size_CASE(9)
+		UnOrderedMultiMap_Size_CASE(10)
+		UnOrderedMultiMap_Size_CASE(11)
+		UnOrderedMultiMap_Size_CASE(12)
+		UnOrderedMultiMap_Size_CASE(13)
+		UnOrderedMultiMap_Size_CASE(14)
+		UnOrderedMultiMap_Size_CASE(15)
+		UnOrderedMultiMap_Size_CASE(16)
+		UnOrderedMultiMap_Size_CASE(17)
+		UnOrderedMultiMap_Size_CASE(18)
+		UnOrderedMultiMap_Size_CASE(19)
+		UnOrderedMultiMap_Size_CASE(20)
+		UnOrderedMultiMap_Size_CASE(21)
+		UnOrderedMultiMap_Size_CASE(22)
+		UnOrderedMultiMap_Size_CASE(23)
+		UnOrderedMultiMap_Size_CASE(24)
+		UnOrderedMultiMap_Size_CASE(25)
+		UnOrderedMultiMap_Size_CASE(26)
+		UnOrderedMultiMap_Size_CASE(27)
+		UnOrderedMultiMap_Size_CASE(28)
+		UnOrderedMultiMap_Size_CASE(29)
+		UnOrderedMultiMap_Size_CASE(30)
+		UnOrderedMultiMap_Size_CASE(31)
+		UnOrderedMultiMap_Size_CASE(32)
+		UnOrderedMultiMap_Size_CASE(33)
+		UnOrderedMultiMap_Size_CASE(34)
+		UnOrderedMultiMap_Size_CASE(35)
+		UnOrderedMultiMap_Size_CASE(36)
+		UnOrderedMultiMap_Size_CASE(37)
+		UnOrderedMultiMap_Size_CASE(38)
+		UnOrderedMultiMap_Size_CASE(39)
+		UnOrderedMultiMap_Size_CASE(40)
+		UnOrderedMultiMap_Size_CASE(41)
+		UnOrderedMultiMap_Size_CASE(42)
+		UnOrderedMultiMap_Size_CASE(43)
+		UnOrderedMultiMap_Size_CASE(44)
+		UnOrderedMultiMap_Size_CASE(45)
+		UnOrderedMultiMap_Size_CASE(46)
+		UnOrderedMultiMap_Size_CASE(47)
+		UnOrderedMultiMap_Size_CASE(48)
+		UnOrderedMultiMap_Size_CASE(49)
+		UnOrderedMultiMap_Size_CASE(50)
+		UnOrderedMultiMap_Size_CASE(51)
+		UnOrderedMultiMap_Size_CASE(52)
+		UnOrderedMultiMap_Size_CASE(53)
+		UnOrderedMultiMap_Size_CASE(54)
+		UnOrderedMultiMap_Size_CASE(55)
+		UnOrderedMultiMap_Size_CASE(56)
+		UnOrderedMultiMap_Size_CASE(57)
+		UnOrderedMultiMap_Size_CASE(58)
+		UnOrderedMultiMap_Size_CASE(59)
+		UnOrderedMultiMap_Size_CASE(60)
+		UnOrderedMultiMap_Size_CASE(61)
+		UnOrderedMultiMap_Size_CASE(62)
+		UnOrderedMultiMap_Size_CASE(63)
+		UnOrderedMultiMap_Size_CASE(64)
+		UnOrderedMultiMap_Size_CASE(65)
+		UnOrderedMultiMap_Size_CASE(66)
+		UnOrderedMultiMap_Size_CASE(67)
+		UnOrderedMultiMap_Size_CASE(68)
+		UnOrderedMultiMap_Size_CASE(69)
+		UnOrderedMultiMap_Size_CASE(70)
+		UnOrderedMultiMap_Size_CASE(71)
+		UnOrderedMultiMap_Size_CASE(72)
+		UnOrderedMultiMap_Size_CASE(73)
+		UnOrderedMultiMap_Size_CASE(74)
+		UnOrderedMultiMap_Size_CASE(75)
+		UnOrderedMultiMap_Size_CASE(76)
+		UnOrderedMultiMap_Size_CASE(77)
+		UnOrderedMultiMap_Size_CASE(78)
+		UnOrderedMultiMap_Size_CASE(79)
+		UnOrderedMultiMap_Size_CASE(80)
+		UnOrderedMultiMap_Size_CASE(81)
+		UnOrderedMultiMap_Size_CASE(82)
+		UnOrderedMultiMap_Size_CASE(83)
+		UnOrderedMultiMap_Size_CASE(84)
+		UnOrderedMultiMap_Size_CASE(85)
+		UnOrderedMultiMap_Size_CASE(86)
+		UnOrderedMultiMap_Size_CASE(87)
+		UnOrderedMultiMap_Size_CASE(88)
+		UnOrderedMultiMap_Size_CASE(89)
+		UnOrderedMultiMap_Size_CASE(90)
+		UnOrderedMultiMap_Size_CASE(91)
+		UnOrderedMultiMap_Size_CASE(92)
+		UnOrderedMultiMap_Size_CASE(93)
+		UnOrderedMultiMap_Size_CASE(94)
+		UnOrderedMultiMap_Size_CASE(95)
+		UnOrderedMultiMap_Size_CASE(96)
+		UnOrderedMultiMap_Size_CASE(97)
+		UnOrderedMultiMap_Size_CASE(98)
+		UnOrderedMultiMap_Size_CASE(99)
+		UnOrderedMultiMap_Size_CASE(100)
+		UnOrderedMultiMap_Size_CASE(101)
+		UnOrderedMultiMap_Size_CASE(102)
+		UnOrderedMultiMap_Size_CASE(103)
+		UnOrderedMultiMap_Size_CASE(104)
+		UnOrderedMultiMap_Size_CASE(105)
+		UnOrderedMultiMap_Size_CASE(106)
+		UnOrderedMultiMap_Size_CASE(107)
+		UnOrderedMultiMap_Size_CASE(108)
+		UnOrderedMultiMap_Size_CASE(109)
+		UnOrderedMultiMap_Size_CASE(110)
+		UnOrderedMultiMap_Size_CASE(111)
+		UnOrderedMultiMap_Size_CASE(112)
+		UnOrderedMultiMap_Size_CASE(113)
+		UnOrderedMultiMap_Size_CASE(114)
+		UnOrderedMultiMap_Size_CASE(115)
+		UnOrderedMultiMap_Size_CASE(116)
+		UnOrderedMultiMap_Size_CASE(117)
+		UnOrderedMultiMap_Size_CASE(118)
+		UnOrderedMultiMap_Size_CASE(119)
+		UnOrderedMultiMap_Size_CASE(120)
+		UnOrderedMultiMap_Size_CASE(121)
+		UnOrderedMultiMap_Size_CASE(122)
+		UnOrderedMultiMap_Size_CASE(123)
+		UnOrderedMultiMap_Size_CASE(124)
+		UnOrderedMultiMap_Size_CASE(125)
+		UnOrderedMultiMap_Size_CASE(126)
+		UnOrderedMultiMap_Size_CASE(127)
+		UnOrderedMultiMap_Size_CASE(128)
+		UnOrderedMultiMap_Size_CASE(129)
+		UnOrderedMultiMap_Size_CASE(130)
+		UnOrderedMultiMap_Size_CASE(131)
+		UnOrderedMultiMap_Size_CASE(132)
+		UnOrderedMultiMap_Size_CASE(133)
+		UnOrderedMultiMap_Size_CASE(134)
+		UnOrderedMultiMap_Size_CASE(135)
+		UnOrderedMultiMap_Size_CASE(136)
+		UnOrderedMultiMap_Size_CASE(137)
+		UnOrderedMultiMap_Size_CASE(138)
+		UnOrderedMultiMap_Size_CASE(139)
+		UnOrderedMultiMap_Size_CASE(140)
+		UnOrderedMultiMap_Size_CASE(141)
+		UnOrderedMultiMap_Size_CASE(142)
+		UnOrderedMultiMap_Size_CASE(143)
+		UnOrderedMultiMap_Size_CASE(144)
+		UnOrderedMultiMap_Size_CASE(145)
+		UnOrderedMultiMap_Size_CASE(146)
+		UnOrderedMultiMap_Size_CASE(147)
+		UnOrderedMultiMap_Size_CASE(148)
+		UnOrderedMultiMap_Size_CASE(149)
+		UnOrderedMultiMap_Size_CASE(150)
+		UnOrderedMultiMap_Size_CASE(151)
+		UnOrderedMultiMap_Size_CASE(152)
+		UnOrderedMultiMap_Size_CASE(153)
+		UnOrderedMultiMap_Size_CASE(154)
+		UnOrderedMultiMap_Size_CASE(155)
+		UnOrderedMultiMap_Size_CASE(156)
+		UnOrderedMultiMap_Size_CASE(157)
+		UnOrderedMultiMap_Size_CASE(158)
+		UnOrderedMultiMap_Size_CASE(159)
+		UnOrderedMultiMap_Size_CASE(160)
+		UnOrderedMultiMap_Size_CASE(161)
+		UnOrderedMultiMap_Size_CASE(162)
+		UnOrderedMultiMap_Size_CASE(163)
+		UnOrderedMultiMap_Size_CASE(164)
+		UnOrderedMultiMap_Size_CASE(165)
+		UnOrderedMultiMap_Size_CASE(166)
+		UnOrderedMultiMap_Size_CASE(167)
+		UnOrderedMultiMap_Size_CASE(168)
+		UnOrderedMultiMap_Size_CASE(169)
+		UnOrderedMultiMap_Size_CASE(170)
+		UnOrderedMultiMap_Size_CASE(171)
+		UnOrderedMultiMap_Size_CASE(172)
+		UnOrderedMultiMap_Size_CASE(173)
+		UnOrderedMultiMap_Size_CASE(174)
+		UnOrderedMultiMap_Size_CASE(175)
+		UnOrderedMultiMap_Size_CASE(176)
+		UnOrderedMultiMap_Size_CASE(177)
+		UnOrderedMultiMap_Size_CASE(178)
+		UnOrderedMultiMap_Size_CASE(179)
+		UnOrderedMultiMap_Size_CASE(180)
+		UnOrderedMultiMap_Size_CASE(181)
+		UnOrderedMultiMap_Size_CASE(182)
+		UnOrderedMultiMap_Size_CASE(183)
+		UnOrderedMultiMap_Size_CASE(184)
+		UnOrderedMultiMap_Size_CASE(185)
+		UnOrderedMultiMap_Size_CASE(186)
+		UnOrderedMultiMap_Size_CASE(187)
+		UnOrderedMultiMap_Size_CASE(188)
+		UnOrderedMultiMap_Size_CASE(189)
+		UnOrderedMultiMap_Size_CASE(190)
+		UnOrderedMultiMap_Size_CASE(191)
+		UnOrderedMultiMap_Size_CASE(192)
+		UnOrderedMultiMap_Size_CASE(193)
+		UnOrderedMultiMap_Size_CASE(194)
+		UnOrderedMultiMap_Size_CASE(195)
+		UnOrderedMultiMap_Size_CASE(196)
 	}
 	return 0;
 }
+
+#define UnOrderedMultiMap_Count_CASE(NUM, KeyType) \
+	case NUM: \
+		return static_cast<System::UInt64>(multimapUnion->CPPmultimap##NUM->count(KeyType));
 
 generic<typename Key, typename Value>
 System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::count(const Key key)
@@ -1986,398 +1410,202 @@ System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::cou
 	{
 	case 0:	default:
 		return 0;
-	case 1:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap1->count(KeyUchar));
-	case 2:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap2->count(KeyUchar));
-	case 3:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap3->count(KeyUchar));
-	case 4:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap4->count(KeyUchar));
-	case 5:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap5->count(KeyUchar));
-	case 6:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap6->count(KeyUchar));
-	case 7:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap7->count(KeyUchar));
-	case 8:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap8->count(KeyUchar));
-	case 9:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap9->count(KeyUchar));
-	case 10:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap10->count(KeyUchar));
-	case 11:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap11->count(KeyUchar));
-	case 12:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap12->count(KeyUchar));
-	case 13:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap13->count(KeyUchar));
-	case 14:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap14->count(KeyUchar));
-	case 15:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap15->count(KeyChar));
-	case 16:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap16->count(KeyChar));
-	case 17:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap17->count(KeyChar));
-	case 18:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap18->count(KeyChar));
-	case 19:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap19->count(KeyChar));
-	case 20:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap20->count(KeyChar));
-	case 21:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap21->count(KeyChar));
-	case 22:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap22->count(KeyChar));
-	case 23:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap23->count(KeyChar));
-	case 24:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap24->count(KeyChar));
-	case 25:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap25->count(KeyChar));
-	case 26:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap26->count(KeyChar));
-	case 27:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap27->count(KeyChar));
-	case 28:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap28->count(KeyChar));
-	case 29:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap29->count(KeyShort));
-	case 30:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap30->count(KeyShort));
-	case 31:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap31->count(KeyShort));
-	case 32:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap32->count(KeyShort));
-	case 33:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap33->count(KeyShort));
-	case 34:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap34->count(KeyShort));
-	case 35:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap35->count(KeyShort));
-	case 36:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap36->count(KeyShort));
-	case 37:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap37->count(KeyShort));
-	case 38:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap38->count(KeyShort));
-	case 39:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap39->count(KeyShort));
-	case 40:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap40->count(KeyShort));
-	case 41:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap41->count(KeyShort));
-	case 42:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap42->count(KeyShort));
-	case 43:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap43->count(KeyUshort));
-	case 44:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap44->count(KeyUshort));
-	case 45:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap45->count(KeyUshort));
-	case 46:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap46->count(KeyUshort));
-	case 47:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap47->count(KeyUshort));
-	case 48:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap48->count(KeyUshort));
-	case 49:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap49->count(KeyUshort));
-	case 50:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap50->count(KeyUshort));
-	case 51:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap51->count(KeyUshort));
-	case 52:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap52->count(KeyUshort));
-	case 53:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap53->count(KeyUshort));
-	case 54:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap54->count(KeyUshort));
-	case 55:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap55->count(KeyUshort));
-	case 56:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap56->count(KeyUshort));
-	case 57:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap57->count(KeyInt));
-	case 58:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap58->count(KeyInt));
-	case 59:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap59->count(KeyInt));
-	case 60:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap60->count(KeyInt));
-	case 61:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap61->count(KeyInt));
-	case 62:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap62->count(KeyInt));
-	case 63:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap63->count(KeyInt));
-	case 64:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap64->count(KeyInt));
-	case 65:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap65->count(KeyInt));
-	case 66:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap66->count(KeyInt));
-	case 67:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap67->count(KeyInt));
-	case 68:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap68->count(KeyInt));
-	case 69:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap69->count(KeyInt));
-	case 70:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap70->count(KeyInt));
-	case 71:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap71->count(KeyUint));
-	case 72:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap72->count(KeyUint));
-	case 73:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap73->count(KeyUint));
-	case 74:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap74->count(KeyUint));
-	case 75:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap75->count(KeyUint));
-	case 76:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap76->count(KeyUint));
-	case 77:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap77->count(KeyUint));
-	case 78:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap78->count(KeyUint));
-	case 79:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap79->count(KeyUint));
-	case 80:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap80->count(KeyUint));
-	case 81:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap81->count(KeyUint));
-	case 82:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap82->count(KeyUint));
-	case 83:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap83->count(KeyUint));
-	case 84:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap84->count(KeyUint));
-	case 85:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap85->count(KeyLonglong));
-	case 86:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap86->count(KeyLonglong));
-	case 87:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap87->count(KeyLonglong));
-	case 88:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap88->count(KeyLonglong));
-	case 89:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap89->count(KeyLonglong));
-	case 90:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap90->count(KeyLonglong));
-	case 91:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap91->count(KeyLonglong));
-	case 92:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap92->count(KeyLonglong));
-	case 93:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap93->count(KeyLonglong));
-	case 94:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap94->count(KeyLonglong));
-	case 95:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap95->count(KeyLonglong));
-	case 96:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap96->count(KeyLonglong));
-	case 97:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap97->count(KeyLonglong));
-	case 98:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap98->count(KeyLonglong));
-	case 99:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap99->count(KeyUlonglong));
-	case 100:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap100->count(KeyUlonglong));
-	case 101:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap101->count(KeyUlonglong));
-	case 102:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap102->count(KeyUlonglong));
-	case 103:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap103->count(KeyUlonglong));
-	case 104:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap104->count(KeyUlonglong));
-	case 105:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap105->count(KeyUlonglong));
-	case 106:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap106->count(KeyUlonglong));
-	case 107:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap107->count(KeyUlonglong));
-	case 108:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap108->count(KeyUlonglong));
-	case 109:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap109->count(KeyUlonglong));
-	case 110:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap110->count(KeyUlonglong));
-	case 111:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap111->count(KeyUlonglong));
-	case 112:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap112->count(KeyUlonglong));
-	case 113:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap113->count(KeyFloat));
-	case 114:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap114->count(KeyFloat));
-	case 115:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap115->count(KeyFloat));
-	case 116:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap116->count(KeyFloat));
-	case 117:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap117->count(KeyFloat));
-	case 118:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap118->count(KeyFloat));
-	case 119:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap119->count(KeyFloat));
-	case 120:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap120->count(KeyFloat));
-	case 121:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap121->count(KeyFloat));
-	case 122:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap122->count(KeyFloat));
-	case 123:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap123->count(KeyFloat));
-	case 124:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap124->count(KeyFloat));
-	case 125:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap125->count(KeyFloat));
-	case 126:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap126->count(KeyFloat));
-	case 127:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap127->count(KeyDouble));
-	case 128:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap128->count(KeyDouble));
-	case 129:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap129->count(KeyDouble));
-	case 130:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap130->count(KeyDouble));
-	case 131:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap131->count(KeyDouble));
-	case 132:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap132->count(KeyDouble));
-	case 133:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap133->count(KeyDouble));
-	case 134:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap134->count(KeyDouble));
-	case 135:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap135->count(KeyDouble));
-	case 136:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap136->count(KeyDouble));
-	case 137:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap137->count(KeyDouble));
-	case 138:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap138->count(KeyDouble));
-	case 139:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap139->count(KeyDouble));
-	case 140:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap140->count(KeyDouble));
-	case 141:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap141->count(KeyWchar));
-	case 142:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap142->count(KeyWchar));
-	case 143:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap143->count(KeyWchar));
-	case 144:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap144->count(KeyWchar));
-	case 145:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap145->count(KeyWchar));
-	case 146:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap146->count(KeyWchar));
-	case 147:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap147->count(KeyWchar));
-	case 148:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap148->count(KeyWchar));
-	case 149:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap149->count(KeyWchar));
-	case 150:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap150->count(KeyWchar));
-	case 151:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap151->count(KeyWchar));
-	case 152:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap152->count(KeyWchar));
-	case 153:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap153->count(KeyWchar));
-	case 154:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap154->count(KeyWchar));
-	case 155:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap155->count(KeyBool));
-	case 156:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap156->count(KeyBool));
-	case 157:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap157->count(KeyBool));
-	case 158:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap158->count(KeyBool));
-	case 159:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap159->count(KeyBool));
-	case 160:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap160->count(KeyBool));
-	case 161:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap161->count(KeyBool));
-	case 162:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap162->count(KeyBool));
-	case 163:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap163->count(KeyBool));
-	case 164:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap164->count(KeyBool));
-	case 165:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap165->count(KeyBool));
-	case 166:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap166->count(KeyBool));
-	case 167:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap167->count(KeyBool));
-	case 168:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap168->count(KeyBool));
-	case 169:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap169->count(KeyWstring));
-	case 170:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap170->count(KeyWstring));
-	case 171:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap171->count(KeyWstring));
-	case 172:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap172->count(KeyWstring));
-	case 173:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap173->count(KeyWstring));
-	case 174:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap174->count(KeyWstring));
-	case 175:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap175->count(KeyWstring));
-	case 176:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap176->count(KeyWstring));
-	case 177:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap177->count(KeyWstring));
-	case 178:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap178->count(KeyWstring));
-	case 179:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap179->count(KeyWstring));
-	case 180:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap180->count(KeyWstring));
-	case 181:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap181->count(KeyWstring));
-	case 182:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap182->count(KeyWstring));
-	case 183:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap183->count(Key__Int));
-	case 184:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap184->count(Key__Int));
-	case 185:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap185->count(Key__Int));
-	case 186:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap186->count(Key__Int));
-	case 187:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap187->count(Key__Int));
-	case 188:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap188->count(Key__Int));
-	case 189:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap189->count(Key__Int));
-	case 190:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap190->count(Key__Int));
-	case 191:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap191->count(Key__Int));
-	case 192:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap192->count(Key__Int));
-	case 193:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap193->count(Key__Int));
-	case 194:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap194->count(Key__Int));
-	case 195:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap195->count(Key__Int));
-	case 196:
-		return static_cast<System::UInt64>(multimapUnion->CPPmultimap196->count(Key__Int));
+		UnOrderedMultiMap_Count_CASE(1, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(2, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(3, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(4, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(5, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(6, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(7, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(8, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(9, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(10, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(11, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(12, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(13, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(14, KeyUchar)
+		UnOrderedMultiMap_Count_CASE(15, KeyChar)
+		UnOrderedMultiMap_Count_CASE(16, KeyChar)
+		UnOrderedMultiMap_Count_CASE(17, KeyChar)
+		UnOrderedMultiMap_Count_CASE(18, KeyChar)
+		UnOrderedMultiMap_Count_CASE(19, KeyChar)
+		UnOrderedMultiMap_Count_CASE(20, KeyChar)
+		UnOrderedMultiMap_Count_CASE(21, KeyChar)
+		UnOrderedMultiMap_Count_CASE(22, KeyChar)
+		UnOrderedMultiMap_Count_CASE(23, KeyChar)
+		UnOrderedMultiMap_Count_CASE(24, KeyChar)
+		UnOrderedMultiMap_Count_CASE(25, KeyChar)
+		UnOrderedMultiMap_Count_CASE(26, KeyChar)
+		UnOrderedMultiMap_Count_CASE(27, KeyChar)
+		UnOrderedMultiMap_Count_CASE(28, KeyChar)
+		UnOrderedMultiMap_Count_CASE(29, KeyShort)
+		UnOrderedMultiMap_Count_CASE(30, KeyShort)
+		UnOrderedMultiMap_Count_CASE(31, KeyShort)
+		UnOrderedMultiMap_Count_CASE(32, KeyShort)
+		UnOrderedMultiMap_Count_CASE(33, KeyShort)
+		UnOrderedMultiMap_Count_CASE(34, KeyShort)
+		UnOrderedMultiMap_Count_CASE(35, KeyShort)
+		UnOrderedMultiMap_Count_CASE(36, KeyShort)
+		UnOrderedMultiMap_Count_CASE(37, KeyShort)
+		UnOrderedMultiMap_Count_CASE(38, KeyShort)
+		UnOrderedMultiMap_Count_CASE(39, KeyShort)
+		UnOrderedMultiMap_Count_CASE(40, KeyShort)
+		UnOrderedMultiMap_Count_CASE(41, KeyShort)
+		UnOrderedMultiMap_Count_CASE(42, KeyShort)
+		UnOrderedMultiMap_Count_CASE(43, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(44, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(45, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(46, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(47, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(48, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(49, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(50, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(51, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(52, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(53, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(54, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(55, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(56, KeyUshort)
+		UnOrderedMultiMap_Count_CASE(57, KeyInt)
+		UnOrderedMultiMap_Count_CASE(58, KeyInt)
+		UnOrderedMultiMap_Count_CASE(59, KeyInt)
+		UnOrderedMultiMap_Count_CASE(60, KeyInt)
+		UnOrderedMultiMap_Count_CASE(61, KeyInt)
+		UnOrderedMultiMap_Count_CASE(62, KeyInt)
+		UnOrderedMultiMap_Count_CASE(63, KeyInt)
+		UnOrderedMultiMap_Count_CASE(64, KeyInt)
+		UnOrderedMultiMap_Count_CASE(65, KeyInt)
+		UnOrderedMultiMap_Count_CASE(66, KeyInt)
+		UnOrderedMultiMap_Count_CASE(67, KeyInt)
+		UnOrderedMultiMap_Count_CASE(68, KeyInt)
+		UnOrderedMultiMap_Count_CASE(69, KeyInt)
+		UnOrderedMultiMap_Count_CASE(70, KeyInt)
+		UnOrderedMultiMap_Count_CASE(71, KeyUint)
+		UnOrderedMultiMap_Count_CASE(72, KeyUint)
+		UnOrderedMultiMap_Count_CASE(73, KeyUint)
+		UnOrderedMultiMap_Count_CASE(74, KeyUint)
+		UnOrderedMultiMap_Count_CASE(75, KeyUint)
+		UnOrderedMultiMap_Count_CASE(76, KeyUint)
+		UnOrderedMultiMap_Count_CASE(77, KeyUint)
+		UnOrderedMultiMap_Count_CASE(78, KeyUint)
+		UnOrderedMultiMap_Count_CASE(79, KeyUint)
+		UnOrderedMultiMap_Count_CASE(80, KeyUint)
+		UnOrderedMultiMap_Count_CASE(81, KeyUint)
+		UnOrderedMultiMap_Count_CASE(82, KeyUint)
+		UnOrderedMultiMap_Count_CASE(83, KeyUint)
+		UnOrderedMultiMap_Count_CASE(84, KeyUint)
+		UnOrderedMultiMap_Count_CASE(85, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(86, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(87, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(88, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(89, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(90, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(91, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(92, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(93, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(94, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(95, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(96, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(97, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(98, KeyLonglong)
+		UnOrderedMultiMap_Count_CASE(99, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(100, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(101, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(102, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(103, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(104, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(105, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(106, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(107, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(108, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(109, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(110, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(111, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(112, KeyUlonglong)
+		UnOrderedMultiMap_Count_CASE(113, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(114, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(115, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(116, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(117, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(118, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(119, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(120, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(121, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(122, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(123, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(124, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(125, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(126, KeyFloat)
+		UnOrderedMultiMap_Count_CASE(127, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(128, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(129, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(130, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(131, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(132, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(133, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(134, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(135, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(136, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(137, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(138, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(139, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(140, KeyDouble)
+		UnOrderedMultiMap_Count_CASE(141, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(142, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(143, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(144, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(145, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(146, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(147, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(148, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(149, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(150, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(151, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(152, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(153, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(154, KeyWchar)
+		UnOrderedMultiMap_Count_CASE(155, KeyBool)
+		UnOrderedMultiMap_Count_CASE(156, KeyBool)
+		UnOrderedMultiMap_Count_CASE(157, KeyBool)
+		UnOrderedMultiMap_Count_CASE(158, KeyBool)
+		UnOrderedMultiMap_Count_CASE(159, KeyBool)
+		UnOrderedMultiMap_Count_CASE(160, KeyBool)
+		UnOrderedMultiMap_Count_CASE(161, KeyBool)
+		UnOrderedMultiMap_Count_CASE(162, KeyBool)
+		UnOrderedMultiMap_Count_CASE(163, KeyBool)
+		UnOrderedMultiMap_Count_CASE(164, KeyBool)
+		UnOrderedMultiMap_Count_CASE(165, KeyBool)
+		UnOrderedMultiMap_Count_CASE(166, KeyBool)
+		UnOrderedMultiMap_Count_CASE(167, KeyBool)
+		UnOrderedMultiMap_Count_CASE(168, KeyBool)
+		UnOrderedMultiMap_Count_CASE(169, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(170, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(171, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(172, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(173, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(174, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(175, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(176, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(177, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(178, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(179, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(180, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(181, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(182, KeyWstring)
+		UnOrderedMultiMap_Count_CASE(183, Key__Int)
+		UnOrderedMultiMap_Count_CASE(184, Key__Int)
+		UnOrderedMultiMap_Count_CASE(185, Key__Int)
+		UnOrderedMultiMap_Count_CASE(186, Key__Int)
+		UnOrderedMultiMap_Count_CASE(187, Key__Int)
+		UnOrderedMultiMap_Count_CASE(188, Key__Int)
+		UnOrderedMultiMap_Count_CASE(189, Key__Int)
+		UnOrderedMultiMap_Count_CASE(190, Key__Int)
+		UnOrderedMultiMap_Count_CASE(191, Key__Int)
+		UnOrderedMultiMap_Count_CASE(192, Key__Int)
+		UnOrderedMultiMap_Count_CASE(193, Key__Int)
+		UnOrderedMultiMap_Count_CASE(194, Key__Int)
+		UnOrderedMultiMap_Count_CASE(195, Key__Int)
+		UnOrderedMultiMap_Count_CASE(196, Key__Int)
 	}
 
 	return 0;
@@ -2952,6 +2180,10 @@ System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::era
 	return 0;
 }
 
+#define UnOrderedMultiMap_Empty_CASE(NUM) \
+	case NUM: \
+		return static_cast<System::Boolean>(multimapUnion->CPPmultimap##NUM->empty());
+
 generic<typename Key, typename Value>
 System::Boolean UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::empty()
 {
@@ -2959,401 +2191,210 @@ System::Boolean UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::em
 	{
 	case 0:	default:
 		return false;
-	case 1:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap1->empty());
-	case 2:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap2->empty());
-	case 3:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap3->empty());
-	case 4:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap4->empty());
-	case 5:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap5->empty());
-	case 6:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap6->empty());
-	case 7:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap7->empty());
-	case 8:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap8->empty());
-	case 9:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap9->empty());
-	case 10:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap10->empty());
-	case 11:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap11->empty());
-	case 12:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap12->empty());
-	case 13:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap13->empty());
-	case 14:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap14->empty());
-	case 15:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap15->empty());
-	case 16:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap16->empty());
-	case 17:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap17->empty());
-	case 18:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap18->empty());
-	case 19:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap19->empty());
-	case 20:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap20->empty());
-	case 21:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap21->empty());
-	case 22:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap22->empty());
-	case 23:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap23->empty());
-	case 24:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap24->empty());
-	case 25:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap25->empty());
-	case 26:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap26->empty());
-	case 27:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap27->empty());
-	case 28:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap28->empty());
-	case 29:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap29->empty());
-	case 30:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap30->empty());
-	case 31:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap31->empty());
-	case 32:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap32->empty());
-	case 33:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap33->empty());
-	case 34:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap34->empty());
-	case 35:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap35->empty());
-	case 36:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap36->empty());
-	case 37:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap37->empty());
-	case 38:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap38->empty());
-	case 39:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap39->empty());
-	case 40:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap40->empty());
-	case 41:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap41->empty());
-	case 42:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap42->empty());
-	case 43:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap43->empty());
-	case 44:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap44->empty());
-	case 45:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap45->empty());
-	case 46:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap46->empty());
-	case 47:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap47->empty());
-	case 48:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap48->empty());
-	case 49:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap49->empty());
-	case 50:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap50->empty());
-	case 51:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap51->empty());
-	case 52:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap52->empty());
-	case 53:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap53->empty());
-	case 54:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap54->empty());
-	case 55:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap55->empty());
-	case 56:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap56->empty());
-	case 57:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap57->empty());
-	case 58:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap58->empty());
-	case 59:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap59->empty());
-	case 60:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap60->empty());
-	case 61:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap61->empty());
-	case 62:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap62->empty());
-	case 63:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap63->empty());
-	case 64:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap64->empty());
-	case 65:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap65->empty());
-	case 66:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap66->empty());
-	case 67:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap67->empty());
-	case 68:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap68->empty());
-	case 69:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap69->empty());
-	case 70:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap70->empty());
-	case 71:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap71->empty());
-	case 72:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap72->empty());
-	case 73:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap73->empty());
-	case 74:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap74->empty());
-	case 75:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap75->empty());
-	case 76:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap76->empty());
-	case 77:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap77->empty());
-	case 78:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap78->empty());
-	case 79:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap79->empty());
-	case 80:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap80->empty());
-	case 81:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap81->empty());
-	case 82:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap82->empty());
-	case 83:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap83->empty());
-	case 84:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap84->empty());
-	case 85:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap85->empty());
-	case 86:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap86->empty());
-	case 87:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap87->empty());
-	case 88:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap88->empty());
-	case 89:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap89->empty());
-	case 90:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap90->empty());
-	case 91:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap91->empty());
-	case 92:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap92->empty());
-	case 93:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap93->empty());
-	case 94:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap94->empty());
-	case 95:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap95->empty());
-	case 96:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap96->empty());
-	case 97:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap97->empty());
-	case 98:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap98->empty());
-	case 99:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap99->empty());
-	case 100:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap100->empty());
-	case 101:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap101->empty());
-	case 102:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap102->empty());
-	case 103:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap103->empty());
-	case 104:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap104->empty());
-	case 105:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap105->empty());
-	case 106:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap106->empty());
-	case 107:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap107->empty());
-	case 108:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap108->empty());
-	case 109:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap109->empty());
-	case 110:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap110->empty());
-	case 111:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap111->empty());
-	case 112:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap112->empty());
-	case 113:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap113->empty());
-	case 114:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap114->empty());
-	case 115:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap115->empty());
-	case 116:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap116->empty());
-	case 117:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap117->empty());
-	case 118:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap118->empty());
-	case 119:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap119->empty());
-	case 120:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap120->empty());
-	case 121:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap121->empty());
-	case 122:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap122->empty());
-	case 123:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap123->empty());
-	case 124:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap124->empty());
-	case 125:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap125->empty());
-	case 126:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap126->empty());
-	case 127:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap127->empty());
-	case 128:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap128->empty());
-	case 129:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap129->empty());
-	case 130:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap130->empty());
-	case 131:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap131->empty());
-	case 132:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap132->empty());
-	case 133:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap133->empty());
-	case 134:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap134->empty());
-	case 135:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap135->empty());
-	case 136:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap136->empty());
-	case 137:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap137->empty());
-	case 138:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap138->empty());
-	case 139:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap139->empty());
-	case 140:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap140->empty());
-	case 141:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap141->empty());
-	case 142:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap142->empty());
-	case 143:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap143->empty());
-	case 144:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap144->empty());
-	case 145:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap145->empty());
-	case 146:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap146->empty());
-	case 147:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap147->empty());
-	case 148:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap148->empty());
-	case 149:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap149->empty());
-	case 150:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap150->empty());
-	case 151:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap151->empty());
-	case 152:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap152->empty());
-	case 153:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap153->empty());
-	case 154:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap154->empty());
-	case 155:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap155->empty());
-	case 156:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap156->empty());
-	case 157:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap157->empty());
-	case 158:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap158->empty());
-	case 159:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap159->empty());
-	case 160:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap160->empty());
-	case 161:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap161->empty());
-	case 162:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap162->empty());
-	case 163:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap163->empty());
-	case 164:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap164->empty());
-	case 165:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap165->empty());
-	case 166:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap166->empty());
-	case 167:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap167->empty());
-	case 168:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap168->empty());
-	case 169:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap169->empty());
-	case 170:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap170->empty());
-	case 171:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap171->empty());
-	case 172:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap172->empty());
-	case 173:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap173->empty());
-	case 174:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap174->empty());
-	case 175:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap175->empty());
-	case 176:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap176->empty());
-	case 177:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap177->empty());
-	case 178:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap178->empty());
-	case 179:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap179->empty());
-	case 180:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap180->empty());
-	case 181:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap181->empty());
-	case 182:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap182->empty());
-	case 183:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap183->empty());
-	case 184:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap184->empty());
-	case 185:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap185->empty());
-	case 186:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap186->empty());
-	case 187:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap187->empty());
-	case 188:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap188->empty());
-	case 189:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap189->empty());
-	case 190:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap190->empty());
-	case 191:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap191->empty());
-	case 192:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap192->empty());
-	case 193:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap193->empty());
-	case 194:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap194->empty());
-	case 195:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap195->empty());
-	case 196:
-		return static_cast<System::Boolean>(multimapUnion->CPPmultimap196->empty());
+		UnOrderedMultiMap_Empty_CASE(1)
+		UnOrderedMultiMap_Empty_CASE(2)
+		UnOrderedMultiMap_Empty_CASE(3)
+		UnOrderedMultiMap_Empty_CASE(4)
+		UnOrderedMultiMap_Empty_CASE(5)
+		UnOrderedMultiMap_Empty_CASE(6)
+		UnOrderedMultiMap_Empty_CASE(7)
+		UnOrderedMultiMap_Empty_CASE(8)
+		UnOrderedMultiMap_Empty_CASE(9)
+		UnOrderedMultiMap_Empty_CASE(10)
+		UnOrderedMultiMap_Empty_CASE(11)
+		UnOrderedMultiMap_Empty_CASE(12)
+		UnOrderedMultiMap_Empty_CASE(13)
+		UnOrderedMultiMap_Empty_CASE(14)
+		UnOrderedMultiMap_Empty_CASE(15)
+		UnOrderedMultiMap_Empty_CASE(16)
+		UnOrderedMultiMap_Empty_CASE(17)
+		UnOrderedMultiMap_Empty_CASE(18)
+		UnOrderedMultiMap_Empty_CASE(19)
+		UnOrderedMultiMap_Empty_CASE(20)
+		UnOrderedMultiMap_Empty_CASE(21)
+		UnOrderedMultiMap_Empty_CASE(22)
+		UnOrderedMultiMap_Empty_CASE(23)
+		UnOrderedMultiMap_Empty_CASE(24)
+		UnOrderedMultiMap_Empty_CASE(25)
+		UnOrderedMultiMap_Empty_CASE(26)
+		UnOrderedMultiMap_Empty_CASE(27)
+		UnOrderedMultiMap_Empty_CASE(28)
+		UnOrderedMultiMap_Empty_CASE(29)
+		UnOrderedMultiMap_Empty_CASE(30)
+		UnOrderedMultiMap_Empty_CASE(31)
+		UnOrderedMultiMap_Empty_CASE(32)
+		UnOrderedMultiMap_Empty_CASE(33)
+		UnOrderedMultiMap_Empty_CASE(34)
+		UnOrderedMultiMap_Empty_CASE(35)
+		UnOrderedMultiMap_Empty_CASE(36)
+		UnOrderedMultiMap_Empty_CASE(37)
+		UnOrderedMultiMap_Empty_CASE(38)
+		UnOrderedMultiMap_Empty_CASE(39)
+		UnOrderedMultiMap_Empty_CASE(40)
+		UnOrderedMultiMap_Empty_CASE(41)
+		UnOrderedMultiMap_Empty_CASE(42)
+		UnOrderedMultiMap_Empty_CASE(43)
+		UnOrderedMultiMap_Empty_CASE(44)
+		UnOrderedMultiMap_Empty_CASE(45)
+		UnOrderedMultiMap_Empty_CASE(46)
+		UnOrderedMultiMap_Empty_CASE(47)
+		UnOrderedMultiMap_Empty_CASE(48)
+		UnOrderedMultiMap_Empty_CASE(49)
+		UnOrderedMultiMap_Empty_CASE(50)
+		UnOrderedMultiMap_Empty_CASE(51)
+		UnOrderedMultiMap_Empty_CASE(52)
+		UnOrderedMultiMap_Empty_CASE(53)
+		UnOrderedMultiMap_Empty_CASE(54)
+		UnOrderedMultiMap_Empty_CASE(55)
+		UnOrderedMultiMap_Empty_CASE(56)
+		UnOrderedMultiMap_Empty_CASE(57)
+		UnOrderedMultiMap_Empty_CASE(58)
+		UnOrderedMultiMap_Empty_CASE(59)
+		UnOrderedMultiMap_Empty_CASE(60)
+		UnOrderedMultiMap_Empty_CASE(61)
+		UnOrderedMultiMap_Empty_CASE(62)
+		UnOrderedMultiMap_Empty_CASE(63)
+		UnOrderedMultiMap_Empty_CASE(64)
+		UnOrderedMultiMap_Empty_CASE(65)
+		UnOrderedMultiMap_Empty_CASE(66)
+		UnOrderedMultiMap_Empty_CASE(67)
+		UnOrderedMultiMap_Empty_CASE(68)
+		UnOrderedMultiMap_Empty_CASE(69)
+		UnOrderedMultiMap_Empty_CASE(70)
+		UnOrderedMultiMap_Empty_CASE(71)
+		UnOrderedMultiMap_Empty_CASE(72)
+		UnOrderedMultiMap_Empty_CASE(73)
+		UnOrderedMultiMap_Empty_CASE(74)
+		UnOrderedMultiMap_Empty_CASE(75)
+		UnOrderedMultiMap_Empty_CASE(76)
+		UnOrderedMultiMap_Empty_CASE(77)
+		UnOrderedMultiMap_Empty_CASE(78)
+		UnOrderedMultiMap_Empty_CASE(79)
+		UnOrderedMultiMap_Empty_CASE(80)
+		UnOrderedMultiMap_Empty_CASE(81)
+		UnOrderedMultiMap_Empty_CASE(82)
+		UnOrderedMultiMap_Empty_CASE(83)
+		UnOrderedMultiMap_Empty_CASE(84)
+		UnOrderedMultiMap_Empty_CASE(85)
+		UnOrderedMultiMap_Empty_CASE(86)
+		UnOrderedMultiMap_Empty_CASE(87)
+		UnOrderedMultiMap_Empty_CASE(88)
+		UnOrderedMultiMap_Empty_CASE(89)
+		UnOrderedMultiMap_Empty_CASE(90)
+		UnOrderedMultiMap_Empty_CASE(91)
+		UnOrderedMultiMap_Empty_CASE(92)
+		UnOrderedMultiMap_Empty_CASE(93)
+		UnOrderedMultiMap_Empty_CASE(94)
+		UnOrderedMultiMap_Empty_CASE(95)
+		UnOrderedMultiMap_Empty_CASE(96)
+		UnOrderedMultiMap_Empty_CASE(97)
+		UnOrderedMultiMap_Empty_CASE(98)
+		UnOrderedMultiMap_Empty_CASE(99)
+		UnOrderedMultiMap_Empty_CASE(100)
+		UnOrderedMultiMap_Empty_CASE(101)
+		UnOrderedMultiMap_Empty_CASE(102)
+		UnOrderedMultiMap_Empty_CASE(103)
+		UnOrderedMultiMap_Empty_CASE(104)
+		UnOrderedMultiMap_Empty_CASE(105)
+		UnOrderedMultiMap_Empty_CASE(106)
+		UnOrderedMultiMap_Empty_CASE(107)
+		UnOrderedMultiMap_Empty_CASE(108)
+		UnOrderedMultiMap_Empty_CASE(109)
+		UnOrderedMultiMap_Empty_CASE(110)
+		UnOrderedMultiMap_Empty_CASE(111)
+		UnOrderedMultiMap_Empty_CASE(112)
+		UnOrderedMultiMap_Empty_CASE(113)
+		UnOrderedMultiMap_Empty_CASE(114)
+		UnOrderedMultiMap_Empty_CASE(115)
+		UnOrderedMultiMap_Empty_CASE(116)
+		UnOrderedMultiMap_Empty_CASE(117)
+		UnOrderedMultiMap_Empty_CASE(118)
+		UnOrderedMultiMap_Empty_CASE(119)
+		UnOrderedMultiMap_Empty_CASE(120)
+		UnOrderedMultiMap_Empty_CASE(121)
+		UnOrderedMultiMap_Empty_CASE(122)
+		UnOrderedMultiMap_Empty_CASE(123)
+		UnOrderedMultiMap_Empty_CASE(124)
+		UnOrderedMultiMap_Empty_CASE(125)
+		UnOrderedMultiMap_Empty_CASE(126)
+		UnOrderedMultiMap_Empty_CASE(127)
+		UnOrderedMultiMap_Empty_CASE(128)
+		UnOrderedMultiMap_Empty_CASE(129)
+		UnOrderedMultiMap_Empty_CASE(130)
+		UnOrderedMultiMap_Empty_CASE(131)
+		UnOrderedMultiMap_Empty_CASE(132)
+		UnOrderedMultiMap_Empty_CASE(133)
+		UnOrderedMultiMap_Empty_CASE(134)
+		UnOrderedMultiMap_Empty_CASE(135)
+		UnOrderedMultiMap_Empty_CASE(136)
+		UnOrderedMultiMap_Empty_CASE(137)
+		UnOrderedMultiMap_Empty_CASE(138)
+		UnOrderedMultiMap_Empty_CASE(139)
+		UnOrderedMultiMap_Empty_CASE(140)
+		UnOrderedMultiMap_Empty_CASE(141)
+		UnOrderedMultiMap_Empty_CASE(142)
+		UnOrderedMultiMap_Empty_CASE(143)
+		UnOrderedMultiMap_Empty_CASE(144)
+		UnOrderedMultiMap_Empty_CASE(145)
+		UnOrderedMultiMap_Empty_CASE(146)
+		UnOrderedMultiMap_Empty_CASE(147)
+		UnOrderedMultiMap_Empty_CASE(148)
+		UnOrderedMultiMap_Empty_CASE(149)
+		UnOrderedMultiMap_Empty_CASE(150)
+		UnOrderedMultiMap_Empty_CASE(151)
+		UnOrderedMultiMap_Empty_CASE(152)
+		UnOrderedMultiMap_Empty_CASE(153)
+		UnOrderedMultiMap_Empty_CASE(154)
+		UnOrderedMultiMap_Empty_CASE(155)
+		UnOrderedMultiMap_Empty_CASE(156)
+		UnOrderedMultiMap_Empty_CASE(157)
+		UnOrderedMultiMap_Empty_CASE(158)
+		UnOrderedMultiMap_Empty_CASE(159)
+		UnOrderedMultiMap_Empty_CASE(160)
+		UnOrderedMultiMap_Empty_CASE(161)
+		UnOrderedMultiMap_Empty_CASE(162)
+		UnOrderedMultiMap_Empty_CASE(163)
+		UnOrderedMultiMap_Empty_CASE(164)
+		UnOrderedMultiMap_Empty_CASE(165)
+		UnOrderedMultiMap_Empty_CASE(166)
+		UnOrderedMultiMap_Empty_CASE(167)
+		UnOrderedMultiMap_Empty_CASE(168)
+		UnOrderedMultiMap_Empty_CASE(169)
+		UnOrderedMultiMap_Empty_CASE(170)
+		UnOrderedMultiMap_Empty_CASE(171)
+		UnOrderedMultiMap_Empty_CASE(172)
+		UnOrderedMultiMap_Empty_CASE(173)
+		UnOrderedMultiMap_Empty_CASE(174)
+		UnOrderedMultiMap_Empty_CASE(175)
+		UnOrderedMultiMap_Empty_CASE(176)
+		UnOrderedMultiMap_Empty_CASE(177)
+		UnOrderedMultiMap_Empty_CASE(178)
+		UnOrderedMultiMap_Empty_CASE(179)
+		UnOrderedMultiMap_Empty_CASE(180)
+		UnOrderedMultiMap_Empty_CASE(181)
+		UnOrderedMultiMap_Empty_CASE(182)
+		UnOrderedMultiMap_Empty_CASE(183)
+		UnOrderedMultiMap_Empty_CASE(184)
+		UnOrderedMultiMap_Empty_CASE(185)
+		UnOrderedMultiMap_Empty_CASE(186)
+		UnOrderedMultiMap_Empty_CASE(187)
+		UnOrderedMultiMap_Empty_CASE(188)
+		UnOrderedMultiMap_Empty_CASE(189)
+		UnOrderedMultiMap_Empty_CASE(190)
+		UnOrderedMultiMap_Empty_CASE(191)
+		UnOrderedMultiMap_Empty_CASE(192)
+		UnOrderedMultiMap_Empty_CASE(193)
+		UnOrderedMultiMap_Empty_CASE(194)
+		UnOrderedMultiMap_Empty_CASE(195)
+		UnOrderedMultiMap_Empty_CASE(196)
 	}
 	return false;
 }
+
+#define UnOrderedMultiMap_find_CASE(NUM, KeyType) \
+	case NUM: \
+		*(multiNode->GetNode()->CPPmultinode##NUM) = multimapUnion->CPPmultimap##NUM->find(KeyType); \
+		break;
 
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::find(const Key key)
@@ -3474,598 +2515,211 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	{
 	case 0:	default:
 		return nullptr;
-	case 1:
-		*(multiNode->GetNode()->CPPmultinode1) = multimapUnion->CPPmultimap1->find(KeyUchar);
-		break;
-	case 2:
-		*(multiNode->GetNode()->CPPmultinode2) = multimapUnion->CPPmultimap2->find(KeyUchar);
-		break;
-	case 3:
-		*(multiNode->GetNode()->CPPmultinode3) = multimapUnion->CPPmultimap3->find(KeyUchar);
-		break;
-	case 4:
-		*(multiNode->GetNode()->CPPmultinode4) = multimapUnion->CPPmultimap4->find(KeyUchar);
-		break;
-	case 5:
-		*(multiNode->GetNode()->CPPmultinode5) = multimapUnion->CPPmultimap5->find(KeyUchar);
-		break;
-	case 6:
-		*(multiNode->GetNode()->CPPmultinode6) = multimapUnion->CPPmultimap6->find(KeyUchar);
-		break;
-	case 7:
-		*(multiNode->GetNode()->CPPmultinode7) = multimapUnion->CPPmultimap7->find(KeyUchar);
-		break;
-	case 8:
-		*(multiNode->GetNode()->CPPmultinode8) = multimapUnion->CPPmultimap8->find(KeyUchar);
-		break;
-	case 9:
-		*(multiNode->GetNode()->CPPmultinode9) = multimapUnion->CPPmultimap9->find(KeyUchar);
-		break;
-	case 10:
-		*(multiNode->GetNode()->CPPmultinode10) = multimapUnion->CPPmultimap10->find(KeyUchar);
-		break;
-	case 11:
-		*(multiNode->GetNode()->CPPmultinode11) = multimapUnion->CPPmultimap11->find(KeyUchar);
-		break;
-	case 12:
-		*(multiNode->GetNode()->CPPmultinode12) = multimapUnion->CPPmultimap12->find(KeyUchar);
-		break;
-	case 13:
-		*(multiNode->GetNode()->CPPmultinode13) = multimapUnion->CPPmultimap13->find(KeyUchar);
-		break;
-	case 14:
-		*(multiNode->GetNode()->CPPmultinode14) = multimapUnion->CPPmultimap14->find(KeyUchar);
-		break;
-	case 15:
-		*(multiNode->GetNode()->CPPmultinode15) = multimapUnion->CPPmultimap15->find(KeyChar);
-		break;
-	case 16:
-		*(multiNode->GetNode()->CPPmultinode16) = multimapUnion->CPPmultimap16->find(KeyChar);
-		break;
-	case 17:
-		*(multiNode->GetNode()->CPPmultinode17) = multimapUnion->CPPmultimap17->find(KeyChar);
-		break;
-	case 18:
-		*(multiNode->GetNode()->CPPmultinode18) = multimapUnion->CPPmultimap18->find(KeyChar);
-		break;
-	case 19:
-		*(multiNode->GetNode()->CPPmultinode19) = multimapUnion->CPPmultimap19->find(KeyChar);
-		break;
-	case 20:
-		*(multiNode->GetNode()->CPPmultinode20) = multimapUnion->CPPmultimap20->find(KeyChar);
-		break;
-	case 21:
-		*(multiNode->GetNode()->CPPmultinode21) = multimapUnion->CPPmultimap21->find(KeyChar);
-		break;
-	case 22:
-		*(multiNode->GetNode()->CPPmultinode22) = multimapUnion->CPPmultimap22->find(KeyChar);
-		break;
-	case 23:
-		*(multiNode->GetNode()->CPPmultinode23) = multimapUnion->CPPmultimap23->find(KeyChar);
-		break;
-	case 24:
-		*(multiNode->GetNode()->CPPmultinode24) = multimapUnion->CPPmultimap24->find(KeyChar);
-		break;
-	case 25:
-		*(multiNode->GetNode()->CPPmultinode25) = multimapUnion->CPPmultimap25->find(KeyChar);
-		break;
-	case 26:
-		*(multiNode->GetNode()->CPPmultinode26) = multimapUnion->CPPmultimap26->find(KeyChar);
-		break;
-	case 27:
-		*(multiNode->GetNode()->CPPmultinode27) = multimapUnion->CPPmultimap27->find(KeyChar);
-		break;
-	case 28:
-		*(multiNode->GetNode()->CPPmultinode28) = multimapUnion->CPPmultimap28->find(KeyChar);
-		break;
-	case 29:
-		*(multiNode->GetNode()->CPPmultinode29) = multimapUnion->CPPmultimap29->find(KeyShort);
-		break;
-	case 30:
-		*(multiNode->GetNode()->CPPmultinode30) = multimapUnion->CPPmultimap30->find(KeyShort);
-		break;
-	case 31:
-		*(multiNode->GetNode()->CPPmultinode31) = multimapUnion->CPPmultimap31->find(KeyShort);
-		break;
-	case 32:
-		*(multiNode->GetNode()->CPPmultinode32) = multimapUnion->CPPmultimap32->find(KeyShort);
-		break;
-	case 33:
-		*(multiNode->GetNode()->CPPmultinode33) = multimapUnion->CPPmultimap33->find(KeyShort);
-		break;
-	case 34:
-		*(multiNode->GetNode()->CPPmultinode34) = multimapUnion->CPPmultimap34->find(KeyShort);
-		break;
-	case 35:
-		*(multiNode->GetNode()->CPPmultinode35) = multimapUnion->CPPmultimap35->find(KeyShort);
-		break;
-	case 36:
-		*(multiNode->GetNode()->CPPmultinode36) = multimapUnion->CPPmultimap36->find(KeyShort);
-		break;
-	case 37:
-		*(multiNode->GetNode()->CPPmultinode37) = multimapUnion->CPPmultimap37->find(KeyShort);
-		break;
-	case 38:
-		*(multiNode->GetNode()->CPPmultinode38) = multimapUnion->CPPmultimap38->find(KeyShort);
-		break;
-	case 39:
-		*(multiNode->GetNode()->CPPmultinode39) = multimapUnion->CPPmultimap39->find(KeyShort);
-		break;
-	case 40:
-		*(multiNode->GetNode()->CPPmultinode40) = multimapUnion->CPPmultimap40->find(KeyShort);
-		break;
-	case 41:
-		*(multiNode->GetNode()->CPPmultinode41) = multimapUnion->CPPmultimap41->find(KeyShort);
-		break;
-	case 42:
-		*(multiNode->GetNode()->CPPmultinode42) = multimapUnion->CPPmultimap42->find(KeyShort);
-		break;
-	case 43:
-		*(multiNode->GetNode()->CPPmultinode43) = multimapUnion->CPPmultimap43->find(KeyUshort);
-		break;
-	case 44:
-		*(multiNode->GetNode()->CPPmultinode44) = multimapUnion->CPPmultimap44->find(KeyUshort);
-		break;
-	case 45:
-		*(multiNode->GetNode()->CPPmultinode45) = multimapUnion->CPPmultimap45->find(KeyUshort);
-		break;
-	case 46:
-		*(multiNode->GetNode()->CPPmultinode46) = multimapUnion->CPPmultimap46->find(KeyUshort);
-		break;
-	case 47:
-		*(multiNode->GetNode()->CPPmultinode47) = multimapUnion->CPPmultimap47->find(KeyUshort);
-		break;
-	case 48:
-		*(multiNode->GetNode()->CPPmultinode48) = multimapUnion->CPPmultimap48->find(KeyUshort);
-		break;
-	case 49:
-		*(multiNode->GetNode()->CPPmultinode49) = multimapUnion->CPPmultimap49->find(KeyUshort);
-		break;
-	case 50:
-		*(multiNode->GetNode()->CPPmultinode50) = multimapUnion->CPPmultimap50->find(KeyUshort);
-		break;
-	case 51:
-		*(multiNode->GetNode()->CPPmultinode51) = multimapUnion->CPPmultimap51->find(KeyUshort);
-		break;
-	case 52:
-		*(multiNode->GetNode()->CPPmultinode52) = multimapUnion->CPPmultimap52->find(KeyUshort);
-		break;
-	case 53:
-		*(multiNode->GetNode()->CPPmultinode53) = multimapUnion->CPPmultimap53->find(KeyUshort);
-		break;
-	case 54:
-		*(multiNode->GetNode()->CPPmultinode54) = multimapUnion->CPPmultimap54->find(KeyUshort);
-		break;
-	case 55:
-		*(multiNode->GetNode()->CPPmultinode55) = multimapUnion->CPPmultimap55->find(KeyUshort);
-		break;
-	case 56:
-		*(multiNode->GetNode()->CPPmultinode56) = multimapUnion->CPPmultimap56->find(KeyUshort);
-		break;
-	case 57:
-		*(multiNode->GetNode()->CPPmultinode57) = multimapUnion->CPPmultimap57->find(KeyInt);
-		break;
-	case 58:
-		*(multiNode->GetNode()->CPPmultinode58) = multimapUnion->CPPmultimap58->find(KeyInt);
-		break;
-	case 59:
-		*(multiNode->GetNode()->CPPmultinode59) = multimapUnion->CPPmultimap59->find(KeyInt);
-		break;
-	case 60:
-		*(multiNode->GetNode()->CPPmultinode60) = multimapUnion->CPPmultimap60->find(KeyInt);
-		break;
-	case 61:
-		*(multiNode->GetNode()->CPPmultinode61) = multimapUnion->CPPmultimap61->find(KeyInt);
-		break;
-	case 62:
-		*(multiNode->GetNode()->CPPmultinode62) = multimapUnion->CPPmultimap62->find(KeyInt);
-		break;
-	case 63:
-		*(multiNode->GetNode()->CPPmultinode63) = multimapUnion->CPPmultimap63->find(KeyInt);
-		break;
-	case 64:
-		*(multiNode->GetNode()->CPPmultinode64) = multimapUnion->CPPmultimap64->find(KeyInt);
-		break;
-	case 65:
-		*(multiNode->GetNode()->CPPmultinode65) = multimapUnion->CPPmultimap65->find(KeyInt);
-		break;
-	case 66:
-		*(multiNode->GetNode()->CPPmultinode66) = multimapUnion->CPPmultimap66->find(KeyInt);
-		break;
-	case 67:
-		*(multiNode->GetNode()->CPPmultinode67) = multimapUnion->CPPmultimap67->find(KeyInt);
-		break;
-	case 68:
-		*(multiNode->GetNode()->CPPmultinode68) = multimapUnion->CPPmultimap68->find(KeyInt);
-		break;
-	case 69:
-		*(multiNode->GetNode()->CPPmultinode69) = multimapUnion->CPPmultimap69->find(KeyInt);
-		break;
-	case 70:
-		*(multiNode->GetNode()->CPPmultinode70) = multimapUnion->CPPmultimap70->find(KeyInt);
-		break;
-	case 71:
-		*(multiNode->GetNode()->CPPmultinode71) = multimapUnion->CPPmultimap71->find(KeyUint);
-		break;
-	case 72:
-		*(multiNode->GetNode()->CPPmultinode72) = multimapUnion->CPPmultimap72->find(KeyUint);
-		break;
-	case 73:
-		*(multiNode->GetNode()->CPPmultinode73) = multimapUnion->CPPmultimap73->find(KeyUint);
-		break;
-	case 74:
-		*(multiNode->GetNode()->CPPmultinode74) = multimapUnion->CPPmultimap74->find(KeyUint);
-		break;
-	case 75:
-		*(multiNode->GetNode()->CPPmultinode75) = multimapUnion->CPPmultimap75->find(KeyUint);
-		break;
-	case 76:
-		*(multiNode->GetNode()->CPPmultinode76) = multimapUnion->CPPmultimap76->find(KeyUint);
-		break;
-	case 77:
-		*(multiNode->GetNode()->CPPmultinode77) = multimapUnion->CPPmultimap77->find(KeyUint);
-		break;
-	case 78:
-		*(multiNode->GetNode()->CPPmultinode78) = multimapUnion->CPPmultimap78->find(KeyUint);
-		break;
-	case 79:
-		*(multiNode->GetNode()->CPPmultinode79) = multimapUnion->CPPmultimap79->find(KeyUint);
-		break;
-	case 80:
-		*(multiNode->GetNode()->CPPmultinode80) = multimapUnion->CPPmultimap80->find(KeyUint);
-		break;
-	case 81:
-		*(multiNode->GetNode()->CPPmultinode81) = multimapUnion->CPPmultimap81->find(KeyUint);
-		break;
-	case 82:
-		*(multiNode->GetNode()->CPPmultinode82) = multimapUnion->CPPmultimap82->find(KeyUint);
-		break;
-	case 83:
-		*(multiNode->GetNode()->CPPmultinode83) = multimapUnion->CPPmultimap83->find(KeyUint);
-		break;
-	case 84:
-		*(multiNode->GetNode()->CPPmultinode84) = multimapUnion->CPPmultimap84->find(KeyUint);
-		break;
-	case 85:
-		*(multiNode->GetNode()->CPPmultinode85) = multimapUnion->CPPmultimap85->find(KeyLonglong);
-		break;
-	case 86:
-		*(multiNode->GetNode()->CPPmultinode86) = multimapUnion->CPPmultimap86->find(KeyLonglong);
-		break;
-	case 87:
-		*(multiNode->GetNode()->CPPmultinode87) = multimapUnion->CPPmultimap87->find(KeyLonglong);
-		break;
-	case 88:
-		*(multiNode->GetNode()->CPPmultinode88) = multimapUnion->CPPmultimap88->find(KeyLonglong);
-		break;
-	case 89:
-		*(multiNode->GetNode()->CPPmultinode89) = multimapUnion->CPPmultimap89->find(KeyLonglong);
-		break;
-	case 90:
-		*(multiNode->GetNode()->CPPmultinode90) = multimapUnion->CPPmultimap90->find(KeyLonglong);
-		break;
-	case 91:
-		*(multiNode->GetNode()->CPPmultinode91) = multimapUnion->CPPmultimap91->find(KeyLonglong);
-		break;
-	case 92:
-		*(multiNode->GetNode()->CPPmultinode92) = multimapUnion->CPPmultimap92->find(KeyLonglong);
-		break;
-	case 93:
-		*(multiNode->GetNode()->CPPmultinode93) = multimapUnion->CPPmultimap93->find(KeyLonglong);
-		break;
-	case 94:
-		*(multiNode->GetNode()->CPPmultinode94) = multimapUnion->CPPmultimap94->find(KeyLonglong);
-		break;
-	case 95:
-		*(multiNode->GetNode()->CPPmultinode95) = multimapUnion->CPPmultimap95->find(KeyLonglong);
-		break;
-	case 96:
-		*(multiNode->GetNode()->CPPmultinode96) = multimapUnion->CPPmultimap96->find(KeyLonglong);
-		break;
-	case 97:
-		*(multiNode->GetNode()->CPPmultinode97) = multimapUnion->CPPmultimap97->find(KeyLonglong);
-		break;
-	case 98:
-		*(multiNode->GetNode()->CPPmultinode98) = multimapUnion->CPPmultimap98->find(KeyLonglong);
-		break;
-	case 99:
-		*(multiNode->GetNode()->CPPmultinode99) = multimapUnion->CPPmultimap99->find(KeyUlonglong);
-		break;
-	case 100:
-		*(multiNode->GetNode()->CPPmultinode100) = multimapUnion->CPPmultimap100->find(KeyUlonglong);
-		break;
-	case 101:
-		*(multiNode->GetNode()->CPPmultinode101) = multimapUnion->CPPmultimap101->find(KeyUlonglong);
-		break;
-	case 102:
-		*(multiNode->GetNode()->CPPmultinode102) = multimapUnion->CPPmultimap102->find(KeyUlonglong);
-		break;
-	case 103:
-		*(multiNode->GetNode()->CPPmultinode103) = multimapUnion->CPPmultimap103->find(KeyUlonglong);
-		break;
-	case 104:
-		*(multiNode->GetNode()->CPPmultinode104) = multimapUnion->CPPmultimap104->find(KeyUlonglong);
-		break;
-	case 105:
-		*(multiNode->GetNode()->CPPmultinode105) = multimapUnion->CPPmultimap105->find(KeyUlonglong);
-		break;
-	case 106:
-		*(multiNode->GetNode()->CPPmultinode106) = multimapUnion->CPPmultimap106->find(KeyUlonglong);
-		break;
-	case 107:
-		*(multiNode->GetNode()->CPPmultinode107) = multimapUnion->CPPmultimap107->find(KeyUlonglong);
-		break;
-	case 108:
-		*(multiNode->GetNode()->CPPmultinode108) = multimapUnion->CPPmultimap108->find(KeyUlonglong);
-		break;
-	case 109:
-		*(multiNode->GetNode()->CPPmultinode109) = multimapUnion->CPPmultimap109->find(KeyUlonglong);
-		break;
-	case 110:
-		*(multiNode->GetNode()->CPPmultinode110) = multimapUnion->CPPmultimap110->find(KeyUlonglong);
-		break;
-	case 111:
-		*(multiNode->GetNode()->CPPmultinode111) = multimapUnion->CPPmultimap111->find(KeyUlonglong);
-		break;
-	case 112:
-		*(multiNode->GetNode()->CPPmultinode112) = multimapUnion->CPPmultimap112->find(KeyUlonglong);
-		break;
-	case 113:
-		*(multiNode->GetNode()->CPPmultinode113) = multimapUnion->CPPmultimap113->find(KeyFloat);
-		break;
-	case 114:
-		*(multiNode->GetNode()->CPPmultinode114) = multimapUnion->CPPmultimap114->find(KeyFloat);
-		break;
-	case 115:
-		*(multiNode->GetNode()->CPPmultinode115) = multimapUnion->CPPmultimap115->find(KeyFloat);
-		break;
-	case 116:
-		*(multiNode->GetNode()->CPPmultinode116) = multimapUnion->CPPmultimap116->find(KeyFloat);
-		break;
-	case 117:
-		*(multiNode->GetNode()->CPPmultinode117) = multimapUnion->CPPmultimap117->find(KeyFloat);
-		break;
-	case 118:
-		*(multiNode->GetNode()->CPPmultinode118) = multimapUnion->CPPmultimap118->find(KeyFloat);
-		break;
-	case 119:
-		*(multiNode->GetNode()->CPPmultinode119) = multimapUnion->CPPmultimap119->find(KeyFloat);
-		break;
-	case 120:
-		*(multiNode->GetNode()->CPPmultinode120) = multimapUnion->CPPmultimap120->find(KeyFloat);
-		break;
-	case 121:
-		*(multiNode->GetNode()->CPPmultinode121) = multimapUnion->CPPmultimap121->find(KeyFloat);
-		break;
-	case 122:
-		*(multiNode->GetNode()->CPPmultinode122) = multimapUnion->CPPmultimap122->find(KeyFloat);
-		break;
-	case 123:
-		*(multiNode->GetNode()->CPPmultinode123) = multimapUnion->CPPmultimap123->find(KeyFloat);
-		break;
-	case 124:
-		*(multiNode->GetNode()->CPPmultinode124) = multimapUnion->CPPmultimap124->find(KeyFloat);
-		break;
-	case 125:
-		*(multiNode->GetNode()->CPPmultinode125) = multimapUnion->CPPmultimap125->find(KeyFloat);
-		break;
-	case 126:
-		*(multiNode->GetNode()->CPPmultinode126) = multimapUnion->CPPmultimap126->find(KeyFloat);
-		break;
-	case 127:
-		*(multiNode->GetNode()->CPPmultinode127) = multimapUnion->CPPmultimap127->find(KeyDouble);
-		break;
-	case 128:
-		*(multiNode->GetNode()->CPPmultinode128) = multimapUnion->CPPmultimap128->find(KeyDouble);
-		break;
-	case 129:
-		*(multiNode->GetNode()->CPPmultinode129) = multimapUnion->CPPmultimap129->find(KeyDouble);
-		break;
-	case 130:
-		*(multiNode->GetNode()->CPPmultinode130) = multimapUnion->CPPmultimap130->find(KeyDouble);
-		break;
-	case 131:
-		*(multiNode->GetNode()->CPPmultinode131) = multimapUnion->CPPmultimap131->find(KeyDouble);
-		break;
-	case 132:
-		*(multiNode->GetNode()->CPPmultinode132) = multimapUnion->CPPmultimap132->find(KeyDouble);
-		break;
-	case 133:
-		*(multiNode->GetNode()->CPPmultinode133) = multimapUnion->CPPmultimap133->find(KeyDouble);
-		break;
-	case 134:
-		*(multiNode->GetNode()->CPPmultinode134) = multimapUnion->CPPmultimap134->find(KeyDouble);
-		break;
-	case 135:
-		*(multiNode->GetNode()->CPPmultinode135) = multimapUnion->CPPmultimap135->find(KeyDouble);
-		break;
-	case 136:
-		*(multiNode->GetNode()->CPPmultinode136) = multimapUnion->CPPmultimap136->find(KeyDouble);
-		break;
-	case 137:
-		*(multiNode->GetNode()->CPPmultinode137) = multimapUnion->CPPmultimap137->find(KeyDouble);
-		break;
-	case 138:
-		*(multiNode->GetNode()->CPPmultinode138) = multimapUnion->CPPmultimap138->find(KeyDouble);
-		break;
-	case 139:
-		*(multiNode->GetNode()->CPPmultinode139) = multimapUnion->CPPmultimap139->find(KeyDouble);
-		break;
-	case 140:
-		*(multiNode->GetNode()->CPPmultinode140) = multimapUnion->CPPmultimap140->find(KeyDouble);
-		break;
-	case 141:
-		*(multiNode->GetNode()->CPPmultinode141) = multimapUnion->CPPmultimap141->find(KeyWchar);
-		break;
-	case 142:
-		*(multiNode->GetNode()->CPPmultinode142) = multimapUnion->CPPmultimap142->find(KeyWchar);
-		break;
-	case 143:
-		*(multiNode->GetNode()->CPPmultinode143) = multimapUnion->CPPmultimap143->find(KeyWchar);
-		break;
-	case 144:
-		*(multiNode->GetNode()->CPPmultinode144) = multimapUnion->CPPmultimap144->find(KeyWchar);
-		break;
-	case 145:
-		*(multiNode->GetNode()->CPPmultinode145) = multimapUnion->CPPmultimap145->find(KeyWchar);
-		break;
-	case 146:
-		*(multiNode->GetNode()->CPPmultinode146) = multimapUnion->CPPmultimap146->find(KeyWchar);
-		break;
-	case 147:
-		*(multiNode->GetNode()->CPPmultinode147) = multimapUnion->CPPmultimap147->find(KeyWchar);
-		break;
-	case 148:
-		*(multiNode->GetNode()->CPPmultinode148) = multimapUnion->CPPmultimap148->find(KeyWchar);
-		break;
-	case 149:
-		*(multiNode->GetNode()->CPPmultinode149) = multimapUnion->CPPmultimap149->find(KeyWchar);
-		break;
-	case 150:
-		*(multiNode->GetNode()->CPPmultinode150) = multimapUnion->CPPmultimap150->find(KeyWchar);
-		break;
-	case 151:
-		*(multiNode->GetNode()->CPPmultinode151) = multimapUnion->CPPmultimap151->find(KeyWchar);
-		break;
-	case 152:
-		*(multiNode->GetNode()->CPPmultinode152) = multimapUnion->CPPmultimap152->find(KeyWchar);
-		break;
-	case 153:
-		*(multiNode->GetNode()->CPPmultinode153) = multimapUnion->CPPmultimap153->find(KeyWchar);
-		break;
-	case 154:
-		*(multiNode->GetNode()->CPPmultinode154) = multimapUnion->CPPmultimap154->find(KeyWchar);
-		break;
-	case 155:
-		*(multiNode->GetNode()->CPPmultinode155) = multimapUnion->CPPmultimap155->find(KeyBool);
-		break;
-	case 156:
-		*(multiNode->GetNode()->CPPmultinode156) = multimapUnion->CPPmultimap156->find(KeyBool);
-		break;
-	case 157:
-		*(multiNode->GetNode()->CPPmultinode157) = multimapUnion->CPPmultimap157->find(KeyBool);
-		break;
-	case 158:
-		*(multiNode->GetNode()->CPPmultinode158) = multimapUnion->CPPmultimap158->find(KeyBool);
-		break;
-	case 159:
-		*(multiNode->GetNode()->CPPmultinode159) = multimapUnion->CPPmultimap159->find(KeyBool);
-		break;
-	case 160:
-		*(multiNode->GetNode()->CPPmultinode160) = multimapUnion->CPPmultimap160->find(KeyBool);
-		break;
-	case 161:
-		*(multiNode->GetNode()->CPPmultinode161) = multimapUnion->CPPmultimap161->find(KeyBool);
-		break;
-	case 162:
-		*(multiNode->GetNode()->CPPmultinode162) = multimapUnion->CPPmultimap162->find(KeyBool);
-		break;
-	case 163:
-		*(multiNode->GetNode()->CPPmultinode163) = multimapUnion->CPPmultimap163->find(KeyBool);
-		break;
-	case 164:
-		*(multiNode->GetNode()->CPPmultinode164) = multimapUnion->CPPmultimap164->find(KeyBool);
-		break;
-	case 165:
-		*(multiNode->GetNode()->CPPmultinode165) = multimapUnion->CPPmultimap165->find(KeyBool);
-		break;
-	case 166:
-		*(multiNode->GetNode()->CPPmultinode166) = multimapUnion->CPPmultimap166->find(KeyBool);
-		break;
-	case 167:
-		*(multiNode->GetNode()->CPPmultinode167) = multimapUnion->CPPmultimap167->find(KeyBool);
-		break;
-	case 168:
-		*(multiNode->GetNode()->CPPmultinode168) = multimapUnion->CPPmultimap168->find(KeyBool);
-		break;
-	case 169:
-		*(multiNode->GetNode()->CPPmultinode169) = multimapUnion->CPPmultimap169->find(KeyWstring);
-		break;
-	case 170:
-		*(multiNode->GetNode()->CPPmultinode170) = multimapUnion->CPPmultimap170->find(KeyWstring);
-		break;
-	case 171:
-		*(multiNode->GetNode()->CPPmultinode171) = multimapUnion->CPPmultimap171->find(KeyWstring);
-		break;
-	case 172:
-		*(multiNode->GetNode()->CPPmultinode172) = multimapUnion->CPPmultimap172->find(KeyWstring);
-		break;
-	case 173:
-		*(multiNode->GetNode()->CPPmultinode173) = multimapUnion->CPPmultimap173->find(KeyWstring);
-		break;
-	case 174:
-		*(multiNode->GetNode()->CPPmultinode174) = multimapUnion->CPPmultimap174->find(KeyWstring);
-		break;
-	case 175:
-		*(multiNode->GetNode()->CPPmultinode175) = multimapUnion->CPPmultimap175->find(KeyWstring);
-		break;
-	case 176:
-		*(multiNode->GetNode()->CPPmultinode176) = multimapUnion->CPPmultimap176->find(KeyWstring);
-		break;
-	case 177:
-		*(multiNode->GetNode()->CPPmultinode177) = multimapUnion->CPPmultimap177->find(KeyWstring);
-		break;
-	case 178:
-		*(multiNode->GetNode()->CPPmultinode178) = multimapUnion->CPPmultimap178->find(KeyWstring);
-		break;
-	case 179:
-		*(multiNode->GetNode()->CPPmultinode179) = multimapUnion->CPPmultimap179->find(KeyWstring);
-		break;
-	case 180:
-		*(multiNode->GetNode()->CPPmultinode180) = multimapUnion->CPPmultimap180->find(KeyWstring);
-		break;
-	case 181:
-		*(multiNode->GetNode()->CPPmultinode181) = multimapUnion->CPPmultimap181->find(KeyWstring);
-		break;
-	case 182:
-		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->find(KeyWstring);
-		break;
-	case 183:
-		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->find(Key__Int);
-		break;
-	case 184:
-		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->find(Key__Int);
-		break;
-	case 185:
-		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->find(Key__Int);
-		break;
-	case 186:
-		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->find(Key__Int);
-		break;
-	case 187:
-		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->find(Key__Int);
-		break;
-	case 188:
-		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->find(Key__Int);
-		break;
-	case 189:
-		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->find(Key__Int);
-		break;
-	case 190:
-		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->find(Key__Int);
-		break;
-	case 191:
-		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->find(Key__Int);
-		break;
-	case 192:
-		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->find(Key__Int);
-		break;
-	case 193:
-		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->find(Key__Int);
-		break;
-	case 194:
-		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->find(Key__Int);
-		break;
-	case 195:
-		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->find(Key__Int);
-		break;
-	case 196:
-		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->find(Key__Int);
-		break;
+		UnOrderedMultiMap_find_CASE(1, KeyUchar)
+		UnOrderedMultiMap_find_CASE(2, KeyUchar)
+		UnOrderedMultiMap_find_CASE(3, KeyUchar)
+		UnOrderedMultiMap_find_CASE(4, KeyUchar)
+		UnOrderedMultiMap_find_CASE(5, KeyUchar)
+		UnOrderedMultiMap_find_CASE(6, KeyUchar)
+		UnOrderedMultiMap_find_CASE(7, KeyUchar)
+		UnOrderedMultiMap_find_CASE(8, KeyUchar)
+		UnOrderedMultiMap_find_CASE(9, KeyUchar)
+		UnOrderedMultiMap_find_CASE(10, KeyUchar)
+		UnOrderedMultiMap_find_CASE(11, KeyUchar)
+		UnOrderedMultiMap_find_CASE(12, KeyUchar)
+		UnOrderedMultiMap_find_CASE(13, KeyUchar)
+		UnOrderedMultiMap_find_CASE(14, KeyUchar)
+		UnOrderedMultiMap_find_CASE(15, KeyChar)
+		UnOrderedMultiMap_find_CASE(16, KeyChar)
+		UnOrderedMultiMap_find_CASE(17, KeyChar)
+		UnOrderedMultiMap_find_CASE(18, KeyChar)
+		UnOrderedMultiMap_find_CASE(19, KeyChar)
+		UnOrderedMultiMap_find_CASE(20, KeyChar)
+		UnOrderedMultiMap_find_CASE(21, KeyChar)
+		UnOrderedMultiMap_find_CASE(22, KeyChar)
+		UnOrderedMultiMap_find_CASE(23, KeyChar)
+		UnOrderedMultiMap_find_CASE(24, KeyChar)
+		UnOrderedMultiMap_find_CASE(25, KeyChar)
+		UnOrderedMultiMap_find_CASE(26, KeyChar)
+		UnOrderedMultiMap_find_CASE(27, KeyChar)
+		UnOrderedMultiMap_find_CASE(28, KeyChar)
+		UnOrderedMultiMap_find_CASE(29, KeyShort)
+		UnOrderedMultiMap_find_CASE(30, KeyShort)
+		UnOrderedMultiMap_find_CASE(31, KeyShort)
+		UnOrderedMultiMap_find_CASE(32, KeyShort)
+		UnOrderedMultiMap_find_CASE(33, KeyShort)
+		UnOrderedMultiMap_find_CASE(34, KeyShort)
+		UnOrderedMultiMap_find_CASE(35, KeyShort)
+		UnOrderedMultiMap_find_CASE(36, KeyShort)
+		UnOrderedMultiMap_find_CASE(37, KeyShort)
+		UnOrderedMultiMap_find_CASE(38, KeyShort)
+		UnOrderedMultiMap_find_CASE(39, KeyShort)
+		UnOrderedMultiMap_find_CASE(40, KeyShort)
+		UnOrderedMultiMap_find_CASE(41, KeyShort)
+		UnOrderedMultiMap_find_CASE(42, KeyShort)
+		UnOrderedMultiMap_find_CASE(43, KeyUshort)
+		UnOrderedMultiMap_find_CASE(44, KeyUshort)
+		UnOrderedMultiMap_find_CASE(45, KeyUshort)
+		UnOrderedMultiMap_find_CASE(46, KeyUshort)
+		UnOrderedMultiMap_find_CASE(47, KeyUshort)
+		UnOrderedMultiMap_find_CASE(48, KeyUshort)
+		UnOrderedMultiMap_find_CASE(49, KeyUshort)
+		UnOrderedMultiMap_find_CASE(50, KeyUshort)
+		UnOrderedMultiMap_find_CASE(51, KeyUshort)
+		UnOrderedMultiMap_find_CASE(52, KeyUshort)
+		UnOrderedMultiMap_find_CASE(53, KeyUshort)
+		UnOrderedMultiMap_find_CASE(54, KeyUshort)
+		UnOrderedMultiMap_find_CASE(55, KeyUshort)
+		UnOrderedMultiMap_find_CASE(56, KeyUshort)
+		UnOrderedMultiMap_find_CASE(57, KeyInt)
+		UnOrderedMultiMap_find_CASE(58, KeyInt)
+		UnOrderedMultiMap_find_CASE(59, KeyInt)
+		UnOrderedMultiMap_find_CASE(60, KeyInt)
+		UnOrderedMultiMap_find_CASE(61, KeyInt)
+		UnOrderedMultiMap_find_CASE(62, KeyInt)
+		UnOrderedMultiMap_find_CASE(63, KeyInt)
+		UnOrderedMultiMap_find_CASE(64, KeyInt)
+		UnOrderedMultiMap_find_CASE(65, KeyInt)
+		UnOrderedMultiMap_find_CASE(66, KeyInt)
+		UnOrderedMultiMap_find_CASE(67, KeyInt)
+		UnOrderedMultiMap_find_CASE(68, KeyInt)
+		UnOrderedMultiMap_find_CASE(69, KeyInt)
+		UnOrderedMultiMap_find_CASE(70, KeyInt)
+		UnOrderedMultiMap_find_CASE(71, KeyUint)
+		UnOrderedMultiMap_find_CASE(72, KeyUint)
+		UnOrderedMultiMap_find_CASE(73, KeyUint)
+		UnOrderedMultiMap_find_CASE(74, KeyUint)
+		UnOrderedMultiMap_find_CASE(75, KeyUint)
+		UnOrderedMultiMap_find_CASE(76, KeyUint)
+		UnOrderedMultiMap_find_CASE(77, KeyUint)
+		UnOrderedMultiMap_find_CASE(78, KeyUint)
+		UnOrderedMultiMap_find_CASE(79, KeyUint)
+		UnOrderedMultiMap_find_CASE(80, KeyUint)
+		UnOrderedMultiMap_find_CASE(81, KeyUint)
+		UnOrderedMultiMap_find_CASE(82, KeyUint)
+		UnOrderedMultiMap_find_CASE(83, KeyUint)
+		UnOrderedMultiMap_find_CASE(84, KeyUint)
+		UnOrderedMultiMap_find_CASE(85, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(86, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(87, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(88, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(89, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(90, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(91, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(92, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(93, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(94, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(95, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(96, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(97, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(98, KeyLonglong)
+		UnOrderedMultiMap_find_CASE(99, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(100, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(101, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(102, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(103, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(104, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(105, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(106, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(107, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(108, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(109, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(110, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(111, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(112, KeyUlonglong)
+		UnOrderedMultiMap_find_CASE(113, KeyFloat)
+		UnOrderedMultiMap_find_CASE(114, KeyFloat)
+		UnOrderedMultiMap_find_CASE(115, KeyFloat)
+		UnOrderedMultiMap_find_CASE(116, KeyFloat)
+		UnOrderedMultiMap_find_CASE(117, KeyFloat)
+		UnOrderedMultiMap_find_CASE(118, KeyFloat)
+		UnOrderedMultiMap_find_CASE(119, KeyFloat)
+		UnOrderedMultiMap_find_CASE(120, KeyFloat)
+		UnOrderedMultiMap_find_CASE(121, KeyFloat)
+		UnOrderedMultiMap_find_CASE(122, KeyFloat)
+		UnOrderedMultiMap_find_CASE(123, KeyFloat)
+		UnOrderedMultiMap_find_CASE(124, KeyFloat)
+		UnOrderedMultiMap_find_CASE(125, KeyFloat)
+		UnOrderedMultiMap_find_CASE(126, KeyFloat)
+		UnOrderedMultiMap_find_CASE(127, KeyDouble)
+		UnOrderedMultiMap_find_CASE(128, KeyDouble)
+		UnOrderedMultiMap_find_CASE(129, KeyDouble)
+		UnOrderedMultiMap_find_CASE(130, KeyDouble)
+		UnOrderedMultiMap_find_CASE(131, KeyDouble)
+		UnOrderedMultiMap_find_CASE(132, KeyDouble)
+		UnOrderedMultiMap_find_CASE(133, KeyDouble)
+		UnOrderedMultiMap_find_CASE(134, KeyDouble)
+		UnOrderedMultiMap_find_CASE(135, KeyDouble)
+		UnOrderedMultiMap_find_CASE(136, KeyDouble)
+		UnOrderedMultiMap_find_CASE(137, KeyDouble)
+		UnOrderedMultiMap_find_CASE(138, KeyDouble)
+		UnOrderedMultiMap_find_CASE(139, KeyDouble)
+		UnOrderedMultiMap_find_CASE(140, KeyDouble)
+		UnOrderedMultiMap_find_CASE(141, KeyWchar)
+		UnOrderedMultiMap_find_CASE(142, KeyWchar)
+		UnOrderedMultiMap_find_CASE(143, KeyWchar)
+		UnOrderedMultiMap_find_CASE(144, KeyWchar)
+		UnOrderedMultiMap_find_CASE(145, KeyWchar)
+		UnOrderedMultiMap_find_CASE(146, KeyWchar)
+		UnOrderedMultiMap_find_CASE(147, KeyWchar)
+		UnOrderedMultiMap_find_CASE(148, KeyWchar)
+		UnOrderedMultiMap_find_CASE(149, KeyWchar)
+		UnOrderedMultiMap_find_CASE(150, KeyWchar)
+		UnOrderedMultiMap_find_CASE(151, KeyWchar)
+		UnOrderedMultiMap_find_CASE(152, KeyWchar)
+		UnOrderedMultiMap_find_CASE(153, KeyWchar)
+		UnOrderedMultiMap_find_CASE(154, KeyWchar)
+		UnOrderedMultiMap_find_CASE(155, KeyBool)
+		UnOrderedMultiMap_find_CASE(156, KeyBool)
+		UnOrderedMultiMap_find_CASE(157, KeyBool)
+		UnOrderedMultiMap_find_CASE(158, KeyBool)
+		UnOrderedMultiMap_find_CASE(159, KeyBool)
+		UnOrderedMultiMap_find_CASE(160, KeyBool)
+		UnOrderedMultiMap_find_CASE(161, KeyBool)
+		UnOrderedMultiMap_find_CASE(162, KeyBool)
+		UnOrderedMultiMap_find_CASE(163, KeyBool)
+		UnOrderedMultiMap_find_CASE(164, KeyBool)
+		UnOrderedMultiMap_find_CASE(165, KeyBool)
+		UnOrderedMultiMap_find_CASE(166, KeyBool)
+		UnOrderedMultiMap_find_CASE(167, KeyBool)
+		UnOrderedMultiMap_find_CASE(168, KeyBool)
+		UnOrderedMultiMap_find_CASE(169, KeyWstring)
+		UnOrderedMultiMap_find_CASE(170, KeyWstring)
+		UnOrderedMultiMap_find_CASE(171, KeyWstring)
+		UnOrderedMultiMap_find_CASE(172, KeyWstring)
+		UnOrderedMultiMap_find_CASE(173, KeyWstring)
+		UnOrderedMultiMap_find_CASE(174, KeyWstring)
+		UnOrderedMultiMap_find_CASE(175, KeyWstring)
+		UnOrderedMultiMap_find_CASE(176, KeyWstring)
+		UnOrderedMultiMap_find_CASE(177, KeyWstring)
+		UnOrderedMultiMap_find_CASE(178, KeyWstring)
+		UnOrderedMultiMap_find_CASE(179, KeyWstring)
+		UnOrderedMultiMap_find_CASE(180, KeyWstring)
+		UnOrderedMultiMap_find_CASE(181, KeyWstring)
+		UnOrderedMultiMap_find_CASE(182, KeyWstring)
+		UnOrderedMultiMap_find_CASE(183, Key__Int)
+		UnOrderedMultiMap_find_CASE(184, Key__Int)
+		UnOrderedMultiMap_find_CASE(185, Key__Int)
+		UnOrderedMultiMap_find_CASE(186, Key__Int)
+		UnOrderedMultiMap_find_CASE(187, Key__Int)
+		UnOrderedMultiMap_find_CASE(188, Key__Int)
+		UnOrderedMultiMap_find_CASE(189, Key__Int)
+		UnOrderedMultiMap_find_CASE(190, Key__Int)
+		UnOrderedMultiMap_find_CASE(191, Key__Int)
+		UnOrderedMultiMap_find_CASE(192, Key__Int)
+		UnOrderedMultiMap_find_CASE(193, Key__Int)
+		UnOrderedMultiMap_find_CASE(194, Key__Int)
+		UnOrderedMultiMap_find_CASE(195, Key__Int)
+		UnOrderedMultiMap_find_CASE(196, Key__Int)
 	}
 
 	return multiNode->DeepCopy();
 }
+
+#define UnOrderedMultiMap_BeginEnd_CASE(NUM, BeginEnd) \
+	case NUM: \
+		*(multiNode->GetNode()->CPPmultinode##NUM) = multimapUnion->CPPmultimap##NUM->BeginEnd(); \
+		break;
 
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::begin()
@@ -4074,594 +2728,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(multiNode->GetNode()->CPPmultinode1) = multimapUnion->CPPmultimap1->begin();
-		break;
-	case 2:
-		*(multiNode->GetNode()->CPPmultinode2) = multimapUnion->CPPmultimap2->begin();
-		break;
-	case 3:
-		*(multiNode->GetNode()->CPPmultinode3) = multimapUnion->CPPmultimap3->begin();
-		break;
-	case 4:
-		*(multiNode->GetNode()->CPPmultinode4) = multimapUnion->CPPmultimap4->begin();
-		break;
-	case 5:
-		*(multiNode->GetNode()->CPPmultinode5) = multimapUnion->CPPmultimap5->begin();
-		break;
-	case 6:
-		*(multiNode->GetNode()->CPPmultinode6) = multimapUnion->CPPmultimap6->begin();
-		break;
-	case 7:
-		*(multiNode->GetNode()->CPPmultinode7) = multimapUnion->CPPmultimap7->begin();
-		break;
-	case 8:
-		*(multiNode->GetNode()->CPPmultinode8) = multimapUnion->CPPmultimap8->begin();
-		break;
-	case 9:
-		*(multiNode->GetNode()->CPPmultinode9) = multimapUnion->CPPmultimap9->begin();
-		break;
-	case 10:
-		*(multiNode->GetNode()->CPPmultinode10) = multimapUnion->CPPmultimap10->begin();
-		break;
-	case 11:
-		*(multiNode->GetNode()->CPPmultinode11) = multimapUnion->CPPmultimap11->begin();
-		break;
-	case 12:
-		*(multiNode->GetNode()->CPPmultinode12) = multimapUnion->CPPmultimap12->begin();
-		break;
-	case 13:
-		*(multiNode->GetNode()->CPPmultinode13) = multimapUnion->CPPmultimap13->begin();
-		break;
-	case 14:
-		*(multiNode->GetNode()->CPPmultinode14) = multimapUnion->CPPmultimap14->begin();
-		break;
-	case 15:
-		*(multiNode->GetNode()->CPPmultinode15) = multimapUnion->CPPmultimap15->begin();
-		break;
-	case 16:
-		*(multiNode->GetNode()->CPPmultinode16) = multimapUnion->CPPmultimap16->begin();
-		break;
-	case 17:
-		*(multiNode->GetNode()->CPPmultinode17) = multimapUnion->CPPmultimap17->begin();
-		break;
-	case 18:
-		*(multiNode->GetNode()->CPPmultinode18) = multimapUnion->CPPmultimap18->begin();
-		break;
-	case 19:
-		*(multiNode->GetNode()->CPPmultinode19) = multimapUnion->CPPmultimap19->begin();
-		break;
-	case 20:
-		*(multiNode->GetNode()->CPPmultinode20) = multimapUnion->CPPmultimap20->begin();
-		break;
-	case 21:
-		*(multiNode->GetNode()->CPPmultinode21) = multimapUnion->CPPmultimap21->begin();
-		break;
-	case 22:
-		*(multiNode->GetNode()->CPPmultinode22) = multimapUnion->CPPmultimap22->begin();
-		break;
-	case 23:
-		*(multiNode->GetNode()->CPPmultinode23) = multimapUnion->CPPmultimap23->begin();
-		break;
-	case 24:
-		*(multiNode->GetNode()->CPPmultinode24) = multimapUnion->CPPmultimap24->begin();
-		break;
-	case 25:
-		*(multiNode->GetNode()->CPPmultinode25) = multimapUnion->CPPmultimap25->begin();
-		break;
-	case 26:
-		*(multiNode->GetNode()->CPPmultinode26) = multimapUnion->CPPmultimap26->begin();
-		break;
-	case 27:
-		*(multiNode->GetNode()->CPPmultinode27) = multimapUnion->CPPmultimap27->begin();
-		break;
-	case 28:
-		*(multiNode->GetNode()->CPPmultinode28) = multimapUnion->CPPmultimap28->begin();
-		break;
-	case 29:
-		*(multiNode->GetNode()->CPPmultinode29) = multimapUnion->CPPmultimap29->begin();
-		break;
-	case 30:
-		*(multiNode->GetNode()->CPPmultinode30) = multimapUnion->CPPmultimap30->begin();
-		break;
-	case 31:
-		*(multiNode->GetNode()->CPPmultinode31) = multimapUnion->CPPmultimap31->begin();
-		break;
-	case 32:
-		*(multiNode->GetNode()->CPPmultinode32) = multimapUnion->CPPmultimap32->begin();
-		break;
-	case 33:
-		*(multiNode->GetNode()->CPPmultinode33) = multimapUnion->CPPmultimap33->begin();
-		break;
-	case 34:
-		*(multiNode->GetNode()->CPPmultinode34) = multimapUnion->CPPmultimap34->begin();
-		break;
-	case 35:
-		*(multiNode->GetNode()->CPPmultinode35) = multimapUnion->CPPmultimap35->begin();
-		break;
-	case 36:
-		*(multiNode->GetNode()->CPPmultinode36) = multimapUnion->CPPmultimap36->begin();
-		break;
-	case 37:
-		*(multiNode->GetNode()->CPPmultinode37) = multimapUnion->CPPmultimap37->begin();
-		break;
-	case 38:
-		*(multiNode->GetNode()->CPPmultinode38) = multimapUnion->CPPmultimap38->begin();
-		break;
-	case 39:
-		*(multiNode->GetNode()->CPPmultinode39) = multimapUnion->CPPmultimap39->begin();
-		break;
-	case 40:
-		*(multiNode->GetNode()->CPPmultinode40) = multimapUnion->CPPmultimap40->begin();
-		break;
-	case 41:
-		*(multiNode->GetNode()->CPPmultinode41) = multimapUnion->CPPmultimap41->begin();
-		break;
-	case 42:
-		*(multiNode->GetNode()->CPPmultinode42) = multimapUnion->CPPmultimap42->begin();
-		break;
-	case 43:
-		*(multiNode->GetNode()->CPPmultinode43) = multimapUnion->CPPmultimap43->begin();
-		break;
-	case 44:
-		*(multiNode->GetNode()->CPPmultinode44) = multimapUnion->CPPmultimap44->begin();
-		break;
-	case 45:
-		*(multiNode->GetNode()->CPPmultinode45) = multimapUnion->CPPmultimap45->begin();
-		break;
-	case 46:
-		*(multiNode->GetNode()->CPPmultinode46) = multimapUnion->CPPmultimap46->begin();
-		break;
-	case 47:
-		*(multiNode->GetNode()->CPPmultinode47) = multimapUnion->CPPmultimap47->begin();
-		break;
-	case 48:
-		*(multiNode->GetNode()->CPPmultinode48) = multimapUnion->CPPmultimap48->begin();
-		break;
-	case 49:
-		*(multiNode->GetNode()->CPPmultinode49) = multimapUnion->CPPmultimap49->begin();
-		break;
-	case 50:
-		*(multiNode->GetNode()->CPPmultinode50) = multimapUnion->CPPmultimap50->begin();
-		break;
-	case 51:
-		*(multiNode->GetNode()->CPPmultinode51) = multimapUnion->CPPmultimap51->begin();
-		break;
-	case 52:
-		*(multiNode->GetNode()->CPPmultinode52) = multimapUnion->CPPmultimap52->begin();
-		break;
-	case 53:
-		*(multiNode->GetNode()->CPPmultinode53) = multimapUnion->CPPmultimap53->begin();
-		break;
-	case 54:
-		*(multiNode->GetNode()->CPPmultinode54) = multimapUnion->CPPmultimap54->begin();
-		break;
-	case 55:
-		*(multiNode->GetNode()->CPPmultinode55) = multimapUnion->CPPmultimap55->begin();
-		break;
-	case 56:
-		*(multiNode->GetNode()->CPPmultinode56) = multimapUnion->CPPmultimap56->begin();
-		break;
-	case 57:
-		*(multiNode->GetNode()->CPPmultinode57) = multimapUnion->CPPmultimap57->begin();
-		break;
-	case 58:
-		*(multiNode->GetNode()->CPPmultinode58) = multimapUnion->CPPmultimap58->begin();
-		break;
-	case 59:
-		*(multiNode->GetNode()->CPPmultinode59) = multimapUnion->CPPmultimap59->begin();
-		break;
-	case 60:
-		*(multiNode->GetNode()->CPPmultinode60) = multimapUnion->CPPmultimap60->begin();
-		break;
-	case 61:
-		*(multiNode->GetNode()->CPPmultinode61) = multimapUnion->CPPmultimap61->begin();
-		break;
-	case 62:
-		*(multiNode->GetNode()->CPPmultinode62) = multimapUnion->CPPmultimap62->begin();
-		break;
-	case 63:
-		*(multiNode->GetNode()->CPPmultinode63) = multimapUnion->CPPmultimap63->begin();
-		break;
-	case 64:
-		*(multiNode->GetNode()->CPPmultinode64) = multimapUnion->CPPmultimap64->begin();
-		break;
-	case 65:
-		*(multiNode->GetNode()->CPPmultinode65) = multimapUnion->CPPmultimap65->begin();
-		break;
-	case 66:
-		*(multiNode->GetNode()->CPPmultinode66) = multimapUnion->CPPmultimap66->begin();
-		break;
-	case 67:
-		*(multiNode->GetNode()->CPPmultinode67) = multimapUnion->CPPmultimap67->begin();
-		break;
-	case 68:
-		*(multiNode->GetNode()->CPPmultinode68) = multimapUnion->CPPmultimap68->begin();
-		break;
-	case 69:
-		*(multiNode->GetNode()->CPPmultinode69) = multimapUnion->CPPmultimap69->begin();
-		break;
-	case 70:
-		*(multiNode->GetNode()->CPPmultinode70) = multimapUnion->CPPmultimap70->begin();
-		break;
-	case 71:
-		*(multiNode->GetNode()->CPPmultinode71) = multimapUnion->CPPmultimap71->begin();
-		break;
-	case 72:
-		*(multiNode->GetNode()->CPPmultinode72) = multimapUnion->CPPmultimap72->begin();
-		break;
-	case 73:
-		*(multiNode->GetNode()->CPPmultinode73) = multimapUnion->CPPmultimap73->begin();
-		break;
-	case 74:
-		*(multiNode->GetNode()->CPPmultinode74) = multimapUnion->CPPmultimap74->begin();
-		break;
-	case 75:
-		*(multiNode->GetNode()->CPPmultinode75) = multimapUnion->CPPmultimap75->begin();
-		break;
-	case 76:
-		*(multiNode->GetNode()->CPPmultinode76) = multimapUnion->CPPmultimap76->begin();
-		break;
-	case 77:
-		*(multiNode->GetNode()->CPPmultinode77) = multimapUnion->CPPmultimap77->begin();
-		break;
-	case 78:
-		*(multiNode->GetNode()->CPPmultinode78) = multimapUnion->CPPmultimap78->begin();
-		break;
-	case 79:
-		*(multiNode->GetNode()->CPPmultinode79) = multimapUnion->CPPmultimap79->begin();
-		break;
-	case 80:
-		*(multiNode->GetNode()->CPPmultinode80) = multimapUnion->CPPmultimap80->begin();
-		break;
-	case 81:
-		*(multiNode->GetNode()->CPPmultinode81) = multimapUnion->CPPmultimap81->begin();
-		break;
-	case 82:
-		*(multiNode->GetNode()->CPPmultinode82) = multimapUnion->CPPmultimap82->begin();
-		break;
-	case 83:
-		*(multiNode->GetNode()->CPPmultinode83) = multimapUnion->CPPmultimap83->begin();
-		break;
-	case 84:
-		*(multiNode->GetNode()->CPPmultinode84) = multimapUnion->CPPmultimap84->begin();
-		break;
-	case 85:
-		*(multiNode->GetNode()->CPPmultinode85) = multimapUnion->CPPmultimap85->begin();
-		break;
-	case 86:
-		*(multiNode->GetNode()->CPPmultinode86) = multimapUnion->CPPmultimap86->begin();
-		break;
-	case 87:
-		*(multiNode->GetNode()->CPPmultinode87) = multimapUnion->CPPmultimap87->begin();
-		break;
-	case 88:
-		*(multiNode->GetNode()->CPPmultinode88) = multimapUnion->CPPmultimap88->begin();
-		break;
-	case 89:
-		*(multiNode->GetNode()->CPPmultinode89) = multimapUnion->CPPmultimap89->begin();
-		break;
-	case 90:
-		*(multiNode->GetNode()->CPPmultinode90) = multimapUnion->CPPmultimap90->begin();
-		break;
-	case 91:
-		*(multiNode->GetNode()->CPPmultinode91) = multimapUnion->CPPmultimap91->begin();
-		break;
-	case 92:
-		*(multiNode->GetNode()->CPPmultinode92) = multimapUnion->CPPmultimap92->begin();
-		break;
-	case 93:
-		*(multiNode->GetNode()->CPPmultinode93) = multimapUnion->CPPmultimap93->begin();
-		break;
-	case 94:
-		*(multiNode->GetNode()->CPPmultinode94) = multimapUnion->CPPmultimap94->begin();
-		break;
-	case 95:
-		*(multiNode->GetNode()->CPPmultinode95) = multimapUnion->CPPmultimap95->begin();
-		break;
-	case 96:
-		*(multiNode->GetNode()->CPPmultinode96) = multimapUnion->CPPmultimap96->begin();
-		break;
-	case 97:
-		*(multiNode->GetNode()->CPPmultinode97) = multimapUnion->CPPmultimap97->begin();
-		break;
-	case 98:
-		*(multiNode->GetNode()->CPPmultinode98) = multimapUnion->CPPmultimap98->begin();
-		break;
-	case 99:
-		*(multiNode->GetNode()->CPPmultinode99) = multimapUnion->CPPmultimap99->begin();
-		break;
-	case 100:
-		*(multiNode->GetNode()->CPPmultinode100) = multimapUnion->CPPmultimap100->begin();
-		break;
-	case 101:
-		*(multiNode->GetNode()->CPPmultinode101) = multimapUnion->CPPmultimap101->begin();
-		break;
-	case 102:
-		*(multiNode->GetNode()->CPPmultinode102) = multimapUnion->CPPmultimap102->begin();
-		break;
-	case 103:
-		*(multiNode->GetNode()->CPPmultinode103) = multimapUnion->CPPmultimap103->begin();
-		break;
-	case 104:
-		*(multiNode->GetNode()->CPPmultinode104) = multimapUnion->CPPmultimap104->begin();
-		break;
-	case 105:
-		*(multiNode->GetNode()->CPPmultinode105) = multimapUnion->CPPmultimap105->begin();
-		break;
-	case 106:
-		*(multiNode->GetNode()->CPPmultinode106) = multimapUnion->CPPmultimap106->begin();
-		break;
-	case 107:
-		*(multiNode->GetNode()->CPPmultinode107) = multimapUnion->CPPmultimap107->begin();
-		break;
-	case 108:
-		*(multiNode->GetNode()->CPPmultinode108) = multimapUnion->CPPmultimap108->begin();
-		break;
-	case 109:
-		*(multiNode->GetNode()->CPPmultinode109) = multimapUnion->CPPmultimap109->begin();
-		break;
-	case 110:
-		*(multiNode->GetNode()->CPPmultinode110) = multimapUnion->CPPmultimap110->begin();
-		break;
-	case 111:
-		*(multiNode->GetNode()->CPPmultinode111) = multimapUnion->CPPmultimap111->begin();
-		break;
-	case 112:
-		*(multiNode->GetNode()->CPPmultinode112) = multimapUnion->CPPmultimap112->begin();
-		break;
-	case 113:
-		*(multiNode->GetNode()->CPPmultinode113) = multimapUnion->CPPmultimap113->begin();
-		break;
-	case 114:
-		*(multiNode->GetNode()->CPPmultinode114) = multimapUnion->CPPmultimap114->begin();
-		break;
-	case 115:
-		*(multiNode->GetNode()->CPPmultinode115) = multimapUnion->CPPmultimap115->begin();
-		break;
-	case 116:
-		*(multiNode->GetNode()->CPPmultinode116) = multimapUnion->CPPmultimap116->begin();
-		break;
-	case 117:
-		*(multiNode->GetNode()->CPPmultinode117) = multimapUnion->CPPmultimap117->begin();
-		break;
-	case 118:
-		*(multiNode->GetNode()->CPPmultinode118) = multimapUnion->CPPmultimap118->begin();
-		break;
-	case 119:
-		*(multiNode->GetNode()->CPPmultinode119) = multimapUnion->CPPmultimap119->begin();
-		break;
-	case 120:
-		*(multiNode->GetNode()->CPPmultinode120) = multimapUnion->CPPmultimap120->begin();
-		break;
-	case 121:
-		*(multiNode->GetNode()->CPPmultinode121) = multimapUnion->CPPmultimap121->begin();
-		break;
-	case 122:
-		*(multiNode->GetNode()->CPPmultinode122) = multimapUnion->CPPmultimap122->begin();
-		break;
-	case 123:
-		*(multiNode->GetNode()->CPPmultinode123) = multimapUnion->CPPmultimap123->begin();
-		break;
-	case 124:
-		*(multiNode->GetNode()->CPPmultinode124) = multimapUnion->CPPmultimap124->begin();
-		break;
-	case 125:
-		*(multiNode->GetNode()->CPPmultinode125) = multimapUnion->CPPmultimap125->begin();
-		break;
-	case 126:
-		*(multiNode->GetNode()->CPPmultinode126) = multimapUnion->CPPmultimap126->begin();
-		break;
-	case 127:
-		*(multiNode->GetNode()->CPPmultinode127) = multimapUnion->CPPmultimap127->begin();
-		break;
-	case 128:
-		*(multiNode->GetNode()->CPPmultinode128) = multimapUnion->CPPmultimap128->begin();
-		break;
-	case 129:
-		*(multiNode->GetNode()->CPPmultinode129) = multimapUnion->CPPmultimap129->begin();
-		break;
-	case 130:
-		*(multiNode->GetNode()->CPPmultinode130) = multimapUnion->CPPmultimap130->begin();
-		break;
-	case 131:
-		*(multiNode->GetNode()->CPPmultinode131) = multimapUnion->CPPmultimap131->begin();
-		break;
-	case 132:
-		*(multiNode->GetNode()->CPPmultinode132) = multimapUnion->CPPmultimap132->begin();
-		break;
-	case 133:
-		*(multiNode->GetNode()->CPPmultinode133) = multimapUnion->CPPmultimap133->begin();
-		break;
-	case 134:
-		*(multiNode->GetNode()->CPPmultinode134) = multimapUnion->CPPmultimap134->begin();
-		break;
-	case 135:
-		*(multiNode->GetNode()->CPPmultinode135) = multimapUnion->CPPmultimap135->begin();
-		break;
-	case 136:
-		*(multiNode->GetNode()->CPPmultinode136) = multimapUnion->CPPmultimap136->begin();
-		break;
-	case 137:
-		*(multiNode->GetNode()->CPPmultinode137) = multimapUnion->CPPmultimap137->begin();
-		break;
-	case 138:
-		*(multiNode->GetNode()->CPPmultinode138) = multimapUnion->CPPmultimap138->begin();
-		break;
-	case 139:
-		*(multiNode->GetNode()->CPPmultinode139) = multimapUnion->CPPmultimap139->begin();
-		break;
-	case 140:
-		*(multiNode->GetNode()->CPPmultinode140) = multimapUnion->CPPmultimap140->begin();
-		break;
-	case 141:
-		*(multiNode->GetNode()->CPPmultinode141) = multimapUnion->CPPmultimap141->begin();
-		break;
-	case 142:
-		*(multiNode->GetNode()->CPPmultinode142) = multimapUnion->CPPmultimap142->begin();
-		break;
-	case 143:
-		*(multiNode->GetNode()->CPPmultinode143) = multimapUnion->CPPmultimap143->begin();
-		break;
-	case 144:
-		*(multiNode->GetNode()->CPPmultinode144) = multimapUnion->CPPmultimap144->begin();
-		break;
-	case 145:
-		*(multiNode->GetNode()->CPPmultinode145) = multimapUnion->CPPmultimap145->begin();
-		break;
-	case 146:
-		*(multiNode->GetNode()->CPPmultinode146) = multimapUnion->CPPmultimap146->begin();
-		break;
-	case 147:
-		*(multiNode->GetNode()->CPPmultinode147) = multimapUnion->CPPmultimap147->begin();
-		break;
-	case 148:
-		*(multiNode->GetNode()->CPPmultinode148) = multimapUnion->CPPmultimap148->begin();
-		break;
-	case 149:
-		*(multiNode->GetNode()->CPPmultinode149) = multimapUnion->CPPmultimap149->begin();
-		break;
-	case 150:
-		*(multiNode->GetNode()->CPPmultinode150) = multimapUnion->CPPmultimap150->begin();
-		break;
-	case 151:
-		*(multiNode->GetNode()->CPPmultinode151) = multimapUnion->CPPmultimap151->begin();
-		break;
-	case 152:
-		*(multiNode->GetNode()->CPPmultinode152) = multimapUnion->CPPmultimap152->begin();
-		break;
-	case 153:
-		*(multiNode->GetNode()->CPPmultinode153) = multimapUnion->CPPmultimap153->begin();
-		break;
-	case 154:
-		*(multiNode->GetNode()->CPPmultinode154) = multimapUnion->CPPmultimap154->begin();
-		break;
-	case 155:
-		*(multiNode->GetNode()->CPPmultinode155) = multimapUnion->CPPmultimap155->begin();
-		break;
-	case 156:
-		*(multiNode->GetNode()->CPPmultinode156) = multimapUnion->CPPmultimap156->begin();
-		break;
-	case 157:
-		*(multiNode->GetNode()->CPPmultinode157) = multimapUnion->CPPmultimap157->begin();
-		break;
-	case 158:
-		*(multiNode->GetNode()->CPPmultinode158) = multimapUnion->CPPmultimap158->begin();
-		break;
-	case 159:
-		*(multiNode->GetNode()->CPPmultinode159) = multimapUnion->CPPmultimap159->begin();
-		break;
-	case 160:
-		*(multiNode->GetNode()->CPPmultinode160) = multimapUnion->CPPmultimap160->begin();
-		break;
-	case 161:
-		*(multiNode->GetNode()->CPPmultinode161) = multimapUnion->CPPmultimap161->begin();
-		break;
-	case 162:
-		*(multiNode->GetNode()->CPPmultinode162) = multimapUnion->CPPmultimap162->begin();
-		break;
-	case 163:
-		*(multiNode->GetNode()->CPPmultinode163) = multimapUnion->CPPmultimap163->begin();
-		break;
-	case 164:
-		*(multiNode->GetNode()->CPPmultinode164) = multimapUnion->CPPmultimap164->begin();
-		break;
-	case 165:
-		*(multiNode->GetNode()->CPPmultinode165) = multimapUnion->CPPmultimap165->begin();
-		break;
-	case 166:
-		*(multiNode->GetNode()->CPPmultinode166) = multimapUnion->CPPmultimap166->begin();
-		break;
-	case 167:
-		*(multiNode->GetNode()->CPPmultinode167) = multimapUnion->CPPmultimap167->begin();
-		break;
-	case 168:
-		*(multiNode->GetNode()->CPPmultinode168) = multimapUnion->CPPmultimap168->begin();
-		break;
-	case 169:
-		*(multiNode->GetNode()->CPPmultinode169) = multimapUnion->CPPmultimap169->begin();
-		break;
-	case 170:
-		*(multiNode->GetNode()->CPPmultinode170) = multimapUnion->CPPmultimap170->begin();
-		break;
-	case 171:
-		*(multiNode->GetNode()->CPPmultinode171) = multimapUnion->CPPmultimap171->begin();
-		break;
-	case 172:
-		*(multiNode->GetNode()->CPPmultinode172) = multimapUnion->CPPmultimap172->begin();
-		break;
-	case 173:
-		*(multiNode->GetNode()->CPPmultinode173) = multimapUnion->CPPmultimap173->begin();
-		break;
-	case 174:
-		*(multiNode->GetNode()->CPPmultinode174) = multimapUnion->CPPmultimap174->begin();
-		break;
-	case 175:
-		*(multiNode->GetNode()->CPPmultinode175) = multimapUnion->CPPmultimap175->begin();
-		break;
-	case 176:
-		*(multiNode->GetNode()->CPPmultinode176) = multimapUnion->CPPmultimap176->begin();
-		break;
-	case 177:
-		*(multiNode->GetNode()->CPPmultinode177) = multimapUnion->CPPmultimap177->begin();
-		break;
-	case 178:
-		*(multiNode->GetNode()->CPPmultinode178) = multimapUnion->CPPmultimap178->begin();
-		break;
-	case 179:
-		*(multiNode->GetNode()->CPPmultinode179) = multimapUnion->CPPmultimap179->begin();
-		break;
-	case 180:
-		*(multiNode->GetNode()->CPPmultinode180) = multimapUnion->CPPmultimap180->begin();
-		break;
-	case 181:
-		*(multiNode->GetNode()->CPPmultinode181) = multimapUnion->CPPmultimap181->begin();
-		break;
-	case 182:
-		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->begin();
-		break;
-	case 183:
-		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->begin();
-		break;
-	case 184:
-		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->begin();
-		break;
-	case 185:
-		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->begin();
-		break;
-	case 186:
-		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->begin();
-		break;
-	case 187:
-		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->begin();
-		break;
-	case 188:
-		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->begin();
-		break;
-	case 189:
-		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->begin();
-		break;
-	case 190:
-		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->begin();
-		break;
-	case 191:
-		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->begin();
-		break;
-	case 192:
-		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->begin();
-		break;
-	case 193:
-		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->begin();
-		break;
-	case 194:
-		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->begin();
-		break;
-	case 195:
-		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->begin();
-		break;
-	case 196:
-		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->begin();
-		break;
+		UnOrderedMultiMap_BeginEnd_CASE(1, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(2, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(3, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(4, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(5, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(6, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(7, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(8, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(9, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(10, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(11, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(12, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(13, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(14, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(15, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(16, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(17, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(18, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(19, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(20, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(21, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(22, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(23, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(24, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(25, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(26, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(27, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(28, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(29, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(30, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(31, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(32, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(33, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(34, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(35, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(36, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(37, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(38, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(39, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(40, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(41, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(42, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(43, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(44, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(45, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(46, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(47, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(48, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(49, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(50, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(51, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(52, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(53, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(54, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(55, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(56, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(57, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(58, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(59, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(60, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(61, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(62, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(63, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(64, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(65, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(66, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(67, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(68, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(69, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(70, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(71, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(72, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(73, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(74, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(75, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(76, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(77, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(78, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(79, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(80, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(81, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(82, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(83, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(84, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(85, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(86, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(87, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(88, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(89, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(90, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(91, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(92, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(93, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(94, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(95, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(96, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(97, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(98, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(99, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(100, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(101, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(102, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(103, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(104, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(105, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(106, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(107, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(108, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(109, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(110, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(111, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(112, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(113, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(114, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(115, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(116, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(117, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(118, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(119, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(120, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(121, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(122, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(123, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(124, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(125, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(126, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(127, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(128, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(129, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(130, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(131, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(132, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(133, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(134, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(135, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(136, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(137, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(138, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(139, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(140, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(141, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(142, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(143, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(144, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(145, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(146, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(147, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(148, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(149, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(150, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(151, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(152, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(153, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(154, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(155, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(156, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(157, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(158, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(159, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(160, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(161, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(162, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(163, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(164, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(165, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(166, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(167, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(168, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(169, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(170, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(171, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(172, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(173, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(174, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(175, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(176, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(177, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(178, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(179, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(180, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(181, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(182, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(183, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(184, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(185, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(186, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(187, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(188, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(189, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(190, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(191, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(192, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(193, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(194, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(195, begin)
+		UnOrderedMultiMap_BeginEnd_CASE(196, begin)
 	}
 	return multiNode->DeepCopy();
 }
@@ -4673,594 +2935,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(multiNode->GetNode()->CPPmultinode1) = multimapUnion->CPPmultimap1->end();
-		break;
-	case 2:
-		*(multiNode->GetNode()->CPPmultinode2) = multimapUnion->CPPmultimap2->end();
-		break;
-	case 3:
-		*(multiNode->GetNode()->CPPmultinode3) = multimapUnion->CPPmultimap3->end();
-		break;
-	case 4:
-		*(multiNode->GetNode()->CPPmultinode4) = multimapUnion->CPPmultimap4->end();
-		break;
-	case 5:
-		*(multiNode->GetNode()->CPPmultinode5) = multimapUnion->CPPmultimap5->end();
-		break;
-	case 6:
-		*(multiNode->GetNode()->CPPmultinode6) = multimapUnion->CPPmultimap6->end();
-		break;
-	case 7:
-		*(multiNode->GetNode()->CPPmultinode7) = multimapUnion->CPPmultimap7->end();
-		break;
-	case 8:
-		*(multiNode->GetNode()->CPPmultinode8) = multimapUnion->CPPmultimap8->end();
-		break;
-	case 9:
-		*(multiNode->GetNode()->CPPmultinode9) = multimapUnion->CPPmultimap9->end();
-		break;
-	case 10:
-		*(multiNode->GetNode()->CPPmultinode10) = multimapUnion->CPPmultimap10->end();
-		break;
-	case 11:
-		*(multiNode->GetNode()->CPPmultinode11) = multimapUnion->CPPmultimap11->end();
-		break;
-	case 12:
-		*(multiNode->GetNode()->CPPmultinode12) = multimapUnion->CPPmultimap12->end();
-		break;
-	case 13:
-		*(multiNode->GetNode()->CPPmultinode13) = multimapUnion->CPPmultimap13->end();
-		break;
-	case 14:
-		*(multiNode->GetNode()->CPPmultinode14) = multimapUnion->CPPmultimap14->end();
-		break;
-	case 15:
-		*(multiNode->GetNode()->CPPmultinode15) = multimapUnion->CPPmultimap15->end();
-		break;
-	case 16:
-		*(multiNode->GetNode()->CPPmultinode16) = multimapUnion->CPPmultimap16->end();
-		break;
-	case 17:
-		*(multiNode->GetNode()->CPPmultinode17) = multimapUnion->CPPmultimap17->end();
-		break;
-	case 18:
-		*(multiNode->GetNode()->CPPmultinode18) = multimapUnion->CPPmultimap18->end();
-		break;
-	case 19:
-		*(multiNode->GetNode()->CPPmultinode19) = multimapUnion->CPPmultimap19->end();
-		break;
-	case 20:
-		*(multiNode->GetNode()->CPPmultinode20) = multimapUnion->CPPmultimap20->end();
-		break;
-	case 21:
-		*(multiNode->GetNode()->CPPmultinode21) = multimapUnion->CPPmultimap21->end();
-		break;
-	case 22:
-		*(multiNode->GetNode()->CPPmultinode22) = multimapUnion->CPPmultimap22->end();
-		break;
-	case 23:
-		*(multiNode->GetNode()->CPPmultinode23) = multimapUnion->CPPmultimap23->end();
-		break;
-	case 24:
-		*(multiNode->GetNode()->CPPmultinode24) = multimapUnion->CPPmultimap24->end();
-		break;
-	case 25:
-		*(multiNode->GetNode()->CPPmultinode25) = multimapUnion->CPPmultimap25->end();
-		break;
-	case 26:
-		*(multiNode->GetNode()->CPPmultinode26) = multimapUnion->CPPmultimap26->end();
-		break;
-	case 27:
-		*(multiNode->GetNode()->CPPmultinode27) = multimapUnion->CPPmultimap27->end();
-		break;
-	case 28:
-		*(multiNode->GetNode()->CPPmultinode28) = multimapUnion->CPPmultimap28->end();
-		break;
-	case 29:
-		*(multiNode->GetNode()->CPPmultinode29) = multimapUnion->CPPmultimap29->end();
-		break;
-	case 30:
-		*(multiNode->GetNode()->CPPmultinode30) = multimapUnion->CPPmultimap30->end();
-		break;
-	case 31:
-		*(multiNode->GetNode()->CPPmultinode31) = multimapUnion->CPPmultimap31->end();
-		break;
-	case 32:
-		*(multiNode->GetNode()->CPPmultinode32) = multimapUnion->CPPmultimap32->end();
-		break;
-	case 33:
-		*(multiNode->GetNode()->CPPmultinode33) = multimapUnion->CPPmultimap33->end();
-		break;
-	case 34:
-		*(multiNode->GetNode()->CPPmultinode34) = multimapUnion->CPPmultimap34->end();
-		break;
-	case 35:
-		*(multiNode->GetNode()->CPPmultinode35) = multimapUnion->CPPmultimap35->end();
-		break;
-	case 36:
-		*(multiNode->GetNode()->CPPmultinode36) = multimapUnion->CPPmultimap36->end();
-		break;
-	case 37:
-		*(multiNode->GetNode()->CPPmultinode37) = multimapUnion->CPPmultimap37->end();
-		break;
-	case 38:
-		*(multiNode->GetNode()->CPPmultinode38) = multimapUnion->CPPmultimap38->end();
-		break;
-	case 39:
-		*(multiNode->GetNode()->CPPmultinode39) = multimapUnion->CPPmultimap39->end();
-		break;
-	case 40:
-		*(multiNode->GetNode()->CPPmultinode40) = multimapUnion->CPPmultimap40->end();
-		break;
-	case 41:
-		*(multiNode->GetNode()->CPPmultinode41) = multimapUnion->CPPmultimap41->end();
-		break;
-	case 42:
-		*(multiNode->GetNode()->CPPmultinode42) = multimapUnion->CPPmultimap42->end();
-		break;
-	case 43:
-		*(multiNode->GetNode()->CPPmultinode43) = multimapUnion->CPPmultimap43->end();
-		break;
-	case 44:
-		*(multiNode->GetNode()->CPPmultinode44) = multimapUnion->CPPmultimap44->end();
-		break;
-	case 45:
-		*(multiNode->GetNode()->CPPmultinode45) = multimapUnion->CPPmultimap45->end();
-		break;
-	case 46:
-		*(multiNode->GetNode()->CPPmultinode46) = multimapUnion->CPPmultimap46->end();
-		break;
-	case 47:
-		*(multiNode->GetNode()->CPPmultinode47) = multimapUnion->CPPmultimap47->end();
-		break;
-	case 48:
-		*(multiNode->GetNode()->CPPmultinode48) = multimapUnion->CPPmultimap48->end();
-		break;
-	case 49:
-		*(multiNode->GetNode()->CPPmultinode49) = multimapUnion->CPPmultimap49->end();
-		break;
-	case 50:
-		*(multiNode->GetNode()->CPPmultinode50) = multimapUnion->CPPmultimap50->end();
-		break;
-	case 51:
-		*(multiNode->GetNode()->CPPmultinode51) = multimapUnion->CPPmultimap51->end();
-		break;
-	case 52:
-		*(multiNode->GetNode()->CPPmultinode52) = multimapUnion->CPPmultimap52->end();
-		break;
-	case 53:
-		*(multiNode->GetNode()->CPPmultinode53) = multimapUnion->CPPmultimap53->end();
-		break;
-	case 54:
-		*(multiNode->GetNode()->CPPmultinode54) = multimapUnion->CPPmultimap54->end();
-		break;
-	case 55:
-		*(multiNode->GetNode()->CPPmultinode55) = multimapUnion->CPPmultimap55->end();
-		break;
-	case 56:
-		*(multiNode->GetNode()->CPPmultinode56) = multimapUnion->CPPmultimap56->end();
-		break;
-	case 57:
-		*(multiNode->GetNode()->CPPmultinode57) = multimapUnion->CPPmultimap57->end();
-		break;
-	case 58:
-		*(multiNode->GetNode()->CPPmultinode58) = multimapUnion->CPPmultimap58->end();
-		break;
-	case 59:
-		*(multiNode->GetNode()->CPPmultinode59) = multimapUnion->CPPmultimap59->end();
-		break;
-	case 60:
-		*(multiNode->GetNode()->CPPmultinode60) = multimapUnion->CPPmultimap60->end();
-		break;
-	case 61:
-		*(multiNode->GetNode()->CPPmultinode61) = multimapUnion->CPPmultimap61->end();
-		break;
-	case 62:
-		*(multiNode->GetNode()->CPPmultinode62) = multimapUnion->CPPmultimap62->end();
-		break;
-	case 63:
-		*(multiNode->GetNode()->CPPmultinode63) = multimapUnion->CPPmultimap63->end();
-		break;
-	case 64:
-		*(multiNode->GetNode()->CPPmultinode64) = multimapUnion->CPPmultimap64->end();
-		break;
-	case 65:
-		*(multiNode->GetNode()->CPPmultinode65) = multimapUnion->CPPmultimap65->end();
-		break;
-	case 66:
-		*(multiNode->GetNode()->CPPmultinode66) = multimapUnion->CPPmultimap66->end();
-		break;
-	case 67:
-		*(multiNode->GetNode()->CPPmultinode67) = multimapUnion->CPPmultimap67->end();
-		break;
-	case 68:
-		*(multiNode->GetNode()->CPPmultinode68) = multimapUnion->CPPmultimap68->end();
-		break;
-	case 69:
-		*(multiNode->GetNode()->CPPmultinode69) = multimapUnion->CPPmultimap69->end();
-		break;
-	case 70:
-		*(multiNode->GetNode()->CPPmultinode70) = multimapUnion->CPPmultimap70->end();
-		break;
-	case 71:
-		*(multiNode->GetNode()->CPPmultinode71) = multimapUnion->CPPmultimap71->end();
-		break;
-	case 72:
-		*(multiNode->GetNode()->CPPmultinode72) = multimapUnion->CPPmultimap72->end();
-		break;
-	case 73:
-		*(multiNode->GetNode()->CPPmultinode73) = multimapUnion->CPPmultimap73->end();
-		break;
-	case 74:
-		*(multiNode->GetNode()->CPPmultinode74) = multimapUnion->CPPmultimap74->end();
-		break;
-	case 75:
-		*(multiNode->GetNode()->CPPmultinode75) = multimapUnion->CPPmultimap75->end();
-		break;
-	case 76:
-		*(multiNode->GetNode()->CPPmultinode76) = multimapUnion->CPPmultimap76->end();
-		break;
-	case 77:
-		*(multiNode->GetNode()->CPPmultinode77) = multimapUnion->CPPmultimap77->end();
-		break;
-	case 78:
-		*(multiNode->GetNode()->CPPmultinode78) = multimapUnion->CPPmultimap78->end();
-		break;
-	case 79:
-		*(multiNode->GetNode()->CPPmultinode79) = multimapUnion->CPPmultimap79->end();
-		break;
-	case 80:
-		*(multiNode->GetNode()->CPPmultinode80) = multimapUnion->CPPmultimap80->end();
-		break;
-	case 81:
-		*(multiNode->GetNode()->CPPmultinode81) = multimapUnion->CPPmultimap81->end();
-		break;
-	case 82:
-		*(multiNode->GetNode()->CPPmultinode82) = multimapUnion->CPPmultimap82->end();
-		break;
-	case 83:
-		*(multiNode->GetNode()->CPPmultinode83) = multimapUnion->CPPmultimap83->end();
-		break;
-	case 84:
-		*(multiNode->GetNode()->CPPmultinode84) = multimapUnion->CPPmultimap84->end();
-		break;
-	case 85:
-		*(multiNode->GetNode()->CPPmultinode85) = multimapUnion->CPPmultimap85->end();
-		break;
-	case 86:
-		*(multiNode->GetNode()->CPPmultinode86) = multimapUnion->CPPmultimap86->end();
-		break;
-	case 87:
-		*(multiNode->GetNode()->CPPmultinode87) = multimapUnion->CPPmultimap87->end();
-		break;
-	case 88:
-		*(multiNode->GetNode()->CPPmultinode88) = multimapUnion->CPPmultimap88->end();
-		break;
-	case 89:
-		*(multiNode->GetNode()->CPPmultinode89) = multimapUnion->CPPmultimap89->end();
-		break;
-	case 90:
-		*(multiNode->GetNode()->CPPmultinode90) = multimapUnion->CPPmultimap90->end();
-		break;
-	case 91:
-		*(multiNode->GetNode()->CPPmultinode91) = multimapUnion->CPPmultimap91->end();
-		break;
-	case 92:
-		*(multiNode->GetNode()->CPPmultinode92) = multimapUnion->CPPmultimap92->end();
-		break;
-	case 93:
-		*(multiNode->GetNode()->CPPmultinode93) = multimapUnion->CPPmultimap93->end();
-		break;
-	case 94:
-		*(multiNode->GetNode()->CPPmultinode94) = multimapUnion->CPPmultimap94->end();
-		break;
-	case 95:
-		*(multiNode->GetNode()->CPPmultinode95) = multimapUnion->CPPmultimap95->end();
-		break;
-	case 96:
-		*(multiNode->GetNode()->CPPmultinode96) = multimapUnion->CPPmultimap96->end();
-		break;
-	case 97:
-		*(multiNode->GetNode()->CPPmultinode97) = multimapUnion->CPPmultimap97->end();
-		break;
-	case 98:
-		*(multiNode->GetNode()->CPPmultinode98) = multimapUnion->CPPmultimap98->end();
-		break;
-	case 99:
-		*(multiNode->GetNode()->CPPmultinode99) = multimapUnion->CPPmultimap99->end();
-		break;
-	case 100:
-		*(multiNode->GetNode()->CPPmultinode100) = multimapUnion->CPPmultimap100->end();
-		break;
-	case 101:
-		*(multiNode->GetNode()->CPPmultinode101) = multimapUnion->CPPmultimap101->end();
-		break;
-	case 102:
-		*(multiNode->GetNode()->CPPmultinode102) = multimapUnion->CPPmultimap102->end();
-		break;
-	case 103:
-		*(multiNode->GetNode()->CPPmultinode103) = multimapUnion->CPPmultimap103->end();
-		break;
-	case 104:
-		*(multiNode->GetNode()->CPPmultinode104) = multimapUnion->CPPmultimap104->end();
-		break;
-	case 105:
-		*(multiNode->GetNode()->CPPmultinode105) = multimapUnion->CPPmultimap105->end();
-		break;
-	case 106:
-		*(multiNode->GetNode()->CPPmultinode106) = multimapUnion->CPPmultimap106->end();
-		break;
-	case 107:
-		*(multiNode->GetNode()->CPPmultinode107) = multimapUnion->CPPmultimap107->end();
-		break;
-	case 108:
-		*(multiNode->GetNode()->CPPmultinode108) = multimapUnion->CPPmultimap108->end();
-		break;
-	case 109:
-		*(multiNode->GetNode()->CPPmultinode109) = multimapUnion->CPPmultimap109->end();
-		break;
-	case 110:
-		*(multiNode->GetNode()->CPPmultinode110) = multimapUnion->CPPmultimap110->end();
-		break;
-	case 111:
-		*(multiNode->GetNode()->CPPmultinode111) = multimapUnion->CPPmultimap111->end();
-		break;
-	case 112:
-		*(multiNode->GetNode()->CPPmultinode112) = multimapUnion->CPPmultimap112->end();
-		break;
-	case 113:
-		*(multiNode->GetNode()->CPPmultinode113) = multimapUnion->CPPmultimap113->end();
-		break;
-	case 114:
-		*(multiNode->GetNode()->CPPmultinode114) = multimapUnion->CPPmultimap114->end();
-		break;
-	case 115:
-		*(multiNode->GetNode()->CPPmultinode115) = multimapUnion->CPPmultimap115->end();
-		break;
-	case 116:
-		*(multiNode->GetNode()->CPPmultinode116) = multimapUnion->CPPmultimap116->end();
-		break;
-	case 117:
-		*(multiNode->GetNode()->CPPmultinode117) = multimapUnion->CPPmultimap117->end();
-		break;
-	case 118:
-		*(multiNode->GetNode()->CPPmultinode118) = multimapUnion->CPPmultimap118->end();
-		break;
-	case 119:
-		*(multiNode->GetNode()->CPPmultinode119) = multimapUnion->CPPmultimap119->end();
-		break;
-	case 120:
-		*(multiNode->GetNode()->CPPmultinode120) = multimapUnion->CPPmultimap120->end();
-		break;
-	case 121:
-		*(multiNode->GetNode()->CPPmultinode121) = multimapUnion->CPPmultimap121->end();
-		break;
-	case 122:
-		*(multiNode->GetNode()->CPPmultinode122) = multimapUnion->CPPmultimap122->end();
-		break;
-	case 123:
-		*(multiNode->GetNode()->CPPmultinode123) = multimapUnion->CPPmultimap123->end();
-		break;
-	case 124:
-		*(multiNode->GetNode()->CPPmultinode124) = multimapUnion->CPPmultimap124->end();
-		break;
-	case 125:
-		*(multiNode->GetNode()->CPPmultinode125) = multimapUnion->CPPmultimap125->end();
-		break;
-	case 126:
-		*(multiNode->GetNode()->CPPmultinode126) = multimapUnion->CPPmultimap126->end();
-		break;
-	case 127:
-		*(multiNode->GetNode()->CPPmultinode127) = multimapUnion->CPPmultimap127->end();
-		break;
-	case 128:
-		*(multiNode->GetNode()->CPPmultinode128) = multimapUnion->CPPmultimap128->end();
-		break;
-	case 129:
-		*(multiNode->GetNode()->CPPmultinode129) = multimapUnion->CPPmultimap129->end();
-		break;
-	case 130:
-		*(multiNode->GetNode()->CPPmultinode130) = multimapUnion->CPPmultimap130->end();
-		break;
-	case 131:
-		*(multiNode->GetNode()->CPPmultinode131) = multimapUnion->CPPmultimap131->end();
-		break;
-	case 132:
-		*(multiNode->GetNode()->CPPmultinode132) = multimapUnion->CPPmultimap132->end();
-		break;
-	case 133:
-		*(multiNode->GetNode()->CPPmultinode133) = multimapUnion->CPPmultimap133->end();
-		break;
-	case 134:
-		*(multiNode->GetNode()->CPPmultinode134) = multimapUnion->CPPmultimap134->end();
-		break;
-	case 135:
-		*(multiNode->GetNode()->CPPmultinode135) = multimapUnion->CPPmultimap135->end();
-		break;
-	case 136:
-		*(multiNode->GetNode()->CPPmultinode136) = multimapUnion->CPPmultimap136->end();
-		break;
-	case 137:
-		*(multiNode->GetNode()->CPPmultinode137) = multimapUnion->CPPmultimap137->end();
-		break;
-	case 138:
-		*(multiNode->GetNode()->CPPmultinode138) = multimapUnion->CPPmultimap138->end();
-		break;
-	case 139:
-		*(multiNode->GetNode()->CPPmultinode139) = multimapUnion->CPPmultimap139->end();
-		break;
-	case 140:
-		*(multiNode->GetNode()->CPPmultinode140) = multimapUnion->CPPmultimap140->end();
-		break;
-	case 141:
-		*(multiNode->GetNode()->CPPmultinode141) = multimapUnion->CPPmultimap141->end();
-		break;
-	case 142:
-		*(multiNode->GetNode()->CPPmultinode142) = multimapUnion->CPPmultimap142->end();
-		break;
-	case 143:
-		*(multiNode->GetNode()->CPPmultinode143) = multimapUnion->CPPmultimap143->end();
-		break;
-	case 144:
-		*(multiNode->GetNode()->CPPmultinode144) = multimapUnion->CPPmultimap144->end();
-		break;
-	case 145:
-		*(multiNode->GetNode()->CPPmultinode145) = multimapUnion->CPPmultimap145->end();
-		break;
-	case 146:
-		*(multiNode->GetNode()->CPPmultinode146) = multimapUnion->CPPmultimap146->end();
-		break;
-	case 147:
-		*(multiNode->GetNode()->CPPmultinode147) = multimapUnion->CPPmultimap147->end();
-		break;
-	case 148:
-		*(multiNode->GetNode()->CPPmultinode148) = multimapUnion->CPPmultimap148->end();
-		break;
-	case 149:
-		*(multiNode->GetNode()->CPPmultinode149) = multimapUnion->CPPmultimap149->end();
-		break;
-	case 150:
-		*(multiNode->GetNode()->CPPmultinode150) = multimapUnion->CPPmultimap150->end();
-		break;
-	case 151:
-		*(multiNode->GetNode()->CPPmultinode151) = multimapUnion->CPPmultimap151->end();
-		break;
-	case 152:
-		*(multiNode->GetNode()->CPPmultinode152) = multimapUnion->CPPmultimap152->end();
-		break;
-	case 153:
-		*(multiNode->GetNode()->CPPmultinode153) = multimapUnion->CPPmultimap153->end();
-		break;
-	case 154:
-		*(multiNode->GetNode()->CPPmultinode154) = multimapUnion->CPPmultimap154->end();
-		break;
-	case 155:
-		*(multiNode->GetNode()->CPPmultinode155) = multimapUnion->CPPmultimap155->end();
-		break;
-	case 156:
-		*(multiNode->GetNode()->CPPmultinode156) = multimapUnion->CPPmultimap156->end();
-		break;
-	case 157:
-		*(multiNode->GetNode()->CPPmultinode157) = multimapUnion->CPPmultimap157->end();
-		break;
-	case 158:
-		*(multiNode->GetNode()->CPPmultinode158) = multimapUnion->CPPmultimap158->end();
-		break;
-	case 159:
-		*(multiNode->GetNode()->CPPmultinode159) = multimapUnion->CPPmultimap159->end();
-		break;
-	case 160:
-		*(multiNode->GetNode()->CPPmultinode160) = multimapUnion->CPPmultimap160->end();
-		break;
-	case 161:
-		*(multiNode->GetNode()->CPPmultinode161) = multimapUnion->CPPmultimap161->end();
-		break;
-	case 162:
-		*(multiNode->GetNode()->CPPmultinode162) = multimapUnion->CPPmultimap162->end();
-		break;
-	case 163:
-		*(multiNode->GetNode()->CPPmultinode163) = multimapUnion->CPPmultimap163->end();
-		break;
-	case 164:
-		*(multiNode->GetNode()->CPPmultinode164) = multimapUnion->CPPmultimap164->end();
-		break;
-	case 165:
-		*(multiNode->GetNode()->CPPmultinode165) = multimapUnion->CPPmultimap165->end();
-		break;
-	case 166:
-		*(multiNode->GetNode()->CPPmultinode166) = multimapUnion->CPPmultimap166->end();
-		break;
-	case 167:
-		*(multiNode->GetNode()->CPPmultinode167) = multimapUnion->CPPmultimap167->end();
-		break;
-	case 168:
-		*(multiNode->GetNode()->CPPmultinode168) = multimapUnion->CPPmultimap168->end();
-		break;
-	case 169:
-		*(multiNode->GetNode()->CPPmultinode169) = multimapUnion->CPPmultimap169->end();
-		break;
-	case 170:
-		*(multiNode->GetNode()->CPPmultinode170) = multimapUnion->CPPmultimap170->end();
-		break;
-	case 171:
-		*(multiNode->GetNode()->CPPmultinode171) = multimapUnion->CPPmultimap171->end();
-		break;
-	case 172:
-		*(multiNode->GetNode()->CPPmultinode172) = multimapUnion->CPPmultimap172->end();
-		break;
-	case 173:
-		*(multiNode->GetNode()->CPPmultinode173) = multimapUnion->CPPmultimap173->end();
-		break;
-	case 174:
-		*(multiNode->GetNode()->CPPmultinode174) = multimapUnion->CPPmultimap174->end();
-		break;
-	case 175:
-		*(multiNode->GetNode()->CPPmultinode175) = multimapUnion->CPPmultimap175->end();
-		break;
-	case 176:
-		*(multiNode->GetNode()->CPPmultinode176) = multimapUnion->CPPmultimap176->end();
-		break;
-	case 177:
-		*(multiNode->GetNode()->CPPmultinode177) = multimapUnion->CPPmultimap177->end();
-		break;
-	case 178:
-		*(multiNode->GetNode()->CPPmultinode178) = multimapUnion->CPPmultimap178->end();
-		break;
-	case 179:
-		*(multiNode->GetNode()->CPPmultinode179) = multimapUnion->CPPmultimap179->end();
-		break;
-	case 180:
-		*(multiNode->GetNode()->CPPmultinode180) = multimapUnion->CPPmultimap180->end();
-		break;
-	case 181:
-		*(multiNode->GetNode()->CPPmultinode181) = multimapUnion->CPPmultimap181->end();
-		break;
-	case 182:
-		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->end();
-		break;
-	case 183:
-		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->end();
-		break;
-	case 184:
-		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->end();
-		break;
-	case 185:
-		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->end();
-		break;
-	case 186:
-		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->end();
-		break;
-	case 187:
-		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->end();
-		break;
-	case 188:
-		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->end();
-		break;
-	case 189:
-		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->end();
-		break;
-	case 190:
-		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->end();
-		break;
-	case 191:
-		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->end();
-		break;
-	case 192:
-		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->end();
-		break;
-	case 193:
-		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->end();
-		break;
-	case 194:
-		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->end();
-		break;
-	case 195:
-		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->end();
-		break;
-	case 196:
-		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->end();
-		break;
+		UnOrderedMultiMap_BeginEnd_CASE(1, end)
+		UnOrderedMultiMap_BeginEnd_CASE(2, end)
+		UnOrderedMultiMap_BeginEnd_CASE(3, end)
+		UnOrderedMultiMap_BeginEnd_CASE(4, end)
+		UnOrderedMultiMap_BeginEnd_CASE(5, end)
+		UnOrderedMultiMap_BeginEnd_CASE(6, end)
+		UnOrderedMultiMap_BeginEnd_CASE(7, end)
+		UnOrderedMultiMap_BeginEnd_CASE(8, end)
+		UnOrderedMultiMap_BeginEnd_CASE(9, end)
+		UnOrderedMultiMap_BeginEnd_CASE(10, end)
+		UnOrderedMultiMap_BeginEnd_CASE(11, end)
+		UnOrderedMultiMap_BeginEnd_CASE(12, end)
+		UnOrderedMultiMap_BeginEnd_CASE(13, end)
+		UnOrderedMultiMap_BeginEnd_CASE(14, end)
+		UnOrderedMultiMap_BeginEnd_CASE(15, end)
+		UnOrderedMultiMap_BeginEnd_CASE(16, end)
+		UnOrderedMultiMap_BeginEnd_CASE(17, end)
+		UnOrderedMultiMap_BeginEnd_CASE(18, end)
+		UnOrderedMultiMap_BeginEnd_CASE(19, end)
+		UnOrderedMultiMap_BeginEnd_CASE(20, end)
+		UnOrderedMultiMap_BeginEnd_CASE(21, end)
+		UnOrderedMultiMap_BeginEnd_CASE(22, end)
+		UnOrderedMultiMap_BeginEnd_CASE(23, end)
+		UnOrderedMultiMap_BeginEnd_CASE(24, end)
+		UnOrderedMultiMap_BeginEnd_CASE(25, end)
+		UnOrderedMultiMap_BeginEnd_CASE(26, end)
+		UnOrderedMultiMap_BeginEnd_CASE(27, end)
+		UnOrderedMultiMap_BeginEnd_CASE(28, end)
+		UnOrderedMultiMap_BeginEnd_CASE(29, end)
+		UnOrderedMultiMap_BeginEnd_CASE(30, end)
+		UnOrderedMultiMap_BeginEnd_CASE(31, end)
+		UnOrderedMultiMap_BeginEnd_CASE(32, end)
+		UnOrderedMultiMap_BeginEnd_CASE(33, end)
+		UnOrderedMultiMap_BeginEnd_CASE(34, end)
+		UnOrderedMultiMap_BeginEnd_CASE(35, end)
+		UnOrderedMultiMap_BeginEnd_CASE(36, end)
+		UnOrderedMultiMap_BeginEnd_CASE(37, end)
+		UnOrderedMultiMap_BeginEnd_CASE(38, end)
+		UnOrderedMultiMap_BeginEnd_CASE(39, end)
+		UnOrderedMultiMap_BeginEnd_CASE(40, end)
+		UnOrderedMultiMap_BeginEnd_CASE(41, end)
+		UnOrderedMultiMap_BeginEnd_CASE(42, end)
+		UnOrderedMultiMap_BeginEnd_CASE(43, end)
+		UnOrderedMultiMap_BeginEnd_CASE(44, end)
+		UnOrderedMultiMap_BeginEnd_CASE(45, end)
+		UnOrderedMultiMap_BeginEnd_CASE(46, end)
+		UnOrderedMultiMap_BeginEnd_CASE(47, end)
+		UnOrderedMultiMap_BeginEnd_CASE(48, end)
+		UnOrderedMultiMap_BeginEnd_CASE(49, end)
+		UnOrderedMultiMap_BeginEnd_CASE(50, end)
+		UnOrderedMultiMap_BeginEnd_CASE(51, end)
+		UnOrderedMultiMap_BeginEnd_CASE(52, end)
+		UnOrderedMultiMap_BeginEnd_CASE(53, end)
+		UnOrderedMultiMap_BeginEnd_CASE(54, end)
+		UnOrderedMultiMap_BeginEnd_CASE(55, end)
+		UnOrderedMultiMap_BeginEnd_CASE(56, end)
+		UnOrderedMultiMap_BeginEnd_CASE(57, end)
+		UnOrderedMultiMap_BeginEnd_CASE(58, end)
+		UnOrderedMultiMap_BeginEnd_CASE(59, end)
+		UnOrderedMultiMap_BeginEnd_CASE(60, end)
+		UnOrderedMultiMap_BeginEnd_CASE(61, end)
+		UnOrderedMultiMap_BeginEnd_CASE(62, end)
+		UnOrderedMultiMap_BeginEnd_CASE(63, end)
+		UnOrderedMultiMap_BeginEnd_CASE(64, end)
+		UnOrderedMultiMap_BeginEnd_CASE(65, end)
+		UnOrderedMultiMap_BeginEnd_CASE(66, end)
+		UnOrderedMultiMap_BeginEnd_CASE(67, end)
+		UnOrderedMultiMap_BeginEnd_CASE(68, end)
+		UnOrderedMultiMap_BeginEnd_CASE(69, end)
+		UnOrderedMultiMap_BeginEnd_CASE(70, end)
+		UnOrderedMultiMap_BeginEnd_CASE(71, end)
+		UnOrderedMultiMap_BeginEnd_CASE(72, end)
+		UnOrderedMultiMap_BeginEnd_CASE(73, end)
+		UnOrderedMultiMap_BeginEnd_CASE(74, end)
+		UnOrderedMultiMap_BeginEnd_CASE(75, end)
+		UnOrderedMultiMap_BeginEnd_CASE(76, end)
+		UnOrderedMultiMap_BeginEnd_CASE(77, end)
+		UnOrderedMultiMap_BeginEnd_CASE(78, end)
+		UnOrderedMultiMap_BeginEnd_CASE(79, end)
+		UnOrderedMultiMap_BeginEnd_CASE(80, end)
+		UnOrderedMultiMap_BeginEnd_CASE(81, end)
+		UnOrderedMultiMap_BeginEnd_CASE(82, end)
+		UnOrderedMultiMap_BeginEnd_CASE(83, end)
+		UnOrderedMultiMap_BeginEnd_CASE(84, end)
+		UnOrderedMultiMap_BeginEnd_CASE(85, end)
+		UnOrderedMultiMap_BeginEnd_CASE(86, end)
+		UnOrderedMultiMap_BeginEnd_CASE(87, end)
+		UnOrderedMultiMap_BeginEnd_CASE(88, end)
+		UnOrderedMultiMap_BeginEnd_CASE(89, end)
+		UnOrderedMultiMap_BeginEnd_CASE(90, end)
+		UnOrderedMultiMap_BeginEnd_CASE(91, end)
+		UnOrderedMultiMap_BeginEnd_CASE(92, end)
+		UnOrderedMultiMap_BeginEnd_CASE(93, end)
+		UnOrderedMultiMap_BeginEnd_CASE(94, end)
+		UnOrderedMultiMap_BeginEnd_CASE(95, end)
+		UnOrderedMultiMap_BeginEnd_CASE(96, end)
+		UnOrderedMultiMap_BeginEnd_CASE(97, end)
+		UnOrderedMultiMap_BeginEnd_CASE(98, end)
+		UnOrderedMultiMap_BeginEnd_CASE(99, end)
+		UnOrderedMultiMap_BeginEnd_CASE(100, end)
+		UnOrderedMultiMap_BeginEnd_CASE(101, end)
+		UnOrderedMultiMap_BeginEnd_CASE(102, end)
+		UnOrderedMultiMap_BeginEnd_CASE(103, end)
+		UnOrderedMultiMap_BeginEnd_CASE(104, end)
+		UnOrderedMultiMap_BeginEnd_CASE(105, end)
+		UnOrderedMultiMap_BeginEnd_CASE(106, end)
+		UnOrderedMultiMap_BeginEnd_CASE(107, end)
+		UnOrderedMultiMap_BeginEnd_CASE(108, end)
+		UnOrderedMultiMap_BeginEnd_CASE(109, end)
+		UnOrderedMultiMap_BeginEnd_CASE(110, end)
+		UnOrderedMultiMap_BeginEnd_CASE(111, end)
+		UnOrderedMultiMap_BeginEnd_CASE(112, end)
+		UnOrderedMultiMap_BeginEnd_CASE(113, end)
+		UnOrderedMultiMap_BeginEnd_CASE(114, end)
+		UnOrderedMultiMap_BeginEnd_CASE(115, end)
+		UnOrderedMultiMap_BeginEnd_CASE(116, end)
+		UnOrderedMultiMap_BeginEnd_CASE(117, end)
+		UnOrderedMultiMap_BeginEnd_CASE(118, end)
+		UnOrderedMultiMap_BeginEnd_CASE(119, end)
+		UnOrderedMultiMap_BeginEnd_CASE(120, end)
+		UnOrderedMultiMap_BeginEnd_CASE(121, end)
+		UnOrderedMultiMap_BeginEnd_CASE(122, end)
+		UnOrderedMultiMap_BeginEnd_CASE(123, end)
+		UnOrderedMultiMap_BeginEnd_CASE(124, end)
+		UnOrderedMultiMap_BeginEnd_CASE(125, end)
+		UnOrderedMultiMap_BeginEnd_CASE(126, end)
+		UnOrderedMultiMap_BeginEnd_CASE(127, end)
+		UnOrderedMultiMap_BeginEnd_CASE(128, end)
+		UnOrderedMultiMap_BeginEnd_CASE(129, end)
+		UnOrderedMultiMap_BeginEnd_CASE(130, end)
+		UnOrderedMultiMap_BeginEnd_CASE(131, end)
+		UnOrderedMultiMap_BeginEnd_CASE(132, end)
+		UnOrderedMultiMap_BeginEnd_CASE(133, end)
+		UnOrderedMultiMap_BeginEnd_CASE(134, end)
+		UnOrderedMultiMap_BeginEnd_CASE(135, end)
+		UnOrderedMultiMap_BeginEnd_CASE(136, end)
+		UnOrderedMultiMap_BeginEnd_CASE(137, end)
+		UnOrderedMultiMap_BeginEnd_CASE(138, end)
+		UnOrderedMultiMap_BeginEnd_CASE(139, end)
+		UnOrderedMultiMap_BeginEnd_CASE(140, end)
+		UnOrderedMultiMap_BeginEnd_CASE(141, end)
+		UnOrderedMultiMap_BeginEnd_CASE(142, end)
+		UnOrderedMultiMap_BeginEnd_CASE(143, end)
+		UnOrderedMultiMap_BeginEnd_CASE(144, end)
+		UnOrderedMultiMap_BeginEnd_CASE(145, end)
+		UnOrderedMultiMap_BeginEnd_CASE(146, end)
+		UnOrderedMultiMap_BeginEnd_CASE(147, end)
+		UnOrderedMultiMap_BeginEnd_CASE(148, end)
+		UnOrderedMultiMap_BeginEnd_CASE(149, end)
+		UnOrderedMultiMap_BeginEnd_CASE(150, end)
+		UnOrderedMultiMap_BeginEnd_CASE(151, end)
+		UnOrderedMultiMap_BeginEnd_CASE(152, end)
+		UnOrderedMultiMap_BeginEnd_CASE(153, end)
+		UnOrderedMultiMap_BeginEnd_CASE(154, end)
+		UnOrderedMultiMap_BeginEnd_CASE(155, end)
+		UnOrderedMultiMap_BeginEnd_CASE(156, end)
+		UnOrderedMultiMap_BeginEnd_CASE(157, end)
+		UnOrderedMultiMap_BeginEnd_CASE(158, end)
+		UnOrderedMultiMap_BeginEnd_CASE(159, end)
+		UnOrderedMultiMap_BeginEnd_CASE(160, end)
+		UnOrderedMultiMap_BeginEnd_CASE(161, end)
+		UnOrderedMultiMap_BeginEnd_CASE(162, end)
+		UnOrderedMultiMap_BeginEnd_CASE(163, end)
+		UnOrderedMultiMap_BeginEnd_CASE(164, end)
+		UnOrderedMultiMap_BeginEnd_CASE(165, end)
+		UnOrderedMultiMap_BeginEnd_CASE(166, end)
+		UnOrderedMultiMap_BeginEnd_CASE(167, end)
+		UnOrderedMultiMap_BeginEnd_CASE(168, end)
+		UnOrderedMultiMap_BeginEnd_CASE(169, end)
+		UnOrderedMultiMap_BeginEnd_CASE(170, end)
+		UnOrderedMultiMap_BeginEnd_CASE(171, end)
+		UnOrderedMultiMap_BeginEnd_CASE(172, end)
+		UnOrderedMultiMap_BeginEnd_CASE(173, end)
+		UnOrderedMultiMap_BeginEnd_CASE(174, end)
+		UnOrderedMultiMap_BeginEnd_CASE(175, end)
+		UnOrderedMultiMap_BeginEnd_CASE(176, end)
+		UnOrderedMultiMap_BeginEnd_CASE(177, end)
+		UnOrderedMultiMap_BeginEnd_CASE(178, end)
+		UnOrderedMultiMap_BeginEnd_CASE(179, end)
+		UnOrderedMultiMap_BeginEnd_CASE(180, end)
+		UnOrderedMultiMap_BeginEnd_CASE(181, end)
+		UnOrderedMultiMap_BeginEnd_CASE(182, end)
+		UnOrderedMultiMap_BeginEnd_CASE(183, end)
+		UnOrderedMultiMap_BeginEnd_CASE(184, end)
+		UnOrderedMultiMap_BeginEnd_CASE(185, end)
+		UnOrderedMultiMap_BeginEnd_CASE(186, end)
+		UnOrderedMultiMap_BeginEnd_CASE(187, end)
+		UnOrderedMultiMap_BeginEnd_CASE(188, end)
+		UnOrderedMultiMap_BeginEnd_CASE(189, end)
+		UnOrderedMultiMap_BeginEnd_CASE(190, end)
+		UnOrderedMultiMap_BeginEnd_CASE(191, end)
+		UnOrderedMultiMap_BeginEnd_CASE(192, end)
+		UnOrderedMultiMap_BeginEnd_CASE(193, end)
+		UnOrderedMultiMap_BeginEnd_CASE(194, end)
+		UnOrderedMultiMap_BeginEnd_CASE(195, end)
+		UnOrderedMultiMap_BeginEnd_CASE(196, end)
 	}
 	return multiNode;
 }
@@ -11300,6 +9170,11 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	return multiNode->DeepCopy();
 }
 
+#define UnOrderedMultiMap_CbeginCend_CASE(NUM, CbeginCend) \
+	case NUM: \
+		*(temp->GetNode()->CPPmulticonstnode##NUM) = multimapUnion->CPPmultimap##NUM->CbeginCend(); \
+		break;
+
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::cbegin()
 {
@@ -11312,594 +9187,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>^ UnOrderedMul
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(temp->GetNode()->CPPmulticonstnode1) = multimapUnion->CPPmultimap1->cbegin();
-		break;
-	case 2:
-		*(temp->GetNode()->CPPmulticonstnode2) = multimapUnion->CPPmultimap2->cbegin();
-		break;
-	case 3:
-		*(temp->GetNode()->CPPmulticonstnode3) = multimapUnion->CPPmultimap3->cbegin();
-		break;
-	case 4:
-		*(temp->GetNode()->CPPmulticonstnode4) = multimapUnion->CPPmultimap4->cbegin();
-		break;
-	case 5:
-		*(temp->GetNode()->CPPmulticonstnode5) = multimapUnion->CPPmultimap5->cbegin();
-		break;
-	case 6:
-		*(temp->GetNode()->CPPmulticonstnode6) = multimapUnion->CPPmultimap6->cbegin();
-		break;
-	case 7:
-		*(temp->GetNode()->CPPmulticonstnode7) = multimapUnion->CPPmultimap7->cbegin();
-		break;
-	case 8:
-		*(temp->GetNode()->CPPmulticonstnode8) = multimapUnion->CPPmultimap8->cbegin();
-		break;
-	case 9:
-		*(temp->GetNode()->CPPmulticonstnode9) = multimapUnion->CPPmultimap9->cbegin();
-		break;
-	case 10:
-		*(temp->GetNode()->CPPmulticonstnode10) = multimapUnion->CPPmultimap10->cbegin();
-		break;
-	case 11:
-		*(temp->GetNode()->CPPmulticonstnode11) = multimapUnion->CPPmultimap11->cbegin();
-		break;
-	case 12:
-		*(temp->GetNode()->CPPmulticonstnode12) = multimapUnion->CPPmultimap12->cbegin();
-		break;
-	case 13:
-		*(temp->GetNode()->CPPmulticonstnode13) = multimapUnion->CPPmultimap13->cbegin();
-		break;
-	case 14:
-		*(temp->GetNode()->CPPmulticonstnode14) = multimapUnion->CPPmultimap14->cbegin();
-		break;
-	case 15:
-		*(temp->GetNode()->CPPmulticonstnode15) = multimapUnion->CPPmultimap15->cbegin();
-		break;
-	case 16:
-		*(temp->GetNode()->CPPmulticonstnode16) = multimapUnion->CPPmultimap16->cbegin();
-		break;
-	case 17:
-		*(temp->GetNode()->CPPmulticonstnode17) = multimapUnion->CPPmultimap17->cbegin();
-		break;
-	case 18:
-		*(temp->GetNode()->CPPmulticonstnode18) = multimapUnion->CPPmultimap18->cbegin();
-		break;
-	case 19:
-		*(temp->GetNode()->CPPmulticonstnode19) = multimapUnion->CPPmultimap19->cbegin();
-		break;
-	case 20:
-		*(temp->GetNode()->CPPmulticonstnode20) = multimapUnion->CPPmultimap20->cbegin();
-		break;
-	case 21:
-		*(temp->GetNode()->CPPmulticonstnode21) = multimapUnion->CPPmultimap21->cbegin();
-		break;
-	case 22:
-		*(temp->GetNode()->CPPmulticonstnode22) = multimapUnion->CPPmultimap22->cbegin();
-		break;
-	case 23:
-		*(temp->GetNode()->CPPmulticonstnode23) = multimapUnion->CPPmultimap23->cbegin();
-		break;
-	case 24:
-		*(temp->GetNode()->CPPmulticonstnode24) = multimapUnion->CPPmultimap24->cbegin();
-		break;
-	case 25:
-		*(temp->GetNode()->CPPmulticonstnode25) = multimapUnion->CPPmultimap25->cbegin();
-		break;
-	case 26:
-		*(temp->GetNode()->CPPmulticonstnode26) = multimapUnion->CPPmultimap26->cbegin();
-		break;
-	case 27:
-		*(temp->GetNode()->CPPmulticonstnode27) = multimapUnion->CPPmultimap27->cbegin();
-		break;
-	case 28:
-		*(temp->GetNode()->CPPmulticonstnode28) = multimapUnion->CPPmultimap28->cbegin();
-		break;
-	case 29:
-		*(temp->GetNode()->CPPmulticonstnode29) = multimapUnion->CPPmultimap29->cbegin();
-		break;
-	case 30:
-		*(temp->GetNode()->CPPmulticonstnode30) = multimapUnion->CPPmultimap30->cbegin();
-		break;
-	case 31:
-		*(temp->GetNode()->CPPmulticonstnode31) = multimapUnion->CPPmultimap31->cbegin();
-		break;
-	case 32:
-		*(temp->GetNode()->CPPmulticonstnode32) = multimapUnion->CPPmultimap32->cbegin();
-		break;
-	case 33:
-		*(temp->GetNode()->CPPmulticonstnode33) = multimapUnion->CPPmultimap33->cbegin();
-		break;
-	case 34:
-		*(temp->GetNode()->CPPmulticonstnode34) = multimapUnion->CPPmultimap34->cbegin();
-		break;
-	case 35:
-		*(temp->GetNode()->CPPmulticonstnode35) = multimapUnion->CPPmultimap35->cbegin();
-		break;
-	case 36:
-		*(temp->GetNode()->CPPmulticonstnode36) = multimapUnion->CPPmultimap36->cbegin();
-		break;
-	case 37:
-		*(temp->GetNode()->CPPmulticonstnode37) = multimapUnion->CPPmultimap37->cbegin();
-		break;
-	case 38:
-		*(temp->GetNode()->CPPmulticonstnode38) = multimapUnion->CPPmultimap38->cbegin();
-		break;
-	case 39:
-		*(temp->GetNode()->CPPmulticonstnode39) = multimapUnion->CPPmultimap39->cbegin();
-		break;
-	case 40:
-		*(temp->GetNode()->CPPmulticonstnode40) = multimapUnion->CPPmultimap40->cbegin();
-		break;
-	case 41:
-		*(temp->GetNode()->CPPmulticonstnode41) = multimapUnion->CPPmultimap41->cbegin();
-		break;
-	case 42:
-		*(temp->GetNode()->CPPmulticonstnode42) = multimapUnion->CPPmultimap42->cbegin();
-		break;
-	case 43:
-		*(temp->GetNode()->CPPmulticonstnode43) = multimapUnion->CPPmultimap43->cbegin();
-		break;
-	case 44:
-		*(temp->GetNode()->CPPmulticonstnode44) = multimapUnion->CPPmultimap44->cbegin();
-		break;
-	case 45:
-		*(temp->GetNode()->CPPmulticonstnode45) = multimapUnion->CPPmultimap45->cbegin();
-		break;
-	case 46:
-		*(temp->GetNode()->CPPmulticonstnode46) = multimapUnion->CPPmultimap46->cbegin();
-		break;
-	case 47:
-		*(temp->GetNode()->CPPmulticonstnode47) = multimapUnion->CPPmultimap47->cbegin();
-		break;
-	case 48:
-		*(temp->GetNode()->CPPmulticonstnode48) = multimapUnion->CPPmultimap48->cbegin();
-		break;
-	case 49:
-		*(temp->GetNode()->CPPmulticonstnode49) = multimapUnion->CPPmultimap49->cbegin();
-		break;
-	case 50:
-		*(temp->GetNode()->CPPmulticonstnode50) = multimapUnion->CPPmultimap50->cbegin();
-		break;
-	case 51:
-		*(temp->GetNode()->CPPmulticonstnode51) = multimapUnion->CPPmultimap51->cbegin();
-		break;
-	case 52:
-		*(temp->GetNode()->CPPmulticonstnode52) = multimapUnion->CPPmultimap52->cbegin();
-		break;
-	case 53:
-		*(temp->GetNode()->CPPmulticonstnode53) = multimapUnion->CPPmultimap53->cbegin();
-		break;
-	case 54:
-		*(temp->GetNode()->CPPmulticonstnode54) = multimapUnion->CPPmultimap54->cbegin();
-		break;
-	case 55:
-		*(temp->GetNode()->CPPmulticonstnode55) = multimapUnion->CPPmultimap55->cbegin();
-		break;
-	case 56:
-		*(temp->GetNode()->CPPmulticonstnode56) = multimapUnion->CPPmultimap56->cbegin();
-		break;
-	case 57:
-		*(temp->GetNode()->CPPmulticonstnode57) = multimapUnion->CPPmultimap57->cbegin();
-		break;
-	case 58:
-		*(temp->GetNode()->CPPmulticonstnode58) = multimapUnion->CPPmultimap58->cbegin();
-		break;
-	case 59:
-		*(temp->GetNode()->CPPmulticonstnode59) = multimapUnion->CPPmultimap59->cbegin();
-		break;
-	case 60:
-		*(temp->GetNode()->CPPmulticonstnode60) = multimapUnion->CPPmultimap60->cbegin();
-		break;
-	case 61:
-		*(temp->GetNode()->CPPmulticonstnode61) = multimapUnion->CPPmultimap61->cbegin();
-		break;
-	case 62:
-		*(temp->GetNode()->CPPmulticonstnode62) = multimapUnion->CPPmultimap62->cbegin();
-		break;
-	case 63:
-		*(temp->GetNode()->CPPmulticonstnode63) = multimapUnion->CPPmultimap63->cbegin();
-		break;
-	case 64:
-		*(temp->GetNode()->CPPmulticonstnode64) = multimapUnion->CPPmultimap64->cbegin();
-		break;
-	case 65:
-		*(temp->GetNode()->CPPmulticonstnode65) = multimapUnion->CPPmultimap65->cbegin();
-		break;
-	case 66:
-		*(temp->GetNode()->CPPmulticonstnode66) = multimapUnion->CPPmultimap66->cbegin();
-		break;
-	case 67:
-		*(temp->GetNode()->CPPmulticonstnode67) = multimapUnion->CPPmultimap67->cbegin();
-		break;
-	case 68:
-		*(temp->GetNode()->CPPmulticonstnode68) = multimapUnion->CPPmultimap68->cbegin();
-		break;
-	case 69:
-		*(temp->GetNode()->CPPmulticonstnode69) = multimapUnion->CPPmultimap69->cbegin();
-		break;
-	case 70:
-		*(temp->GetNode()->CPPmulticonstnode70) = multimapUnion->CPPmultimap70->cbegin();
-		break;
-	case 71:
-		*(temp->GetNode()->CPPmulticonstnode71) = multimapUnion->CPPmultimap71->cbegin();
-		break;
-	case 72:
-		*(temp->GetNode()->CPPmulticonstnode72) = multimapUnion->CPPmultimap72->cbegin();
-		break;
-	case 73:
-		*(temp->GetNode()->CPPmulticonstnode73) = multimapUnion->CPPmultimap73->cbegin();
-		break;
-	case 74:
-		*(temp->GetNode()->CPPmulticonstnode74) = multimapUnion->CPPmultimap74->cbegin();
-		break;
-	case 75:
-		*(temp->GetNode()->CPPmulticonstnode75) = multimapUnion->CPPmultimap75->cbegin();
-		break;
-	case 76:
-		*(temp->GetNode()->CPPmulticonstnode76) = multimapUnion->CPPmultimap76->cbegin();
-		break;
-	case 77:
-		*(temp->GetNode()->CPPmulticonstnode77) = multimapUnion->CPPmultimap77->cbegin();
-		break;
-	case 78:
-		*(temp->GetNode()->CPPmulticonstnode78) = multimapUnion->CPPmultimap78->cbegin();
-		break;
-	case 79:
-		*(temp->GetNode()->CPPmulticonstnode79) = multimapUnion->CPPmultimap79->cbegin();
-		break;
-	case 80:
-		*(temp->GetNode()->CPPmulticonstnode80) = multimapUnion->CPPmultimap80->cbegin();
-		break;
-	case 81:
-		*(temp->GetNode()->CPPmulticonstnode81) = multimapUnion->CPPmultimap81->cbegin();
-		break;
-	case 82:
-		*(temp->GetNode()->CPPmulticonstnode82) = multimapUnion->CPPmultimap82->cbegin();
-		break;
-	case 83:
-		*(temp->GetNode()->CPPmulticonstnode83) = multimapUnion->CPPmultimap83->cbegin();
-		break;
-	case 84:
-		*(temp->GetNode()->CPPmulticonstnode84) = multimapUnion->CPPmultimap84->cbegin();
-		break;
-	case 85:
-		*(temp->GetNode()->CPPmulticonstnode85) = multimapUnion->CPPmultimap85->cbegin();
-		break;
-	case 86:
-		*(temp->GetNode()->CPPmulticonstnode86) = multimapUnion->CPPmultimap86->cbegin();
-		break;
-	case 87:
-		*(temp->GetNode()->CPPmulticonstnode87) = multimapUnion->CPPmultimap87->cbegin();
-		break;
-	case 88:
-		*(temp->GetNode()->CPPmulticonstnode88) = multimapUnion->CPPmultimap88->cbegin();
-		break;
-	case 89:
-		*(temp->GetNode()->CPPmulticonstnode89) = multimapUnion->CPPmultimap89->cbegin();
-		break;
-	case 90:
-		*(temp->GetNode()->CPPmulticonstnode90) = multimapUnion->CPPmultimap90->cbegin();
-		break;
-	case 91:
-		*(temp->GetNode()->CPPmulticonstnode91) = multimapUnion->CPPmultimap91->cbegin();
-		break;
-	case 92:
-		*(temp->GetNode()->CPPmulticonstnode92) = multimapUnion->CPPmultimap92->cbegin();
-		break;
-	case 93:
-		*(temp->GetNode()->CPPmulticonstnode93) = multimapUnion->CPPmultimap93->cbegin();
-		break;
-	case 94:
-		*(temp->GetNode()->CPPmulticonstnode94) = multimapUnion->CPPmultimap94->cbegin();
-		break;
-	case 95:
-		*(temp->GetNode()->CPPmulticonstnode95) = multimapUnion->CPPmultimap95->cbegin();
-		break;
-	case 96:
-		*(temp->GetNode()->CPPmulticonstnode96) = multimapUnion->CPPmultimap96->cbegin();
-		break;
-	case 97:
-		*(temp->GetNode()->CPPmulticonstnode97) = multimapUnion->CPPmultimap97->cbegin();
-		break;
-	case 98:
-		*(temp->GetNode()->CPPmulticonstnode98) = multimapUnion->CPPmultimap98->cbegin();
-		break;
-	case 99:
-		*(temp->GetNode()->CPPmulticonstnode99) = multimapUnion->CPPmultimap99->cbegin();
-		break;
-	case 100:
-		*(temp->GetNode()->CPPmulticonstnode100) = multimapUnion->CPPmultimap100->cbegin();
-		break;
-	case 101:
-		*(temp->GetNode()->CPPmulticonstnode101) = multimapUnion->CPPmultimap101->cbegin();
-		break;
-	case 102:
-		*(temp->GetNode()->CPPmulticonstnode102) = multimapUnion->CPPmultimap102->cbegin();
-		break;
-	case 103:
-		*(temp->GetNode()->CPPmulticonstnode103) = multimapUnion->CPPmultimap103->cbegin();
-		break;
-	case 104:
-		*(temp->GetNode()->CPPmulticonstnode104) = multimapUnion->CPPmultimap104->cbegin();
-		break;
-	case 105:
-		*(temp->GetNode()->CPPmulticonstnode105) = multimapUnion->CPPmultimap105->cbegin();
-		break;
-	case 106:
-		*(temp->GetNode()->CPPmulticonstnode106) = multimapUnion->CPPmultimap106->cbegin();
-		break;
-	case 107:
-		*(temp->GetNode()->CPPmulticonstnode107) = multimapUnion->CPPmultimap107->cbegin();
-		break;
-	case 108:
-		*(temp->GetNode()->CPPmulticonstnode108) = multimapUnion->CPPmultimap108->cbegin();
-		break;
-	case 109:
-		*(temp->GetNode()->CPPmulticonstnode109) = multimapUnion->CPPmultimap109->cbegin();
-		break;
-	case 110:
-		*(temp->GetNode()->CPPmulticonstnode110) = multimapUnion->CPPmultimap110->cbegin();
-		break;
-	case 111:
-		*(temp->GetNode()->CPPmulticonstnode111) = multimapUnion->CPPmultimap111->cbegin();
-		break;
-	case 112:
-		*(temp->GetNode()->CPPmulticonstnode112) = multimapUnion->CPPmultimap112->cbegin();
-		break;
-	case 113:
-		*(temp->GetNode()->CPPmulticonstnode113) = multimapUnion->CPPmultimap113->cbegin();
-		break;
-	case 114:
-		*(temp->GetNode()->CPPmulticonstnode114) = multimapUnion->CPPmultimap114->cbegin();
-		break;
-	case 115:
-		*(temp->GetNode()->CPPmulticonstnode115) = multimapUnion->CPPmultimap115->cbegin();
-		break;
-	case 116:
-		*(temp->GetNode()->CPPmulticonstnode116) = multimapUnion->CPPmultimap116->cbegin();
-		break;
-	case 117:
-		*(temp->GetNode()->CPPmulticonstnode117) = multimapUnion->CPPmultimap117->cbegin();
-		break;
-	case 118:
-		*(temp->GetNode()->CPPmulticonstnode118) = multimapUnion->CPPmultimap118->cbegin();
-		break;
-	case 119:
-		*(temp->GetNode()->CPPmulticonstnode119) = multimapUnion->CPPmultimap119->cbegin();
-		break;
-	case 120:
-		*(temp->GetNode()->CPPmulticonstnode120) = multimapUnion->CPPmultimap120->cbegin();
-		break;
-	case 121:
-		*(temp->GetNode()->CPPmulticonstnode121) = multimapUnion->CPPmultimap121->cbegin();
-		break;
-	case 122:
-		*(temp->GetNode()->CPPmulticonstnode122) = multimapUnion->CPPmultimap122->cbegin();
-		break;
-	case 123:
-		*(temp->GetNode()->CPPmulticonstnode123) = multimapUnion->CPPmultimap123->cbegin();
-		break;
-	case 124:
-		*(temp->GetNode()->CPPmulticonstnode124) = multimapUnion->CPPmultimap124->cbegin();
-		break;
-	case 125:
-		*(temp->GetNode()->CPPmulticonstnode125) = multimapUnion->CPPmultimap125->cbegin();
-		break;
-	case 126:
-		*(temp->GetNode()->CPPmulticonstnode126) = multimapUnion->CPPmultimap126->cbegin();
-		break;
-	case 127:
-		*(temp->GetNode()->CPPmulticonstnode127) = multimapUnion->CPPmultimap127->cbegin();
-		break;
-	case 128:
-		*(temp->GetNode()->CPPmulticonstnode128) = multimapUnion->CPPmultimap128->cbegin();
-		break;
-	case 129:
-		*(temp->GetNode()->CPPmulticonstnode129) = multimapUnion->CPPmultimap129->cbegin();
-		break;
-	case 130:
-		*(temp->GetNode()->CPPmulticonstnode130) = multimapUnion->CPPmultimap130->cbegin();
-		break;
-	case 131:
-		*(temp->GetNode()->CPPmulticonstnode131) = multimapUnion->CPPmultimap131->cbegin();
-		break;
-	case 132:
-		*(temp->GetNode()->CPPmulticonstnode132) = multimapUnion->CPPmultimap132->cbegin();
-		break;
-	case 133:
-		*(temp->GetNode()->CPPmulticonstnode133) = multimapUnion->CPPmultimap133->cbegin();
-		break;
-	case 134:
-		*(temp->GetNode()->CPPmulticonstnode134) = multimapUnion->CPPmultimap134->cbegin();
-		break;
-	case 135:
-		*(temp->GetNode()->CPPmulticonstnode135) = multimapUnion->CPPmultimap135->cbegin();
-		break;
-	case 136:
-		*(temp->GetNode()->CPPmulticonstnode136) = multimapUnion->CPPmultimap136->cbegin();
-		break;
-	case 137:
-		*(temp->GetNode()->CPPmulticonstnode137) = multimapUnion->CPPmultimap137->cbegin();
-		break;
-	case 138:
-		*(temp->GetNode()->CPPmulticonstnode138) = multimapUnion->CPPmultimap138->cbegin();
-		break;
-	case 139:
-		*(temp->GetNode()->CPPmulticonstnode139) = multimapUnion->CPPmultimap139->cbegin();
-		break;
-	case 140:
-		*(temp->GetNode()->CPPmulticonstnode140) = multimapUnion->CPPmultimap140->cbegin();
-		break;
-	case 141:
-		*(temp->GetNode()->CPPmulticonstnode141) = multimapUnion->CPPmultimap141->cbegin();
-		break;
-	case 142:
-		*(temp->GetNode()->CPPmulticonstnode142) = multimapUnion->CPPmultimap142->cbegin();
-		break;
-	case 143:
-		*(temp->GetNode()->CPPmulticonstnode143) = multimapUnion->CPPmultimap143->cbegin();
-		break;
-	case 144:
-		*(temp->GetNode()->CPPmulticonstnode144) = multimapUnion->CPPmultimap144->cbegin();
-		break;
-	case 145:
-		*(temp->GetNode()->CPPmulticonstnode145) = multimapUnion->CPPmultimap145->cbegin();
-		break;
-	case 146:
-		*(temp->GetNode()->CPPmulticonstnode146) = multimapUnion->CPPmultimap146->cbegin();
-		break;
-	case 147:
-		*(temp->GetNode()->CPPmulticonstnode147) = multimapUnion->CPPmultimap147->cbegin();
-		break;
-	case 148:
-		*(temp->GetNode()->CPPmulticonstnode148) = multimapUnion->CPPmultimap148->cbegin();
-		break;
-	case 149:
-		*(temp->GetNode()->CPPmulticonstnode149) = multimapUnion->CPPmultimap149->cbegin();
-		break;
-	case 150:
-		*(temp->GetNode()->CPPmulticonstnode150) = multimapUnion->CPPmultimap150->cbegin();
-		break;
-	case 151:
-		*(temp->GetNode()->CPPmulticonstnode151) = multimapUnion->CPPmultimap151->cbegin();
-		break;
-	case 152:
-		*(temp->GetNode()->CPPmulticonstnode152) = multimapUnion->CPPmultimap152->cbegin();
-		break;
-	case 153:
-		*(temp->GetNode()->CPPmulticonstnode153) = multimapUnion->CPPmultimap153->cbegin();
-		break;
-	case 154:
-		*(temp->GetNode()->CPPmulticonstnode154) = multimapUnion->CPPmultimap154->cbegin();
-		break;
-	case 155:
-		*(temp->GetNode()->CPPmulticonstnode155) = multimapUnion->CPPmultimap155->cbegin();
-		break;
-	case 156:
-		*(temp->GetNode()->CPPmulticonstnode156) = multimapUnion->CPPmultimap156->cbegin();
-		break;
-	case 157:
-		*(temp->GetNode()->CPPmulticonstnode157) = multimapUnion->CPPmultimap157->cbegin();
-		break;
-	case 158:
-		*(temp->GetNode()->CPPmulticonstnode158) = multimapUnion->CPPmultimap158->cbegin();
-		break;
-	case 159:
-		*(temp->GetNode()->CPPmulticonstnode159) = multimapUnion->CPPmultimap159->cbegin();
-		break;
-	case 160:
-		*(temp->GetNode()->CPPmulticonstnode160) = multimapUnion->CPPmultimap160->cbegin();
-		break;
-	case 161:
-		*(temp->GetNode()->CPPmulticonstnode161) = multimapUnion->CPPmultimap161->cbegin();
-		break;
-	case 162:
-		*(temp->GetNode()->CPPmulticonstnode162) = multimapUnion->CPPmultimap162->cbegin();
-		break;
-	case 163:
-		*(temp->GetNode()->CPPmulticonstnode163) = multimapUnion->CPPmultimap163->cbegin();
-		break;
-	case 164:
-		*(temp->GetNode()->CPPmulticonstnode164) = multimapUnion->CPPmultimap164->cbegin();
-		break;
-	case 165:
-		*(temp->GetNode()->CPPmulticonstnode165) = multimapUnion->CPPmultimap165->cbegin();
-		break;
-	case 166:
-		*(temp->GetNode()->CPPmulticonstnode166) = multimapUnion->CPPmultimap166->cbegin();
-		break;
-	case 167:
-		*(temp->GetNode()->CPPmulticonstnode167) = multimapUnion->CPPmultimap167->cbegin();
-		break;
-	case 168:
-		*(temp->GetNode()->CPPmulticonstnode168) = multimapUnion->CPPmultimap168->cbegin();
-		break;
-	case 169:
-		*(temp->GetNode()->CPPmulticonstnode169) = multimapUnion->CPPmultimap169->cbegin();
-		break;
-	case 170:
-		*(temp->GetNode()->CPPmulticonstnode170) = multimapUnion->CPPmultimap170->cbegin();
-		break;
-	case 171:
-		*(temp->GetNode()->CPPmulticonstnode171) = multimapUnion->CPPmultimap171->cbegin();
-		break;
-	case 172:
-		*(temp->GetNode()->CPPmulticonstnode172) = multimapUnion->CPPmultimap172->cbegin();
-		break;
-	case 173:
-		*(temp->GetNode()->CPPmulticonstnode173) = multimapUnion->CPPmultimap173->cbegin();
-		break;
-	case 174:
-		*(temp->GetNode()->CPPmulticonstnode174) = multimapUnion->CPPmultimap174->cbegin();
-		break;
-	case 175:
-		*(temp->GetNode()->CPPmulticonstnode175) = multimapUnion->CPPmultimap175->cbegin();
-		break;
-	case 176:
-		*(temp->GetNode()->CPPmulticonstnode176) = multimapUnion->CPPmultimap176->cbegin();
-		break;
-	case 177:
-		*(temp->GetNode()->CPPmulticonstnode177) = multimapUnion->CPPmultimap177->cbegin();
-		break;
-	case 178:
-		*(temp->GetNode()->CPPmulticonstnode178) = multimapUnion->CPPmultimap178->cbegin();
-		break;
-	case 179:
-		*(temp->GetNode()->CPPmulticonstnode179) = multimapUnion->CPPmultimap179->cbegin();
-		break;
-	case 180:
-		*(temp->GetNode()->CPPmulticonstnode180) = multimapUnion->CPPmultimap180->cbegin();
-		break;
-	case 181:
-		*(temp->GetNode()->CPPmulticonstnode181) = multimapUnion->CPPmultimap181->cbegin();
-		break;
-	case 182:
-		*(temp->GetNode()->CPPmulticonstnode182) = multimapUnion->CPPmultimap182->cbegin();
-		break;
-	case 183:
-		*(temp->GetNode()->CPPmulticonstnode183) = multimapUnion->CPPmultimap183->cbegin();
-		break;
-	case 184:
-		*(temp->GetNode()->CPPmulticonstnode184) = multimapUnion->CPPmultimap184->cbegin();
-		break;
-	case 185:
-		*(temp->GetNode()->CPPmulticonstnode185) = multimapUnion->CPPmultimap185->cbegin();
-		break;
-	case 186:
-		*(temp->GetNode()->CPPmulticonstnode186) = multimapUnion->CPPmultimap186->cbegin();
-		break;
-	case 187:
-		*(temp->GetNode()->CPPmulticonstnode187) = multimapUnion->CPPmultimap187->cbegin();
-		break;
-	case 188:
-		*(temp->GetNode()->CPPmulticonstnode188) = multimapUnion->CPPmultimap188->cbegin();
-		break;
-	case 189:
-		*(temp->GetNode()->CPPmulticonstnode189) = multimapUnion->CPPmultimap189->cbegin();
-		break;
-	case 190:
-		*(temp->GetNode()->CPPmulticonstnode190) = multimapUnion->CPPmultimap190->cbegin();
-		break;
-	case 191:
-		*(temp->GetNode()->CPPmulticonstnode191) = multimapUnion->CPPmultimap191->cbegin();
-		break;
-	case 192:
-		*(temp->GetNode()->CPPmulticonstnode192) = multimapUnion->CPPmultimap192->cbegin();
-		break;
-	case 193:
-		*(temp->GetNode()->CPPmulticonstnode193) = multimapUnion->CPPmultimap193->cbegin();
-		break;
-	case 194:
-		*(temp->GetNode()->CPPmulticonstnode194) = multimapUnion->CPPmultimap194->cbegin();
-		break;
-	case 195:
-		*(temp->GetNode()->CPPmulticonstnode195) = multimapUnion->CPPmultimap195->cbegin();
-		break;
-	case 196:
-		*(temp->GetNode()->CPPmulticonstnode196) = multimapUnion->CPPmultimap196->cbegin();
-		break;
+		UnOrderedMultiMap_CbeginCend_CASE(1, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(2, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(3, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(4, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(5, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(6, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(7, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(8, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(9, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(10, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(11, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(12, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(13, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(14, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(15, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(16, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(17, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(18, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(19, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(20, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(21, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(22, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(23, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(24, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(25, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(26, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(27, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(28, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(29, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(30, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(31, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(32, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(33, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(34, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(35, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(36, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(37, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(38, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(39, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(40, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(41, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(42, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(43, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(44, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(45, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(46, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(47, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(48, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(49, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(50, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(51, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(52, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(53, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(54, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(55, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(56, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(57, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(58, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(59, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(60, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(61, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(62, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(63, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(64, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(65, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(66, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(67, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(68, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(69, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(70, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(71, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(72, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(73, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(74, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(75, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(76, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(77, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(78, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(79, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(80, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(81, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(82, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(83, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(84, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(85, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(86, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(87, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(88, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(89, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(90, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(91, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(92, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(93, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(94, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(95, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(96, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(97, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(98, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(99, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(100, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(101, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(102, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(103, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(104, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(105, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(106, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(107, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(108, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(109, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(110, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(111, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(112, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(113, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(114, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(115, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(116, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(117, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(118, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(119, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(120, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(121, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(122, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(123, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(124, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(125, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(126, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(127, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(128, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(129, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(130, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(131, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(132, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(133, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(134, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(135, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(136, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(137, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(138, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(139, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(140, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(141, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(142, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(143, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(144, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(145, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(146, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(147, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(148, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(149, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(150, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(151, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(152, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(153, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(154, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(155, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(156, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(157, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(158, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(159, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(160, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(161, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(162, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(163, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(164, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(165, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(166, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(167, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(168, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(169, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(170, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(171, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(172, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(173, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(174, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(175, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(176, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(177, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(178, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(179, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(180, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(181, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(182, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(183, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(184, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(185, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(186, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(187, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(188, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(189, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(190, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(191, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(192, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(193, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(194, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(195, cbegin)
+		UnOrderedMultiMap_CbeginCend_CASE(196, cbegin)
 	}
 	return temp;
 }
@@ -11916,594 +9399,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>^ UnOrderedMul
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(temp->GetNode()->CPPmulticonstnode1) = multimapUnion->CPPmultimap1->cend();
-		break;
-	case 2:
-		*(temp->GetNode()->CPPmulticonstnode2) = multimapUnion->CPPmultimap2->cend();
-		break;
-	case 3:
-		*(temp->GetNode()->CPPmulticonstnode3) = multimapUnion->CPPmultimap3->cend();
-		break;
-	case 4:
-		*(temp->GetNode()->CPPmulticonstnode4) = multimapUnion->CPPmultimap4->cend();
-		break;
-	case 5:
-		*(temp->GetNode()->CPPmulticonstnode5) = multimapUnion->CPPmultimap5->cend();
-		break;
-	case 6:
-		*(temp->GetNode()->CPPmulticonstnode6) = multimapUnion->CPPmultimap6->cend();
-		break;
-	case 7:
-		*(temp->GetNode()->CPPmulticonstnode7) = multimapUnion->CPPmultimap7->cend();
-		break;
-	case 8:
-		*(temp->GetNode()->CPPmulticonstnode8) = multimapUnion->CPPmultimap8->cend();
-		break;
-	case 9:
-		*(temp->GetNode()->CPPmulticonstnode9) = multimapUnion->CPPmultimap9->cend();
-		break;
-	case 10:
-		*(temp->GetNode()->CPPmulticonstnode10) = multimapUnion->CPPmultimap10->cend();
-		break;
-	case 11:
-		*(temp->GetNode()->CPPmulticonstnode11) = multimapUnion->CPPmultimap11->cend();
-		break;
-	case 12:
-		*(temp->GetNode()->CPPmulticonstnode12) = multimapUnion->CPPmultimap12->cend();
-		break;
-	case 13:
-		*(temp->GetNode()->CPPmulticonstnode13) = multimapUnion->CPPmultimap13->cend();
-		break;
-	case 14:
-		*(temp->GetNode()->CPPmulticonstnode14) = multimapUnion->CPPmultimap14->cend();
-		break;
-	case 15:
-		*(temp->GetNode()->CPPmulticonstnode15) = multimapUnion->CPPmultimap15->cend();
-		break;
-	case 16:
-		*(temp->GetNode()->CPPmulticonstnode16) = multimapUnion->CPPmultimap16->cend();
-		break;
-	case 17:
-		*(temp->GetNode()->CPPmulticonstnode17) = multimapUnion->CPPmultimap17->cend();
-		break;
-	case 18:
-		*(temp->GetNode()->CPPmulticonstnode18) = multimapUnion->CPPmultimap18->cend();
-		break;
-	case 19:
-		*(temp->GetNode()->CPPmulticonstnode19) = multimapUnion->CPPmultimap19->cend();
-		break;
-	case 20:
-		*(temp->GetNode()->CPPmulticonstnode20) = multimapUnion->CPPmultimap20->cend();
-		break;
-	case 21:
-		*(temp->GetNode()->CPPmulticonstnode21) = multimapUnion->CPPmultimap21->cend();
-		break;
-	case 22:
-		*(temp->GetNode()->CPPmulticonstnode22) = multimapUnion->CPPmultimap22->cend();
-		break;
-	case 23:
-		*(temp->GetNode()->CPPmulticonstnode23) = multimapUnion->CPPmultimap23->cend();
-		break;
-	case 24:
-		*(temp->GetNode()->CPPmulticonstnode24) = multimapUnion->CPPmultimap24->cend();
-		break;
-	case 25:
-		*(temp->GetNode()->CPPmulticonstnode25) = multimapUnion->CPPmultimap25->cend();
-		break;
-	case 26:
-		*(temp->GetNode()->CPPmulticonstnode26) = multimapUnion->CPPmultimap26->cend();
-		break;
-	case 27:
-		*(temp->GetNode()->CPPmulticonstnode27) = multimapUnion->CPPmultimap27->cend();
-		break;
-	case 28:
-		*(temp->GetNode()->CPPmulticonstnode28) = multimapUnion->CPPmultimap28->cend();
-		break;
-	case 29:
-		*(temp->GetNode()->CPPmulticonstnode29) = multimapUnion->CPPmultimap29->cend();
-		break;
-	case 30:
-		*(temp->GetNode()->CPPmulticonstnode30) = multimapUnion->CPPmultimap30->cend();
-		break;
-	case 31:
-		*(temp->GetNode()->CPPmulticonstnode31) = multimapUnion->CPPmultimap31->cend();
-		break;
-	case 32:
-		*(temp->GetNode()->CPPmulticonstnode32) = multimapUnion->CPPmultimap32->cend();
-		break;
-	case 33:
-		*(temp->GetNode()->CPPmulticonstnode33) = multimapUnion->CPPmultimap33->cend();
-		break;
-	case 34:
-		*(temp->GetNode()->CPPmulticonstnode34) = multimapUnion->CPPmultimap34->cend();
-		break;
-	case 35:
-		*(temp->GetNode()->CPPmulticonstnode35) = multimapUnion->CPPmultimap35->cend();
-		break;
-	case 36:
-		*(temp->GetNode()->CPPmulticonstnode36) = multimapUnion->CPPmultimap36->cend();
-		break;
-	case 37:
-		*(temp->GetNode()->CPPmulticonstnode37) = multimapUnion->CPPmultimap37->cend();
-		break;
-	case 38:
-		*(temp->GetNode()->CPPmulticonstnode38) = multimapUnion->CPPmultimap38->cend();
-		break;
-	case 39:
-		*(temp->GetNode()->CPPmulticonstnode39) = multimapUnion->CPPmultimap39->cend();
-		break;
-	case 40:
-		*(temp->GetNode()->CPPmulticonstnode40) = multimapUnion->CPPmultimap40->cend();
-		break;
-	case 41:
-		*(temp->GetNode()->CPPmulticonstnode41) = multimapUnion->CPPmultimap41->cend();
-		break;
-	case 42:
-		*(temp->GetNode()->CPPmulticonstnode42) = multimapUnion->CPPmultimap42->cend();
-		break;
-	case 43:
-		*(temp->GetNode()->CPPmulticonstnode43) = multimapUnion->CPPmultimap43->cend();
-		break;
-	case 44:
-		*(temp->GetNode()->CPPmulticonstnode44) = multimapUnion->CPPmultimap44->cend();
-		break;
-	case 45:
-		*(temp->GetNode()->CPPmulticonstnode45) = multimapUnion->CPPmultimap45->cend();
-		break;
-	case 46:
-		*(temp->GetNode()->CPPmulticonstnode46) = multimapUnion->CPPmultimap46->cend();
-		break;
-	case 47:
-		*(temp->GetNode()->CPPmulticonstnode47) = multimapUnion->CPPmultimap47->cend();
-		break;
-	case 48:
-		*(temp->GetNode()->CPPmulticonstnode48) = multimapUnion->CPPmultimap48->cend();
-		break;
-	case 49:
-		*(temp->GetNode()->CPPmulticonstnode49) = multimapUnion->CPPmultimap49->cend();
-		break;
-	case 50:
-		*(temp->GetNode()->CPPmulticonstnode50) = multimapUnion->CPPmultimap50->cend();
-		break;
-	case 51:
-		*(temp->GetNode()->CPPmulticonstnode51) = multimapUnion->CPPmultimap51->cend();
-		break;
-	case 52:
-		*(temp->GetNode()->CPPmulticonstnode52) = multimapUnion->CPPmultimap52->cend();
-		break;
-	case 53:
-		*(temp->GetNode()->CPPmulticonstnode53) = multimapUnion->CPPmultimap53->cend();
-		break;
-	case 54:
-		*(temp->GetNode()->CPPmulticonstnode54) = multimapUnion->CPPmultimap54->cend();
-		break;
-	case 55:
-		*(temp->GetNode()->CPPmulticonstnode55) = multimapUnion->CPPmultimap55->cend();
-		break;
-	case 56:
-		*(temp->GetNode()->CPPmulticonstnode56) = multimapUnion->CPPmultimap56->cend();
-		break;
-	case 57:
-		*(temp->GetNode()->CPPmulticonstnode57) = multimapUnion->CPPmultimap57->cend();
-		break;
-	case 58:
-		*(temp->GetNode()->CPPmulticonstnode58) = multimapUnion->CPPmultimap58->cend();
-		break;
-	case 59:
-		*(temp->GetNode()->CPPmulticonstnode59) = multimapUnion->CPPmultimap59->cend();
-		break;
-	case 60:
-		*(temp->GetNode()->CPPmulticonstnode60) = multimapUnion->CPPmultimap60->cend();
-		break;
-	case 61:
-		*(temp->GetNode()->CPPmulticonstnode61) = multimapUnion->CPPmultimap61->cend();
-		break;
-	case 62:
-		*(temp->GetNode()->CPPmulticonstnode62) = multimapUnion->CPPmultimap62->cend();
-		break;
-	case 63:
-		*(temp->GetNode()->CPPmulticonstnode63) = multimapUnion->CPPmultimap63->cend();
-		break;
-	case 64:
-		*(temp->GetNode()->CPPmulticonstnode64) = multimapUnion->CPPmultimap64->cend();
-		break;
-	case 65:
-		*(temp->GetNode()->CPPmulticonstnode65) = multimapUnion->CPPmultimap65->cend();
-		break;
-	case 66:
-		*(temp->GetNode()->CPPmulticonstnode66) = multimapUnion->CPPmultimap66->cend();
-		break;
-	case 67:
-		*(temp->GetNode()->CPPmulticonstnode67) = multimapUnion->CPPmultimap67->cend();
-		break;
-	case 68:
-		*(temp->GetNode()->CPPmulticonstnode68) = multimapUnion->CPPmultimap68->cend();
-		break;
-	case 69:
-		*(temp->GetNode()->CPPmulticonstnode69) = multimapUnion->CPPmultimap69->cend();
-		break;
-	case 70:
-		*(temp->GetNode()->CPPmulticonstnode70) = multimapUnion->CPPmultimap70->cend();
-		break;
-	case 71:
-		*(temp->GetNode()->CPPmulticonstnode71) = multimapUnion->CPPmultimap71->cend();
-		break;
-	case 72:
-		*(temp->GetNode()->CPPmulticonstnode72) = multimapUnion->CPPmultimap72->cend();
-		break;
-	case 73:
-		*(temp->GetNode()->CPPmulticonstnode73) = multimapUnion->CPPmultimap73->cend();
-		break;
-	case 74:
-		*(temp->GetNode()->CPPmulticonstnode74) = multimapUnion->CPPmultimap74->cend();
-		break;
-	case 75:
-		*(temp->GetNode()->CPPmulticonstnode75) = multimapUnion->CPPmultimap75->cend();
-		break;
-	case 76:
-		*(temp->GetNode()->CPPmulticonstnode76) = multimapUnion->CPPmultimap76->cend();
-		break;
-	case 77:
-		*(temp->GetNode()->CPPmulticonstnode77) = multimapUnion->CPPmultimap77->cend();
-		break;
-	case 78:
-		*(temp->GetNode()->CPPmulticonstnode78) = multimapUnion->CPPmultimap78->cend();
-		break;
-	case 79:
-		*(temp->GetNode()->CPPmulticonstnode79) = multimapUnion->CPPmultimap79->cend();
-		break;
-	case 80:
-		*(temp->GetNode()->CPPmulticonstnode80) = multimapUnion->CPPmultimap80->cend();
-		break;
-	case 81:
-		*(temp->GetNode()->CPPmulticonstnode81) = multimapUnion->CPPmultimap81->cend();
-		break;
-	case 82:
-		*(temp->GetNode()->CPPmulticonstnode82) = multimapUnion->CPPmultimap82->cend();
-		break;
-	case 83:
-		*(temp->GetNode()->CPPmulticonstnode83) = multimapUnion->CPPmultimap83->cend();
-		break;
-	case 84:
-		*(temp->GetNode()->CPPmulticonstnode84) = multimapUnion->CPPmultimap84->cend();
-		break;
-	case 85:
-		*(temp->GetNode()->CPPmulticonstnode85) = multimapUnion->CPPmultimap85->cend();
-		break;
-	case 86:
-		*(temp->GetNode()->CPPmulticonstnode86) = multimapUnion->CPPmultimap86->cend();
-		break;
-	case 87:
-		*(temp->GetNode()->CPPmulticonstnode87) = multimapUnion->CPPmultimap87->cend();
-		break;
-	case 88:
-		*(temp->GetNode()->CPPmulticonstnode88) = multimapUnion->CPPmultimap88->cend();
-		break;
-	case 89:
-		*(temp->GetNode()->CPPmulticonstnode89) = multimapUnion->CPPmultimap89->cend();
-		break;
-	case 90:
-		*(temp->GetNode()->CPPmulticonstnode90) = multimapUnion->CPPmultimap90->cend();
-		break;
-	case 91:
-		*(temp->GetNode()->CPPmulticonstnode91) = multimapUnion->CPPmultimap91->cend();
-		break;
-	case 92:
-		*(temp->GetNode()->CPPmulticonstnode92) = multimapUnion->CPPmultimap92->cend();
-		break;
-	case 93:
-		*(temp->GetNode()->CPPmulticonstnode93) = multimapUnion->CPPmultimap93->cend();
-		break;
-	case 94:
-		*(temp->GetNode()->CPPmulticonstnode94) = multimapUnion->CPPmultimap94->cend();
-		break;
-	case 95:
-		*(temp->GetNode()->CPPmulticonstnode95) = multimapUnion->CPPmultimap95->cend();
-		break;
-	case 96:
-		*(temp->GetNode()->CPPmulticonstnode96) = multimapUnion->CPPmultimap96->cend();
-		break;
-	case 97:
-		*(temp->GetNode()->CPPmulticonstnode97) = multimapUnion->CPPmultimap97->cend();
-		break;
-	case 98:
-		*(temp->GetNode()->CPPmulticonstnode98) = multimapUnion->CPPmultimap98->cend();
-		break;
-	case 99:
-		*(temp->GetNode()->CPPmulticonstnode99) = multimapUnion->CPPmultimap99->cend();
-		break;
-	case 100:
-		*(temp->GetNode()->CPPmulticonstnode100) = multimapUnion->CPPmultimap100->cend();
-		break;
-	case 101:
-		*(temp->GetNode()->CPPmulticonstnode101) = multimapUnion->CPPmultimap101->cend();
-		break;
-	case 102:
-		*(temp->GetNode()->CPPmulticonstnode102) = multimapUnion->CPPmultimap102->cend();
-		break;
-	case 103:
-		*(temp->GetNode()->CPPmulticonstnode103) = multimapUnion->CPPmultimap103->cend();
-		break;
-	case 104:
-		*(temp->GetNode()->CPPmulticonstnode104) = multimapUnion->CPPmultimap104->cend();
-		break;
-	case 105:
-		*(temp->GetNode()->CPPmulticonstnode105) = multimapUnion->CPPmultimap105->cend();
-		break;
-	case 106:
-		*(temp->GetNode()->CPPmulticonstnode106) = multimapUnion->CPPmultimap106->cend();
-		break;
-	case 107:
-		*(temp->GetNode()->CPPmulticonstnode107) = multimapUnion->CPPmultimap107->cend();
-		break;
-	case 108:
-		*(temp->GetNode()->CPPmulticonstnode108) = multimapUnion->CPPmultimap108->cend();
-		break;
-	case 109:
-		*(temp->GetNode()->CPPmulticonstnode109) = multimapUnion->CPPmultimap109->cend();
-		break;
-	case 110:
-		*(temp->GetNode()->CPPmulticonstnode110) = multimapUnion->CPPmultimap110->cend();
-		break;
-	case 111:
-		*(temp->GetNode()->CPPmulticonstnode111) = multimapUnion->CPPmultimap111->cend();
-		break;
-	case 112:
-		*(temp->GetNode()->CPPmulticonstnode112) = multimapUnion->CPPmultimap112->cend();
-		break;
-	case 113:
-		*(temp->GetNode()->CPPmulticonstnode113) = multimapUnion->CPPmultimap113->cend();
-		break;
-	case 114:
-		*(temp->GetNode()->CPPmulticonstnode114) = multimapUnion->CPPmultimap114->cend();
-		break;
-	case 115:
-		*(temp->GetNode()->CPPmulticonstnode115) = multimapUnion->CPPmultimap115->cend();
-		break;
-	case 116:
-		*(temp->GetNode()->CPPmulticonstnode116) = multimapUnion->CPPmultimap116->cend();
-		break;
-	case 117:
-		*(temp->GetNode()->CPPmulticonstnode117) = multimapUnion->CPPmultimap117->cend();
-		break;
-	case 118:
-		*(temp->GetNode()->CPPmulticonstnode118) = multimapUnion->CPPmultimap118->cend();
-		break;
-	case 119:
-		*(temp->GetNode()->CPPmulticonstnode119) = multimapUnion->CPPmultimap119->cend();
-		break;
-	case 120:
-		*(temp->GetNode()->CPPmulticonstnode120) = multimapUnion->CPPmultimap120->cend();
-		break;
-	case 121:
-		*(temp->GetNode()->CPPmulticonstnode121) = multimapUnion->CPPmultimap121->cend();
-		break;
-	case 122:
-		*(temp->GetNode()->CPPmulticonstnode122) = multimapUnion->CPPmultimap122->cend();
-		break;
-	case 123:
-		*(temp->GetNode()->CPPmulticonstnode123) = multimapUnion->CPPmultimap123->cend();
-		break;
-	case 124:
-		*(temp->GetNode()->CPPmulticonstnode124) = multimapUnion->CPPmultimap124->cend();
-		break;
-	case 125:
-		*(temp->GetNode()->CPPmulticonstnode125) = multimapUnion->CPPmultimap125->cend();
-		break;
-	case 126:
-		*(temp->GetNode()->CPPmulticonstnode126) = multimapUnion->CPPmultimap126->cend();
-		break;
-	case 127:
-		*(temp->GetNode()->CPPmulticonstnode127) = multimapUnion->CPPmultimap127->cend();
-		break;
-	case 128:
-		*(temp->GetNode()->CPPmulticonstnode128) = multimapUnion->CPPmultimap128->cend();
-		break;
-	case 129:
-		*(temp->GetNode()->CPPmulticonstnode129) = multimapUnion->CPPmultimap129->cend();
-		break;
-	case 130:
-		*(temp->GetNode()->CPPmulticonstnode130) = multimapUnion->CPPmultimap130->cend();
-		break;
-	case 131:
-		*(temp->GetNode()->CPPmulticonstnode131) = multimapUnion->CPPmultimap131->cend();
-		break;
-	case 132:
-		*(temp->GetNode()->CPPmulticonstnode132) = multimapUnion->CPPmultimap132->cend();
-		break;
-	case 133:
-		*(temp->GetNode()->CPPmulticonstnode133) = multimapUnion->CPPmultimap133->cend();
-		break;
-	case 134:
-		*(temp->GetNode()->CPPmulticonstnode134) = multimapUnion->CPPmultimap134->cend();
-		break;
-	case 135:
-		*(temp->GetNode()->CPPmulticonstnode135) = multimapUnion->CPPmultimap135->cend();
-		break;
-	case 136:
-		*(temp->GetNode()->CPPmulticonstnode136) = multimapUnion->CPPmultimap136->cend();
-		break;
-	case 137:
-		*(temp->GetNode()->CPPmulticonstnode137) = multimapUnion->CPPmultimap137->cend();
-		break;
-	case 138:
-		*(temp->GetNode()->CPPmulticonstnode138) = multimapUnion->CPPmultimap138->cend();
-		break;
-	case 139:
-		*(temp->GetNode()->CPPmulticonstnode139) = multimapUnion->CPPmultimap139->cend();
-		break;
-	case 140:
-		*(temp->GetNode()->CPPmulticonstnode140) = multimapUnion->CPPmultimap140->cend();
-		break;
-	case 141:
-		*(temp->GetNode()->CPPmulticonstnode141) = multimapUnion->CPPmultimap141->cend();
-		break;
-	case 142:
-		*(temp->GetNode()->CPPmulticonstnode142) = multimapUnion->CPPmultimap142->cend();
-		break;
-	case 143:
-		*(temp->GetNode()->CPPmulticonstnode143) = multimapUnion->CPPmultimap143->cend();
-		break;
-	case 144:
-		*(temp->GetNode()->CPPmulticonstnode144) = multimapUnion->CPPmultimap144->cend();
-		break;
-	case 145:
-		*(temp->GetNode()->CPPmulticonstnode145) = multimapUnion->CPPmultimap145->cend();
-		break;
-	case 146:
-		*(temp->GetNode()->CPPmulticonstnode146) = multimapUnion->CPPmultimap146->cend();
-		break;
-	case 147:
-		*(temp->GetNode()->CPPmulticonstnode147) = multimapUnion->CPPmultimap147->cend();
-		break;
-	case 148:
-		*(temp->GetNode()->CPPmulticonstnode148) = multimapUnion->CPPmultimap148->cend();
-		break;
-	case 149:
-		*(temp->GetNode()->CPPmulticonstnode149) = multimapUnion->CPPmultimap149->cend();
-		break;
-	case 150:
-		*(temp->GetNode()->CPPmulticonstnode150) = multimapUnion->CPPmultimap150->cend();
-		break;
-	case 151:
-		*(temp->GetNode()->CPPmulticonstnode151) = multimapUnion->CPPmultimap151->cend();
-		break;
-	case 152:
-		*(temp->GetNode()->CPPmulticonstnode152) = multimapUnion->CPPmultimap152->cend();
-		break;
-	case 153:
-		*(temp->GetNode()->CPPmulticonstnode153) = multimapUnion->CPPmultimap153->cend();
-		break;
-	case 154:
-		*(temp->GetNode()->CPPmulticonstnode154) = multimapUnion->CPPmultimap154->cend();
-		break;
-	case 155:
-		*(temp->GetNode()->CPPmulticonstnode155) = multimapUnion->CPPmultimap155->cend();
-		break;
-	case 156:
-		*(temp->GetNode()->CPPmulticonstnode156) = multimapUnion->CPPmultimap156->cend();
-		break;
-	case 157:
-		*(temp->GetNode()->CPPmulticonstnode157) = multimapUnion->CPPmultimap157->cend();
-		break;
-	case 158:
-		*(temp->GetNode()->CPPmulticonstnode158) = multimapUnion->CPPmultimap158->cend();
-		break;
-	case 159:
-		*(temp->GetNode()->CPPmulticonstnode159) = multimapUnion->CPPmultimap159->cend();
-		break;
-	case 160:
-		*(temp->GetNode()->CPPmulticonstnode160) = multimapUnion->CPPmultimap160->cend();
-		break;
-	case 161:
-		*(temp->GetNode()->CPPmulticonstnode161) = multimapUnion->CPPmultimap161->cend();
-		break;
-	case 162:
-		*(temp->GetNode()->CPPmulticonstnode162) = multimapUnion->CPPmultimap162->cend();
-		break;
-	case 163:
-		*(temp->GetNode()->CPPmulticonstnode163) = multimapUnion->CPPmultimap163->cend();
-		break;
-	case 164:
-		*(temp->GetNode()->CPPmulticonstnode164) = multimapUnion->CPPmultimap164->cend();
-		break;
-	case 165:
-		*(temp->GetNode()->CPPmulticonstnode165) = multimapUnion->CPPmultimap165->cend();
-		break;
-	case 166:
-		*(temp->GetNode()->CPPmulticonstnode166) = multimapUnion->CPPmultimap166->cend();
-		break;
-	case 167:
-		*(temp->GetNode()->CPPmulticonstnode167) = multimapUnion->CPPmultimap167->cend();
-		break;
-	case 168:
-		*(temp->GetNode()->CPPmulticonstnode168) = multimapUnion->CPPmultimap168->cend();
-		break;
-	case 169:
-		*(temp->GetNode()->CPPmulticonstnode169) = multimapUnion->CPPmultimap169->cend();
-		break;
-	case 170:
-		*(temp->GetNode()->CPPmulticonstnode170) = multimapUnion->CPPmultimap170->cend();
-		break;
-	case 171:
-		*(temp->GetNode()->CPPmulticonstnode171) = multimapUnion->CPPmultimap171->cend();
-		break;
-	case 172:
-		*(temp->GetNode()->CPPmulticonstnode172) = multimapUnion->CPPmultimap172->cend();
-		break;
-	case 173:
-		*(temp->GetNode()->CPPmulticonstnode173) = multimapUnion->CPPmultimap173->cend();
-		break;
-	case 174:
-		*(temp->GetNode()->CPPmulticonstnode174) = multimapUnion->CPPmultimap174->cend();
-		break;
-	case 175:
-		*(temp->GetNode()->CPPmulticonstnode175) = multimapUnion->CPPmultimap175->cend();
-		break;
-	case 176:
-		*(temp->GetNode()->CPPmulticonstnode176) = multimapUnion->CPPmultimap176->cend();
-		break;
-	case 177:
-		*(temp->GetNode()->CPPmulticonstnode177) = multimapUnion->CPPmultimap177->cend();
-		break;
-	case 178:
-		*(temp->GetNode()->CPPmulticonstnode178) = multimapUnion->CPPmultimap178->cend();
-		break;
-	case 179:
-		*(temp->GetNode()->CPPmulticonstnode179) = multimapUnion->CPPmultimap179->cend();
-		break;
-	case 180:
-		*(temp->GetNode()->CPPmulticonstnode180) = multimapUnion->CPPmultimap180->cend();
-		break;
-	case 181:
-		*(temp->GetNode()->CPPmulticonstnode181) = multimapUnion->CPPmultimap181->cend();
-		break;
-	case 182:
-		*(temp->GetNode()->CPPmulticonstnode182) = multimapUnion->CPPmultimap182->cend();
-		break;
-	case 183:
-		*(temp->GetNode()->CPPmulticonstnode183) = multimapUnion->CPPmultimap183->cend();
-		break;
-	case 184:
-		*(temp->GetNode()->CPPmulticonstnode184) = multimapUnion->CPPmultimap184->cend();
-		break;
-	case 185:
-		*(temp->GetNode()->CPPmulticonstnode185) = multimapUnion->CPPmultimap185->cend();
-		break;
-	case 186:
-		*(temp->GetNode()->CPPmulticonstnode186) = multimapUnion->CPPmultimap186->cend();
-		break;
-	case 187:
-		*(temp->GetNode()->CPPmulticonstnode187) = multimapUnion->CPPmultimap187->cend();
-		break;
-	case 188:
-		*(temp->GetNode()->CPPmulticonstnode188) = multimapUnion->CPPmultimap188->cend();
-		break;
-	case 189:
-		*(temp->GetNode()->CPPmulticonstnode189) = multimapUnion->CPPmultimap189->cend();
-		break;
-	case 190:
-		*(temp->GetNode()->CPPmulticonstnode190) = multimapUnion->CPPmultimap190->cend();
-		break;
-	case 191:
-		*(temp->GetNode()->CPPmulticonstnode191) = multimapUnion->CPPmultimap191->cend();
-		break;
-	case 192:
-		*(temp->GetNode()->CPPmulticonstnode192) = multimapUnion->CPPmultimap192->cend();
-		break;
-	case 193:
-		*(temp->GetNode()->CPPmulticonstnode193) = multimapUnion->CPPmultimap193->cend();
-		break;
-	case 194:
-		*(temp->GetNode()->CPPmulticonstnode194) = multimapUnion->CPPmultimap194->cend();
-		break;
-	case 195:
-		*(temp->GetNode()->CPPmulticonstnode195) = multimapUnion->CPPmultimap195->cend();
-		break;
-	case 196:
-		*(temp->GetNode()->CPPmulticonstnode196) = multimapUnion->CPPmultimap196->cend();
-		break;
+		UnOrderedMultiMap_CbeginCend_CASE(1, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(2, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(3, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(4, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(5, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(6, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(7, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(8, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(9, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(10, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(11, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(12, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(13, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(14, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(15, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(16, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(17, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(18, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(19, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(20, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(21, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(22, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(23, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(24, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(25, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(26, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(27, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(28, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(29, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(30, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(31, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(32, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(33, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(34, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(35, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(36, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(37, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(38, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(39, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(40, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(41, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(42, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(43, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(44, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(45, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(46, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(47, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(48, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(49, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(50, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(51, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(52, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(53, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(54, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(55, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(56, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(57, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(58, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(59, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(60, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(61, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(62, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(63, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(64, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(65, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(66, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(67, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(68, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(69, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(70, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(71, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(72, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(73, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(74, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(75, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(76, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(77, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(78, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(79, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(80, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(81, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(82, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(83, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(84, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(85, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(86, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(87, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(88, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(89, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(90, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(91, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(92, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(93, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(94, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(95, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(96, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(97, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(98, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(99, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(100, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(101, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(102, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(103, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(104, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(105, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(106, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(107, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(108, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(109, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(110, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(111, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(112, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(113, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(114, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(115, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(116, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(117, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(118, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(119, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(120, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(121, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(122, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(123, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(124, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(125, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(126, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(127, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(128, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(129, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(130, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(131, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(132, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(133, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(134, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(135, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(136, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(137, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(138, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(139, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(140, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(141, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(142, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(143, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(144, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(145, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(146, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(147, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(148, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(149, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(150, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(151, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(152, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(153, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(154, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(155, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(156, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(157, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(158, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(159, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(160, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(161, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(162, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(163, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(164, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(165, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(166, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(167, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(168, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(169, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(170, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(171, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(172, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(173, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(174, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(175, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(176, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(177, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(178, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(179, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(180, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(181, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(182, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(183, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(184, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(185, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(186, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(187, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(188, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(189, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(190, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(191, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(192, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(193, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(194, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(195, cend)
+			UnOrderedMultiMap_CbeginCend_CASE(196, cend)
 	}
 	return temp;
 }
@@ -14168,6 +11259,11 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	return multiNode->DeepCopy();
 }
 
+#define UnOrderedMultiMap_RbeginRend_CASE(NUM, RbeginRend) \
+	case NUM: \
+		*(RIterNode->GetNode()->CPPreversenode##NUM) = multimapUnion->CPPmultimap##NUM->rbegin(); \
+		break;
+
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::rbegin()
 {
@@ -14175,594 +11271,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>^ UnOrderedMultiM
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(RIterNode->GetNode()->CPPreversenode1) = multimapUnion->CPPmultimap1->rbegin();
-		break;
-	case 2:
-		*(RIterNode->GetNode()->CPPreversenode2) = multimapUnion->CPPmultimap2->rbegin();
-		break;
-	case 3:
-		*(RIterNode->GetNode()->CPPreversenode3) = multimapUnion->CPPmultimap3->rbegin();
-		break;
-	case 4:
-		*(RIterNode->GetNode()->CPPreversenode4) = multimapUnion->CPPmultimap4->rbegin();
-		break;
-	case 5:
-		*(RIterNode->GetNode()->CPPreversenode5) = multimapUnion->CPPmultimap5->rbegin();
-		break;
-	case 6:
-		*(RIterNode->GetNode()->CPPreversenode6) = multimapUnion->CPPmultimap6->rbegin();
-		break;
-	case 7:
-		*(RIterNode->GetNode()->CPPreversenode7) = multimapUnion->CPPmultimap7->rbegin();
-		break;
-	case 8:
-		*(RIterNode->GetNode()->CPPreversenode8) = multimapUnion->CPPmultimap8->rbegin();
-		break;
-	case 9:
-		*(RIterNode->GetNode()->CPPreversenode9) = multimapUnion->CPPmultimap9->rbegin();
-		break;
-	case 10:
-		*(RIterNode->GetNode()->CPPreversenode10) = multimapUnion->CPPmultimap10->rbegin();
-		break;
-	case 11:
-		*(RIterNode->GetNode()->CPPreversenode11) = multimapUnion->CPPmultimap11->rbegin();
-		break;
-	case 12:
-		*(RIterNode->GetNode()->CPPreversenode12) = multimapUnion->CPPmultimap12->rbegin();
-		break;
-	case 13:
-		*(RIterNode->GetNode()->CPPreversenode13) = multimapUnion->CPPmultimap13->rbegin();
-		break;
-	case 14:
-		*(RIterNode->GetNode()->CPPreversenode14) = multimapUnion->CPPmultimap14->rbegin();
-		break;
-	case 15:
-		*(RIterNode->GetNode()->CPPreversenode15) = multimapUnion->CPPmultimap15->rbegin();
-		break;
-	case 16:
-		*(RIterNode->GetNode()->CPPreversenode16) = multimapUnion->CPPmultimap16->rbegin();
-		break;
-	case 17:
-		*(RIterNode->GetNode()->CPPreversenode17) = multimapUnion->CPPmultimap17->rbegin();
-		break;
-	case 18:
-		*(RIterNode->GetNode()->CPPreversenode18) = multimapUnion->CPPmultimap18->rbegin();
-		break;
-	case 19:
-		*(RIterNode->GetNode()->CPPreversenode19) = multimapUnion->CPPmultimap19->rbegin();
-		break;
-	case 20:
-		*(RIterNode->GetNode()->CPPreversenode20) = multimapUnion->CPPmultimap20->rbegin();
-		break;
-	case 21:
-		*(RIterNode->GetNode()->CPPreversenode21) = multimapUnion->CPPmultimap21->rbegin();
-		break;
-	case 22:
-		*(RIterNode->GetNode()->CPPreversenode22) = multimapUnion->CPPmultimap22->rbegin();
-		break;
-	case 23:
-		*(RIterNode->GetNode()->CPPreversenode23) = multimapUnion->CPPmultimap23->rbegin();
-		break;
-	case 24:
-		*(RIterNode->GetNode()->CPPreversenode24) = multimapUnion->CPPmultimap24->rbegin();
-		break;
-	case 25:
-		*(RIterNode->GetNode()->CPPreversenode25) = multimapUnion->CPPmultimap25->rbegin();
-		break;
-	case 26:
-		*(RIterNode->GetNode()->CPPreversenode26) = multimapUnion->CPPmultimap26->rbegin();
-		break;
-	case 27:
-		*(RIterNode->GetNode()->CPPreversenode27) = multimapUnion->CPPmultimap27->rbegin();
-		break;
-	case 28:
-		*(RIterNode->GetNode()->CPPreversenode28) = multimapUnion->CPPmultimap28->rbegin();
-		break;
-	case 29:
-		*(RIterNode->GetNode()->CPPreversenode29) = multimapUnion->CPPmultimap29->rbegin();
-		break;
-	case 30:
-		*(RIterNode->GetNode()->CPPreversenode30) = multimapUnion->CPPmultimap30->rbegin();
-		break;
-	case 31:
-		*(RIterNode->GetNode()->CPPreversenode31) = multimapUnion->CPPmultimap31->rbegin();
-		break;
-	case 32:
-		*(RIterNode->GetNode()->CPPreversenode32) = multimapUnion->CPPmultimap32->rbegin();
-		break;
-	case 33:
-		*(RIterNode->GetNode()->CPPreversenode33) = multimapUnion->CPPmultimap33->rbegin();
-		break;
-	case 34:
-		*(RIterNode->GetNode()->CPPreversenode34) = multimapUnion->CPPmultimap34->rbegin();
-		break;
-	case 35:
-		*(RIterNode->GetNode()->CPPreversenode35) = multimapUnion->CPPmultimap35->rbegin();
-		break;
-	case 36:
-		*(RIterNode->GetNode()->CPPreversenode36) = multimapUnion->CPPmultimap36->rbegin();
-		break;
-	case 37:
-		*(RIterNode->GetNode()->CPPreversenode37) = multimapUnion->CPPmultimap37->rbegin();
-		break;
-	case 38:
-		*(RIterNode->GetNode()->CPPreversenode38) = multimapUnion->CPPmultimap38->rbegin();
-		break;
-	case 39:
-		*(RIterNode->GetNode()->CPPreversenode39) = multimapUnion->CPPmultimap39->rbegin();
-		break;
-	case 40:
-		*(RIterNode->GetNode()->CPPreversenode40) = multimapUnion->CPPmultimap40->rbegin();
-		break;
-	case 41:
-		*(RIterNode->GetNode()->CPPreversenode41) = multimapUnion->CPPmultimap41->rbegin();
-		break;
-	case 42:
-		*(RIterNode->GetNode()->CPPreversenode42) = multimapUnion->CPPmultimap42->rbegin();
-		break;
-	case 43:
-		*(RIterNode->GetNode()->CPPreversenode43) = multimapUnion->CPPmultimap43->rbegin();
-		break;
-	case 44:
-		*(RIterNode->GetNode()->CPPreversenode44) = multimapUnion->CPPmultimap44->rbegin();
-		break;
-	case 45:
-		*(RIterNode->GetNode()->CPPreversenode45) = multimapUnion->CPPmultimap45->rbegin();
-		break;
-	case 46:
-		*(RIterNode->GetNode()->CPPreversenode46) = multimapUnion->CPPmultimap46->rbegin();
-		break;
-	case 47:
-		*(RIterNode->GetNode()->CPPreversenode47) = multimapUnion->CPPmultimap47->rbegin();
-		break;
-	case 48:
-		*(RIterNode->GetNode()->CPPreversenode48) = multimapUnion->CPPmultimap48->rbegin();
-		break;
-	case 49:
-		*(RIterNode->GetNode()->CPPreversenode49) = multimapUnion->CPPmultimap49->rbegin();
-		break;
-	case 50:
-		*(RIterNode->GetNode()->CPPreversenode50) = multimapUnion->CPPmultimap50->rbegin();
-		break;
-	case 51:
-		*(RIterNode->GetNode()->CPPreversenode51) = multimapUnion->CPPmultimap51->rbegin();
-		break;
-	case 52:
-		*(RIterNode->GetNode()->CPPreversenode52) = multimapUnion->CPPmultimap52->rbegin();
-		break;
-	case 53:
-		*(RIterNode->GetNode()->CPPreversenode53) = multimapUnion->CPPmultimap53->rbegin();
-		break;
-	case 54:
-		*(RIterNode->GetNode()->CPPreversenode54) = multimapUnion->CPPmultimap54->rbegin();
-		break;
-	case 55:
-		*(RIterNode->GetNode()->CPPreversenode55) = multimapUnion->CPPmultimap55->rbegin();
-		break;
-	case 56:
-		*(RIterNode->GetNode()->CPPreversenode56) = multimapUnion->CPPmultimap56->rbegin();
-		break;
-	case 57:
-		*(RIterNode->GetNode()->CPPreversenode57) = multimapUnion->CPPmultimap57->rbegin();
-		break;
-	case 58:
-		*(RIterNode->GetNode()->CPPreversenode58) = multimapUnion->CPPmultimap58->rbegin();
-		break;
-	case 59:
-		*(RIterNode->GetNode()->CPPreversenode59) = multimapUnion->CPPmultimap59->rbegin();
-		break;
-	case 60:
-		*(RIterNode->GetNode()->CPPreversenode60) = multimapUnion->CPPmultimap60->rbegin();
-		break;
-	case 61:
-		*(RIterNode->GetNode()->CPPreversenode61) = multimapUnion->CPPmultimap61->rbegin();
-		break;
-	case 62:
-		*(RIterNode->GetNode()->CPPreversenode62) = multimapUnion->CPPmultimap62->rbegin();
-		break;
-	case 63:
-		*(RIterNode->GetNode()->CPPreversenode63) = multimapUnion->CPPmultimap63->rbegin();
-		break;
-	case 64:
-		*(RIterNode->GetNode()->CPPreversenode64) = multimapUnion->CPPmultimap64->rbegin();
-		break;
-	case 65:
-		*(RIterNode->GetNode()->CPPreversenode65) = multimapUnion->CPPmultimap65->rbegin();
-		break;
-	case 66:
-		*(RIterNode->GetNode()->CPPreversenode66) = multimapUnion->CPPmultimap66->rbegin();
-		break;
-	case 67:
-		*(RIterNode->GetNode()->CPPreversenode67) = multimapUnion->CPPmultimap67->rbegin();
-		break;
-	case 68:
-		*(RIterNode->GetNode()->CPPreversenode68) = multimapUnion->CPPmultimap68->rbegin();
-		break;
-	case 69:
-		*(RIterNode->GetNode()->CPPreversenode69) = multimapUnion->CPPmultimap69->rbegin();
-		break;
-	case 70:
-		*(RIterNode->GetNode()->CPPreversenode70) = multimapUnion->CPPmultimap70->rbegin();
-		break;
-	case 71:
-		*(RIterNode->GetNode()->CPPreversenode71) = multimapUnion->CPPmultimap71->rbegin();
-		break;
-	case 72:
-		*(RIterNode->GetNode()->CPPreversenode72) = multimapUnion->CPPmultimap72->rbegin();
-		break;
-	case 73:
-		*(RIterNode->GetNode()->CPPreversenode73) = multimapUnion->CPPmultimap73->rbegin();
-		break;
-	case 74:
-		*(RIterNode->GetNode()->CPPreversenode74) = multimapUnion->CPPmultimap74->rbegin();
-		break;
-	case 75:
-		*(RIterNode->GetNode()->CPPreversenode75) = multimapUnion->CPPmultimap75->rbegin();
-		break;
-	case 76:
-		*(RIterNode->GetNode()->CPPreversenode76) = multimapUnion->CPPmultimap76->rbegin();
-		break;
-	case 77:
-		*(RIterNode->GetNode()->CPPreversenode77) = multimapUnion->CPPmultimap77->rbegin();
-		break;
-	case 78:
-		*(RIterNode->GetNode()->CPPreversenode78) = multimapUnion->CPPmultimap78->rbegin();
-		break;
-	case 79:
-		*(RIterNode->GetNode()->CPPreversenode79) = multimapUnion->CPPmultimap79->rbegin();
-		break;
-	case 80:
-		*(RIterNode->GetNode()->CPPreversenode80) = multimapUnion->CPPmultimap80->rbegin();
-		break;
-	case 81:
-		*(RIterNode->GetNode()->CPPreversenode81) = multimapUnion->CPPmultimap81->rbegin();
-		break;
-	case 82:
-		*(RIterNode->GetNode()->CPPreversenode82) = multimapUnion->CPPmultimap82->rbegin();
-		break;
-	case 83:
-		*(RIterNode->GetNode()->CPPreversenode83) = multimapUnion->CPPmultimap83->rbegin();
-		break;
-	case 84:
-		*(RIterNode->GetNode()->CPPreversenode84) = multimapUnion->CPPmultimap84->rbegin();
-		break;
-	case 85:
-		*(RIterNode->GetNode()->CPPreversenode85) = multimapUnion->CPPmultimap85->rbegin();
-		break;
-	case 86:
-		*(RIterNode->GetNode()->CPPreversenode86) = multimapUnion->CPPmultimap86->rbegin();
-		break;
-	case 87:
-		*(RIterNode->GetNode()->CPPreversenode87) = multimapUnion->CPPmultimap87->rbegin();
-		break;
-	case 88:
-		*(RIterNode->GetNode()->CPPreversenode88) = multimapUnion->CPPmultimap88->rbegin();
-		break;
-	case 89:
-		*(RIterNode->GetNode()->CPPreversenode89) = multimapUnion->CPPmultimap89->rbegin();
-		break;
-	case 90:
-		*(RIterNode->GetNode()->CPPreversenode90) = multimapUnion->CPPmultimap90->rbegin();
-		break;
-	case 91:
-		*(RIterNode->GetNode()->CPPreversenode91) = multimapUnion->CPPmultimap91->rbegin();
-		break;
-	case 92:
-		*(RIterNode->GetNode()->CPPreversenode92) = multimapUnion->CPPmultimap92->rbegin();
-		break;
-	case 93:
-		*(RIterNode->GetNode()->CPPreversenode93) = multimapUnion->CPPmultimap93->rbegin();
-		break;
-	case 94:
-		*(RIterNode->GetNode()->CPPreversenode94) = multimapUnion->CPPmultimap94->rbegin();
-		break;
-	case 95:
-		*(RIterNode->GetNode()->CPPreversenode95) = multimapUnion->CPPmultimap95->rbegin();
-		break;
-	case 96:
-		*(RIterNode->GetNode()->CPPreversenode96) = multimapUnion->CPPmultimap96->rbegin();
-		break;
-	case 97:
-		*(RIterNode->GetNode()->CPPreversenode97) = multimapUnion->CPPmultimap97->rbegin();
-		break;
-	case 98:
-		*(RIterNode->GetNode()->CPPreversenode98) = multimapUnion->CPPmultimap98->rbegin();
-		break;
-	case 99:
-		*(RIterNode->GetNode()->CPPreversenode99) = multimapUnion->CPPmultimap99->rbegin();
-		break;
-	case 100:
-		*(RIterNode->GetNode()->CPPreversenode100) = multimapUnion->CPPmultimap100->rbegin();
-		break;
-	case 101:
-		*(RIterNode->GetNode()->CPPreversenode101) = multimapUnion->CPPmultimap101->rbegin();
-		break;
-	case 102:
-		*(RIterNode->GetNode()->CPPreversenode102) = multimapUnion->CPPmultimap102->rbegin();
-		break;
-	case 103:
-		*(RIterNode->GetNode()->CPPreversenode103) = multimapUnion->CPPmultimap103->rbegin();
-		break;
-	case 104:
-		*(RIterNode->GetNode()->CPPreversenode104) = multimapUnion->CPPmultimap104->rbegin();
-		break;
-	case 105:
-		*(RIterNode->GetNode()->CPPreversenode105) = multimapUnion->CPPmultimap105->rbegin();
-		break;
-	case 106:
-		*(RIterNode->GetNode()->CPPreversenode106) = multimapUnion->CPPmultimap106->rbegin();
-		break;
-	case 107:
-		*(RIterNode->GetNode()->CPPreversenode107) = multimapUnion->CPPmultimap107->rbegin();
-		break;
-	case 108:
-		*(RIterNode->GetNode()->CPPreversenode108) = multimapUnion->CPPmultimap108->rbegin();
-		break;
-	case 109:
-		*(RIterNode->GetNode()->CPPreversenode109) = multimapUnion->CPPmultimap109->rbegin();
-		break;
-	case 110:
-		*(RIterNode->GetNode()->CPPreversenode110) = multimapUnion->CPPmultimap110->rbegin();
-		break;
-	case 111:
-		*(RIterNode->GetNode()->CPPreversenode111) = multimapUnion->CPPmultimap111->rbegin();
-		break;
-	case 112:
-		*(RIterNode->GetNode()->CPPreversenode112) = multimapUnion->CPPmultimap112->rbegin();
-		break;
-	case 113:
-		*(RIterNode->GetNode()->CPPreversenode113) = multimapUnion->CPPmultimap113->rbegin();
-		break;
-	case 114:
-		*(RIterNode->GetNode()->CPPreversenode114) = multimapUnion->CPPmultimap114->rbegin();
-		break;
-	case 115:
-		*(RIterNode->GetNode()->CPPreversenode115) = multimapUnion->CPPmultimap115->rbegin();
-		break;
-	case 116:
-		*(RIterNode->GetNode()->CPPreversenode116) = multimapUnion->CPPmultimap116->rbegin();
-		break;
-	case 117:
-		*(RIterNode->GetNode()->CPPreversenode117) = multimapUnion->CPPmultimap117->rbegin();
-		break;
-	case 118:
-		*(RIterNode->GetNode()->CPPreversenode118) = multimapUnion->CPPmultimap118->rbegin();
-		break;
-	case 119:
-		*(RIterNode->GetNode()->CPPreversenode119) = multimapUnion->CPPmultimap119->rbegin();
-		break;
-	case 120:
-		*(RIterNode->GetNode()->CPPreversenode120) = multimapUnion->CPPmultimap120->rbegin();
-		break;
-	case 121:
-		*(RIterNode->GetNode()->CPPreversenode121) = multimapUnion->CPPmultimap121->rbegin();
-		break;
-	case 122:
-		*(RIterNode->GetNode()->CPPreversenode122) = multimapUnion->CPPmultimap122->rbegin();
-		break;
-	case 123:
-		*(RIterNode->GetNode()->CPPreversenode123) = multimapUnion->CPPmultimap123->rbegin();
-		break;
-	case 124:
-		*(RIterNode->GetNode()->CPPreversenode124) = multimapUnion->CPPmultimap124->rbegin();
-		break;
-	case 125:
-		*(RIterNode->GetNode()->CPPreversenode125) = multimapUnion->CPPmultimap125->rbegin();
-		break;
-	case 126:
-		*(RIterNode->GetNode()->CPPreversenode126) = multimapUnion->CPPmultimap126->rbegin();
-		break;
-	case 127:
-		*(RIterNode->GetNode()->CPPreversenode127) = multimapUnion->CPPmultimap127->rbegin();
-		break;
-	case 128:
-		*(RIterNode->GetNode()->CPPreversenode128) = multimapUnion->CPPmultimap128->rbegin();
-		break;
-	case 129:
-		*(RIterNode->GetNode()->CPPreversenode129) = multimapUnion->CPPmultimap129->rbegin();
-		break;
-	case 130:
-		*(RIterNode->GetNode()->CPPreversenode130) = multimapUnion->CPPmultimap130->rbegin();
-		break;
-	case 131:
-		*(RIterNode->GetNode()->CPPreversenode131) = multimapUnion->CPPmultimap131->rbegin();
-		break;
-	case 132:
-		*(RIterNode->GetNode()->CPPreversenode132) = multimapUnion->CPPmultimap132->rbegin();
-		break;
-	case 133:
-		*(RIterNode->GetNode()->CPPreversenode133) = multimapUnion->CPPmultimap133->rbegin();
-		break;
-	case 134:
-		*(RIterNode->GetNode()->CPPreversenode134) = multimapUnion->CPPmultimap134->rbegin();
-		break;
-	case 135:
-		*(RIterNode->GetNode()->CPPreversenode135) = multimapUnion->CPPmultimap135->rbegin();
-		break;
-	case 136:
-		*(RIterNode->GetNode()->CPPreversenode136) = multimapUnion->CPPmultimap136->rbegin();
-		break;
-	case 137:
-		*(RIterNode->GetNode()->CPPreversenode137) = multimapUnion->CPPmultimap137->rbegin();
-		break;
-	case 138:
-		*(RIterNode->GetNode()->CPPreversenode138) = multimapUnion->CPPmultimap138->rbegin();
-		break;
-	case 139:
-		*(RIterNode->GetNode()->CPPreversenode139) = multimapUnion->CPPmultimap139->rbegin();
-		break;
-	case 140:
-		*(RIterNode->GetNode()->CPPreversenode140) = multimapUnion->CPPmultimap140->rbegin();
-		break;
-	case 141:
-		*(RIterNode->GetNode()->CPPreversenode141) = multimapUnion->CPPmultimap141->rbegin();
-		break;
-	case 142:
-		*(RIterNode->GetNode()->CPPreversenode142) = multimapUnion->CPPmultimap142->rbegin();
-		break;
-	case 143:
-		*(RIterNode->GetNode()->CPPreversenode143) = multimapUnion->CPPmultimap143->rbegin();
-		break;
-	case 144:
-		*(RIterNode->GetNode()->CPPreversenode144) = multimapUnion->CPPmultimap144->rbegin();
-		break;
-	case 145:
-		*(RIterNode->GetNode()->CPPreversenode145) = multimapUnion->CPPmultimap145->rbegin();
-		break;
-	case 146:
-		*(RIterNode->GetNode()->CPPreversenode146) = multimapUnion->CPPmultimap146->rbegin();
-		break;
-	case 147:
-		*(RIterNode->GetNode()->CPPreversenode147) = multimapUnion->CPPmultimap147->rbegin();
-		break;
-	case 148:
-		*(RIterNode->GetNode()->CPPreversenode148) = multimapUnion->CPPmultimap148->rbegin();
-		break;
-	case 149:
-		*(RIterNode->GetNode()->CPPreversenode149) = multimapUnion->CPPmultimap149->rbegin();
-		break;
-	case 150:
-		*(RIterNode->GetNode()->CPPreversenode150) = multimapUnion->CPPmultimap150->rbegin();
-		break;
-	case 151:
-		*(RIterNode->GetNode()->CPPreversenode151) = multimapUnion->CPPmultimap151->rbegin();
-		break;
-	case 152:
-		*(RIterNode->GetNode()->CPPreversenode152) = multimapUnion->CPPmultimap152->rbegin();
-		break;
-	case 153:
-		*(RIterNode->GetNode()->CPPreversenode153) = multimapUnion->CPPmultimap153->rbegin();
-		break;
-	case 154:
-		*(RIterNode->GetNode()->CPPreversenode154) = multimapUnion->CPPmultimap154->rbegin();
-		break;
-	case 155:
-		*(RIterNode->GetNode()->CPPreversenode155) = multimapUnion->CPPmultimap155->rbegin();
-		break;
-	case 156:
-		*(RIterNode->GetNode()->CPPreversenode156) = multimapUnion->CPPmultimap156->rbegin();
-		break;
-	case 157:
-		*(RIterNode->GetNode()->CPPreversenode157) = multimapUnion->CPPmultimap157->rbegin();
-		break;
-	case 158:
-		*(RIterNode->GetNode()->CPPreversenode158) = multimapUnion->CPPmultimap158->rbegin();
-		break;
-	case 159:
-		*(RIterNode->GetNode()->CPPreversenode159) = multimapUnion->CPPmultimap159->rbegin();
-		break;
-	case 160:
-		*(RIterNode->GetNode()->CPPreversenode160) = multimapUnion->CPPmultimap160->rbegin();
-		break;
-	case 161:
-		*(RIterNode->GetNode()->CPPreversenode161) = multimapUnion->CPPmultimap161->rbegin();
-		break;
-	case 162:
-		*(RIterNode->GetNode()->CPPreversenode162) = multimapUnion->CPPmultimap162->rbegin();
-		break;
-	case 163:
-		*(RIterNode->GetNode()->CPPreversenode163) = multimapUnion->CPPmultimap163->rbegin();
-		break;
-	case 164:
-		*(RIterNode->GetNode()->CPPreversenode164) = multimapUnion->CPPmultimap164->rbegin();
-		break;
-	case 165:
-		*(RIterNode->GetNode()->CPPreversenode165) = multimapUnion->CPPmultimap165->rbegin();
-		break;
-	case 166:
-		*(RIterNode->GetNode()->CPPreversenode166) = multimapUnion->CPPmultimap166->rbegin();
-		break;
-	case 167:
-		*(RIterNode->GetNode()->CPPreversenode167) = multimapUnion->CPPmultimap167->rbegin();
-		break;
-	case 168:
-		*(RIterNode->GetNode()->CPPreversenode168) = multimapUnion->CPPmultimap168->rbegin();
-		break;
-	case 169:
-		*(RIterNode->GetNode()->CPPreversenode169) = multimapUnion->CPPmultimap169->rbegin();
-		break;
-	case 170:
-		*(RIterNode->GetNode()->CPPreversenode170) = multimapUnion->CPPmultimap170->rbegin();
-		break;
-	case 171:
-		*(RIterNode->GetNode()->CPPreversenode171) = multimapUnion->CPPmultimap171->rbegin();
-		break;
-	case 172:
-		*(RIterNode->GetNode()->CPPreversenode172) = multimapUnion->CPPmultimap172->rbegin();
-		break;
-	case 173:
-		*(RIterNode->GetNode()->CPPreversenode173) = multimapUnion->CPPmultimap173->rbegin();
-		break;
-	case 174:
-		*(RIterNode->GetNode()->CPPreversenode174) = multimapUnion->CPPmultimap174->rbegin();
-		break;
-	case 175:
-		*(RIterNode->GetNode()->CPPreversenode175) = multimapUnion->CPPmultimap175->rbegin();
-		break;
-	case 176:
-		*(RIterNode->GetNode()->CPPreversenode176) = multimapUnion->CPPmultimap176->rbegin();
-		break;
-	case 177:
-		*(RIterNode->GetNode()->CPPreversenode177) = multimapUnion->CPPmultimap177->rbegin();
-		break;
-	case 178:
-		*(RIterNode->GetNode()->CPPreversenode178) = multimapUnion->CPPmultimap178->rbegin();
-		break;
-	case 179:
-		*(RIterNode->GetNode()->CPPreversenode179) = multimapUnion->CPPmultimap179->rbegin();
-		break;
-	case 180:
-		*(RIterNode->GetNode()->CPPreversenode180) = multimapUnion->CPPmultimap180->rbegin();
-		break;
-	case 181:
-		*(RIterNode->GetNode()->CPPreversenode181) = multimapUnion->CPPmultimap181->rbegin();
-		break;
-	case 182:
-		*(RIterNode->GetNode()->CPPreversenode182) = multimapUnion->CPPmultimap182->rbegin();
-		break;
-	case 183:
-		*(RIterNode->GetNode()->CPPreversenode183) = multimapUnion->CPPmultimap183->rbegin();
-		break;
-	case 184:
-		*(RIterNode->GetNode()->CPPreversenode184) = multimapUnion->CPPmultimap184->rbegin();
-		break;
-	case 185:
-		*(RIterNode->GetNode()->CPPreversenode185) = multimapUnion->CPPmultimap185->rbegin();
-		break;
-	case 186:
-		*(RIterNode->GetNode()->CPPreversenode186) = multimapUnion->CPPmultimap186->rbegin();
-		break;
-	case 187:
-		*(RIterNode->GetNode()->CPPreversenode187) = multimapUnion->CPPmultimap187->rbegin();
-		break;
-	case 188:
-		*(RIterNode->GetNode()->CPPreversenode188) = multimapUnion->CPPmultimap188->rbegin();
-		break;
-	case 189:
-		*(RIterNode->GetNode()->CPPreversenode189) = multimapUnion->CPPmultimap189->rbegin();
-		break;
-	case 190:
-		*(RIterNode->GetNode()->CPPreversenode190) = multimapUnion->CPPmultimap190->rbegin();
-		break;
-	case 191:
-		*(RIterNode->GetNode()->CPPreversenode191) = multimapUnion->CPPmultimap191->rbegin();
-		break;
-	case 192:
-		*(RIterNode->GetNode()->CPPreversenode192) = multimapUnion->CPPmultimap192->rbegin();
-		break;
-	case 193:
-		*(RIterNode->GetNode()->CPPreversenode193) = multimapUnion->CPPmultimap193->rbegin();
-		break;
-	case 194:
-		*(RIterNode->GetNode()->CPPreversenode194) = multimapUnion->CPPmultimap194->rbegin();
-		break;
-	case 195:
-		*(RIterNode->GetNode()->CPPreversenode195) = multimapUnion->CPPmultimap195->rbegin();
-		break;
-	case 196:
-		*(RIterNode->GetNode()->CPPreversenode196) = multimapUnion->CPPmultimap196->rbegin();
-		break;
+		UnOrderedMultiMap_RbeginRend_CASE(1, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(2, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(3, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(4, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(5, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(6, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(7, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(8, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(9, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(10, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(11, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(12, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(13, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(14, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(15, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(16, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(17, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(18, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(19, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(20, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(21, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(22, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(23, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(24, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(25, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(26, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(27, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(28, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(29, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(30, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(31, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(32, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(33, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(34, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(35, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(36, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(37, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(38, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(39, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(40, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(41, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(42, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(43, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(44, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(45, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(46, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(47, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(48, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(49, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(50, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(51, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(52, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(53, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(54, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(55, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(56, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(57, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(58, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(59, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(60, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(61, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(62, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(63, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(64, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(65, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(66, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(67, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(68, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(69, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(70, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(71, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(72, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(73, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(74, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(75, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(76, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(77, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(78, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(79, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(80, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(81, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(82, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(83, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(84, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(85, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(86, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(87, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(88, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(89, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(90, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(91, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(92, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(93, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(94, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(95, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(96, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(97, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(98, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(99, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(100, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(101, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(102, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(103, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(104, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(105, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(106, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(107, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(108, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(109, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(110, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(111, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(112, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(113, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(114, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(115, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(116, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(117, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(118, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(119, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(120, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(121, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(122, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(123, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(124, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(125, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(126, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(127, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(128, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(129, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(130, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(131, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(132, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(133, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(134, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(135, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(136, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(137, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(138, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(139, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(140, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(141, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(142, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(143, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(144, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(145, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(146, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(147, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(148, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(149, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(150, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(151, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(152, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(153, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(154, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(155, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(156, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(157, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(158, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(159, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(160, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(161, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(162, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(163, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(164, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(165, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(166, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(167, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(168, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(169, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(170, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(171, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(172, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(173, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(174, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(175, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(176, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(177, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(178, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(179, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(180, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(181, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(182, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(183, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(184, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(185, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(186, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(187, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(188, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(189, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(190, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(191, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(192, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(193, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(194, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(195, rbegin)
+			UnOrderedMultiMap_RbeginRend_CASE(196, rbegin)
 	}
 	return RIterNode->DeepCopy();
 }
@@ -14774,597 +11478,210 @@ UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>^ UnOrderedMultiM
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(RIterNode->GetNode()->CPPreversenode1) = multimapUnion->CPPmultimap1->rend();
-		break;
-	case 2:
-		*(RIterNode->GetNode()->CPPreversenode2) = multimapUnion->CPPmultimap2->rend();
-		break;
-	case 3:
-		*(RIterNode->GetNode()->CPPreversenode3) = multimapUnion->CPPmultimap3->rend();
-		break;
-	case 4:
-		*(RIterNode->GetNode()->CPPreversenode4) = multimapUnion->CPPmultimap4->rend();
-		break;
-	case 5:
-		*(RIterNode->GetNode()->CPPreversenode5) = multimapUnion->CPPmultimap5->rend();
-		break;
-	case 6:
-		*(RIterNode->GetNode()->CPPreversenode6) = multimapUnion->CPPmultimap6->rend();
-		break;
-	case 7:
-		*(RIterNode->GetNode()->CPPreversenode7) = multimapUnion->CPPmultimap7->rend();
-		break;
-	case 8:
-		*(RIterNode->GetNode()->CPPreversenode8) = multimapUnion->CPPmultimap8->rend();
-		break;
-	case 9:
-		*(RIterNode->GetNode()->CPPreversenode9) = multimapUnion->CPPmultimap9->rend();
-		break;
-	case 10:
-		*(RIterNode->GetNode()->CPPreversenode10) = multimapUnion->CPPmultimap10->rend();
-		break;
-	case 11:
-		*(RIterNode->GetNode()->CPPreversenode11) = multimapUnion->CPPmultimap11->rend();
-		break;
-	case 12:
-		*(RIterNode->GetNode()->CPPreversenode12) = multimapUnion->CPPmultimap12->rend();
-		break;
-	case 13:
-		*(RIterNode->GetNode()->CPPreversenode13) = multimapUnion->CPPmultimap13->rend();
-		break;
-	case 14:
-		*(RIterNode->GetNode()->CPPreversenode14) = multimapUnion->CPPmultimap14->rend();
-		break;
-	case 15:
-		*(RIterNode->GetNode()->CPPreversenode15) = multimapUnion->CPPmultimap15->rend();
-		break;
-	case 16:
-		*(RIterNode->GetNode()->CPPreversenode16) = multimapUnion->CPPmultimap16->rend();
-		break;
-	case 17:
-		*(RIterNode->GetNode()->CPPreversenode17) = multimapUnion->CPPmultimap17->rend();
-		break;
-	case 18:
-		*(RIterNode->GetNode()->CPPreversenode18) = multimapUnion->CPPmultimap18->rend();
-		break;
-	case 19:
-		*(RIterNode->GetNode()->CPPreversenode19) = multimapUnion->CPPmultimap19->rend();
-		break;
-	case 20:
-		*(RIterNode->GetNode()->CPPreversenode20) = multimapUnion->CPPmultimap20->rend();
-		break;
-	case 21:
-		*(RIterNode->GetNode()->CPPreversenode21) = multimapUnion->CPPmultimap21->rend();
-		break;
-	case 22:
-		*(RIterNode->GetNode()->CPPreversenode22) = multimapUnion->CPPmultimap22->rend();
-		break;
-	case 23:
-		*(RIterNode->GetNode()->CPPreversenode23) = multimapUnion->CPPmultimap23->rend();
-		break;
-	case 24:
-		*(RIterNode->GetNode()->CPPreversenode24) = multimapUnion->CPPmultimap24->rend();
-		break;
-	case 25:
-		*(RIterNode->GetNode()->CPPreversenode25) = multimapUnion->CPPmultimap25->rend();
-		break;
-	case 26:
-		*(RIterNode->GetNode()->CPPreversenode26) = multimapUnion->CPPmultimap26->rend();
-		break;
-	case 27:
-		*(RIterNode->GetNode()->CPPreversenode27) = multimapUnion->CPPmultimap27->rend();
-		break;
-	case 28:
-		*(RIterNode->GetNode()->CPPreversenode28) = multimapUnion->CPPmultimap28->rend();
-		break;
-	case 29:
-		*(RIterNode->GetNode()->CPPreversenode29) = multimapUnion->CPPmultimap29->rend();
-		break;
-	case 30:
-		*(RIterNode->GetNode()->CPPreversenode30) = multimapUnion->CPPmultimap30->rend();
-		break;
-	case 31:
-		*(RIterNode->GetNode()->CPPreversenode31) = multimapUnion->CPPmultimap31->rend();
-		break;
-	case 32:
-		*(RIterNode->GetNode()->CPPreversenode32) = multimapUnion->CPPmultimap32->rend();
-		break;
-	case 33:
-		*(RIterNode->GetNode()->CPPreversenode33) = multimapUnion->CPPmultimap33->rend();
-		break;
-	case 34:
-		*(RIterNode->GetNode()->CPPreversenode34) = multimapUnion->CPPmultimap34->rend();
-		break;
-	case 35:
-		*(RIterNode->GetNode()->CPPreversenode35) = multimapUnion->CPPmultimap35->rend();
-		break;
-	case 36:
-		*(RIterNode->GetNode()->CPPreversenode36) = multimapUnion->CPPmultimap36->rend();
-		break;
-	case 37:
-		*(RIterNode->GetNode()->CPPreversenode37) = multimapUnion->CPPmultimap37->rend();
-		break;
-	case 38:
-		*(RIterNode->GetNode()->CPPreversenode38) = multimapUnion->CPPmultimap38->rend();
-		break;
-	case 39:
-		*(RIterNode->GetNode()->CPPreversenode39) = multimapUnion->CPPmultimap39->rend();
-		break;
-	case 40:
-		*(RIterNode->GetNode()->CPPreversenode40) = multimapUnion->CPPmultimap40->rend();
-		break;
-	case 41:
-		*(RIterNode->GetNode()->CPPreversenode41) = multimapUnion->CPPmultimap41->rend();
-		break;
-	case 42:
-		*(RIterNode->GetNode()->CPPreversenode42) = multimapUnion->CPPmultimap42->rend();
-		break;
-	case 43:
-		*(RIterNode->GetNode()->CPPreversenode43) = multimapUnion->CPPmultimap43->rend();
-		break;
-	case 44:
-		*(RIterNode->GetNode()->CPPreversenode44) = multimapUnion->CPPmultimap44->rend();
-		break;
-	case 45:
-		*(RIterNode->GetNode()->CPPreversenode45) = multimapUnion->CPPmultimap45->rend();
-		break;
-	case 46:
-		*(RIterNode->GetNode()->CPPreversenode46) = multimapUnion->CPPmultimap46->rend();
-		break;
-	case 47:
-		*(RIterNode->GetNode()->CPPreversenode47) = multimapUnion->CPPmultimap47->rend();
-		break;
-	case 48:
-		*(RIterNode->GetNode()->CPPreversenode48) = multimapUnion->CPPmultimap48->rend();
-		break;
-	case 49:
-		*(RIterNode->GetNode()->CPPreversenode49) = multimapUnion->CPPmultimap49->rend();
-		break;
-	case 50:
-		*(RIterNode->GetNode()->CPPreversenode50) = multimapUnion->CPPmultimap50->rend();
-		break;
-	case 51:
-		*(RIterNode->GetNode()->CPPreversenode51) = multimapUnion->CPPmultimap51->rend();
-		break;
-	case 52:
-		*(RIterNode->GetNode()->CPPreversenode52) = multimapUnion->CPPmultimap52->rend();
-		break;
-	case 53:
-		*(RIterNode->GetNode()->CPPreversenode53) = multimapUnion->CPPmultimap53->rend();
-		break;
-	case 54:
-		*(RIterNode->GetNode()->CPPreversenode54) = multimapUnion->CPPmultimap54->rend();
-		break;
-	case 55:
-		*(RIterNode->GetNode()->CPPreversenode55) = multimapUnion->CPPmultimap55->rend();
-		break;
-	case 56:
-		*(RIterNode->GetNode()->CPPreversenode56) = multimapUnion->CPPmultimap56->rend();
-		break;
-	case 57:
-		*(RIterNode->GetNode()->CPPreversenode57) = multimapUnion->CPPmultimap57->rend();
-		break;
-	case 58:
-		*(RIterNode->GetNode()->CPPreversenode58) = multimapUnion->CPPmultimap58->rend();
-		break;
-	case 59:
-		*(RIterNode->GetNode()->CPPreversenode59) = multimapUnion->CPPmultimap59->rend();
-		break;
-	case 60:
-		*(RIterNode->GetNode()->CPPreversenode60) = multimapUnion->CPPmultimap60->rend();
-		break;
-	case 61:
-		*(RIterNode->GetNode()->CPPreversenode61) = multimapUnion->CPPmultimap61->rend();
-		break;
-	case 62:
-		*(RIterNode->GetNode()->CPPreversenode62) = multimapUnion->CPPmultimap62->rend();
-		break;
-	case 63:
-		*(RIterNode->GetNode()->CPPreversenode63) = multimapUnion->CPPmultimap63->rend();
-		break;
-	case 64:
-		*(RIterNode->GetNode()->CPPreversenode64) = multimapUnion->CPPmultimap64->rend();
-		break;
-	case 65:
-		*(RIterNode->GetNode()->CPPreversenode65) = multimapUnion->CPPmultimap65->rend();
-		break;
-	case 66:
-		*(RIterNode->GetNode()->CPPreversenode66) = multimapUnion->CPPmultimap66->rend();
-		break;
-	case 67:
-		*(RIterNode->GetNode()->CPPreversenode67) = multimapUnion->CPPmultimap67->rend();
-		break;
-	case 68:
-		*(RIterNode->GetNode()->CPPreversenode68) = multimapUnion->CPPmultimap68->rend();
-		break;
-	case 69:
-		*(RIterNode->GetNode()->CPPreversenode69) = multimapUnion->CPPmultimap69->rend();
-		break;
-	case 70:
-		*(RIterNode->GetNode()->CPPreversenode70) = multimapUnion->CPPmultimap70->rend();
-		break;
-	case 71:
-		*(RIterNode->GetNode()->CPPreversenode71) = multimapUnion->CPPmultimap71->rend();
-		break;
-	case 72:
-		*(RIterNode->GetNode()->CPPreversenode72) = multimapUnion->CPPmultimap72->rend();
-		break;
-	case 73:
-		*(RIterNode->GetNode()->CPPreversenode73) = multimapUnion->CPPmultimap73->rend();
-		break;
-	case 74:
-		*(RIterNode->GetNode()->CPPreversenode74) = multimapUnion->CPPmultimap74->rend();
-		break;
-	case 75:
-		*(RIterNode->GetNode()->CPPreversenode75) = multimapUnion->CPPmultimap75->rend();
-		break;
-	case 76:
-		*(RIterNode->GetNode()->CPPreversenode76) = multimapUnion->CPPmultimap76->rend();
-		break;
-	case 77:
-		*(RIterNode->GetNode()->CPPreversenode77) = multimapUnion->CPPmultimap77->rend();
-		break;
-	case 78:
-		*(RIterNode->GetNode()->CPPreversenode78) = multimapUnion->CPPmultimap78->rend();
-		break;
-	case 79:
-		*(RIterNode->GetNode()->CPPreversenode79) = multimapUnion->CPPmultimap79->rend();
-		break;
-	case 80:
-		*(RIterNode->GetNode()->CPPreversenode80) = multimapUnion->CPPmultimap80->rend();
-		break;
-	case 81:
-		*(RIterNode->GetNode()->CPPreversenode81) = multimapUnion->CPPmultimap81->rend();
-		break;
-	case 82:
-		*(RIterNode->GetNode()->CPPreversenode82) = multimapUnion->CPPmultimap82->rend();
-		break;
-	case 83:
-		*(RIterNode->GetNode()->CPPreversenode83) = multimapUnion->CPPmultimap83->rend();
-		break;
-	case 84:
-		*(RIterNode->GetNode()->CPPreversenode84) = multimapUnion->CPPmultimap84->rend();
-		break;
-	case 85:
-		*(RIterNode->GetNode()->CPPreversenode85) = multimapUnion->CPPmultimap85->rend();
-		break;
-	case 86:
-		*(RIterNode->GetNode()->CPPreversenode86) = multimapUnion->CPPmultimap86->rend();
-		break;
-	case 87:
-		*(RIterNode->GetNode()->CPPreversenode87) = multimapUnion->CPPmultimap87->rend();
-		break;
-	case 88:
-		*(RIterNode->GetNode()->CPPreversenode88) = multimapUnion->CPPmultimap88->rend();
-		break;
-	case 89:
-		*(RIterNode->GetNode()->CPPreversenode89) = multimapUnion->CPPmultimap89->rend();
-		break;
-	case 90:
-		*(RIterNode->GetNode()->CPPreversenode90) = multimapUnion->CPPmultimap90->rend();
-		break;
-	case 91:
-		*(RIterNode->GetNode()->CPPreversenode91) = multimapUnion->CPPmultimap91->rend();
-		break;
-	case 92:
-		*(RIterNode->GetNode()->CPPreversenode92) = multimapUnion->CPPmultimap92->rend();
-		break;
-	case 93:
-		*(RIterNode->GetNode()->CPPreversenode93) = multimapUnion->CPPmultimap93->rend();
-		break;
-	case 94:
-		*(RIterNode->GetNode()->CPPreversenode94) = multimapUnion->CPPmultimap94->rend();
-		break;
-	case 95:
-		*(RIterNode->GetNode()->CPPreversenode95) = multimapUnion->CPPmultimap95->rend();
-		break;
-	case 96:
-		*(RIterNode->GetNode()->CPPreversenode96) = multimapUnion->CPPmultimap96->rend();
-		break;
-	case 97:
-		*(RIterNode->GetNode()->CPPreversenode97) = multimapUnion->CPPmultimap97->rend();
-		break;
-	case 98:
-		*(RIterNode->GetNode()->CPPreversenode98) = multimapUnion->CPPmultimap98->rend();
-		break;
-	case 99:
-		*(RIterNode->GetNode()->CPPreversenode99) = multimapUnion->CPPmultimap99->rend();
-		break;
-	case 100:
-		*(RIterNode->GetNode()->CPPreversenode100) = multimapUnion->CPPmultimap100->rend();
-		break;
-	case 101:
-		*(RIterNode->GetNode()->CPPreversenode101) = multimapUnion->CPPmultimap101->rend();
-		break;
-	case 102:
-		*(RIterNode->GetNode()->CPPreversenode102) = multimapUnion->CPPmultimap102->rend();
-		break;
-	case 103:
-		*(RIterNode->GetNode()->CPPreversenode103) = multimapUnion->CPPmultimap103->rend();
-		break;
-	case 104:
-		*(RIterNode->GetNode()->CPPreversenode104) = multimapUnion->CPPmultimap104->rend();
-		break;
-	case 105:
-		*(RIterNode->GetNode()->CPPreversenode105) = multimapUnion->CPPmultimap105->rend();
-		break;
-	case 106:
-		*(RIterNode->GetNode()->CPPreversenode106) = multimapUnion->CPPmultimap106->rend();
-		break;
-	case 107:
-		*(RIterNode->GetNode()->CPPreversenode107) = multimapUnion->CPPmultimap107->rend();
-		break;
-	case 108:
-		*(RIterNode->GetNode()->CPPreversenode108) = multimapUnion->CPPmultimap108->rend();
-		break;
-	case 109:
-		*(RIterNode->GetNode()->CPPreversenode109) = multimapUnion->CPPmultimap109->rend();
-		break;
-	case 110:
-		*(RIterNode->GetNode()->CPPreversenode110) = multimapUnion->CPPmultimap110->rend();
-		break;
-	case 111:
-		*(RIterNode->GetNode()->CPPreversenode111) = multimapUnion->CPPmultimap111->rend();
-		break;
-	case 112:
-		*(RIterNode->GetNode()->CPPreversenode112) = multimapUnion->CPPmultimap112->rend();
-		break;
-	case 113:
-		*(RIterNode->GetNode()->CPPreversenode113) = multimapUnion->CPPmultimap113->rend();
-		break;
-	case 114:
-		*(RIterNode->GetNode()->CPPreversenode114) = multimapUnion->CPPmultimap114->rend();
-		break;
-	case 115:
-		*(RIterNode->GetNode()->CPPreversenode115) = multimapUnion->CPPmultimap115->rend();
-		break;
-	case 116:
-		*(RIterNode->GetNode()->CPPreversenode116) = multimapUnion->CPPmultimap116->rend();
-		break;
-	case 117:
-		*(RIterNode->GetNode()->CPPreversenode117) = multimapUnion->CPPmultimap117->rend();
-		break;
-	case 118:
-		*(RIterNode->GetNode()->CPPreversenode118) = multimapUnion->CPPmultimap118->rend();
-		break;
-	case 119:
-		*(RIterNode->GetNode()->CPPreversenode119) = multimapUnion->CPPmultimap119->rend();
-		break;
-	case 120:
-		*(RIterNode->GetNode()->CPPreversenode120) = multimapUnion->CPPmultimap120->rend();
-		break;
-	case 121:
-		*(RIterNode->GetNode()->CPPreversenode121) = multimapUnion->CPPmultimap121->rend();
-		break;
-	case 122:
-		*(RIterNode->GetNode()->CPPreversenode122) = multimapUnion->CPPmultimap122->rend();
-		break;
-	case 123:
-		*(RIterNode->GetNode()->CPPreversenode123) = multimapUnion->CPPmultimap123->rend();
-		break;
-	case 124:
-		*(RIterNode->GetNode()->CPPreversenode124) = multimapUnion->CPPmultimap124->rend();
-		break;
-	case 125:
-		*(RIterNode->GetNode()->CPPreversenode125) = multimapUnion->CPPmultimap125->rend();
-		break;
-	case 126:
-		*(RIterNode->GetNode()->CPPreversenode126) = multimapUnion->CPPmultimap126->rend();
-		break;
-	case 127:
-		*(RIterNode->GetNode()->CPPreversenode127) = multimapUnion->CPPmultimap127->rend();
-		break;
-	case 128:
-		*(RIterNode->GetNode()->CPPreversenode128) = multimapUnion->CPPmultimap128->rend();
-		break;
-	case 129:
-		*(RIterNode->GetNode()->CPPreversenode129) = multimapUnion->CPPmultimap129->rend();
-		break;
-	case 130:
-		*(RIterNode->GetNode()->CPPreversenode130) = multimapUnion->CPPmultimap130->rend();
-		break;
-	case 131:
-		*(RIterNode->GetNode()->CPPreversenode131) = multimapUnion->CPPmultimap131->rend();
-		break;
-	case 132:
-		*(RIterNode->GetNode()->CPPreversenode132) = multimapUnion->CPPmultimap132->rend();
-		break;
-	case 133:
-		*(RIterNode->GetNode()->CPPreversenode133) = multimapUnion->CPPmultimap133->rend();
-		break;
-	case 134:
-		*(RIterNode->GetNode()->CPPreversenode134) = multimapUnion->CPPmultimap134->rend();
-		break;
-	case 135:
-		*(RIterNode->GetNode()->CPPreversenode135) = multimapUnion->CPPmultimap135->rend();
-		break;
-	case 136:
-		*(RIterNode->GetNode()->CPPreversenode136) = multimapUnion->CPPmultimap136->rend();
-		break;
-	case 137:
-		*(RIterNode->GetNode()->CPPreversenode137) = multimapUnion->CPPmultimap137->rend();
-		break;
-	case 138:
-		*(RIterNode->GetNode()->CPPreversenode138) = multimapUnion->CPPmultimap138->rend();
-		break;
-	case 139:
-		*(RIterNode->GetNode()->CPPreversenode139) = multimapUnion->CPPmultimap139->rend();
-		break;
-	case 140:
-		*(RIterNode->GetNode()->CPPreversenode140) = multimapUnion->CPPmultimap140->rend();
-		break;
-	case 141:
-		*(RIterNode->GetNode()->CPPreversenode141) = multimapUnion->CPPmultimap141->rend();
-		break;
-	case 142:
-		*(RIterNode->GetNode()->CPPreversenode142) = multimapUnion->CPPmultimap142->rend();
-		break;
-	case 143:
-		*(RIterNode->GetNode()->CPPreversenode143) = multimapUnion->CPPmultimap143->rend();
-		break;
-	case 144:
-		*(RIterNode->GetNode()->CPPreversenode144) = multimapUnion->CPPmultimap144->rend();
-		break;
-	case 145:
-		*(RIterNode->GetNode()->CPPreversenode145) = multimapUnion->CPPmultimap145->rend();
-		break;
-	case 146:
-		*(RIterNode->GetNode()->CPPreversenode146) = multimapUnion->CPPmultimap146->rend();
-		break;
-	case 147:
-		*(RIterNode->GetNode()->CPPreversenode147) = multimapUnion->CPPmultimap147->rend();
-		break;
-	case 148:
-		*(RIterNode->GetNode()->CPPreversenode148) = multimapUnion->CPPmultimap148->rend();
-		break;
-	case 149:
-		*(RIterNode->GetNode()->CPPreversenode149) = multimapUnion->CPPmultimap149->rend();
-		break;
-	case 150:
-		*(RIterNode->GetNode()->CPPreversenode150) = multimapUnion->CPPmultimap150->rend();
-		break;
-	case 151:
-		*(RIterNode->GetNode()->CPPreversenode151) = multimapUnion->CPPmultimap151->rend();
-		break;
-	case 152:
-		*(RIterNode->GetNode()->CPPreversenode152) = multimapUnion->CPPmultimap152->rend();
-		break;
-	case 153:
-		*(RIterNode->GetNode()->CPPreversenode153) = multimapUnion->CPPmultimap153->rend();
-		break;
-	case 154:
-		*(RIterNode->GetNode()->CPPreversenode154) = multimapUnion->CPPmultimap154->rend();
-		break;
-	case 155:
-		*(RIterNode->GetNode()->CPPreversenode155) = multimapUnion->CPPmultimap155->rend();
-		break;
-	case 156:
-		*(RIterNode->GetNode()->CPPreversenode156) = multimapUnion->CPPmultimap156->rend();
-		break;
-	case 157:
-		*(RIterNode->GetNode()->CPPreversenode157) = multimapUnion->CPPmultimap157->rend();
-		break;
-	case 158:
-		*(RIterNode->GetNode()->CPPreversenode158) = multimapUnion->CPPmultimap158->rend();
-		break;
-	case 159:
-		*(RIterNode->GetNode()->CPPreversenode159) = multimapUnion->CPPmultimap159->rend();
-		break;
-	case 160:
-		*(RIterNode->GetNode()->CPPreversenode160) = multimapUnion->CPPmultimap160->rend();
-		break;
-	case 161:
-		*(RIterNode->GetNode()->CPPreversenode161) = multimapUnion->CPPmultimap161->rend();
-		break;
-	case 162:
-		*(RIterNode->GetNode()->CPPreversenode162) = multimapUnion->CPPmultimap162->rend();
-		break;
-	case 163:
-		*(RIterNode->GetNode()->CPPreversenode163) = multimapUnion->CPPmultimap163->rend();
-		break;
-	case 164:
-		*(RIterNode->GetNode()->CPPreversenode164) = multimapUnion->CPPmultimap164->rend();
-		break;
-	case 165:
-		*(RIterNode->GetNode()->CPPreversenode165) = multimapUnion->CPPmultimap165->rend();
-		break;
-	case 166:
-		*(RIterNode->GetNode()->CPPreversenode166) = multimapUnion->CPPmultimap166->rend();
-		break;
-	case 167:
-		*(RIterNode->GetNode()->CPPreversenode167) = multimapUnion->CPPmultimap167->rend();
-		break;
-	case 168:
-		*(RIterNode->GetNode()->CPPreversenode168) = multimapUnion->CPPmultimap168->rend();
-		break;
-	case 169:
-		*(RIterNode->GetNode()->CPPreversenode169) = multimapUnion->CPPmultimap169->rend();
-		break;
-	case 170:
-		*(RIterNode->GetNode()->CPPreversenode170) = multimapUnion->CPPmultimap170->rend();
-		break;
-	case 171:
-		*(RIterNode->GetNode()->CPPreversenode171) = multimapUnion->CPPmultimap171->rend();
-		break;
-	case 172:
-		*(RIterNode->GetNode()->CPPreversenode172) = multimapUnion->CPPmultimap172->rend();
-		break;
-	case 173:
-		*(RIterNode->GetNode()->CPPreversenode173) = multimapUnion->CPPmultimap173->rend();
-		break;
-	case 174:
-		*(RIterNode->GetNode()->CPPreversenode174) = multimapUnion->CPPmultimap174->rend();
-		break;
-	case 175:
-		*(RIterNode->GetNode()->CPPreversenode175) = multimapUnion->CPPmultimap175->rend();
-		break;
-	case 176:
-		*(RIterNode->GetNode()->CPPreversenode176) = multimapUnion->CPPmultimap176->rend();
-		break;
-	case 177:
-		*(RIterNode->GetNode()->CPPreversenode177) = multimapUnion->CPPmultimap177->rend();
-		break;
-	case 178:
-		*(RIterNode->GetNode()->CPPreversenode178) = multimapUnion->CPPmultimap178->rend();
-		break;
-	case 179:
-		*(RIterNode->GetNode()->CPPreversenode179) = multimapUnion->CPPmultimap179->rend();
-		break;
-	case 180:
-		*(RIterNode->GetNode()->CPPreversenode180) = multimapUnion->CPPmultimap180->rend();
-		break;
-	case 181:
-		*(RIterNode->GetNode()->CPPreversenode181) = multimapUnion->CPPmultimap181->rend();
-		break;
-	case 182:
-		*(RIterNode->GetNode()->CPPreversenode182) = multimapUnion->CPPmultimap182->rend();
-		break;
-	case 183:
-		*(RIterNode->GetNode()->CPPreversenode183) = multimapUnion->CPPmultimap183->rend();
-		break;
-	case 184:
-		*(RIterNode->GetNode()->CPPreversenode184) = multimapUnion->CPPmultimap184->rend();
-		break;
-	case 185:
-		*(RIterNode->GetNode()->CPPreversenode185) = multimapUnion->CPPmultimap185->rend();
-		break;
-	case 186:
-		*(RIterNode->GetNode()->CPPreversenode186) = multimapUnion->CPPmultimap186->rend();
-		break;
-	case 187:
-		*(RIterNode->GetNode()->CPPreversenode187) = multimapUnion->CPPmultimap187->rend();
-		break;
-	case 188:
-		*(RIterNode->GetNode()->CPPreversenode188) = multimapUnion->CPPmultimap188->rend();
-		break;
-	case 189:
-		*(RIterNode->GetNode()->CPPreversenode189) = multimapUnion->CPPmultimap189->rend();
-		break;
-	case 190:
-		*(RIterNode->GetNode()->CPPreversenode190) = multimapUnion->CPPmultimap190->rend();
-		break;
-	case 191:
-		*(RIterNode->GetNode()->CPPreversenode191) = multimapUnion->CPPmultimap191->rend();
-		break;
-	case 192:
-		*(RIterNode->GetNode()->CPPreversenode192) = multimapUnion->CPPmultimap192->rend();
-		break;
-	case 193:
-		*(RIterNode->GetNode()->CPPreversenode193) = multimapUnion->CPPmultimap193->rend();
-		break;
-	case 194:
-		*(RIterNode->GetNode()->CPPreversenode194) = multimapUnion->CPPmultimap194->rend();
-		break;
-	case 195:
-		*(RIterNode->GetNode()->CPPreversenode195) = multimapUnion->CPPmultimap195->rend();
-		break;
-	case 196:
-		*(RIterNode->GetNode()->CPPreversenode196) = multimapUnion->CPPmultimap196->rend();
-		break;
+		UnOrderedMultiMap_RbeginRend_CASE(1, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(2, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(3, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(4, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(5, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(6, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(7, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(8, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(9, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(10, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(11, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(12, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(13, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(14, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(15, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(16, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(17, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(18, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(19, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(20, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(21, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(22, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(23, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(24, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(25, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(26, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(27, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(28, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(29, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(30, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(31, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(32, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(33, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(34, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(35, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(36, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(37, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(38, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(39, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(40, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(41, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(42, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(43, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(44, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(45, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(46, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(47, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(48, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(49, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(50, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(51, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(52, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(53, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(54, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(55, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(56, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(57, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(58, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(59, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(60, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(61, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(62, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(63, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(64, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(65, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(66, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(67, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(68, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(69, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(70, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(71, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(72, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(73, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(74, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(75, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(76, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(77, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(78, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(79, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(80, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(81, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(82, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(83, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(84, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(85, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(86, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(87, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(88, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(89, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(90, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(91, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(92, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(93, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(94, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(95, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(96, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(97, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(98, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(99, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(100, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(101, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(102, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(103, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(104, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(105, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(106, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(107, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(108, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(109, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(110, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(111, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(112, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(113, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(114, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(115, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(116, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(117, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(118, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(119, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(120, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(121, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(122, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(123, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(124, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(125, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(126, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(127, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(128, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(129, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(130, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(131, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(132, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(133, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(134, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(135, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(136, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(137, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(138, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(139, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(140, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(141, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(142, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(143, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(144, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(145, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(146, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(147, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(148, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(149, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(150, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(151, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(152, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(153, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(154, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(155, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(156, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(157, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(158, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(159, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(160, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(161, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(162, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(163, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(164, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(165, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(166, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(167, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(168, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(169, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(170, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(171, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(172, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(173, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(174, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(175, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(176, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(177, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(178, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(179, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(180, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(181, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(182, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(183, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(184, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(185, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(186, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(187, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(188, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(189, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(190, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(191, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(192, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(193, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(194, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(195, rend)
+			UnOrderedMultiMap_RbeginRend_CASE(196, rend)
 	}
 	return RIterNode;
 }
+
+#define UnOrderedMultiMap_CrbeginCrend_CASE(NUM, CrbeginCrend) \
+	case NUM: \
+		*(temp->GetNode()->CPPcreversenode##NUM) = multimapUnion->CPPmultimap##NUM->CrbeginCrend(); \
+		break;
 
 generic<typename Key, typename Value>
 UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::crbegin()
@@ -15378,594 +11695,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>^ UnOrderedMulti
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(temp->GetNode()->CPPcreversenode1) = multimapUnion->CPPmultimap1->crbegin();
-		break;
-	case 2:
-		*(temp->GetNode()->CPPcreversenode2) = multimapUnion->CPPmultimap2->crbegin();
-		break;
-	case 3:
-		*(temp->GetNode()->CPPcreversenode3) = multimapUnion->CPPmultimap3->crbegin();
-		break;
-	case 4:
-		*(temp->GetNode()->CPPcreversenode4) = multimapUnion->CPPmultimap4->crbegin();
-		break;
-	case 5:
-		*(temp->GetNode()->CPPcreversenode5) = multimapUnion->CPPmultimap5->crbegin();
-		break;
-	case 6:
-		*(temp->GetNode()->CPPcreversenode6) = multimapUnion->CPPmultimap6->crbegin();
-		break;
-	case 7:
-		*(temp->GetNode()->CPPcreversenode7) = multimapUnion->CPPmultimap7->crbegin();
-		break;
-	case 8:
-		*(temp->GetNode()->CPPcreversenode8) = multimapUnion->CPPmultimap8->crbegin();
-		break;
-	case 9:
-		*(temp->GetNode()->CPPcreversenode9) = multimapUnion->CPPmultimap9->crbegin();
-		break;
-	case 10:
-		*(temp->GetNode()->CPPcreversenode10) = multimapUnion->CPPmultimap10->crbegin();
-		break;
-	case 11:
-		*(temp->GetNode()->CPPcreversenode11) = multimapUnion->CPPmultimap11->crbegin();
-		break;
-	case 12:
-		*(temp->GetNode()->CPPcreversenode12) = multimapUnion->CPPmultimap12->crbegin();
-		break;
-	case 13:
-		*(temp->GetNode()->CPPcreversenode13) = multimapUnion->CPPmultimap13->crbegin();
-		break;
-	case 14:
-		*(temp->GetNode()->CPPcreversenode14) = multimapUnion->CPPmultimap14->crbegin();
-		break;
-	case 15:
-		*(temp->GetNode()->CPPcreversenode15) = multimapUnion->CPPmultimap15->crbegin();
-		break;
-	case 16:
-		*(temp->GetNode()->CPPcreversenode16) = multimapUnion->CPPmultimap16->crbegin();
-		break;
-	case 17:
-		*(temp->GetNode()->CPPcreversenode17) = multimapUnion->CPPmultimap17->crbegin();
-		break;
-	case 18:
-		*(temp->GetNode()->CPPcreversenode18) = multimapUnion->CPPmultimap18->crbegin();
-		break;
-	case 19:
-		*(temp->GetNode()->CPPcreversenode19) = multimapUnion->CPPmultimap19->crbegin();
-		break;
-	case 20:
-		*(temp->GetNode()->CPPcreversenode20) = multimapUnion->CPPmultimap20->crbegin();
-		break;
-	case 21:
-		*(temp->GetNode()->CPPcreversenode21) = multimapUnion->CPPmultimap21->crbegin();
-		break;
-	case 22:
-		*(temp->GetNode()->CPPcreversenode22) = multimapUnion->CPPmultimap22->crbegin();
-		break;
-	case 23:
-		*(temp->GetNode()->CPPcreversenode23) = multimapUnion->CPPmultimap23->crbegin();
-		break;
-	case 24:
-		*(temp->GetNode()->CPPcreversenode24) = multimapUnion->CPPmultimap24->crbegin();
-		break;
-	case 25:
-		*(temp->GetNode()->CPPcreversenode25) = multimapUnion->CPPmultimap25->crbegin();
-		break;
-	case 26:
-		*(temp->GetNode()->CPPcreversenode26) = multimapUnion->CPPmultimap26->crbegin();
-		break;
-	case 27:
-		*(temp->GetNode()->CPPcreversenode27) = multimapUnion->CPPmultimap27->crbegin();
-		break;
-	case 28:
-		*(temp->GetNode()->CPPcreversenode28) = multimapUnion->CPPmultimap28->crbegin();
-		break;
-	case 29:
-		*(temp->GetNode()->CPPcreversenode29) = multimapUnion->CPPmultimap29->crbegin();
-		break;
-	case 30:
-		*(temp->GetNode()->CPPcreversenode30) = multimapUnion->CPPmultimap30->crbegin();
-		break;
-	case 31:
-		*(temp->GetNode()->CPPcreversenode31) = multimapUnion->CPPmultimap31->crbegin();
-		break;
-	case 32:
-		*(temp->GetNode()->CPPcreversenode32) = multimapUnion->CPPmultimap32->crbegin();
-		break;
-	case 33:
-		*(temp->GetNode()->CPPcreversenode33) = multimapUnion->CPPmultimap33->crbegin();
-		break;
-	case 34:
-		*(temp->GetNode()->CPPcreversenode34) = multimapUnion->CPPmultimap34->crbegin();
-		break;
-	case 35:
-		*(temp->GetNode()->CPPcreversenode35) = multimapUnion->CPPmultimap35->crbegin();
-		break;
-	case 36:
-		*(temp->GetNode()->CPPcreversenode36) = multimapUnion->CPPmultimap36->crbegin();
-		break;
-	case 37:
-		*(temp->GetNode()->CPPcreversenode37) = multimapUnion->CPPmultimap37->crbegin();
-		break;
-	case 38:
-		*(temp->GetNode()->CPPcreversenode38) = multimapUnion->CPPmultimap38->crbegin();
-		break;
-	case 39:
-		*(temp->GetNode()->CPPcreversenode39) = multimapUnion->CPPmultimap39->crbegin();
-		break;
-	case 40:
-		*(temp->GetNode()->CPPcreversenode40) = multimapUnion->CPPmultimap40->crbegin();
-		break;
-	case 41:
-		*(temp->GetNode()->CPPcreversenode41) = multimapUnion->CPPmultimap41->crbegin();
-		break;
-	case 42:
-		*(temp->GetNode()->CPPcreversenode42) = multimapUnion->CPPmultimap42->crbegin();
-		break;
-	case 43:
-		*(temp->GetNode()->CPPcreversenode43) = multimapUnion->CPPmultimap43->crbegin();
-		break;
-	case 44:
-		*(temp->GetNode()->CPPcreversenode44) = multimapUnion->CPPmultimap44->crbegin();
-		break;
-	case 45:
-		*(temp->GetNode()->CPPcreversenode45) = multimapUnion->CPPmultimap45->crbegin();
-		break;
-	case 46:
-		*(temp->GetNode()->CPPcreversenode46) = multimapUnion->CPPmultimap46->crbegin();
-		break;
-	case 47:
-		*(temp->GetNode()->CPPcreversenode47) = multimapUnion->CPPmultimap47->crbegin();
-		break;
-	case 48:
-		*(temp->GetNode()->CPPcreversenode48) = multimapUnion->CPPmultimap48->crbegin();
-		break;
-	case 49:
-		*(temp->GetNode()->CPPcreversenode49) = multimapUnion->CPPmultimap49->crbegin();
-		break;
-	case 50:
-		*(temp->GetNode()->CPPcreversenode50) = multimapUnion->CPPmultimap50->crbegin();
-		break;
-	case 51:
-		*(temp->GetNode()->CPPcreversenode51) = multimapUnion->CPPmultimap51->crbegin();
-		break;
-	case 52:
-		*(temp->GetNode()->CPPcreversenode52) = multimapUnion->CPPmultimap52->crbegin();
-		break;
-	case 53:
-		*(temp->GetNode()->CPPcreversenode53) = multimapUnion->CPPmultimap53->crbegin();
-		break;
-	case 54:
-		*(temp->GetNode()->CPPcreversenode54) = multimapUnion->CPPmultimap54->crbegin();
-		break;
-	case 55:
-		*(temp->GetNode()->CPPcreversenode55) = multimapUnion->CPPmultimap55->crbegin();
-		break;
-	case 56:
-		*(temp->GetNode()->CPPcreversenode56) = multimapUnion->CPPmultimap56->crbegin();
-		break;
-	case 57:
-		*(temp->GetNode()->CPPcreversenode57) = multimapUnion->CPPmultimap57->crbegin();
-		break;
-	case 58:
-		*(temp->GetNode()->CPPcreversenode58) = multimapUnion->CPPmultimap58->crbegin();
-		break;
-	case 59:
-		*(temp->GetNode()->CPPcreversenode59) = multimapUnion->CPPmultimap59->crbegin();
-		break;
-	case 60:
-		*(temp->GetNode()->CPPcreversenode60) = multimapUnion->CPPmultimap60->crbegin();
-		break;
-	case 61:
-		*(temp->GetNode()->CPPcreversenode61) = multimapUnion->CPPmultimap61->crbegin();
-		break;
-	case 62:
-		*(temp->GetNode()->CPPcreversenode62) = multimapUnion->CPPmultimap62->crbegin();
-		break;
-	case 63:
-		*(temp->GetNode()->CPPcreversenode63) = multimapUnion->CPPmultimap63->crbegin();
-		break;
-	case 64:
-		*(temp->GetNode()->CPPcreversenode64) = multimapUnion->CPPmultimap64->crbegin();
-		break;
-	case 65:
-		*(temp->GetNode()->CPPcreversenode65) = multimapUnion->CPPmultimap65->crbegin();
-		break;
-	case 66:
-		*(temp->GetNode()->CPPcreversenode66) = multimapUnion->CPPmultimap66->crbegin();
-		break;
-	case 67:
-		*(temp->GetNode()->CPPcreversenode67) = multimapUnion->CPPmultimap67->crbegin();
-		break;
-	case 68:
-		*(temp->GetNode()->CPPcreversenode68) = multimapUnion->CPPmultimap68->crbegin();
-		break;
-	case 69:
-		*(temp->GetNode()->CPPcreversenode69) = multimapUnion->CPPmultimap69->crbegin();
-		break;
-	case 70:
-		*(temp->GetNode()->CPPcreversenode70) = multimapUnion->CPPmultimap70->crbegin();
-		break;
-	case 71:
-		*(temp->GetNode()->CPPcreversenode71) = multimapUnion->CPPmultimap71->crbegin();
-		break;
-	case 72:
-		*(temp->GetNode()->CPPcreversenode72) = multimapUnion->CPPmultimap72->crbegin();
-		break;
-	case 73:
-		*(temp->GetNode()->CPPcreversenode73) = multimapUnion->CPPmultimap73->crbegin();
-		break;
-	case 74:
-		*(temp->GetNode()->CPPcreversenode74) = multimapUnion->CPPmultimap74->crbegin();
-		break;
-	case 75:
-		*(temp->GetNode()->CPPcreversenode75) = multimapUnion->CPPmultimap75->crbegin();
-		break;
-	case 76:
-		*(temp->GetNode()->CPPcreversenode76) = multimapUnion->CPPmultimap76->crbegin();
-		break;
-	case 77:
-		*(temp->GetNode()->CPPcreversenode77) = multimapUnion->CPPmultimap77->crbegin();
-		break;
-	case 78:
-		*(temp->GetNode()->CPPcreversenode78) = multimapUnion->CPPmultimap78->crbegin();
-		break;
-	case 79:
-		*(temp->GetNode()->CPPcreversenode79) = multimapUnion->CPPmultimap79->crbegin();
-		break;
-	case 80:
-		*(temp->GetNode()->CPPcreversenode80) = multimapUnion->CPPmultimap80->crbegin();
-		break;
-	case 81:
-		*(temp->GetNode()->CPPcreversenode81) = multimapUnion->CPPmultimap81->crbegin();
-		break;
-	case 82:
-		*(temp->GetNode()->CPPcreversenode82) = multimapUnion->CPPmultimap82->crbegin();
-		break;
-	case 83:
-		*(temp->GetNode()->CPPcreversenode83) = multimapUnion->CPPmultimap83->crbegin();
-		break;
-	case 84:
-		*(temp->GetNode()->CPPcreversenode84) = multimapUnion->CPPmultimap84->crbegin();
-		break;
-	case 85:
-		*(temp->GetNode()->CPPcreversenode85) = multimapUnion->CPPmultimap85->crbegin();
-		break;
-	case 86:
-		*(temp->GetNode()->CPPcreversenode86) = multimapUnion->CPPmultimap86->crbegin();
-		break;
-	case 87:
-		*(temp->GetNode()->CPPcreversenode87) = multimapUnion->CPPmultimap87->crbegin();
-		break;
-	case 88:
-		*(temp->GetNode()->CPPcreversenode88) = multimapUnion->CPPmultimap88->crbegin();
-		break;
-	case 89:
-		*(temp->GetNode()->CPPcreversenode89) = multimapUnion->CPPmultimap89->crbegin();
-		break;
-	case 90:
-		*(temp->GetNode()->CPPcreversenode90) = multimapUnion->CPPmultimap90->crbegin();
-		break;
-	case 91:
-		*(temp->GetNode()->CPPcreversenode91) = multimapUnion->CPPmultimap91->crbegin();
-		break;
-	case 92:
-		*(temp->GetNode()->CPPcreversenode92) = multimapUnion->CPPmultimap92->crbegin();
-		break;
-	case 93:
-		*(temp->GetNode()->CPPcreversenode93) = multimapUnion->CPPmultimap93->crbegin();
-		break;
-	case 94:
-		*(temp->GetNode()->CPPcreversenode94) = multimapUnion->CPPmultimap94->crbegin();
-		break;
-	case 95:
-		*(temp->GetNode()->CPPcreversenode95) = multimapUnion->CPPmultimap95->crbegin();
-		break;
-	case 96:
-		*(temp->GetNode()->CPPcreversenode96) = multimapUnion->CPPmultimap96->crbegin();
-		break;
-	case 97:
-		*(temp->GetNode()->CPPcreversenode97) = multimapUnion->CPPmultimap97->crbegin();
-		break;
-	case 98:
-		*(temp->GetNode()->CPPcreversenode98) = multimapUnion->CPPmultimap98->crbegin();
-		break;
-	case 99:
-		*(temp->GetNode()->CPPcreversenode99) = multimapUnion->CPPmultimap99->crbegin();
-		break;
-	case 100:
-		*(temp->GetNode()->CPPcreversenode100) = multimapUnion->CPPmultimap100->crbegin();
-		break;
-	case 101:
-		*(temp->GetNode()->CPPcreversenode101) = multimapUnion->CPPmultimap101->crbegin();
-		break;
-	case 102:
-		*(temp->GetNode()->CPPcreversenode102) = multimapUnion->CPPmultimap102->crbegin();
-		break;
-	case 103:
-		*(temp->GetNode()->CPPcreversenode103) = multimapUnion->CPPmultimap103->crbegin();
-		break;
-	case 104:
-		*(temp->GetNode()->CPPcreversenode104) = multimapUnion->CPPmultimap104->crbegin();
-		break;
-	case 105:
-		*(temp->GetNode()->CPPcreversenode105) = multimapUnion->CPPmultimap105->crbegin();
-		break;
-	case 106:
-		*(temp->GetNode()->CPPcreversenode106) = multimapUnion->CPPmultimap106->crbegin();
-		break;
-	case 107:
-		*(temp->GetNode()->CPPcreversenode107) = multimapUnion->CPPmultimap107->crbegin();
-		break;
-	case 108:
-		*(temp->GetNode()->CPPcreversenode108) = multimapUnion->CPPmultimap108->crbegin();
-		break;
-	case 109:
-		*(temp->GetNode()->CPPcreversenode109) = multimapUnion->CPPmultimap109->crbegin();
-		break;
-	case 110:
-		*(temp->GetNode()->CPPcreversenode110) = multimapUnion->CPPmultimap110->crbegin();
-		break;
-	case 111:
-		*(temp->GetNode()->CPPcreversenode111) = multimapUnion->CPPmultimap111->crbegin();
-		break;
-	case 112:
-		*(temp->GetNode()->CPPcreversenode112) = multimapUnion->CPPmultimap112->crbegin();
-		break;
-	case 113:
-		*(temp->GetNode()->CPPcreversenode113) = multimapUnion->CPPmultimap113->crbegin();
-		break;
-	case 114:
-		*(temp->GetNode()->CPPcreversenode114) = multimapUnion->CPPmultimap114->crbegin();
-		break;
-	case 115:
-		*(temp->GetNode()->CPPcreversenode115) = multimapUnion->CPPmultimap115->crbegin();
-		break;
-	case 116:
-		*(temp->GetNode()->CPPcreversenode116) = multimapUnion->CPPmultimap116->crbegin();
-		break;
-	case 117:
-		*(temp->GetNode()->CPPcreversenode117) = multimapUnion->CPPmultimap117->crbegin();
-		break;
-	case 118:
-		*(temp->GetNode()->CPPcreversenode118) = multimapUnion->CPPmultimap118->crbegin();
-		break;
-	case 119:
-		*(temp->GetNode()->CPPcreversenode119) = multimapUnion->CPPmultimap119->crbegin();
-		break;
-	case 120:
-		*(temp->GetNode()->CPPcreversenode120) = multimapUnion->CPPmultimap120->crbegin();
-		break;
-	case 121:
-		*(temp->GetNode()->CPPcreversenode121) = multimapUnion->CPPmultimap121->crbegin();
-		break;
-	case 122:
-		*(temp->GetNode()->CPPcreversenode122) = multimapUnion->CPPmultimap122->crbegin();
-		break;
-	case 123:
-		*(temp->GetNode()->CPPcreversenode123) = multimapUnion->CPPmultimap123->crbegin();
-		break;
-	case 124:
-		*(temp->GetNode()->CPPcreversenode124) = multimapUnion->CPPmultimap124->crbegin();
-		break;
-	case 125:
-		*(temp->GetNode()->CPPcreversenode125) = multimapUnion->CPPmultimap125->crbegin();
-		break;
-	case 126:
-		*(temp->GetNode()->CPPcreversenode126) = multimapUnion->CPPmultimap126->crbegin();
-		break;
-	case 127:
-		*(temp->GetNode()->CPPcreversenode127) = multimapUnion->CPPmultimap127->crbegin();
-		break;
-	case 128:
-		*(temp->GetNode()->CPPcreversenode128) = multimapUnion->CPPmultimap128->crbegin();
-		break;
-	case 129:
-		*(temp->GetNode()->CPPcreversenode129) = multimapUnion->CPPmultimap129->crbegin();
-		break;
-	case 130:
-		*(temp->GetNode()->CPPcreversenode130) = multimapUnion->CPPmultimap130->crbegin();
-		break;
-	case 131:
-		*(temp->GetNode()->CPPcreversenode131) = multimapUnion->CPPmultimap131->crbegin();
-		break;
-	case 132:
-		*(temp->GetNode()->CPPcreversenode132) = multimapUnion->CPPmultimap132->crbegin();
-		break;
-	case 133:
-		*(temp->GetNode()->CPPcreversenode133) = multimapUnion->CPPmultimap133->crbegin();
-		break;
-	case 134:
-		*(temp->GetNode()->CPPcreversenode134) = multimapUnion->CPPmultimap134->crbegin();
-		break;
-	case 135:
-		*(temp->GetNode()->CPPcreversenode135) = multimapUnion->CPPmultimap135->crbegin();
-		break;
-	case 136:
-		*(temp->GetNode()->CPPcreversenode136) = multimapUnion->CPPmultimap136->crbegin();
-		break;
-	case 137:
-		*(temp->GetNode()->CPPcreversenode137) = multimapUnion->CPPmultimap137->crbegin();
-		break;
-	case 138:
-		*(temp->GetNode()->CPPcreversenode138) = multimapUnion->CPPmultimap138->crbegin();
-		break;
-	case 139:
-		*(temp->GetNode()->CPPcreversenode139) = multimapUnion->CPPmultimap139->crbegin();
-		break;
-	case 140:
-		*(temp->GetNode()->CPPcreversenode140) = multimapUnion->CPPmultimap140->crbegin();
-		break;
-	case 141:
-		*(temp->GetNode()->CPPcreversenode141) = multimapUnion->CPPmultimap141->crbegin();
-		break;
-	case 142:
-		*(temp->GetNode()->CPPcreversenode142) = multimapUnion->CPPmultimap142->crbegin();
-		break;
-	case 143:
-		*(temp->GetNode()->CPPcreversenode143) = multimapUnion->CPPmultimap143->crbegin();
-		break;
-	case 144:
-		*(temp->GetNode()->CPPcreversenode144) = multimapUnion->CPPmultimap144->crbegin();
-		break;
-	case 145:
-		*(temp->GetNode()->CPPcreversenode145) = multimapUnion->CPPmultimap145->crbegin();
-		break;
-	case 146:
-		*(temp->GetNode()->CPPcreversenode146) = multimapUnion->CPPmultimap146->crbegin();
-		break;
-	case 147:
-		*(temp->GetNode()->CPPcreversenode147) = multimapUnion->CPPmultimap147->crbegin();
-		break;
-	case 148:
-		*(temp->GetNode()->CPPcreversenode148) = multimapUnion->CPPmultimap148->crbegin();
-		break;
-	case 149:
-		*(temp->GetNode()->CPPcreversenode149) = multimapUnion->CPPmultimap149->crbegin();
-		break;
-	case 150:
-		*(temp->GetNode()->CPPcreversenode150) = multimapUnion->CPPmultimap150->crbegin();
-		break;
-	case 151:
-		*(temp->GetNode()->CPPcreversenode151) = multimapUnion->CPPmultimap151->crbegin();
-		break;
-	case 152:
-		*(temp->GetNode()->CPPcreversenode152) = multimapUnion->CPPmultimap152->crbegin();
-		break;
-	case 153:
-		*(temp->GetNode()->CPPcreversenode153) = multimapUnion->CPPmultimap153->crbegin();
-		break;
-	case 154:
-		*(temp->GetNode()->CPPcreversenode154) = multimapUnion->CPPmultimap154->crbegin();
-		break;
-	case 155:
-		*(temp->GetNode()->CPPcreversenode155) = multimapUnion->CPPmultimap155->crbegin();
-		break;
-	case 156:
-		*(temp->GetNode()->CPPcreversenode156) = multimapUnion->CPPmultimap156->crbegin();
-		break;
-	case 157:
-		*(temp->GetNode()->CPPcreversenode157) = multimapUnion->CPPmultimap157->crbegin();
-		break;
-	case 158:
-		*(temp->GetNode()->CPPcreversenode158) = multimapUnion->CPPmultimap158->crbegin();
-		break;
-	case 159:
-		*(temp->GetNode()->CPPcreversenode159) = multimapUnion->CPPmultimap159->crbegin();
-		break;
-	case 160:
-		*(temp->GetNode()->CPPcreversenode160) = multimapUnion->CPPmultimap160->crbegin();
-		break;
-	case 161:
-		*(temp->GetNode()->CPPcreversenode161) = multimapUnion->CPPmultimap161->crbegin();
-		break;
-	case 162:
-		*(temp->GetNode()->CPPcreversenode162) = multimapUnion->CPPmultimap162->crbegin();
-		break;
-	case 163:
-		*(temp->GetNode()->CPPcreversenode163) = multimapUnion->CPPmultimap163->crbegin();
-		break;
-	case 164:
-		*(temp->GetNode()->CPPcreversenode164) = multimapUnion->CPPmultimap164->crbegin();
-		break;
-	case 165:
-		*(temp->GetNode()->CPPcreversenode165) = multimapUnion->CPPmultimap165->crbegin();
-		break;
-	case 166:
-		*(temp->GetNode()->CPPcreversenode166) = multimapUnion->CPPmultimap166->crbegin();
-		break;
-	case 167:
-		*(temp->GetNode()->CPPcreversenode167) = multimapUnion->CPPmultimap167->crbegin();
-		break;
-	case 168:
-		*(temp->GetNode()->CPPcreversenode168) = multimapUnion->CPPmultimap168->crbegin();
-		break;
-	case 169:
-		*(temp->GetNode()->CPPcreversenode169) = multimapUnion->CPPmultimap169->crbegin();
-		break;
-	case 170:
-		*(temp->GetNode()->CPPcreversenode170) = multimapUnion->CPPmultimap170->crbegin();
-		break;
-	case 171:
-		*(temp->GetNode()->CPPcreversenode171) = multimapUnion->CPPmultimap171->crbegin();
-		break;
-	case 172:
-		*(temp->GetNode()->CPPcreversenode172) = multimapUnion->CPPmultimap172->crbegin();
-		break;
-	case 173:
-		*(temp->GetNode()->CPPcreversenode173) = multimapUnion->CPPmultimap173->crbegin();
-		break;
-	case 174:
-		*(temp->GetNode()->CPPcreversenode174) = multimapUnion->CPPmultimap174->crbegin();
-		break;
-	case 175:
-		*(temp->GetNode()->CPPcreversenode175) = multimapUnion->CPPmultimap175->crbegin();
-		break;
-	case 176:
-		*(temp->GetNode()->CPPcreversenode176) = multimapUnion->CPPmultimap176->crbegin();
-		break;
-	case 177:
-		*(temp->GetNode()->CPPcreversenode177) = multimapUnion->CPPmultimap177->crbegin();
-		break;
-	case 178:
-		*(temp->GetNode()->CPPcreversenode178) = multimapUnion->CPPmultimap178->crbegin();
-		break;
-	case 179:
-		*(temp->GetNode()->CPPcreversenode179) = multimapUnion->CPPmultimap179->crbegin();
-		break;
-	case 180:
-		*(temp->GetNode()->CPPcreversenode180) = multimapUnion->CPPmultimap180->crbegin();
-		break;
-	case 181:
-		*(temp->GetNode()->CPPcreversenode181) = multimapUnion->CPPmultimap181->crbegin();
-		break;
-	case 182:
-		*(temp->GetNode()->CPPcreversenode182) = multimapUnion->CPPmultimap182->crbegin();
-		break;
-	case 183:
-		*(temp->GetNode()->CPPcreversenode183) = multimapUnion->CPPmultimap183->crbegin();
-		break;
-	case 184:
-		*(temp->GetNode()->CPPcreversenode184) = multimapUnion->CPPmultimap184->crbegin();
-		break;
-	case 185:
-		*(temp->GetNode()->CPPcreversenode185) = multimapUnion->CPPmultimap185->crbegin();
-		break;
-	case 186:
-		*(temp->GetNode()->CPPcreversenode186) = multimapUnion->CPPmultimap186->crbegin();
-		break;
-	case 187:
-		*(temp->GetNode()->CPPcreversenode187) = multimapUnion->CPPmultimap187->crbegin();
-		break;
-	case 188:
-		*(temp->GetNode()->CPPcreversenode188) = multimapUnion->CPPmultimap188->crbegin();
-		break;
-	case 189:
-		*(temp->GetNode()->CPPcreversenode189) = multimapUnion->CPPmultimap189->crbegin();
-		break;
-	case 190:
-		*(temp->GetNode()->CPPcreversenode190) = multimapUnion->CPPmultimap190->crbegin();
-		break;
-	case 191:
-		*(temp->GetNode()->CPPcreversenode191) = multimapUnion->CPPmultimap191->crbegin();
-		break;
-	case 192:
-		*(temp->GetNode()->CPPcreversenode192) = multimapUnion->CPPmultimap192->crbegin();
-		break;
-	case 193:
-		*(temp->GetNode()->CPPcreversenode193) = multimapUnion->CPPmultimap193->crbegin();
-		break;
-	case 194:
-		*(temp->GetNode()->CPPcreversenode194) = multimapUnion->CPPmultimap194->crbegin();
-		break;
-	case 195:
-		*(temp->GetNode()->CPPcreversenode195) = multimapUnion->CPPmultimap195->crbegin();
-		break;
-	case 196:
-		*(temp->GetNode()->CPPcreversenode196) = multimapUnion->CPPmultimap196->crbegin();
-		break;
+		UnOrderedMultiMap_CrbeginCrend_CASE(1, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(2, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(3, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(4, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(5, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(6, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(7, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(8, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(9, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(10, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(11, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(12, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(13, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(14, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(15, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(16, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(17, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(18, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(19, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(20, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(21, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(22, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(23, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(24, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(25, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(26, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(27, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(28, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(29, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(30, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(31, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(32, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(33, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(34, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(35, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(36, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(37, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(38, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(39, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(40, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(41, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(42, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(43, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(44, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(45, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(46, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(47, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(48, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(49, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(50, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(51, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(52, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(53, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(54, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(55, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(56, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(57, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(58, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(59, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(60, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(61, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(62, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(63, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(64, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(65, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(66, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(67, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(68, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(69, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(70, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(71, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(72, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(73, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(74, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(75, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(76, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(77, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(78, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(79, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(80, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(81, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(82, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(83, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(84, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(85, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(86, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(87, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(88, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(89, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(90, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(91, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(92, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(93, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(94, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(95, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(96, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(97, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(98, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(99, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(100, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(101, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(102, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(103, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(104, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(105, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(106, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(107, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(108, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(109, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(110, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(111, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(112, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(113, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(114, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(115, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(116, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(117, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(118, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(119, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(120, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(121, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(122, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(123, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(124, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(125, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(126, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(127, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(128, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(129, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(130, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(131, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(132, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(133, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(134, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(135, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(136, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(137, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(138, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(139, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(140, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(141, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(142, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(143, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(144, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(145, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(146, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(147, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(148, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(149, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(150, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(151, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(152, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(153, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(154, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(155, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(156, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(157, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(158, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(159, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(160, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(161, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(162, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(163, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(164, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(165, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(166, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(167, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(168, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(169, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(170, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(171, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(172, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(173, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(174, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(175, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(176, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(177, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(178, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(179, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(180, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(181, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(182, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(183, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(184, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(185, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(186, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(187, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(188, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(189, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(190, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(191, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(192, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(193, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(194, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(195, crbegin)
+		UnOrderedMultiMap_CrbeginCrend_CASE(196, crbegin)
 	}
 	return temp;
 }
@@ -15982,594 +11907,202 @@ UnOrderedMultiMapWapper::CShorpUnOrderedCReverseNode<Key, Value>^ UnOrderedMulti
 	{
 	case 0: default:
 		return nullptr;
-	case 1:
-		*(temp->GetNode()->CPPcreversenode1) = multimapUnion->CPPmultimap1->crend();
-		break;
-	case 2:
-		*(temp->GetNode()->CPPcreversenode2) = multimapUnion->CPPmultimap2->crend();
-		break;
-	case 3:
-		*(temp->GetNode()->CPPcreversenode3) = multimapUnion->CPPmultimap3->crend();
-		break;
-	case 4:
-		*(temp->GetNode()->CPPcreversenode4) = multimapUnion->CPPmultimap4->crend();
-		break;
-	case 5:
-		*(temp->GetNode()->CPPcreversenode5) = multimapUnion->CPPmultimap5->crend();
-		break;
-	case 6:
-		*(temp->GetNode()->CPPcreversenode6) = multimapUnion->CPPmultimap6->crend();
-		break;
-	case 7:
-		*(temp->GetNode()->CPPcreversenode7) = multimapUnion->CPPmultimap7->crend();
-		break;
-	case 8:
-		*(temp->GetNode()->CPPcreversenode8) = multimapUnion->CPPmultimap8->crend();
-		break;
-	case 9:
-		*(temp->GetNode()->CPPcreversenode9) = multimapUnion->CPPmultimap9->crend();
-		break;
-	case 10:
-		*(temp->GetNode()->CPPcreversenode10) = multimapUnion->CPPmultimap10->crend();
-		break;
-	case 11:
-		*(temp->GetNode()->CPPcreversenode11) = multimapUnion->CPPmultimap11->crend();
-		break;
-	case 12:
-		*(temp->GetNode()->CPPcreversenode12) = multimapUnion->CPPmultimap12->crend();
-		break;
-	case 13:
-		*(temp->GetNode()->CPPcreversenode13) = multimapUnion->CPPmultimap13->crend();
-		break;
-	case 14:
-		*(temp->GetNode()->CPPcreversenode14) = multimapUnion->CPPmultimap14->crend();
-		break;
-	case 15:
-		*(temp->GetNode()->CPPcreversenode15) = multimapUnion->CPPmultimap15->crend();
-		break;
-	case 16:
-		*(temp->GetNode()->CPPcreversenode16) = multimapUnion->CPPmultimap16->crend();
-		break;
-	case 17:
-		*(temp->GetNode()->CPPcreversenode17) = multimapUnion->CPPmultimap17->crend();
-		break;
-	case 18:
-		*(temp->GetNode()->CPPcreversenode18) = multimapUnion->CPPmultimap18->crend();
-		break;
-	case 19:
-		*(temp->GetNode()->CPPcreversenode19) = multimapUnion->CPPmultimap19->crend();
-		break;
-	case 20:
-		*(temp->GetNode()->CPPcreversenode20) = multimapUnion->CPPmultimap20->crend();
-		break;
-	case 21:
-		*(temp->GetNode()->CPPcreversenode21) = multimapUnion->CPPmultimap21->crend();
-		break;
-	case 22:
-		*(temp->GetNode()->CPPcreversenode22) = multimapUnion->CPPmultimap22->crend();
-		break;
-	case 23:
-		*(temp->GetNode()->CPPcreversenode23) = multimapUnion->CPPmultimap23->crend();
-		break;
-	case 24:
-		*(temp->GetNode()->CPPcreversenode24) = multimapUnion->CPPmultimap24->crend();
-		break;
-	case 25:
-		*(temp->GetNode()->CPPcreversenode25) = multimapUnion->CPPmultimap25->crend();
-		break;
-	case 26:
-		*(temp->GetNode()->CPPcreversenode26) = multimapUnion->CPPmultimap26->crend();
-		break;
-	case 27:
-		*(temp->GetNode()->CPPcreversenode27) = multimapUnion->CPPmultimap27->crend();
-		break;
-	case 28:
-		*(temp->GetNode()->CPPcreversenode28) = multimapUnion->CPPmultimap28->crend();
-		break;
-	case 29:
-		*(temp->GetNode()->CPPcreversenode29) = multimapUnion->CPPmultimap29->crend();
-		break;
-	case 30:
-		*(temp->GetNode()->CPPcreversenode30) = multimapUnion->CPPmultimap30->crend();
-		break;
-	case 31:
-		*(temp->GetNode()->CPPcreversenode31) = multimapUnion->CPPmultimap31->crend();
-		break;
-	case 32:
-		*(temp->GetNode()->CPPcreversenode32) = multimapUnion->CPPmultimap32->crend();
-		break;
-	case 33:
-		*(temp->GetNode()->CPPcreversenode33) = multimapUnion->CPPmultimap33->crend();
-		break;
-	case 34:
-		*(temp->GetNode()->CPPcreversenode34) = multimapUnion->CPPmultimap34->crend();
-		break;
-	case 35:
-		*(temp->GetNode()->CPPcreversenode35) = multimapUnion->CPPmultimap35->crend();
-		break;
-	case 36:
-		*(temp->GetNode()->CPPcreversenode36) = multimapUnion->CPPmultimap36->crend();
-		break;
-	case 37:
-		*(temp->GetNode()->CPPcreversenode37) = multimapUnion->CPPmultimap37->crend();
-		break;
-	case 38:
-		*(temp->GetNode()->CPPcreversenode38) = multimapUnion->CPPmultimap38->crend();
-		break;
-	case 39:
-		*(temp->GetNode()->CPPcreversenode39) = multimapUnion->CPPmultimap39->crend();
-		break;
-	case 40:
-		*(temp->GetNode()->CPPcreversenode40) = multimapUnion->CPPmultimap40->crend();
-		break;
-	case 41:
-		*(temp->GetNode()->CPPcreversenode41) = multimapUnion->CPPmultimap41->crend();
-		break;
-	case 42:
-		*(temp->GetNode()->CPPcreversenode42) = multimapUnion->CPPmultimap42->crend();
-		break;
-	case 43:
-		*(temp->GetNode()->CPPcreversenode43) = multimapUnion->CPPmultimap43->crend();
-		break;
-	case 44:
-		*(temp->GetNode()->CPPcreversenode44) = multimapUnion->CPPmultimap44->crend();
-		break;
-	case 45:
-		*(temp->GetNode()->CPPcreversenode45) = multimapUnion->CPPmultimap45->crend();
-		break;
-	case 46:
-		*(temp->GetNode()->CPPcreversenode46) = multimapUnion->CPPmultimap46->crend();
-		break;
-	case 47:
-		*(temp->GetNode()->CPPcreversenode47) = multimapUnion->CPPmultimap47->crend();
-		break;
-	case 48:
-		*(temp->GetNode()->CPPcreversenode48) = multimapUnion->CPPmultimap48->crend();
-		break;
-	case 49:
-		*(temp->GetNode()->CPPcreversenode49) = multimapUnion->CPPmultimap49->crend();
-		break;
-	case 50:
-		*(temp->GetNode()->CPPcreversenode50) = multimapUnion->CPPmultimap50->crend();
-		break;
-	case 51:
-		*(temp->GetNode()->CPPcreversenode51) = multimapUnion->CPPmultimap51->crend();
-		break;
-	case 52:
-		*(temp->GetNode()->CPPcreversenode52) = multimapUnion->CPPmultimap52->crend();
-		break;
-	case 53:
-		*(temp->GetNode()->CPPcreversenode53) = multimapUnion->CPPmultimap53->crend();
-		break;
-	case 54:
-		*(temp->GetNode()->CPPcreversenode54) = multimapUnion->CPPmultimap54->crend();
-		break;
-	case 55:
-		*(temp->GetNode()->CPPcreversenode55) = multimapUnion->CPPmultimap55->crend();
-		break;
-	case 56:
-		*(temp->GetNode()->CPPcreversenode56) = multimapUnion->CPPmultimap56->crend();
-		break;
-	case 57:
-		*(temp->GetNode()->CPPcreversenode57) = multimapUnion->CPPmultimap57->crend();
-		break;
-	case 58:
-		*(temp->GetNode()->CPPcreversenode58) = multimapUnion->CPPmultimap58->crend();
-		break;
-	case 59:
-		*(temp->GetNode()->CPPcreversenode59) = multimapUnion->CPPmultimap59->crend();
-		break;
-	case 60:
-		*(temp->GetNode()->CPPcreversenode60) = multimapUnion->CPPmultimap60->crend();
-		break;
-	case 61:
-		*(temp->GetNode()->CPPcreversenode61) = multimapUnion->CPPmultimap61->crend();
-		break;
-	case 62:
-		*(temp->GetNode()->CPPcreversenode62) = multimapUnion->CPPmultimap62->crend();
-		break;
-	case 63:
-		*(temp->GetNode()->CPPcreversenode63) = multimapUnion->CPPmultimap63->crend();
-		break;
-	case 64:
-		*(temp->GetNode()->CPPcreversenode64) = multimapUnion->CPPmultimap64->crend();
-		break;
-	case 65:
-		*(temp->GetNode()->CPPcreversenode65) = multimapUnion->CPPmultimap65->crend();
-		break;
-	case 66:
-		*(temp->GetNode()->CPPcreversenode66) = multimapUnion->CPPmultimap66->crend();
-		break;
-	case 67:
-		*(temp->GetNode()->CPPcreversenode67) = multimapUnion->CPPmultimap67->crend();
-		break;
-	case 68:
-		*(temp->GetNode()->CPPcreversenode68) = multimapUnion->CPPmultimap68->crend();
-		break;
-	case 69:
-		*(temp->GetNode()->CPPcreversenode69) = multimapUnion->CPPmultimap69->crend();
-		break;
-	case 70:
-		*(temp->GetNode()->CPPcreversenode70) = multimapUnion->CPPmultimap70->crend();
-		break;
-	case 71:
-		*(temp->GetNode()->CPPcreversenode71) = multimapUnion->CPPmultimap71->crend();
-		break;
-	case 72:
-		*(temp->GetNode()->CPPcreversenode72) = multimapUnion->CPPmultimap72->crend();
-		break;
-	case 73:
-		*(temp->GetNode()->CPPcreversenode73) = multimapUnion->CPPmultimap73->crend();
-		break;
-	case 74:
-		*(temp->GetNode()->CPPcreversenode74) = multimapUnion->CPPmultimap74->crend();
-		break;
-	case 75:
-		*(temp->GetNode()->CPPcreversenode75) = multimapUnion->CPPmultimap75->crend();
-		break;
-	case 76:
-		*(temp->GetNode()->CPPcreversenode76) = multimapUnion->CPPmultimap76->crend();
-		break;
-	case 77:
-		*(temp->GetNode()->CPPcreversenode77) = multimapUnion->CPPmultimap77->crend();
-		break;
-	case 78:
-		*(temp->GetNode()->CPPcreversenode78) = multimapUnion->CPPmultimap78->crend();
-		break;
-	case 79:
-		*(temp->GetNode()->CPPcreversenode79) = multimapUnion->CPPmultimap79->crend();
-		break;
-	case 80:
-		*(temp->GetNode()->CPPcreversenode80) = multimapUnion->CPPmultimap80->crend();
-		break;
-	case 81:
-		*(temp->GetNode()->CPPcreversenode81) = multimapUnion->CPPmultimap81->crend();
-		break;
-	case 82:
-		*(temp->GetNode()->CPPcreversenode82) = multimapUnion->CPPmultimap82->crend();
-		break;
-	case 83:
-		*(temp->GetNode()->CPPcreversenode83) = multimapUnion->CPPmultimap83->crend();
-		break;
-	case 84:
-		*(temp->GetNode()->CPPcreversenode84) = multimapUnion->CPPmultimap84->crend();
-		break;
-	case 85:
-		*(temp->GetNode()->CPPcreversenode85) = multimapUnion->CPPmultimap85->crend();
-		break;
-	case 86:
-		*(temp->GetNode()->CPPcreversenode86) = multimapUnion->CPPmultimap86->crend();
-		break;
-	case 87:
-		*(temp->GetNode()->CPPcreversenode87) = multimapUnion->CPPmultimap87->crend();
-		break;
-	case 88:
-		*(temp->GetNode()->CPPcreversenode88) = multimapUnion->CPPmultimap88->crend();
-		break;
-	case 89:
-		*(temp->GetNode()->CPPcreversenode89) = multimapUnion->CPPmultimap89->crend();
-		break;
-	case 90:
-		*(temp->GetNode()->CPPcreversenode90) = multimapUnion->CPPmultimap90->crend();
-		break;
-	case 91:
-		*(temp->GetNode()->CPPcreversenode91) = multimapUnion->CPPmultimap91->crend();
-		break;
-	case 92:
-		*(temp->GetNode()->CPPcreversenode92) = multimapUnion->CPPmultimap92->crend();
-		break;
-	case 93:
-		*(temp->GetNode()->CPPcreversenode93) = multimapUnion->CPPmultimap93->crend();
-		break;
-	case 94:
-		*(temp->GetNode()->CPPcreversenode94) = multimapUnion->CPPmultimap94->crend();
-		break;
-	case 95:
-		*(temp->GetNode()->CPPcreversenode95) = multimapUnion->CPPmultimap95->crend();
-		break;
-	case 96:
-		*(temp->GetNode()->CPPcreversenode96) = multimapUnion->CPPmultimap96->crend();
-		break;
-	case 97:
-		*(temp->GetNode()->CPPcreversenode97) = multimapUnion->CPPmultimap97->crend();
-		break;
-	case 98:
-		*(temp->GetNode()->CPPcreversenode98) = multimapUnion->CPPmultimap98->crend();
-		break;
-	case 99:
-		*(temp->GetNode()->CPPcreversenode99) = multimapUnion->CPPmultimap99->crend();
-		break;
-	case 100:
-		*(temp->GetNode()->CPPcreversenode100) = multimapUnion->CPPmultimap100->crend();
-		break;
-	case 101:
-		*(temp->GetNode()->CPPcreversenode101) = multimapUnion->CPPmultimap101->crend();
-		break;
-	case 102:
-		*(temp->GetNode()->CPPcreversenode102) = multimapUnion->CPPmultimap102->crend();
-		break;
-	case 103:
-		*(temp->GetNode()->CPPcreversenode103) = multimapUnion->CPPmultimap103->crend();
-		break;
-	case 104:
-		*(temp->GetNode()->CPPcreversenode104) = multimapUnion->CPPmultimap104->crend();
-		break;
-	case 105:
-		*(temp->GetNode()->CPPcreversenode105) = multimapUnion->CPPmultimap105->crend();
-		break;
-	case 106:
-		*(temp->GetNode()->CPPcreversenode106) = multimapUnion->CPPmultimap106->crend();
-		break;
-	case 107:
-		*(temp->GetNode()->CPPcreversenode107) = multimapUnion->CPPmultimap107->crend();
-		break;
-	case 108:
-		*(temp->GetNode()->CPPcreversenode108) = multimapUnion->CPPmultimap108->crend();
-		break;
-	case 109:
-		*(temp->GetNode()->CPPcreversenode109) = multimapUnion->CPPmultimap109->crend();
-		break;
-	case 110:
-		*(temp->GetNode()->CPPcreversenode110) = multimapUnion->CPPmultimap110->crend();
-		break;
-	case 111:
-		*(temp->GetNode()->CPPcreversenode111) = multimapUnion->CPPmultimap111->crend();
-		break;
-	case 112:
-		*(temp->GetNode()->CPPcreversenode112) = multimapUnion->CPPmultimap112->crend();
-		break;
-	case 113:
-		*(temp->GetNode()->CPPcreversenode113) = multimapUnion->CPPmultimap113->crend();
-		break;
-	case 114:
-		*(temp->GetNode()->CPPcreversenode114) = multimapUnion->CPPmultimap114->crend();
-		break;
-	case 115:
-		*(temp->GetNode()->CPPcreversenode115) = multimapUnion->CPPmultimap115->crend();
-		break;
-	case 116:
-		*(temp->GetNode()->CPPcreversenode116) = multimapUnion->CPPmultimap116->crend();
-		break;
-	case 117:
-		*(temp->GetNode()->CPPcreversenode117) = multimapUnion->CPPmultimap117->crend();
-		break;
-	case 118:
-		*(temp->GetNode()->CPPcreversenode118) = multimapUnion->CPPmultimap118->crend();
-		break;
-	case 119:
-		*(temp->GetNode()->CPPcreversenode119) = multimapUnion->CPPmultimap119->crend();
-		break;
-	case 120:
-		*(temp->GetNode()->CPPcreversenode120) = multimapUnion->CPPmultimap120->crend();
-		break;
-	case 121:
-		*(temp->GetNode()->CPPcreversenode121) = multimapUnion->CPPmultimap121->crend();
-		break;
-	case 122:
-		*(temp->GetNode()->CPPcreversenode122) = multimapUnion->CPPmultimap122->crend();
-		break;
-	case 123:
-		*(temp->GetNode()->CPPcreversenode123) = multimapUnion->CPPmultimap123->crend();
-		break;
-	case 124:
-		*(temp->GetNode()->CPPcreversenode124) = multimapUnion->CPPmultimap124->crend();
-		break;
-	case 125:
-		*(temp->GetNode()->CPPcreversenode125) = multimapUnion->CPPmultimap125->crend();
-		break;
-	case 126:
-		*(temp->GetNode()->CPPcreversenode126) = multimapUnion->CPPmultimap126->crend();
-		break;
-	case 127:
-		*(temp->GetNode()->CPPcreversenode127) = multimapUnion->CPPmultimap127->crend();
-		break;
-	case 128:
-		*(temp->GetNode()->CPPcreversenode128) = multimapUnion->CPPmultimap128->crend();
-		break;
-	case 129:
-		*(temp->GetNode()->CPPcreversenode129) = multimapUnion->CPPmultimap129->crend();
-		break;
-	case 130:
-		*(temp->GetNode()->CPPcreversenode130) = multimapUnion->CPPmultimap130->crend();
-		break;
-	case 131:
-		*(temp->GetNode()->CPPcreversenode131) = multimapUnion->CPPmultimap131->crend();
-		break;
-	case 132:
-		*(temp->GetNode()->CPPcreversenode132) = multimapUnion->CPPmultimap132->crend();
-		break;
-	case 133:
-		*(temp->GetNode()->CPPcreversenode133) = multimapUnion->CPPmultimap133->crend();
-		break;
-	case 134:
-		*(temp->GetNode()->CPPcreversenode134) = multimapUnion->CPPmultimap134->crend();
-		break;
-	case 135:
-		*(temp->GetNode()->CPPcreversenode135) = multimapUnion->CPPmultimap135->crend();
-		break;
-	case 136:
-		*(temp->GetNode()->CPPcreversenode136) = multimapUnion->CPPmultimap136->crend();
-		break;
-	case 137:
-		*(temp->GetNode()->CPPcreversenode137) = multimapUnion->CPPmultimap137->crend();
-		break;
-	case 138:
-		*(temp->GetNode()->CPPcreversenode138) = multimapUnion->CPPmultimap138->crend();
-		break;
-	case 139:
-		*(temp->GetNode()->CPPcreversenode139) = multimapUnion->CPPmultimap139->crend();
-		break;
-	case 140:
-		*(temp->GetNode()->CPPcreversenode140) = multimapUnion->CPPmultimap140->crend();
-		break;
-	case 141:
-		*(temp->GetNode()->CPPcreversenode141) = multimapUnion->CPPmultimap141->crend();
-		break;
-	case 142:
-		*(temp->GetNode()->CPPcreversenode142) = multimapUnion->CPPmultimap142->crend();
-		break;
-	case 143:
-		*(temp->GetNode()->CPPcreversenode143) = multimapUnion->CPPmultimap143->crend();
-		break;
-	case 144:
-		*(temp->GetNode()->CPPcreversenode144) = multimapUnion->CPPmultimap144->crend();
-		break;
-	case 145:
-		*(temp->GetNode()->CPPcreversenode145) = multimapUnion->CPPmultimap145->crend();
-		break;
-	case 146:
-		*(temp->GetNode()->CPPcreversenode146) = multimapUnion->CPPmultimap146->crend();
-		break;
-	case 147:
-		*(temp->GetNode()->CPPcreversenode147) = multimapUnion->CPPmultimap147->crend();
-		break;
-	case 148:
-		*(temp->GetNode()->CPPcreversenode148) = multimapUnion->CPPmultimap148->crend();
-		break;
-	case 149:
-		*(temp->GetNode()->CPPcreversenode149) = multimapUnion->CPPmultimap149->crend();
-		break;
-	case 150:
-		*(temp->GetNode()->CPPcreversenode150) = multimapUnion->CPPmultimap150->crend();
-		break;
-	case 151:
-		*(temp->GetNode()->CPPcreversenode151) = multimapUnion->CPPmultimap151->crend();
-		break;
-	case 152:
-		*(temp->GetNode()->CPPcreversenode152) = multimapUnion->CPPmultimap152->crend();
-		break;
-	case 153:
-		*(temp->GetNode()->CPPcreversenode153) = multimapUnion->CPPmultimap153->crend();
-		break;
-	case 154:
-		*(temp->GetNode()->CPPcreversenode154) = multimapUnion->CPPmultimap154->crend();
-		break;
-	case 155:
-		*(temp->GetNode()->CPPcreversenode155) = multimapUnion->CPPmultimap155->crend();
-		break;
-	case 156:
-		*(temp->GetNode()->CPPcreversenode156) = multimapUnion->CPPmultimap156->crend();
-		break;
-	case 157:
-		*(temp->GetNode()->CPPcreversenode157) = multimapUnion->CPPmultimap157->crend();
-		break;
-	case 158:
-		*(temp->GetNode()->CPPcreversenode158) = multimapUnion->CPPmultimap158->crend();
-		break;
-	case 159:
-		*(temp->GetNode()->CPPcreversenode159) = multimapUnion->CPPmultimap159->crend();
-		break;
-	case 160:
-		*(temp->GetNode()->CPPcreversenode160) = multimapUnion->CPPmultimap160->crend();
-		break;
-	case 161:
-		*(temp->GetNode()->CPPcreversenode161) = multimapUnion->CPPmultimap161->crend();
-		break;
-	case 162:
-		*(temp->GetNode()->CPPcreversenode162) = multimapUnion->CPPmultimap162->crend();
-		break;
-	case 163:
-		*(temp->GetNode()->CPPcreversenode163) = multimapUnion->CPPmultimap163->crend();
-		break;
-	case 164:
-		*(temp->GetNode()->CPPcreversenode164) = multimapUnion->CPPmultimap164->crend();
-		break;
-	case 165:
-		*(temp->GetNode()->CPPcreversenode165) = multimapUnion->CPPmultimap165->crend();
-		break;
-	case 166:
-		*(temp->GetNode()->CPPcreversenode166) = multimapUnion->CPPmultimap166->crend();
-		break;
-	case 167:
-		*(temp->GetNode()->CPPcreversenode167) = multimapUnion->CPPmultimap167->crend();
-		break;
-	case 168:
-		*(temp->GetNode()->CPPcreversenode168) = multimapUnion->CPPmultimap168->crend();
-		break;
-	case 169:
-		*(temp->GetNode()->CPPcreversenode169) = multimapUnion->CPPmultimap169->crend();
-		break;
-	case 170:
-		*(temp->GetNode()->CPPcreversenode170) = multimapUnion->CPPmultimap170->crend();
-		break;
-	case 171:
-		*(temp->GetNode()->CPPcreversenode171) = multimapUnion->CPPmultimap171->crend();
-		break;
-	case 172:
-		*(temp->GetNode()->CPPcreversenode172) = multimapUnion->CPPmultimap172->crend();
-		break;
-	case 173:
-		*(temp->GetNode()->CPPcreversenode173) = multimapUnion->CPPmultimap173->crend();
-		break;
-	case 174:
-		*(temp->GetNode()->CPPcreversenode174) = multimapUnion->CPPmultimap174->crend();
-		break;
-	case 175:
-		*(temp->GetNode()->CPPcreversenode175) = multimapUnion->CPPmultimap175->crend();
-		break;
-	case 176:
-		*(temp->GetNode()->CPPcreversenode176) = multimapUnion->CPPmultimap176->crend();
-		break;
-	case 177:
-		*(temp->GetNode()->CPPcreversenode177) = multimapUnion->CPPmultimap177->crend();
-		break;
-	case 178:
-		*(temp->GetNode()->CPPcreversenode178) = multimapUnion->CPPmultimap178->crend();
-		break;
-	case 179:
-		*(temp->GetNode()->CPPcreversenode179) = multimapUnion->CPPmultimap179->crend();
-		break;
-	case 180:
-		*(temp->GetNode()->CPPcreversenode180) = multimapUnion->CPPmultimap180->crend();
-		break;
-	case 181:
-		*(temp->GetNode()->CPPcreversenode181) = multimapUnion->CPPmultimap181->crend();
-		break;
-	case 182:
-		*(temp->GetNode()->CPPcreversenode182) = multimapUnion->CPPmultimap182->crend();
-		break;
-	case 183:
-		*(temp->GetNode()->CPPcreversenode183) = multimapUnion->CPPmultimap183->crend();
-		break;
-	case 184:
-		*(temp->GetNode()->CPPcreversenode184) = multimapUnion->CPPmultimap184->crend();
-		break;
-	case 185:
-		*(temp->GetNode()->CPPcreversenode185) = multimapUnion->CPPmultimap185->crend();
-		break;
-	case 186:
-		*(temp->GetNode()->CPPcreversenode186) = multimapUnion->CPPmultimap186->crend();
-		break;
-	case 187:
-		*(temp->GetNode()->CPPcreversenode187) = multimapUnion->CPPmultimap187->crend();
-		break;
-	case 188:
-		*(temp->GetNode()->CPPcreversenode188) = multimapUnion->CPPmultimap188->crend();
-		break;
-	case 189:
-		*(temp->GetNode()->CPPcreversenode189) = multimapUnion->CPPmultimap189->crend();
-		break;
-	case 190:
-		*(temp->GetNode()->CPPcreversenode190) = multimapUnion->CPPmultimap190->crend();
-		break;
-	case 191:
-		*(temp->GetNode()->CPPcreversenode191) = multimapUnion->CPPmultimap191->crend();
-		break;
-	case 192:
-		*(temp->GetNode()->CPPcreversenode192) = multimapUnion->CPPmultimap192->crend();
-		break;
-	case 193:
-		*(temp->GetNode()->CPPcreversenode193) = multimapUnion->CPPmultimap193->crend();
-		break;
-	case 194:
-		*(temp->GetNode()->CPPcreversenode194) = multimapUnion->CPPmultimap194->crend();
-		break;
-	case 195:
-		*(temp->GetNode()->CPPcreversenode195) = multimapUnion->CPPmultimap195->crend();
-		break;
-	case 196:
-		*(temp->GetNode()->CPPcreversenode196) = multimapUnion->CPPmultimap196->crend();
-		break;
+		UnOrderedMultiMap_CrbeginCrend_CASE(1, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(2, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(3, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(4, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(5, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(6, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(7, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(8, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(9, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(10, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(11, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(12, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(13, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(14, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(15, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(16, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(17, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(18, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(19, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(20, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(21, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(22, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(23, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(24, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(25, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(26, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(27, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(28, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(29, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(30, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(31, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(32, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(33, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(34, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(35, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(36, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(37, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(38, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(39, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(40, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(41, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(42, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(43, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(44, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(45, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(46, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(47, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(48, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(49, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(50, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(51, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(52, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(53, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(54, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(55, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(56, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(57, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(58, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(59, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(60, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(61, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(62, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(63, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(64, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(65, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(66, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(67, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(68, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(69, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(70, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(71, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(72, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(73, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(74, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(75, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(76, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(77, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(78, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(79, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(80, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(81, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(82, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(83, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(84, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(85, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(86, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(87, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(88, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(89, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(90, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(91, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(92, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(93, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(94, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(95, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(96, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(97, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(98, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(99, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(100, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(101, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(102, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(103, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(104, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(105, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(106, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(107, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(108, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(109, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(110, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(111, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(112, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(113, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(114, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(115, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(116, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(117, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(118, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(119, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(120, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(121, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(122, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(123, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(124, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(125, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(126, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(127, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(128, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(129, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(130, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(131, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(132, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(133, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(134, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(135, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(136, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(137, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(138, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(139, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(140, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(141, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(142, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(143, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(144, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(145, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(146, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(147, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(148, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(149, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(150, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(151, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(152, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(153, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(154, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(155, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(156, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(157, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(158, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(159, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(160, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(161, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(162, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(163, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(164, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(165, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(166, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(167, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(168, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(169, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(170, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(171, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(172, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(173, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(174, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(175, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(176, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(177, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(178, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(179, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(180, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(181, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(182, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(183, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(184, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(185, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(186, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(187, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(188, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(189, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(190, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(191, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(192, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(193, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(194, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(195, crend)
+		UnOrderedMultiMap_CrbeginCrend_CASE(196, crend)
 	}
 	return temp;
 }

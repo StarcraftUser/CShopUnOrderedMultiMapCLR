@@ -76,6 +76,10 @@ inline UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::CShorpUnOr
 	{
 		KeyNum = 14 * 13;
 	}
+	else if (keyType->IsEnum)
+	{
+		KeyNum = 14 * 13;
+	}
 	else
 	{
 		KeyNum = 200;
@@ -142,6 +146,10 @@ inline UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::CShorpUnOr
 		ValueNum = 14;
 	}
 	else if (valueType->IsInterface)
+	{
+		ValueNum = 14;
+	}
+	else if (valueType->IsEnum)
 	{
 		ValueNum = 14;
 	}

@@ -1,5 +1,6 @@
 #include "pch.h"
 #include <type_traits>
+#include <set>
 
 template <typename T>
 void CheckIfPointer(T& var) {
@@ -372,6 +373,17 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			nDictionaryCount++;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(key, Key__Int));
+		else
+		{
+			System::Object^ managedObject = safe_cast<System::Object^>(key);
+			Key__Int = static_cast<__int64>(Convert::ToInt64(managedObject));
+			gKeyClassDictionary->Add(key, Key__Int);
+			gIntKeyClassDictionary->Add(Key__Int, key);
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -470,6 +482,12 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		nDictionaryCount++;
 	}
 	else if (valueType->IsInterface)
+	{
+		gValueClassDictionary->Add(nDictionaryCount, value);
+		Value__Int = nDictionaryCount;
+		nDictionaryCount++;
+	}
+	else if (valueType->IsEnum)
 	{
 		gValueClassDictionary->Add(nDictionaryCount, value);
 		Value__Int = nDictionaryCount;
@@ -1401,6 +1419,14 @@ System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::cou
 			return 0;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(const_cast<Key>(key), Key__Int));
+		else
+		{
+			return 0;
+		}
+	}
 	else
 	{
 		return 0;
@@ -1714,6 +1740,14 @@ System::UInt64 UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::era
 		}
 	}
 	else if (keyType->IsInterface)
+	{
+		if (gKeyClassDictionary->TryGetValue(const_cast<Key>(key), Key__Int));
+		else
+		{
+			return 0;
+		}
+	}
+	else if (keyType->IsEnum)
 	{
 		if (gKeyClassDictionary->TryGetValue(const_cast<Key>(key), Key__Int));
 		else
@@ -2506,6 +2540,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			return nullptr;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(const_cast<Key>(key), Key__Int));
+		else
+		{
+			return nullptr;
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -3141,6 +3183,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	if (Object::ReferenceEquals(_Where, nullptr)) return nullptr;
 	if (nKeyValueType != _Where->GetKVType()) return nullptr;
 	if (_Where->GetInit() == 0) return nullptr;
+
+	__int64 Key__Int = 0;
+	bool bTempKeyDeleted = false;
+
 	switch (nKeyValueType)
 	{
 	case 0: default:
@@ -3718,50 +3764,107 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->erase(*(_Where->GetNode()->CPPmultinode182));
 		break;
 	case 183:
+		Key__Int = _Where->GetNode()->CPPmultinode183->GetKey();
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(_Where->GetNode()->CPPmultinode183));
+		if (multimapUnion->CPPmultimap183->find(Key__Int) == multimapUnion->CPPmultimap183->end())
+			bTempKeyDeleted = true;
 		break;
 	case 184:
+		Key__Int = _Where->GetNode()->CPPmultinode184->GetKey();
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(_Where->GetNode()->CPPmultinode184));
+		if (multimapUnion->CPPmultimap184->find(Key__Int) == multimapUnion->CPPmultimap184->end())
+			bTempKeyDeleted = true;
 		break;
 	case 185:
+		Key__Int = _Where->GetNode()->CPPmultinode185->GetKey();
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(_Where->GetNode()->CPPmultinode185));
+		if (multimapUnion->CPPmultimap185->find(Key__Int) == multimapUnion->CPPmultimap185->end())
+			bTempKeyDeleted = true;
 		break;
 	case 186:
+		Key__Int = _Where->GetNode()->CPPmultinode186->GetKey();
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(_Where->GetNode()->CPPmultinode186));
+		if (multimapUnion->CPPmultimap186->find(Key__Int) == multimapUnion->CPPmultimap186->end())
+			bTempKeyDeleted = true;
 		break;
 	case 187:
+		Key__Int = _Where->GetNode()->CPPmultinode187->GetKey();
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(_Where->GetNode()->CPPmultinode187));
+		if (multimapUnion->CPPmultimap187->find(Key__Int) == multimapUnion->CPPmultimap187->end())
+			bTempKeyDeleted = true;
 		break;
 	case 188:
+		Key__Int = _Where->GetNode()->CPPmultinode188->GetKey();
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(_Where->GetNode()->CPPmultinode188));
+		if (multimapUnion->CPPmultimap188->find(Key__Int) == multimapUnion->CPPmultimap188->end())
+			bTempKeyDeleted = true;
 		break;
 	case 189:
+		Key__Int = _Where->GetNode()->CPPmultinode189->GetKey();
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(_Where->GetNode()->CPPmultinode189));
+		if (multimapUnion->CPPmultimap189->find(Key__Int) == multimapUnion->CPPmultimap189->end())
+			bTempKeyDeleted = true;
 		break;
 	case 190:
+		Key__Int = _Where->GetNode()->CPPmultinode190->GetKey();
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(_Where->GetNode()->CPPmultinode190));
+		if (multimapUnion->CPPmultimap190->find(Key__Int) == multimapUnion->CPPmultimap190->end())
+			bTempKeyDeleted = true;
 		break;
 	case 191:
+		Key__Int = _Where->GetNode()->CPPmultinode191->GetKey();
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(_Where->GetNode()->CPPmultinode191));
+		if (multimapUnion->CPPmultimap191->find(Key__Int) == multimapUnion->CPPmultimap191->end())
+			bTempKeyDeleted = true;
 		break;
 	case 192:
+		Key__Int = _Where->GetNode()->CPPmultinode192->GetKey();
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(_Where->GetNode()->CPPmultinode192));
+		if (multimapUnion->CPPmultimap192->find(Key__Int) == multimapUnion->CPPmultimap192->end())
+			bTempKeyDeleted = true;
 		break;
 	case 193:
+		Key__Int = _Where->GetNode()->CPPmultinode193->GetKey();
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(_Where->GetNode()->CPPmultinode193));
+		if (multimapUnion->CPPmultimap193->find(Key__Int) == multimapUnion->CPPmultimap193->end())
+			bTempKeyDeleted = true;
 		break;
 	case 194:
+		Key__Int = _Where->GetNode()->CPPmultinode194->GetKey();
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(_Where->GetNode()->CPPmultinode194));
+		if (multimapUnion->CPPmultimap194->find(Key__Int) == multimapUnion->CPPmultimap194->end())
+			bTempKeyDeleted = true;
 		break;
 	case 195:
+		Key__Int = _Where->GetNode()->CPPmultinode195->GetKey();
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(_Where->GetNode()->CPPmultinode195));
+		if (multimapUnion->CPPmultimap195->find(Key__Int) == multimapUnion->CPPmultimap195->end())
+			bTempKeyDeleted = true;
 		break;
 	case 196:
+		Key__Int = _Where->GetNode()->CPPmultinode196->GetKey();
 		if (gValueClassDictionary)
+			bTempKeyDeleted = true;
 			gValueClassDictionary->Remove(_Where->GetNode()->CPPmultinode196->GetValue());
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(_Where->GetNode()->CPPmultinode196));
+		if (multimapUnion->CPPmultimap196->find(Key__Int) == multimapUnion->CPPmultimap196->end())
+			bTempKeyDeleted = true;
 		break;
 	}
+
+	if ((183 <= nKeyValueType && nKeyValueType <= 196) && bTempKeyDeleted)
+	{
+		if (gKeyClassDictionary && gIntKeyClassDictionary)
+		{
+			Key temp;
+			if (gIntKeyClassDictionary->TryGetValue(Key__Int, temp))
+			{
+				gIntKeyClassDictionary->Remove(Key__Int);
+				gKeyClassDictionary->Remove(temp);
+			}
+		}
+	}
+
 	return multiNode->DeepCopy();
 }
 
@@ -3774,6 +3877,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	if (nKeyValueType != First->GetKVType()) return nullptr;
 	if (First->GetInit() == 0) return nullptr;
 	if (Last->GetInit() == 0) return nullptr;
+
+	std::set<__int64> TempKeySet;
+	std::set<__int64> TempKeyDeletedSet;
+	bool bTempKeyDeleted = false;
 
 	switch (nKeyValueType)
 	{
@@ -4404,45 +4511,151 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->erase(*(First->GetNode()->CPPmultinode182), *(Last->GetNode()->CPPmultinode182));
 		break;
 	case 183:
+		for (auto iter = *(First->GetNode()->CPPmultinode183); iter != *(Last->GetNode()->CPPmultinode183); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(First->GetNode()->CPPmultinode183), *(Last->GetNode()->CPPmultinode183));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap183->find(i) == multimapUnion->CPPmultimap183->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 184:
+		for (auto iter = *(First->GetNode()->CPPmultinode184); iter != *(Last->GetNode()->CPPmultinode184); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(First->GetNode()->CPPmultinode184), *(Last->GetNode()->CPPmultinode184));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap184->find(i) == multimapUnion->CPPmultimap184->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 185:
+		for (auto iter = *(First->GetNode()->CPPmultinode185); iter != *(Last->GetNode()->CPPmultinode185); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(First->GetNode()->CPPmultinode185), *(Last->GetNode()->CPPmultinode185));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap185->find(i) == multimapUnion->CPPmultimap185->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 186:
+		for (auto iter = *(First->GetNode()->CPPmultinode186); iter != *(Last->GetNode()->CPPmultinode186); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(First->GetNode()->CPPmultinode186), *(Last->GetNode()->CPPmultinode186));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap186->find(i) == multimapUnion->CPPmultimap186->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 187:
+		for (auto iter = *(First->GetNode()->CPPmultinode187); iter != *(Last->GetNode()->CPPmultinode187); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(First->GetNode()->CPPmultinode187), *(Last->GetNode()->CPPmultinode187));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap187->find(i) == multimapUnion->CPPmultimap187->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 188:
+		for (auto iter = *(First->GetNode()->CPPmultinode188); iter != *(Last->GetNode()->CPPmultinode188); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(First->GetNode()->CPPmultinode188), *(Last->GetNode()->CPPmultinode188));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap188->find(i) == multimapUnion->CPPmultimap188->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 189:
+		for (auto iter = *(First->GetNode()->CPPmultinode189); iter != *(Last->GetNode()->CPPmultinode189); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(First->GetNode()->CPPmultinode189), *(Last->GetNode()->CPPmultinode189));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap189->find(i) == multimapUnion->CPPmultimap189->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 190:
+		for (auto iter = *(First->GetNode()->CPPmultinode190); iter != *(Last->GetNode()->CPPmultinode190); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(First->GetNode()->CPPmultinode190), *(Last->GetNode()->CPPmultinode190));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap190->find(i) == multimapUnion->CPPmultimap190->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 191:
+		for (auto iter = *(First->GetNode()->CPPmultinode191); iter != *(Last->GetNode()->CPPmultinode191); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(First->GetNode()->CPPmultinode191), *(Last->GetNode()->CPPmultinode191));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap191->find(i) == multimapUnion->CPPmultimap191->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 192:
+		for (auto iter = *(First->GetNode()->CPPmultinode192); iter != *(Last->GetNode()->CPPmultinode192); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(First->GetNode()->CPPmultinode192), *(Last->GetNode()->CPPmultinode192));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap192->find(i) == multimapUnion->CPPmultimap192->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 193:
+		for (auto iter = *(First->GetNode()->CPPmultinode193); iter != *(Last->GetNode()->CPPmultinode193); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(First->GetNode()->CPPmultinode193), *(Last->GetNode()->CPPmultinode193));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap193->find(i) == multimapUnion->CPPmultimap193->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 194:
+		for (auto iter = *(First->GetNode()->CPPmultinode194); iter != *(Last->GetNode()->CPPmultinode194); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(First->GetNode()->CPPmultinode194), *(Last->GetNode()->CPPmultinode194));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap194->find(i) == multimapUnion->CPPmultimap194->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 195:
+		for (auto iter = *(First->GetNode()->CPPmultinode195); iter != *(Last->GetNode()->CPPmultinode195); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(First->GetNode()->CPPmultinode195), *(Last->GetNode()->CPPmultinode195));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap195->find(i) == multimapUnion->CPPmultimap195->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 196:
+		for (auto iter = *(First->GetNode()->CPPmultinode196); iter != *(Last->GetNode()->CPPmultinode196); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		if (gValueClassDictionary)
 		{
 			UnOrderedMultiNode<__int64, __int64> iter;
@@ -4450,8 +4663,29 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 				gValueClassDictionary->Remove(iter.GetValue());
 		}
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(First->GetNode()->CPPmultinode196), *(Last->GetNode()->CPPmultinode196));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap196->find(i) == multimapUnion->CPPmultimap196->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	}
+
+	if ((183 <= nKeyValueType && nKeyValueType <= 196) && bTempKeyDeleted)
+	{
+		if (gKeyClassDictionary && gIntKeyClassDictionary)
+		{
+			Key temp;
+			for (__int64 Key__Int : TempKeyDeletedSet)
+				if (gIntKeyClassDictionary->TryGetValue(Key__Int, temp))
+				{
+					gIntKeyClassDictionary->Remove(Key__Int);
+					gKeyClassDictionary->Remove(temp);
+				}
+		}
+	}
+
 	return multiNode->DeepCopy();
 }
 
@@ -4461,6 +4695,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	if (Object::ReferenceEquals(_Where, nullptr)) return nullptr;
 	if (nKeyValueType != _Where->GetKVType()) return nullptr;
 	if (_Where->GetInit() == 0) return nullptr;
+
+	__int64 Key__Int = 0;
+	bool bTempKeyDeleted = false;
+
 	switch (nKeyValueType)
 	{
 	case 0: default:
@@ -5038,50 +5276,106 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->erase(*(_Where->GetNode()->CPPmulticonstnode182));
 		break;
 	case 183:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode183->GetKey();
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(_Where->GetNode()->CPPmulticonstnode183));
+		if (multimapUnion->CPPmultimap183->find(Key__Int) == multimapUnion->CPPmultimap183->end())
+			bTempKeyDeleted = true;
 		break;
 	case 184:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode184->GetKey();
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(_Where->GetNode()->CPPmulticonstnode184));
+		if (multimapUnion->CPPmultimap184->find(Key__Int) == multimapUnion->CPPmultimap184->end())
+			bTempKeyDeleted = true;
 		break;
 	case 185:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode185->GetKey();
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(_Where->GetNode()->CPPmulticonstnode185));
+		if (multimapUnion->CPPmultimap185->find(Key__Int) == multimapUnion->CPPmultimap185->end())
+			bTempKeyDeleted = true;
 		break;
 	case 186:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode186->GetKey();
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(_Where->GetNode()->CPPmulticonstnode186));
+		if (multimapUnion->CPPmultimap186->find(Key__Int) == multimapUnion->CPPmultimap186->end())
+			bTempKeyDeleted = true;
 		break;
 	case 187:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode187->GetKey();
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(_Where->GetNode()->CPPmulticonstnode187));
+		if (multimapUnion->CPPmultimap187->find(Key__Int) == multimapUnion->CPPmultimap187->end())
+			bTempKeyDeleted = true;
 		break;
 	case 188:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode188->GetKey();
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(_Where->GetNode()->CPPmulticonstnode188));
+		if (multimapUnion->CPPmultimap188->find(Key__Int) == multimapUnion->CPPmultimap188->end())
+			bTempKeyDeleted = true;
 		break;
 	case 189:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode189->GetKey();
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(_Where->GetNode()->CPPmulticonstnode189));
+		if (multimapUnion->CPPmultimap189->find(Key__Int) == multimapUnion->CPPmultimap189->end())
+			bTempKeyDeleted = true;
 		break;
 	case 190:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode190->GetKey();
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(_Where->GetNode()->CPPmulticonstnode190));
+		if (multimapUnion->CPPmultimap190->find(Key__Int) == multimapUnion->CPPmultimap190->end())
+			bTempKeyDeleted = true;
 		break;
 	case 191:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode191->GetKey();
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(_Where->GetNode()->CPPmulticonstnode191));
+		if (multimapUnion->CPPmultimap191->find(Key__Int) == multimapUnion->CPPmultimap191->end())
+			bTempKeyDeleted = true;
 		break;
 	case 192:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode192->GetKey();
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(_Where->GetNode()->CPPmulticonstnode192));
+		if (multimapUnion->CPPmultimap192->find(Key__Int) == multimapUnion->CPPmultimap192->end())
+			bTempKeyDeleted = true;
 		break;
 	case 193:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode193->GetKey();
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(_Where->GetNode()->CPPmulticonstnode193));
+		if (multimapUnion->CPPmultimap193->find(Key__Int) == multimapUnion->CPPmultimap193->end())
+			bTempKeyDeleted = true;
 		break;
 	case 194:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode194->GetKey();
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(_Where->GetNode()->CPPmulticonstnode194));
+		if (multimapUnion->CPPmultimap194->find(Key__Int) == multimapUnion->CPPmultimap194->end())
+			bTempKeyDeleted = true;
 		break;
 	case 195:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode195->GetKey();
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(_Where->GetNode()->CPPmulticonstnode195));
+		if (multimapUnion->CPPmultimap195->find(Key__Int) == multimapUnion->CPPmultimap195->end())
+			bTempKeyDeleted = true;
 		break;
 	case 196:
+		Key__Int = _Where->GetNode()->CPPmulticonstnode196->GetKey();
 		if (gValueClassDictionary)
 			gValueClassDictionary->Remove(_Where->GetNode()->CPPmulticonstnode196->GetValue());
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(_Where->GetNode()->CPPmulticonstnode196));
+		if (multimapUnion->CPPmultimap196->find(Key__Int) == multimapUnion->CPPmultimap196->end())
+			bTempKeyDeleted = true;
 		break;
 	}
+
+	if ((183 <= nKeyValueType && nKeyValueType <= 196) && bTempKeyDeleted)
+	{
+		if (gKeyClassDictionary && gIntKeyClassDictionary)
+		{
+			Key temp;
+			if (gIntKeyClassDictionary->TryGetValue(Key__Int, temp))
+			{
+				gIntKeyClassDictionary->Remove(Key__Int);
+				gKeyClassDictionary->Remove(temp);
+			}
+		}
+	}
+
 	return multiNode->DeepCopy();
 }
 
@@ -5094,6 +5388,11 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	if (nKeyValueType != First->GetKVType()) return nullptr;
 	if (First->GetInit() == 0) return nullptr;
 	if (Last->GetInit() == 0) return nullptr;
+
+	std::set<__int64> TempKeySet;
+	std::set<__int64> TempKeyDeletedSet;
+	bool bTempKeyDeleted = false;
+
 	switch (nKeyValueType)
 	{
 	case 0: default:
@@ -5723,45 +6022,151 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		*(multiNode->GetNode()->CPPmultinode182) = multimapUnion->CPPmultimap182->erase(*(First->GetNode()->CPPmulticonstnode182), *(Last->GetNode()->CPPmulticonstnode182));
 		break;
 	case 183:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode183); iter != *(Last->GetNode()->CPPmulticonstnode183); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(First->GetNode()->CPPmulticonstnode183), *(Last->GetNode()->CPPmulticonstnode183));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap183->find(i) == multimapUnion->CPPmultimap183->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 184:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode184); iter != *(Last->GetNode()->CPPmulticonstnode184); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(First->GetNode()->CPPmulticonstnode184), *(Last->GetNode()->CPPmulticonstnode184));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap184->find(i) == multimapUnion->CPPmultimap184->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 185:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode185); iter != *(Last->GetNode()->CPPmulticonstnode185); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(First->GetNode()->CPPmulticonstnode185), *(Last->GetNode()->CPPmulticonstnode185));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap185->find(i) == multimapUnion->CPPmultimap185->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 186:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode186); iter != *(Last->GetNode()->CPPmulticonstnode186); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(First->GetNode()->CPPmulticonstnode186), *(Last->GetNode()->CPPmulticonstnode186));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap186->find(i) == multimapUnion->CPPmultimap186->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 187:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode187); iter != *(Last->GetNode()->CPPmulticonstnode187); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(First->GetNode()->CPPmulticonstnode187), *(Last->GetNode()->CPPmulticonstnode187));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap187->find(i) == multimapUnion->CPPmultimap187->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 188:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode188); iter != *(Last->GetNode()->CPPmulticonstnode188); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(First->GetNode()->CPPmulticonstnode188), *(Last->GetNode()->CPPmulticonstnode188));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap188->find(i) == multimapUnion->CPPmultimap188->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 189:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode189); iter != *(Last->GetNode()->CPPmulticonstnode189); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(First->GetNode()->CPPmulticonstnode189), *(Last->GetNode()->CPPmulticonstnode189));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap189->find(i) == multimapUnion->CPPmultimap189->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 190:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode190); iter != *(Last->GetNode()->CPPmulticonstnode190); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(First->GetNode()->CPPmulticonstnode190), *(Last->GetNode()->CPPmulticonstnode190));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap190->find(i) == multimapUnion->CPPmultimap190->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 191:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode191); iter != *(Last->GetNode()->CPPmulticonstnode191); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(First->GetNode()->CPPmulticonstnode191), *(Last->GetNode()->CPPmulticonstnode191));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap191->find(i) == multimapUnion->CPPmultimap191->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 192:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode192); iter != *(Last->GetNode()->CPPmulticonstnode192); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(First->GetNode()->CPPmulticonstnode192), *(Last->GetNode()->CPPmulticonstnode192));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap192->find(i) == multimapUnion->CPPmultimap192->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 193:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode193); iter != *(Last->GetNode()->CPPmulticonstnode193); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(First->GetNode()->CPPmulticonstnode193), *(Last->GetNode()->CPPmulticonstnode193));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap193->find(i) == multimapUnion->CPPmultimap193->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 194:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode194); iter != *(Last->GetNode()->CPPmulticonstnode194); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(First->GetNode()->CPPmulticonstnode194), *(Last->GetNode()->CPPmulticonstnode194));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap194->find(i) == multimapUnion->CPPmultimap194->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 195:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode195); iter != *(Last->GetNode()->CPPmulticonstnode195); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(First->GetNode()->CPPmulticonstnode195), *(Last->GetNode()->CPPmulticonstnode195));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap195->find(i) == multimapUnion->CPPmultimap195->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	case 196:
+		for (auto iter = *(First->GetNode()->CPPmulticonstnode196); iter != *(Last->GetNode()->CPPmulticonstnode196); iter++)
+			TempKeySet.emplace(iter.GetKey());
 		if (gValueClassDictionary)
 		{
 			UnOrderedMultiConstNode<__int64, __int64> iter;
@@ -5769,8 +6174,29 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 				gValueClassDictionary->Remove(iter.GetValue());
 		}
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(First->GetNode()->CPPmulticonstnode196), *(Last->GetNode()->CPPmulticonstnode196));
+		for (auto i : TempKeySet)
+			if (multimapUnion->CPPmultimap196->find(i) == multimapUnion->CPPmultimap196->end())
+			{
+				bTempKeyDeleted = true;
+				TempKeyDeletedSet.emplace(i);
+			}
 		break;
 	}
+
+	if ((183 <= nKeyValueType && nKeyValueType <= 196) && bTempKeyDeleted)
+	{
+		if (gKeyClassDictionary && gIntKeyClassDictionary)
+		{
+			Key temp;
+			for (__int64 Key__Int : TempKeyDeletedSet)
+				if (gIntKeyClassDictionary->TryGetValue(Key__Int, temp))
+				{
+					gIntKeyClassDictionary->Remove(Key__Int);
+					gKeyClassDictionary->Remove(temp);
+				}
+		}
+	}
+
 	return multiNode->DeepCopy();
 }
 
@@ -5877,6 +6303,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		}
 	}
 	else if (keyType->IsInterface)
+	{
+		if (gKeyClassDictionary->TryGetValue(const_cast<Key>(key), Key__Int));
+		else
+		{
+			return nullptr;
+		}
+	}
+	else if (keyType->IsEnum)
 	{
 		if (gKeyClassDictionary->TryGetValue(const_cast<Key>(key), Key__Int));
 		else
@@ -6802,6 +7236,17 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			nDictionaryCount++;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(key, Key__Int));
+		else
+		{
+			System::Object^ managedObject = safe_cast<System::Object^>(key);
+			Key__Int = static_cast<__int64>(Convert::ToInt64(managedObject));
+			gKeyClassDictionary->Add(key, Key__Int);
+			gIntKeyClassDictionary->Add(Key__Int, key);
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -6905,12 +7350,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		Value__Int = nDictionaryCount;
 		nDictionaryCount++;
 	}
+	else if (valueType->IsEnum)
+	{
+		gValueClassDictionary->Add(nDictionaryCount, value);
+		Value__Int = nDictionaryCount;
+		nDictionaryCount++;
+	}
 	else
 	{
-		GCHandle handle = GCHandle::Alloc(value);
-		IntPtr ptr = GCHandle::ToIntPtr(handle);
-		Value__Int = ptr.ToInt64();
-		handle.Free();
 		return nullptr;
 	}
 
@@ -7632,6 +8079,17 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			nDictionaryCount++;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(key, Key__Int));
+		else
+		{
+			System::Object^ managedObject = safe_cast<System::Object^>(key);
+			Key__Int = static_cast<__int64>(Convert::ToInt64(managedObject));
+			gKeyClassDictionary->Add(key, Key__Int);
+			gIntKeyClassDictionary->Add(Key__Int, key);
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -7735,12 +8193,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		Value__Int = nDictionaryCount;
 		nDictionaryCount++;
 	}
+	else if (valueType->IsEnum)
+	{
+		gValueClassDictionary->Add(nDictionaryCount, value);
+		Value__Int = nDictionaryCount;
+		nDictionaryCount++;
+	}
 	else
 	{
-		GCHandle handle = GCHandle::Alloc(value);
-		IntPtr ptr = GCHandle::ToIntPtr(handle);
-		Value__Int = ptr.ToInt64();
-		handle.Free();
 		return nullptr;
 	}
 
@@ -8462,6 +8922,17 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			nDictionaryCount++;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(key, Key__Int));
+		else
+		{
+			System::Object^ managedObject = safe_cast<System::Object^>(key);
+			Key__Int = static_cast<__int64>(Convert::ToInt64(managedObject));
+			gKeyClassDictionary->Add(key, Key__Int);
+			gIntKeyClassDictionary->Add(Key__Int, key);
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -8565,12 +9036,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		Value__Int = nDictionaryCount;
 		nDictionaryCount++;
 	}
+	else if (valueType->IsEnum)
+	{
+		gValueClassDictionary->Add(nDictionaryCount, value);
+		Value__Int = nDictionaryCount;
+		nDictionaryCount++;
+	}
 	else
 	{
-		GCHandle handle = GCHandle::Alloc(value);
-		IntPtr ptr = GCHandle::ToIntPtr(handle);
-		Value__Int = ptr.ToInt64();
-		handle.Free();
 		return nullptr;
 	}
 
@@ -9721,6 +10194,17 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			nDictionaryCount++;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(key, Key__Int));
+		else
+		{
+			System::Object^ managedObject = safe_cast<System::Object^>(key);
+			Key__Int = static_cast<__int64>(Convert::ToInt64(managedObject));
+			gKeyClassDictionary->Add(key, Key__Int);
+			gIntKeyClassDictionary->Add(Key__Int, key);
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -9824,12 +10308,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		Value__Int = nDictionaryCount;
 		nDictionaryCount++;
 	}
+	else if (valueType->IsEnum)
+	{
+		gValueClassDictionary->Add(nDictionaryCount, value);
+		Value__Int = nDictionaryCount;
+		nDictionaryCount++;
+	}
 	else
 	{
-		GCHandle handle = GCHandle::Alloc(value);
-		IntPtr ptr = GCHandle::ToIntPtr(handle);
-		Value__Int = ptr.ToInt64();
-		handle.Free();
 		return nullptr;
 	}
 
@@ -10551,6 +11037,17 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			nDictionaryCount++;
 		}
 	}
+	else if (keyType->IsEnum)
+	{
+		if (gKeyClassDictionary->TryGetValue(key, Key__Int));
+		else
+		{
+			System::Object^ managedObject = safe_cast<System::Object^>(key);
+			Key__Int = static_cast<__int64>(Convert::ToInt64(managedObject));
+			gKeyClassDictionary->Add(key, Key__Int);
+			gIntKeyClassDictionary->Add(Key__Int, key);
+		}
+	}
 	else
 	{
 		return nullptr;
@@ -10654,12 +11151,14 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		Value__Int = nDictionaryCount;
 		nDictionaryCount++;
 	}
+	else if (valueType->IsEnum)
+	{
+		gValueClassDictionary->Add(nDictionaryCount, value);
+		Value__Int = nDictionaryCount;
+		nDictionaryCount++;
+	}
 	else
 	{
-		GCHandle handle = GCHandle::Alloc(value);
-		IntPtr ptr = GCHandle::ToIntPtr(handle);
-		Value__Int = ptr.ToInt64();
-		handle.Free();
 		return nullptr;
 	}
 
@@ -12205,6 +12704,9 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>::SetValue(Val
 	else if (valueType->IsInterface)
 	{
 	}
+	else if (valueType->IsEnum)
+	{
+	}
 	else
 	{
 		return;
@@ -12916,6 +13418,9 @@ void UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::SetValue(V
 	{
 	}
 	else if (valueType->IsInterface)
+	{
+	}
+	else if (valueType->IsEnum)
 	{
 	}
 	else

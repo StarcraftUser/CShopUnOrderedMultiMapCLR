@@ -85,6 +85,11 @@ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrderedMul
 		KeyNum = 14 * 13;
 		bgClassKeyDictionaryInit = true;
 	}
+	else if (keyType->IsEnum)
+	{
+		KeyNum = 14 * 13;
+		bgClassKeyDictionaryInit = true;
+	}
 	else
 	{
 		KeyNum = 200;

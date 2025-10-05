@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #define MAXSIZE_CASE(NUM) \
-    case NUM: \
+	case NUM: \
 return static_cast<System::UInt64>(multimapUnion->CPPmultimap##NUM->max_size());
 
 generic<typename Key, typename Value>

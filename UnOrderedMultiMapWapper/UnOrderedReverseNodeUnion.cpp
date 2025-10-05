@@ -75,6 +75,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::CShorpUnOrdered
 	{
 		KeyNum = 14 * 13;
 	}
+	else if (keyType->IsEnum)
+	{
+		KeyNum = 14 * 13;
+	}
 	else
 	{
 		KeyNum = 200;
@@ -141,6 +145,10 @@ UnOrderedMultiMapWapper::CShorpUnOrderedReverseNode<Key, Value>::CShorpUnOrdered
 		ValueNum = 14;
 	}
 	else if (valueType->IsInterface)
+	{
+		ValueNum = 14;
+	}
+	else if (valueType->IsEnum)
 	{
 		ValueNum = 14;
 	}

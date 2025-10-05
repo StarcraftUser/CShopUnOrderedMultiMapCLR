@@ -80,6 +80,11 @@ inline UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrd
 		KeyNum = 14 * 13;
 		bgClassKeyDictionaryInit = true;
 	}
+	else if (keyType->IsEnum)
+	{
+		KeyNum = 14 * 13;
+		bgClassKeyDictionaryInit = true;
+	}
 	else
 	{
 		KeyNum = 200;
@@ -148,6 +153,11 @@ inline UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::CSharpUnOrd
 		bgClassValueDictionaryInit = true;
 	}
 	else if (valueType->IsInterface)
+	{
+		ValueNum = 14;
+		bgClassValueDictionaryInit = true;
+	}
+	else if (valueType->IsEnum)
 	{
 		ValueNum = 14;
 		bgClassValueDictionaryInit = true;

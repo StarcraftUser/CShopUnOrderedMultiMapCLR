@@ -1,9 +1,9 @@
 #include "pch.h"
 
 #define SWAP_CASE(NUM) \
-    case NUM: \
-        multimapUnion->CPPmultimap##NUM->Swap(*(OtherCSharpUnOrderedMultiMap->multimapUnion->CPPmultimap##NUM)); \
-        break;
+	case NUM: \
+		multimapUnion->CPPmultimap##NUM->Swap(*(OtherCSharpUnOrderedMultiMap->multimapUnion->CPPmultimap##NUM)); \
+		break;
 
 generic<typename Key, typename Value>
 void UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::Swap(UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>^ OtherCSharpUnOrderedMultiMap)

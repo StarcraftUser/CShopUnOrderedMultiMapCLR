@@ -210,9 +210,9 @@ namespace UnOrderedMultiMapWapper
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ endCopy();
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ KeyEnd();
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ KeyEndCopy();
-		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiNode<Key, Value>^ _Where);
+		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiNode<Key, Value>^% _Where);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiNode<Key, Value>^ First, CShorpUnOrderedMultiNode<Key, Value>^ Last);
-		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiConstNode<Key, Value>^ _Where);
+		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiConstNode<Key, Value>^% _Where);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiConstNode<Key, Value>^ First, CShorpUnOrderedMultiConstNode<Key, Value>^ Last);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ equal_range(const Key key);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ insert(Key key, Value value);

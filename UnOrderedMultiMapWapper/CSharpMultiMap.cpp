@@ -1094,6 +1094,13 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	return multiNode->DeepCopy();
 }
 
+generic<typename Key, typename Value>
+UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::emplace(System::Collections::Generic::KeyValuePair<Key, Value>^ Pair)
+{
+	if (Object::ReferenceEquals(Pair, nullptr)) return nullptr;
+	return emplace(Pair->Key, Pair->Value);
+}
+
 #define UnOrderedMultiMap_Size_CASE(NUM) \
 	case NUM: \
 		return static_cast<System::UInt64>(multimapUnion->CPPmultimap##NUM->size());
@@ -3184,9 +3191,6 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	if (nKeyValueType != _Where->GetKVType()) return nullptr;
 	if (_Where->GetInit() == 0) return nullptr;
 
-	auto TempIter = _Where->DeepCopy();
-	TempIter->operator++(TempIter);
-
 	__int64 Key__Int = 0;
 	bool bTempKeyDeleted = false;
 
@@ -3868,9 +3872,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		}
 	}
 
-	_Where = TempIter;
-
-	return multiNode->DeepCopy();
+	return _Where = multiNode->DeepCopy();
 }
 
 generic<typename Key, typename Value>
@@ -4703,7 +4705,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	if (_Where->GetInit() == 0) return nullptr;
 
 	auto TempIter = _Where->DeepCopy();
-	TempIter->operator++(TempIter);
+	TempIter = UnOrderedMultiMapWapper::CShorpUnOrderedMultiConstNode<Key, Value>::operator++(TempIter);
 
 	__int64 Key__Int = 0;
 	bool bTempKeyDeleted = false;
@@ -7967,6 +7969,13 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		break;
 	}
 	return multiNode->DeepCopy();
+}
+
+generic<typename Key, typename Value>
+UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMapWapper::CSharpUnOrderedMultiMap<Key, Value>::insert(System::Collections::Generic::KeyValuePair<Key, Value>^ Pair)
+{
+	if (Object::ReferenceEquals(Pair, nullptr)) return nullptr;
+	return insert(Pair->Key, Pair->Value);
 }
 
 generic<typename Key, typename Value>

@@ -200,6 +200,7 @@ namespace UnOrderedMultiMapWapper
 		/*virtual*/ ~CSharpUnOrderedMultiMap();
 		/*virtual*/ void clear();
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ emplace(Key key, Value value);
+		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ emplace(System::Collections::Generic::KeyValuePair<Key, Value>^ Pair);
 		/*virtual*/ System::UInt64 size();
 		/*virtual*/ System::UInt64 count(const Key key);
 		/*virtual*/ System::UInt64 erase(const Key key);
@@ -216,6 +217,7 @@ namespace UnOrderedMultiMapWapper
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ erase(CShorpUnOrderedMultiConstNode<Key, Value>^ First, CShorpUnOrderedMultiConstNode<Key, Value>^ Last);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ equal_range(const Key key);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ insert(Key key, Value value);
+		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ insert(System::Collections::Generic::KeyValuePair<Key, Value>^ Pair);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ insert(CShorpUnOrderedMultiNode<Key, Value>^ _Where, Key key, Value value);
 		/*virtual*/ CShorpUnOrderedMultiNode<Key, Value>^ insert(CShorpUnOrderedMultiConstNode<Key, Value>^ _Where, Key key, Value value);
 		/*virtual*/ CShorpUnOrderedMultiConstNode<Key, Value>^ cbegin();

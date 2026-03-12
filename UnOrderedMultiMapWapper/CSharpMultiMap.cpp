@@ -3773,79 +3773,79 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	case 183:
 		Key__Int = _Where->GetNode()->CPPmultinode183->GetKey();
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(_Where->GetNode()->CPPmultinode183));
-		if (multimapUnion->CPPmultimap183->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap183->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 184:
 		Key__Int = _Where->GetNode()->CPPmultinode184->GetKey();
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(_Where->GetNode()->CPPmultinode184));
-		if (multimapUnion->CPPmultimap184->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap184->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 185:
 		Key__Int = _Where->GetNode()->CPPmultinode185->GetKey();
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(_Where->GetNode()->CPPmultinode185));
-		if (multimapUnion->CPPmultimap185->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap185->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 186:
 		Key__Int = _Where->GetNode()->CPPmultinode186->GetKey();
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(_Where->GetNode()->CPPmultinode186));
-		if (multimapUnion->CPPmultimap186->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap186->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 187:
 		Key__Int = _Where->GetNode()->CPPmultinode187->GetKey();
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(_Where->GetNode()->CPPmultinode187));
-		if (multimapUnion->CPPmultimap187->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap187->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 188:
 		Key__Int = _Where->GetNode()->CPPmultinode188->GetKey();
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(_Where->GetNode()->CPPmultinode188));
-		if (multimapUnion->CPPmultimap188->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap188->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 189:
 		Key__Int = _Where->GetNode()->CPPmultinode189->GetKey();
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(_Where->GetNode()->CPPmultinode189));
-		if (multimapUnion->CPPmultimap189->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap189->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 190:
 		Key__Int = _Where->GetNode()->CPPmultinode190->GetKey();
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(_Where->GetNode()->CPPmultinode190));
-		if (multimapUnion->CPPmultimap190->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap190->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 191:
 		Key__Int = _Where->GetNode()->CPPmultinode191->GetKey();
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(_Where->GetNode()->CPPmultinode191));
-		if (multimapUnion->CPPmultimap191->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap191->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 192:
 		Key__Int = _Where->GetNode()->CPPmultinode192->GetKey();
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(_Where->GetNode()->CPPmultinode192));
-		if (multimapUnion->CPPmultimap192->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap192->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 193:
 		Key__Int = _Where->GetNode()->CPPmultinode193->GetKey();
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(_Where->GetNode()->CPPmultinode193));
-		if (multimapUnion->CPPmultimap193->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap193->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 194:
 		Key__Int = _Where->GetNode()->CPPmultinode194->GetKey();
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(_Where->GetNode()->CPPmultinode194));
-		if (multimapUnion->CPPmultimap194->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap194->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 195:
 		Key__Int = _Where->GetNode()->CPPmultinode195->GetKey();
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(_Where->GetNode()->CPPmultinode195));
-		if (multimapUnion->CPPmultimap195->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap195->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 196:
@@ -3854,7 +3854,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			bTempKeyDeleted = true;
 			gValueClassDictionary->Remove(_Where->GetNode()->CPPmultinode196->GetValue());
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(_Where->GetNode()->CPPmultinode196));
-		if (multimapUnion->CPPmultimap196->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap196->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	}
@@ -4522,7 +4522,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(First->GetNode()->CPPmultinode183), *(Last->GetNode()->CPPmultinode183));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap183->count(i) == 0)
+			if (multimapUnion->CPPmultimap183->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4533,7 +4533,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(First->GetNode()->CPPmultinode184), *(Last->GetNode()->CPPmultinode184));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap184->count(i) == 0)
+			if (multimapUnion->CPPmultimap184->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4544,7 +4544,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(First->GetNode()->CPPmultinode185), *(Last->GetNode()->CPPmultinode185));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap185->count(i) == 0)
+			if (multimapUnion->CPPmultimap185->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4555,7 +4555,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(First->GetNode()->CPPmultinode186), *(Last->GetNode()->CPPmultinode186));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap186->count(i) == 0)
+			if (multimapUnion->CPPmultimap186->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4566,7 +4566,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(First->GetNode()->CPPmultinode187), *(Last->GetNode()->CPPmultinode187));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap187->count(i) == 0)
+			if (multimapUnion->CPPmultimap187->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4577,7 +4577,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(First->GetNode()->CPPmultinode188), *(Last->GetNode()->CPPmultinode188));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap188->count(i) == 0)
+			if (multimapUnion->CPPmultimap188->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4588,7 +4588,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(First->GetNode()->CPPmultinode189), *(Last->GetNode()->CPPmultinode189));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap189->count(i) == 0)
+			if (multimapUnion->CPPmultimap189->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4599,7 +4599,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(First->GetNode()->CPPmultinode190), *(Last->GetNode()->CPPmultinode190));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap190->count(i) == 0)
+			if (multimapUnion->CPPmultimap190->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4610,7 +4610,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(First->GetNode()->CPPmultinode191), *(Last->GetNode()->CPPmultinode191));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap191->count(i) == 0)
+			if (multimapUnion->CPPmultimap191->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4621,7 +4621,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(First->GetNode()->CPPmultinode192), *(Last->GetNode()->CPPmultinode192));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap192->count(i) == 0)
+			if (multimapUnion->CPPmultimap192->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4632,7 +4632,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(First->GetNode()->CPPmultinode193), *(Last->GetNode()->CPPmultinode193));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap193->count(i) == 0)
+			if (multimapUnion->CPPmultimap193->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4643,7 +4643,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(First->GetNode()->CPPmultinode194), *(Last->GetNode()->CPPmultinode194));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap194->count(i) == 0)
+			if (multimapUnion->CPPmultimap194->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4654,7 +4654,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(First->GetNode()->CPPmultinode195), *(Last->GetNode()->CPPmultinode195));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap195->count(i) == 0)
+			if (multimapUnion->CPPmultimap195->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -4672,7 +4672,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		}
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(First->GetNode()->CPPmultinode196), *(Last->GetNode()->CPPmultinode196));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap196->count(i) == 0)
+			if (multimapUnion->CPPmultimap196->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -5289,79 +5289,79 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 	case 183:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode183->GetKey();
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(_Where->GetNode()->CPPmulticonstnode183));
-		if (multimapUnion->CPPmultimap183->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap183->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 184:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode184->GetKey();
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(_Where->GetNode()->CPPmulticonstnode184));
-		if (multimapUnion->CPPmultimap184->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap184->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 185:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode185->GetKey();
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(_Where->GetNode()->CPPmulticonstnode185));
-		if (multimapUnion->CPPmultimap185->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap185->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 186:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode186->GetKey();
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(_Where->GetNode()->CPPmulticonstnode186));
-		if (multimapUnion->CPPmultimap186->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap186->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 187:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode187->GetKey();
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(_Where->GetNode()->CPPmulticonstnode187));
-		if (multimapUnion->CPPmultimap187->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap187->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 188:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode188->GetKey();
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(_Where->GetNode()->CPPmulticonstnode188));
-		if (multimapUnion->CPPmultimap188->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap188->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 189:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode189->GetKey();
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(_Where->GetNode()->CPPmulticonstnode189));
-		if (multimapUnion->CPPmultimap189->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap189->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 190:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode190->GetKey();
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(_Where->GetNode()->CPPmulticonstnode190));
-		if (multimapUnion->CPPmultimap190->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap190->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 191:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode191->GetKey();
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(_Where->GetNode()->CPPmulticonstnode191));
-		if (multimapUnion->CPPmultimap191->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap191->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 192:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode192->GetKey();
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(_Where->GetNode()->CPPmulticonstnode192));
-		if (multimapUnion->CPPmultimap192->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap192->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 193:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode193->GetKey();
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(_Where->GetNode()->CPPmulticonstnode193));
-		if (multimapUnion->CPPmultimap193->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap193->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 194:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode194->GetKey();
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(_Where->GetNode()->CPPmulticonstnode194));
-		if (multimapUnion->CPPmultimap194->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap194->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 195:
 		Key__Int = _Where->GetNode()->CPPmulticonstnode195->GetKey();
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(_Where->GetNode()->CPPmulticonstnode195));
-		if (multimapUnion->CPPmultimap195->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap195->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	case 196:
@@ -5369,7 +5369,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		if (gValueClassDictionary)
 			gValueClassDictionary->Remove(_Where->GetNode()->CPPmulticonstnode196->GetValue());
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(_Where->GetNode()->CPPmulticonstnode196));
-		if (multimapUnion->CPPmultimap196->count(Key__Int) == 0)
+		if (multimapUnion->CPPmultimap196->IsRangeEmpty(Key__Int))
 			bTempKeyDeleted = true;
 		break;
 	}
@@ -6039,7 +6039,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode183) = multimapUnion->CPPmultimap183->erase(*(First->GetNode()->CPPmulticonstnode183), *(Last->GetNode()->CPPmulticonstnode183));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap183->count(i) == 0)
+			if (multimapUnion->CPPmultimap183->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6050,7 +6050,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode184) = multimapUnion->CPPmultimap184->erase(*(First->GetNode()->CPPmulticonstnode184), *(Last->GetNode()->CPPmulticonstnode184));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap184->count(i) == 0)
+			if (multimapUnion->CPPmultimap184->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6061,7 +6061,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode185) = multimapUnion->CPPmultimap185->erase(*(First->GetNode()->CPPmulticonstnode185), *(Last->GetNode()->CPPmulticonstnode185));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap185->count(i) == 0)
+			if (multimapUnion->CPPmultimap185->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6072,7 +6072,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode186) = multimapUnion->CPPmultimap186->erase(*(First->GetNode()->CPPmulticonstnode186), *(Last->GetNode()->CPPmulticonstnode186));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap186->count(i) == 0)
+			if (multimapUnion->CPPmultimap186->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6083,7 +6083,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode187) = multimapUnion->CPPmultimap187->erase(*(First->GetNode()->CPPmulticonstnode187), *(Last->GetNode()->CPPmulticonstnode187));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap187->count(i) == 0)
+			if (multimapUnion->CPPmultimap187->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6094,7 +6094,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode188) = multimapUnion->CPPmultimap188->erase(*(First->GetNode()->CPPmulticonstnode188), *(Last->GetNode()->CPPmulticonstnode188));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap188->count(i) == 0)
+			if (multimapUnion->CPPmultimap188->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6105,7 +6105,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode189) = multimapUnion->CPPmultimap189->erase(*(First->GetNode()->CPPmulticonstnode189), *(Last->GetNode()->CPPmulticonstnode189));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap189->count(i) == 0)
+			if (multimapUnion->CPPmultimap189->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6116,7 +6116,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode190) = multimapUnion->CPPmultimap190->erase(*(First->GetNode()->CPPmulticonstnode190), *(Last->GetNode()->CPPmulticonstnode190));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap190->count(i) == 0)
+			if (multimapUnion->CPPmultimap190->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6127,7 +6127,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode191) = multimapUnion->CPPmultimap191->erase(*(First->GetNode()->CPPmulticonstnode191), *(Last->GetNode()->CPPmulticonstnode191));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap191->count(i) == 0)
+			if (multimapUnion->CPPmultimap191->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6138,7 +6138,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode192) = multimapUnion->CPPmultimap192->erase(*(First->GetNode()->CPPmulticonstnode192), *(Last->GetNode()->CPPmulticonstnode192));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap192->count(i) == 0)
+			if (multimapUnion->CPPmultimap192->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6149,7 +6149,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode193) = multimapUnion->CPPmultimap193->erase(*(First->GetNode()->CPPmulticonstnode193), *(Last->GetNode()->CPPmulticonstnode193));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap193->count(i) == 0)
+			if (multimapUnion->CPPmultimap193->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6160,7 +6160,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode194) = multimapUnion->CPPmultimap194->erase(*(First->GetNode()->CPPmulticonstnode194), *(Last->GetNode()->CPPmulticonstnode194));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap194->count(i) == 0)
+			if (multimapUnion->CPPmultimap194->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6171,7 +6171,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 			TempKeySet.emplace(iter.GetKey());
 		*(multiNode->GetNode()->CPPmultinode195) = multimapUnion->CPPmultimap195->erase(*(First->GetNode()->CPPmulticonstnode195), *(Last->GetNode()->CPPmulticonstnode195));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap195->count(i) == 0)
+			if (multimapUnion->CPPmultimap195->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);
@@ -6189,7 +6189,7 @@ UnOrderedMultiMapWapper::CShorpUnOrderedMultiNode<Key, Value>^ UnOrderedMultiMap
 		}
 		*(multiNode->GetNode()->CPPmultinode196) = multimapUnion->CPPmultimap196->erase(*(First->GetNode()->CPPmulticonstnode196), *(Last->GetNode()->CPPmulticonstnode196));
 		for (auto i : TempKeySet)
-			if (multimapUnion->CPPmultimap196->count(i) == 0)
+			if (multimapUnion->CPPmultimap196->IsRangeEmpty(i))
 			{
 				bTempKeyDeleted = true;
 				TempKeyDeletedSet.emplace(i);

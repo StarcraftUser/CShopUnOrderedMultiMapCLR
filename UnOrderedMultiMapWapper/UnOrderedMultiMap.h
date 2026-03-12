@@ -649,6 +649,11 @@ public:
 	{
 		return multimapObject.Multimap.max_size();
 	}
+	virtual [[nodiscard]] bool IsRangeEmpty(const Key& _Keyval) const noexcept
+	{
+		auto temp = multimapObject.Multimap.equal_range(_Keyval);
+		return temp.first == temp.second;
+	}
 	//virtual [[nodiscard]] Value& operator[](int index)
 	//{
 	//	return multimapObject.Multimap[index];
